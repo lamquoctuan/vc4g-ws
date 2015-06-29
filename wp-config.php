@@ -88,5 +88,10 @@ define('SCRIPT_DEBUG', true);
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
+define( 'WP_CONTENT_FOLDERNAME', 'assets' );
+define( 'WP_CONTENT_URL', '//' . $_SERVER['HTTP_HOST'] . '/' . WP_CONTENT_FOLDERNAME );
+define( 'WP_CONTENT_DIR', ABSPATH . WP_CONTENT_FOLDERNAME );
+define( 'UPLOADS', WP_CONTENT_FOLDERNAME . '/images');
+
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

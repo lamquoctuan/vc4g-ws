@@ -1,0 +1,516 @@
+<!-- whatwebuy Grid Section -->
+<section id="whatwebuy" class="bg-light-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="text-right">What we buy</h2>
+                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                    <li class="active"><a href="#gold" data-toggle="tab" class="first">Gold</a></li>
+                    <li><a href="#silver" data-toggle="tab">Silver</a></li>
+                    <li><a href="#platinum" data-toggle="tab">platinum</a></li>
+                    <li><a href="#jewellery" data-toggle="tab" class="last">Jewellery</a></li>
+                </ul>
+                <a href="#" class="viewall">View all</a>
+            </div>
+            <div class="col-sm-9">
+                <div class="tab-content">
+                    <div class="row active tab-pane fade in" id="gold">
+                        <div class="row mb20">
+                            <div class="controls pull-right">
+                                <a class="left fa fa-chevron-left btn btn-primary" href="#prd-gold"
+                                   data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-primary" href="#prd-gold"
+                                                            data-slide="next"></a>
+                            </div>
+                        </div>
+
+                        <div id="prd-gold" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 1</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 2</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 3</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 4</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 5</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 6</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row tab-pane fade" id="silver">
+                        <div class="row mb20">
+                            <div class="controls pull-right">
+                                <a class="left fa fa-chevron-left btn btn-primary" href="#prd-silver"
+                                   data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-primary" href="#prd-silver"
+                                                            data-slide="next"></a>
+                            </div>
+                        </div>
+
+                        <div id="prd-silver" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 1</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 2</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 3</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 4</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 5</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 6</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="row tab-pane fade" id="platinum">
+                        <div class="row mb20">
+                            <div class="controls pull-right">
+                                <a class="left fa fa-chevron-left btn btn-primary" href="#prd-platinum"
+                                   data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-primary" href="#prd-platinum"
+                                                            data-slide="next"></a>
+                            </div>
+                        </div>
+
+                        <div id="prd-platinum" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 1</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 2</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 3</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 4</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 5</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 6</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row tab-pane fade" id="jewellery">
+                        <div class="row mb20">
+                            <div class="controls pull-right">
+                                <a class="left fa fa-chevron-left btn btn-primary" href="#prd-jewellery"  data-slide="prev"></a>
+                                <a class="right fa fa-chevron-right btn btn-primary" href="#prd-jewellery" data-slide="next"></a>
+                            </div>
+                        </div>
+
+                        <div id="prd-jewellery" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 1</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 2</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 3</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 4</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 5</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="col-item">
+                                                <div class="photo">
+                                                    <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="a" />
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5>Gold 6</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function ($) {
+                $('#tabs').tab();
+            });
+        </script>
+
+    </div>
+</section>
