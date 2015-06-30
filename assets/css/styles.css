@@ -189,18 +189,18 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl {
-	border: 2px solid #ccc; /* stroke */
-	-moz-border-radius: 24px / 24px 24px 25px 25px;
-	-webkit-border-radius: 24px / 24px 24px 25px 25px;
-	border-radius: 24px / 24px 24px 25px 25px; /* border radius */
-	-moz-background-clip: padding;
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box; /* prevents bg color from leaking outside the border */
-	font-size: 20px;
-	text-transform: uppercase;
-	font-weight: 300;
-	color: #fff;
-	padding: 10px 30px;
+    border: 2px solid #ccc; /* stroke */
+    -moz-border-radius: 24px / 24px 24px 25px 25px;
+    -webkit-border-radius: 24px / 24px 24px 25px 25px;
+    border-radius: 24px / 24px 24px 25px 25px; /* border radius */
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; /* prevents bg color from leaking outside the border */
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    padding: 10px 30px;
 }
 
 .btn-xl:hover,
@@ -321,7 +321,7 @@ fieldset[disabled] .btn-xl.active {
         transition: all .3s;
     }
 
-       .navbar-default.navbar-shrink {
+    .navbar-default.navbar-shrink {
         padding: 10px 0;
         background-color: #fff;
         border-bottom: solid 1px #ddd;
@@ -368,8 +368,8 @@ header .intro-text .intro-heading {
 }
 
 header .phone-banner {
-	font-size: 25px;
-	margin-top: 20px;
+    font-size: 25px;
+    margin-top: 20px;
 }
 
 @media(min-width:768px) {
@@ -429,6 +429,8 @@ section h3.section-subheading {
 #whatwebuy .whatwebuy-item {
     right: 0;
     margin: 0 0 15px;
+    width: 33.33333333%;
+    float:left;
 }
 
 #whatwebuy .whatwebuy-item .whatwebuy-link {
@@ -440,22 +442,28 @@ section h3.section-subheading {
 
 #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 160px;
+    height: 160px;
     opacity: 0;
-    background: rgba(254,209,54,.9);
+    background: rgba(0,0,0,.5);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
+    border-radius:130px;
+    left:20%;
+    top: 10px;
 }
 
 #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover:hover {
     opacity: 1;
 }
+#whatwebuy span {display: block; font-size: 13px; text-transform: uppercase;}
+
+#whatwebuy .icon-call {background: url(/assets/images/group-icons.png) no-repeat -400px -144px; width: 30px; height: 30px;}
 
 #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
     position: absolute;
-    top: 50%;
+    top: 30%;
     width: 100%;
     height: 20px;
     margin-top: -12px;
@@ -475,7 +483,7 @@ section h3.section-subheading {
 
 #whatwebuy .whatwebuy-item .whatwebuy-caption {
     margin: 0 auto;
-    padding: 10px 0; 
+    padding: 10px 0;
     color: #8e8e8e;
 }
 
@@ -486,12 +494,8 @@ section h3.section-subheading {
     font-size: 16px;
 }
 
-#whatwebuy .whatwebuy-item .whatwebuy-caption p {
-    margin: 0;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-style: italic;
-}
+#whatwebuy .btn-row-next {position: absolute; z-index:6; right: 0; top: 30%;}
+#whatwebuy .icon-next {width: 24px; height: 24px; background: url(/assets/images/icon-next.png) no-repeat 0 0; margin-right: -15px;}
 
 #whatwebuy * {
     z-index: 2;
@@ -724,10 +728,10 @@ aside.clients img {
 
 section#contact  {padding-top: 60px;}
 section#contact .menu-footer li {
-	margin-bottom: 15px;
-	font-weight: 600;
-	text-transform: uppercase;
-	font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
 }
 section#contact .menu-footer li a {color:#797979;}
 section#contact .menu-footer li a:hover {color: #d19f42;}
@@ -875,7 +879,7 @@ ul.social-buttons li a:active {
     margin: 20px 0 30px;
     font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 45px;
-	font-weight: 300;
+    font-weight: 300;
 }
 
 .whatwebuy-modal .modal-content ul.list-inline {
