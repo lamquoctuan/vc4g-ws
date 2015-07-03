@@ -20,7 +20,7 @@ hr {  border-top: 1px solid #cdcdcd;}
     color: #fff;
 }
 
-header,navbar-fixed-top {
+header {
     position: relative;
 }
 .navbar-default .navbar-brand {text-indent: -99999px; display: none;}
@@ -126,7 +126,6 @@ body h2 {
     text-transform: uppercase;
     display: inline-block;
     padding: 6px 0;
-    font-weight: 600;
     font-size: 18px;
     font-weight: 400;
     font-family: 'Roboto Condensed', sans-serif;
@@ -158,10 +157,7 @@ body h2 {
 }
 .webuy {
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(/assets/images/header-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
+    background: url(/assets/images/header-bg.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -217,10 +213,7 @@ body h2 {
 #blog h2 {color: #fff;}
 .bg-blue-dark {
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(/assets/images/bg-blog.jpg);
-    background-position: center center;
-    background-repeat: none;
+    background: url(/assets/images/bg-blog.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -250,12 +243,25 @@ body h2 {
 .carousel-indicators li {background-color: #f0ece0; border: none;}
 .carousel-indicators li.active {background-color: #d9d0b1;}
 
+.bg-banner-how {
+    color: #fff;
+    background: url(/assets/images/bg-banner-how.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 60px 0;
+    height: 251px;
+    margin-top: 70px;
+    text-align: center;
+}
+.bg-banner-how h2 {color:#fff;}
+
 .bg-deal {
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(/assets/images/bg-contact.jpg);
-    background-position: center center;
-    background-repeat: none;
+    background: url(/assets/images/bg-contact.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -285,10 +291,49 @@ body h2 {
 
 .small-screen {display:none;}
 
+.about-page img[alt="about"] {width: 100%;}
+
+.title-prd {width: 100%; overflow: hidden;}
+.title-prd h4 {font-weight:600; margin-bottom:0;}
+.title-prd hr {float: left; margin-top: 10px;}
+
+.whatwebuy h5 {color: #8e8e8e; }
+
+.calculator {background:#f5f5f5; border: solid 1px #eaeaea; padding: 15px 20px;}
+.calculator h4 {color:#d19f42; font-weight:500; text-align: center;margin-bottom:20px; }
+.calculator .form-control {padding-left: 5px; padding-right:5px; font-weight:600; color:#8e8e8e;}
+.calculator .form-control.result {text-align: right;}
+.calculator select.form-control { padding-left:0 ;  padding-right: 0;}
+.calculator .form-group [class^="col"] {padding-left:2px; padding-right: 2px; }
+.calculator .form-horizontal .form-group {margin: 5px 0;}
+.bar-prd {background: #d7d7d7; padding: 5px 0; margin-left: -20px; margin-right: -20px; margin-bottom: 20px; text-align: center;}
+.bar-prd a {color:#989898; font-weight: 600; margin-left:30px; margin-right: 30px;}
+.bar-prd a:hover, .bar-prd a.active {color:#242424; text-decoration: underline;}
+.control-label.btn {background-color: #6e6e6e; color:#fff; font-weight:600; text-align: center;}
+.control-label.btn:hover {background-color: #d19f42}
+.btn.call {background:#d19f42 url(/assets/images/group-icons.png) -536px -740px no-repeat ; border-radius:20px; width: 100%; color:#fff; text-transform: uppercase; font-size: 12px;  padding: 10px 0 10px 30px; margin-top:20px; margin-bottom:20px;}
+.btn.call:hover {background-color:#070c12;}
+.recentpay .icon-next, .recentpay .icon-prev {width: 26px; height: 42px; background: url(/assets/images/group-icons.png) no-repeat; color: transparent; text-shadow: none;  margin-top: -30px;}
+.recentpay .icon-next { margin-right: -20px; background-position: -539px -394px;}
+.recentpay .icon-next:hover {background-position: -646px -394px;}
+.sidebar-whywepay h3 {color:#bababa; font-size: 26px; text-transform: none; font-weight: 600; margin-top:60px;}
+.recentpay .icon-prev { margin-left: -20px;background-position:-539px -495px;}
+.recentpay .icon-prev:hover {background-position:-646px -495px;}
+.recentpay .carousel-control {opacity: 1;}
+.recentpay .carousel-control.right, .recentpay .carousel-control.left {background: none;}
+.recentpay .carousel-caption {background:url(/assets/images/bg-caption.png) repeat;  right: 0;  left: 0; padding:10px 10px 0; text-align: left;  margin-bottom: -20px;}
+.recentpay h2 {color:#ffffff; font-size: 22px;}
+.btn.request {background:#d19f42; padding: 10px; text-align: center; font-weight:600; text-transform: uppercase; width: 100%; font-size:20px; color: #fff;}
+.btn.request:hover {background-color:#070c12;}
+
+.howtosell {padding: 80px 0;}
+
+
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
     .col-md-6 { width: 50%;float: left;}
+    .navbar-fixed-top.navbar-shrink .navbar-right {  position: absolute;  right: 10px;}
     .navbar-default .nav li a {padding: 25px 22px;}
-    .navbar-default.navbar-shrink .nav li a { padding: 10px 11px;}
+    .navbar-default.navbar-shrink .nav li a { padding: 10px 5px; font-size: 12px;}
     header .intro-text {background:none; padding-bottom:100px;}
     .services {padding:80px 0;}
     .services .col-md-4 {margin-bottom:20px;}
@@ -312,8 +357,21 @@ body h2 {
     .sphere-content p {font-size:13px;}
     .sphere-content .btn.body-content {margin-top:-39px; font-size:11px;}
     #team .col-xs-12 {width: 50%;}
+
+    .btn.request {font-size: 12px; font-weight:500;}
+    .sidebar-whywepay h3 {font-size: 22px;}
+    .recentpay .icon-prev {margin-left: -11px;}
+    .recentpay .icon-next {margin-right: -12px;}
+    .recentpay h2{margin:5px 0; font-size: 18px;}
+
+    .fullscreen .col-sm-9, .fullscreen .col-sm-3{ width: 100%;}
+    .fullscreen  .carousel {  width: 38%;  margin-left: 31%;}
+    #whatwebuy.fullscreen  .icon-next {  margin-right: -21px;}
+    #whatwebuy.fullscreen  .icon-prev {  margin-left: -21px;}
+    .fullscreen .sidebar-whywepay h3 {text-align: center;  margin-top: 40px;}
 }
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+    .navbar-fixed-top.navbar-shrink .navbar-right {  position: absolute;  right: 40px;}
     #myRoundabout {margin-left: 25%;}
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
         width:150px;
@@ -323,6 +381,11 @@ body h2 {
         top:0;
     }
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {top: 20%;}
+    .btn.request {font-size: 16px;}
+    .recentpay .icon-prev {margin-left: -15px;}
+    .recentpay .icon-next {margin-right: -16px;}
+    .sidebar-whywepay .form-horizontal .control-label {font-size: 12px;}
+    .btn.call {font-size: 11px;}
 }
 @media  only screen and (max-width: 767px)  {
     header .intro-text {padding-top: 30px;  background: none;}
@@ -358,10 +421,18 @@ body h2 {
     section#contact #contactForm .col-md-6:last-child {  padding-left: 15px;}
     #team .col-xs-12 {width: 50%;}
     .navbar-header.page-scroll {border-bottom: solid 1px #ddd;}
+    .bg-banner-how {margin-top: 22px;}
+    .howtosell {padding: 40px 0;}
+    .carousel {  width: 48%;  margin-left: 28%;}
+    .sidebar-whywepay {margin-top: 20px;}
+    .sidebar-whywepay h3 {text-align: center;}
+    #whatwebuy .icon-next { margin-right: -20px;}
+    #whatwebuy  .carousel-caption h2 {margin-bottom:10px;}
 }
 @media only screen and (max-width: 991px) and  (orientation: landscape)  {
     header .col-md-6 { width: 50%;float: left;}
-    .navbar-default.navbar-shrink .nav li a { padding: 10px;}
+    .navbar-fixed-top.navbar-shrink .navbar-right {  position: absolute;  right: 10px;}
+    .navbar-default.navbar-shrink .nav li a { padding: 10px 6px;}
     header .intro-text {padding-bottom: 205px;  background-position:-28px bottom;}
     .navbar-right  {margin-right:0;}
     .services .col-md-4 {margin-bottom:20px;}
@@ -381,13 +452,24 @@ body h2 {
     #contact .col-sm-5.col-md-6 .col-md-5, #contact .col-sm-5.col-md-6 .col-md-7 {width: 50%; float:left;}
     section#contact #contactForm .col-md-6:first-child {padding-right: 15px;}
     section#contact #contactForm .col-md-6:last-child {  padding-left: 15px;}
+    .howtosell {padding: 40px 0;}
+    .btn.request {  font-size: 12px;}
+    .recentpay .icon-prev {  margin-left: -11px;}
+    .recentpay .icon-next { margin-right: -12px;}
+    .recentpay h2 {  font-size: 20px;  margin-top: 10px;}
+    .fullscreen .col-sm-9, .fullscreen .col-sm-3{ width: 100%;}
+    .fullscreen  .carousel {  width: 38%;  margin-left: 31%;}
+    #whatwebuy.fullscreen  .icon-next {  margin-right: -21px;}
+    #whatwebuy.fullscreen  .icon-prev {  margin-left: -21px;}
+    .fullscreen .sidebar-whywepay h3 {text-align: center;  margin-top: 40px;}
 }
 
 @media  only screen and (max-width: 768px)   and  (orientation: landscape) {
     header .intro-text {padding-top: 54px;}
     #howwepay .col-sm-5, footer .col-md-6 {width: 50%;}
     footer .col-md-6 {float: left;}
-
+    .navbar-default .nav li a {font-size: 11px;}
+    .navbar-default.navbar-shrink .nav li a {padding: 10px 5px;}
 }
 
 @media only screen and (max-width: 480px)  {
@@ -403,8 +485,12 @@ body h2 {
         left:0;
     }
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {top: 12%;}
-    #whatwebuy span.mb20 {margin-bottom:10px !important};
-
+    #whatwebuy span.mb20 {margin-bottom:10px !important;}
+    .recentpay .icon-prev {  margin-left: -16px;}
+    .recentpay .icon-next {  margin-right: -16px;}
+    #whatwebuy.fullscreen .recentpay .icon-next {  margin-right: -15px;}
+    .sidebar-whywepay h3 {margin-top:20px;}
+    .recentpay h2 {  font-size: 20px;  margin-top: 10px;}
 }
 
 @media only screen and (max-width: 360px)  {
@@ -421,10 +507,19 @@ body h2 {
     .tfoot-tbl {padding: 20px;}
     .bg-blue-dark {height: 515px;}
     #contact .col-sm-5.col-md-6 .col-md-5, #contact .col-sm-5.col-md-6 .col-md-7 {width: 100%; clear: both;}
+    .bg-banner-how p {font-size: 13px;}
+    .akordeon-heading {padding-top: 11px; font-size:16px;}
+    .recentpay .icon-prev {  margin-left: -12px;}
+    .recentpay .icon-next {  margin-right: -12px;}
+    #whatwebuy .carousel-control span {display: block;}
+    #whatwebuy.fullscreen {margin-top:40px;}
+    .about-page {margin-top:20px;}
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) and  (orientation: landscape)  {
     header .intro-text .intro-lead-in {  font-size: 32px; margin-bottom:0;}
     header .intro-text .intro-heading {  font-size: 36px;}
     header .intro-text {  padding-bottom: 10px;}
     #howwepay .nav-tabs>li>a {  padding: 9px;}
+    .akordeon-heading {font-size: 14px;padding-left: 6px;  padding-top: 12px;}
+    .bg-banner-how {height: 224px;}
 }

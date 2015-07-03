@@ -1,4 +1,4 @@
-<!-- Team Section -->
+<!-- About Section -->
 <section id="team" class="bg-light-white about-page">
     <div class="container">
         <div class="row">

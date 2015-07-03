@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
     font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
-    color: #797979;
+    color: #4f4f4f;
     font-size: 14px;
     background: #f5f5f5;
 }
@@ -28,6 +28,10 @@ p {
 
 p.large {
     font-size: 16px;
+}
+
+p.small {
+    font-size: 12px;
 }
 
 a,
@@ -91,14 +95,14 @@ h6 {
 .mt30                   { margin-top: 30px; }
 .mr30                   { margin-right: 30px; }
 .mb30                   { margin-bottom: 30px; }
-.ml-50                  { margin-left: -50px; }
-.mt-50                  { margin-top: -50px; }
-.mr-50                  { margin-right: -50px; }
-.mb-50                  { margin-bottom: -50px; }
+.ml40                   { margin-left: 40px; }
+.mt40                   { margin-top: 40px; }
+.mr40                   { margin-right: 40px; }
+.mb40                   { margin-bottom: 40px; }
 
 .p0                     { padding: 0; }
 .pl1                    { padding-left: 1px; }
-.pt1                    { padding-top: 1px; }
+.pt1                    { padding-top: 1px !important; }
 .pr1                    { padding-right: 1px; }
 .pb1                    { padding-bottom: 1px; }
 .pl2                    { padding-left: 2px; }
@@ -266,8 +270,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: none;
-    background-color: none;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -335,10 +339,7 @@ fieldset[disabled] .btn-xl.active {
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(/assets/images/header-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
+    background: url(/assets/images/header-bg.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -495,7 +496,7 @@ section h3.section-subheading {
 }
 
 #whatwebuy .btn-row-next {position: absolute; z-index:6; right: 0; top: 30%;}
-#whatwebuy .icon-next {width: 24px; height: 24px; background: url(/assets/images/icon-next.png) no-repeat 0 0; margin-right: -15px;}
+#whatwebuy .icon-next.btn {width: 24px; height: 24px; background: url(/assets/images/icon-next.png) no-repeat 0 0; margin-right: -15px;}
 
 #whatwebuy * {
     z-index: 2;
@@ -818,7 +819,6 @@ footer .container {border-top: solid 1px #cdcdcd;}
 footer ul.quicklinks {
     margin-bottom: 0;
     text-transform: uppercase;
-    text-transform: none;
     font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
 }
@@ -952,5 +952,3 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
-
-
