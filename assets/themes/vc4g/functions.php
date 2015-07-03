@@ -142,6 +142,9 @@ function vc4g_scripts() {
     wp_enqueue_style( 'vc4g-bootstrap', WP_CONTENT_URL . '/css/bootstrap.min.css' );
     // Load our main stylesheet.
     wp_enqueue_style( 'vc4g-style', WP_CONTENT_URL . '/css/styles.css' );
+    if (!is_front_page() && !is_home()) {
+        wp_enqueue_style( 'vc4g-akordeon', WP_CONTENT_URL . '/css/jquery.akordeon.css' );
+    }
     wp_enqueue_style( 'vc4g-vancouver', WP_CONTENT_URL . '/css/vancouver.css' );
 
 //    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -166,7 +169,12 @@ function vc4g_scripts() {
     wp_enqueue_script( 'vc4g-contact-form', WP_CONTENT_URL . '/js/contact_me.js', array( ), '20150630' );
 //    Custom Theme JavaScript
     wp_enqueue_script( 'vc4g-vancouver', WP_CONTENT_URL . '/js/vancouver.js', array( ), '20150630' );
-    wp_enqueue_script( 'vc4g-roundabout', WP_CONTENT_URL . '/js/jquery.roundabout.js', array( ), '20150630' );
+    if (is_front_page() || is_home()) {
+        wp_enqueue_script( 'vc4g-roundabout', WP_CONTENT_URL . '/js/jquery.roundabout.js', array( ), '20150630' );
+    }
+    else {
+        wp_enqueue_script( 'vc4g-akordeon', WP_CONTENT_URL . '/js/jquery.akordeon.js', array( ), '20150702' );
+    }
 
 }
 add_action( 'wp_enqueue_scripts', 'vc4g_scripts' );
