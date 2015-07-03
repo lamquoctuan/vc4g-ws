@@ -1,6 +1,6 @@
 <?php
-define('WP_HOME','http://vc4g.lnr.com');
-define('WP_SITEURL','http://vc4g.lnr.com');
+define('WP_HOME','http://staging.vancouvercashforgold.com');
+define('WP_SITEURL','http://staging.vancouvercashforgold.com');
 /**
  * The base configurations of the WordPress.
  *
