@@ -12,3 +12,11 @@ wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
 .idea/
+assets/advanced-cache.php
+assets/backup-db/
+assets/backups/
+assets/blogs.dir/
+assets/cache/
+assets/upgrade/
+assets/uploads/
+assets/wp-cache-config.php
