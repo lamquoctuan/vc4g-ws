@@ -150,7 +150,7 @@ function vc4g_scripts()
     if (!is_front_page() && !is_home()) {
         wp_enqueue_style('vc4g-akordeon', WP_CONTENT_URL . '/css/jquery.akordeon.css');
     }
-    wp_enqueue_style('vc4g-vancouver', WP_CONTENT_URL . '/css/vancouver.css');
+//    wp_enqueue_style('vc4g-vancouver', WP_CONTENT_URL . '/css/vancouver.css');
 
 //    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 //        wp_enqueue_script( 'comment-reply' );
@@ -172,8 +172,8 @@ function vc4g_scripts()
     }
     wp_enqueue_script('vc4g-responsive-tabs', WP_CONTENT_URL . '/js/responsive-tabs.js', array(), '20150630');
 //    Contact Form JavaScript
-    wp_enqueue_script('vc4g-bootstrap-validation', WP_CONTENT_URL . '/js/jqBootstrapValidation.js', array(), '20150630');
-    wp_enqueue_script('vc4g-contact-form', WP_CONTENT_URL . '/js/contact_me.js', array(), '20150630');
+//    wp_enqueue_script('vc4g-bootstrap-validation', WP_CONTENT_URL . '/js/jqBootstrapValidation.js', array(), '20150630');
+//    wp_enqueue_script('vc4g-contact-form', WP_CONTENT_URL . '/js/contact_me.js', array(), '20150630');
 //    Custom Theme JavaScript
     wp_enqueue_script('vc4g-vancouver', WP_CONTENT_URL . '/js/vancouver.js', array(), '20150630');
     if (is_front_page() || is_home()) {

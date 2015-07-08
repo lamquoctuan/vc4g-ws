@@ -502,205 +502,6 @@ section h3.section-subheading {
     z-index: 2;
 }
 
-.timeline {
-    position: relative;
-    padding: 0;
-    list-style: none;
-}
-
-.timeline:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    margin-left: -1.5px;
-    background-color: #f1f1f1;
-}
-
-.timeline>li {
-    position: relative;
-    margin-bottom: 50px;
-    min-height: 50px;
-}
-
-.timeline>li:before,
-.timeline>li:after {
-    content: " ";
-    display: table;
-}
-
-.timeline>li:after {
-    clear: both;
-}
-
-.timeline>li .timeline-panel {
-    float: right;
-    position: relative;
-    width: 100%;
-    padding: 0 20px 0 100px;
-    text-align: left;
-}
-
-.timeline>li .timeline-panel:before {
-    right: auto;
-    left: -15px;
-    border-right-width: 15px;
-    border-left-width: 0;
-}
-
-.timeline>li .timeline-panel:after {
-    right: auto;
-    left: -14px;
-    border-right-width: 14px;
-    border-left-width: 0;
-}
-
-.timeline>li .timeline-image {
-    z-index: 100;
-    position: absolute;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    margin-left: 0;
-    border: 7px solid #f1f1f1;
-    border-radius: 100%;
-    text-align: center;
-    color: #fff;
-    background-color: #fed136;
-}
-
-.timeline>li .timeline-image h4 {
-    margin-top: 12px;
-    font-size: 10px;
-    line-height: 14px;
-}
-
-.timeline>li.timeline-inverted>.timeline-panel {
-    float: right;
-    padding: 0 20px 0 100px;
-    text-align: left;
-}
-
-.timeline>li.timeline-inverted>.timeline-panel:before {
-    right: auto;
-    left: -15px;
-    border-right-width: 15px;
-    border-left-width: 0;
-}
-
-.timeline>li.timeline-inverted>.timeline-panel:after {
-    right: auto;
-    left: -14px;
-    border-right-width: 14px;
-    border-left-width: 0;
-}
-
-.timeline>li:last-child {
-    margin-bottom: 0;
-}
-
-.timeline .timeline-heading h4 {
-    margin-top: 0;
-    color: inherit;
-}
-
-.timeline .timeline-heading h4.subheading {
-    text-transform: none;
-}
-
-.timeline .timeline-body>p,
-.timeline .timeline-body>ul {
-    margin-bottom: 0;
-}
-
-@media(min-width:768px) {
-    .timeline:before {
-        left: 50%;
-    }
-
-    .timeline>li {
-        margin-bottom: 100px;
-        min-height: 100px;
-    }
-
-    .timeline>li .timeline-panel {
-        float: left;
-        width: 41%;
-        padding: 0 20px 20px 30px;
-        text-align: right;
-    }
-
-    .timeline>li .timeline-image {
-        left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 16px;
-        font-size: 13px;
-        line-height: 18px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        float: right;
-        padding: 0 30px 20px 20px;
-        text-align: left;
-    }
-}
-
-@media(min-width:992px) {
-    .timeline>li {
-        min-height: 150px;
-    }
-
-    .timeline>li .timeline-panel {
-        padding: 0 20px 20px;
-    }
-
-    .timeline>li .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 30px;
-        font-size: 18px;
-        line-height: 26px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 20px 20px;
-    }
-}
-
-@media(min-width:1200px) {
-    .timeline>li {
-        min-height: 170px;
-    }
-
-    .timeline>li .timeline-panel {
-        padding: 0 20px 20px 100px;
-    }
-
-    .timeline>li .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 40px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 100px 20px 20px;
-    }
-}
 
 .team-member {
     margin-bottom: 50px;
@@ -720,10 +521,6 @@ section h3.section-subheading {
 
 .team-member p {
     margin-top: 0;
-}
-
-aside.clients img {
-    margin: 50px auto;
 }
 
 
@@ -815,13 +612,6 @@ footer span.copyright {
 }
 
 footer .container {border-top: solid 1px #cdcdcd;}
-
-footer ul.quicklinks {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
-}
 
 ul.social-buttons {
     margin-bottom: 0;
@@ -949,6 +739,2325 @@ img::-moz-selection {
     background: 0 0;
 }
 
-body {
-    webkit-tap-highlight-color: #fed136;
+hr {
+    border-top: 1px solid #cdcdcd;
+}
+
+.btn.body-content {
+    border: 2px solid #a1a3a3;
+    -moz-border-radius: 19px / 19px 19px 20px 20px;
+    -webkit-border-radius: 19px / 19px 19px 20px 20px;
+    border-radius: 19px / 19px 19px 20px 20px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: transparent;
+    padding: 6px 24px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #8e8e8e;
+    font-size: 13px;
+}
+
+.btn.body-content:hover {
+    background: #d19f42;
+    border-color: #d19f42;
+    color: #fff;
+}
+
+header {
+    position: relative;
+}
+
+.navbar-default .navbar-brand {
+    text-indent: -99999px;
+    display: none;
+}
+
+.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
+    display: block;
+}
+
+.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
+    width: 60%;
+    margin-top: -11px;
+}
+
+.navbar-fixed-top {
+    top: auto;
+}
+
+.navbar-right {
+    width: 100%
+}
+
+.navbar-fixed-top.navbar-shrink {
+    top: 0;
+}
+
+.navbar-fixed-top.navbar-shrink .navbar-right {
+    width: auto;
+    margin-top: 8px;
+}
+
+.navbar-default.navbar-shrink .nav li a {
+    padding: 10px;
+}
+
+.navbar-default.navbar-shrink .nav li.active a {
+    background: transparent;
+    color: #d19f42;
+}
+
+.navbar-default.navbar-shrink .nav li a:hover,
+.navbar-default.navbar-shrink .nav li a:focus {
+    background-color: transparent;
+    color: #d19f42;
+}
+
+.navbar-default .sub-phone {
+    display: none;
+}
+
+a.sub-phone {
+    position: relative;
+    margin: 20px 0 20px 30px;
+    display: inline-block;
+    color: #555b65;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.icon-phone {
+    position: absolute;
+    font-size: 30px;
+    left: -34px;
+    background: url(/assets/images/group-icons.png) no-repeat 0 -144px;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-search {
+    background-position: 0 -78px;
+    top: 4px;
+}
+
+.navbar-default.navbar-shrink .sub-phone {
+    display: block;
+    margin: 0;
+    font-size: 13px;
+    padding-left: 8px !important;
+}
+
+.navbar-default.navbar-shrink .sub-phone .icon-phone {
+    left: -20px;
+    top: 7px;
+    background-position: -216px -144px;
+}
+
+.navbar-default.navbar-shrink .phone-text {
+    padding-left: 25px;
+}
+
+.navbar-default.navbar-shrink .phone-text:hover a {
+    background: transparent
+}
+
+#blog h3, .webuy h2 {
+    color: #fff;
+}
+
+#myRoundabout {
+    width: 500px;
+    height: 250px;
+    padding-left: 100px;
+    margin-left: 30%;
+    margin-top: 102px;
+}
+
+#myRoundabout ul, #myRoundabout li {
+    list-style-type: none;
+}
+
+.roundabout-moveable-item {
+    height: 460px;
+    width: 460px;
+    cursor: pointer;
+    background-color: #091126;
+    border: 1px solid #fff;
+    border-radius: 230px;
+    color: #fff;
+}
+
+.roundabout-in-focus {
+    cursor: auto;
+}
+
+.blog-latest {
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.no-side-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.services {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.services h3 {
+    text-transform: none;
+    font-weight: 300;
+    font-size: 26px;
+    color: #303030;
+}
+
+.fa.icon-best, .fa.icon-trust, .fa.icon-fast, .fa.icon-snow {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 90px;
+    height: 90px;
+}
+
+.fa.icon-best {
+    background-position: 0 0;
+}
+
+.fa.icon-trust {
+    background-position: -274px 0;
+}
+
+.fa.icon-fast {
+    background-position: -539px 0;
+}
+
+.fa.icon-snow {
+    background-position: -539px -166px;
+    width: 51px;
+    height: 54px;
+}
+
+body h2 {
+    font-weight: 900;
+    font-size: 26px;
+
+}
+
+#whatwebuy h2 {
+    margin-top: 0;
+}
+
+#whatwebuy h5 {
+    text-transform: none;
+    font-weight: 600;
+
+}
+
+#whatwebuy .nav.nav-tabs li {
+    float: none;
+    text-align: right;
+}
+
+#whatwebuy .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+    color: #525252;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 6px 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#whatwebuy .nav-tabs > li:hover > a {
+    background-color: transparent;
+    color: #d19f42;
+}
+
+#whatwebuy .nav-tabs > li.active > a,
+#whatwebuy .nav-tabs > li.active > a:focus,
+#whatwebuy .nav-tabs > li.active > a:hover {
+    color: #d19f42 !important;
+    background-color: transparent;
+    border: transparent;
+}
+
+#whatwebuy .nav-tabs {
+    border: none;
+}
+
+#whatwebuy .nav-tabs > li > a.first {
+    border-top: solid 1px #ddd !important;
+}
+
+#whatwebuy .nav-tabs > li > a.last {
+    border-bottom: solid 1px #ddd !important;
+}
+
+.viewall {
+    background: url(/assets/images/icon-view.png) right 2px no-repeat;
+    padding-right: 20px;
+    color: #7b7b7b;
+    font-size: 13px;
+    float: right;
+    line-height: 1;
+    margin-top: 15px;
+}
+
+.viewall:hover {
+    background-position: right -11px;
+}
+
+.bg-diamond {
+    background: url(/assets/images/diamond.png) no-repeat;
+}
+
+.webuy {
+    color: #fff;
+    background: url(/assets/images/header-bg.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 80px 0;
+}
+
+.webuy ul {
+    padding: 10px 0;
+}
+
+.webuy li {
+    background: url(/assets/images/group-icons.png) 0 -220px no-repeat;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.webuy .btn.body-content {
+    color: #fff;
+    border-color: #fff;
+}
+
+.webuy .btn.body-content:hover {
+    border-color: #d19f42;
+}
+
+.section hr, section hr {
+    width: 50px;
+}
+
+#howwepay .nav-tabs {
+    background: #2b3042;
+    margin-top: 30px;
+    border-bottom: none;
+}
+
+#howwepay .nav-tabs > li {
+    margin-bottom: 0;
+    border-right: solid 1px #454a5e;
+}
+
+#howwepay .nav-tabs > li.active, #howwepay .nav-tabs > li:last-child {
+    border-right: none;
+}
+
+#howwepay .nav-tabs > li > a {
+    font-size: 18px;
+    color: #7b7d87;
+    border: none;
+    padding: 30px 60px;
+    font-weight: normal;
+}
+
+#howwepay .nav-tabs > li:hover > a {
+    color: #d19f42;
+    background: none;
+    border-radius: 0;
+}
+
+#howwepay .nav-tabs > li.active > a,
+#howwepay .nav-tabs > li.active > a:focus,
+#howwepay .nav-tabs > li.active > a:hover {
+    border-radius: 0;
+    color: #fff;
+    background: #d19f42;
+    border: none;
+}
+
+#howwepay .table {
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+#howwepay .table > thead > tr > th {
+    font-size: 16px;
+    padding: 20px 60px;
+    background: #fafafa;
+    border-bottom: none;
+}
+
+#howwepay .table > tbody > tr > td {
+    border-top: none;
+    padding: 15px 60px;
+    border-right: solid 1px #e4e4e4;
+}
+
+#howwepay .table > tbody > tr > td:last-child {
+    border-right: none;
+}
+
+#howwepay .table-striped > tbody > tr {
+    background-color: #f9f9f9;
+}
+
+#howwepay .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+
+#howwepay .table-striped > tbody > tr:hover {
+    background-color: #fafafa;
+}
+
+.tfoot-tbl {
+    padding: 20px 60px;
+    background: #fafafa;
+    margin: 0;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+#howwepay .fa {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 28px;
+    height: 18px;
+}
+
+#howwepay .fa.btn1 {
+    background-position: 0 -326px;
+}
+
+#howwepay .fa.btn2 {
+    background-position: 0 -592px;
+    margin-right: 10px;
+}
+
+#howwepay .btn.body-content:hover .fa.btn1 {
+    background-position: 0 -846px;
+}
+
+#howwepay .btn.body-content:hover .fa.btn2 {
+    background-position: 0 -932px;
+}
+
+#blog {
+    padding: 60px 0 0;
+}
+
+#blog h2 {
+    color: #fff;
+}
+
+.bg-blue-dark {
+    color: #fff;
+    background: url(/assets/images/bg-blog.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    overflow: hidden;
+    height: 442px;
+}
+
+.bg-blue-dark .container {
+    position: relative;
+}
+
+.bg-blue-dark .title {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.sphere-content {
+    width: 75%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+
+#team {
+    padding-bottom: 60px;
+    padding-top: 80px;
+}
+
+#team .img-responsive {
+    max-width: 100px;
+}
+
+#team hr, .webuy hr {
+    margin-left: 0;
+}
+
+#team blockquote {
+    font-size: 14px;
+    line-height: 1.75;
+    border-left: none;
+    background: url(/assets/images/icon-blockquote.png) top left no-repeat;
+}
+
+#team h3 {
+    color: #b7b7b7;
+    text-transform: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#team .btn.body-content {
+    font-size: 12px;
+    text-transform: none;
+    font-weight: 300;
+    border-width: 1px;
+    padding: 5px 20px;
+}
+
+.carousel-indicators {
+    bottom: 0;
+}
+
+.carousel-indicators li {
+    background-color: #f0ece0;
+    border: none;
+}
+
+.carousel-indicators li.active {
+    background-color: #d9d0b1;
+}
+
+.bg-banner-how {
+    color: #fff;
+    background: url(/assets/images/bg-banner-how.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 60px 0;
+    height: 251px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.bg-banner-how h2 {
+    color: #fff;
+}
+
+.bg-deal {
+    color: #fff;
+    background: url(/assets/images/bg-contact.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 60px 0;
+}
+
+.bg-deal p.help-block.text-danger {
+    color: red !important;
+}
+
+.bg-deal h2 {
+    margin: 0;
+    color: #fff;
+}
+
+.bg-deal p {
+    color: #acacac;
+    font-size: 13px;
+}
+
+.btn.btn-yellow {
+    background: #d19f42;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.btn.btn-yellow:hover {
+    color: #fff;
+}
+
+.bg-deal .form-control {
+    background: #3c4c5f;
+    padding: 10px 20px;
+    border: none;
+    height: 43px;
+}
+
+.bg-deal #contactForm [class^="col-"] {
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+.small-screen {
+    display: none;
+}
+
+.about-page img[alt="about"] {
+    width: 100%;
+}
+
+.title-prd {
+    width: 100%;
+    overflow: hidden;
+}
+
+.title-prd h4 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.title-prd hr {
+    float: left;
+    margin-top: 10px;
+}
+
+.whatwebuy h5 {
+    color: #8e8e8e;
+}
+
+.calculator {
+    background: #f5f5f5;
+    border: solid 1px #eaeaea;
+    padding: 15px 20px;
+}
+
+.calculator h4 {
+    color: #d19f42;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calculator .form-control {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 600;
+    color: #8e8e8e;
+}
+
+.calculator .form-control.result {
+    text-align: right;
+}
+
+.calculator select.form-control {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.calculator .form-group [class^="col"] {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.calculator .form-horizontal .form-group {
+    margin: 5px 0;
+}
+
+.bar-prd {
+    background: #d7d7d7;
+    padding: 5px 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bar-prd a {
+    color: #989898;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.bar-prd a:hover, .bar-prd a.active {
+    color: #242424;
+    text-decoration: underline;
+}
+
+.control-label.btn {
+    background-color: #6e6e6e;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.control-label.btn:hover {
+    background-color: #d19f42
+}
+
+.btn.call {
+    background: #d19f42 url(/assets/images/group-icons.png) -536px -740px no-repeat;
+    border-radius: 20px;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 0 10px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn.call:hover {
+    background-color: #070c12;
+}
+
+.recentpay .icon-next, .recentpay .icon-prev {
+    width: 26px;
+    height: 42px;
+    background: url(/assets/images/group-icons.png) no-repeat;
+    color: transparent;
+    text-shadow: none;
+    margin-top: -30px;
+}
+
+.recentpay .icon-next {
+    margin-right: -20px;
+    background-position: -539px -394px;
+}
+
+.recentpay .icon-next:hover {
+    background-position: -646px -394px;
+}
+
+.sidebar-whywepay h3 {
+    color: #bababa;
+    font-size: 26px;
+    text-transform: none;
+    font-weight: 600;
+    margin-top: 60px;
+}
+
+.recentpay .icon-prev {
+    margin-left: -20px;
+    background-position: -539px -495px;
+}
+
+.recentpay .icon-prev:hover {
+    background-position: -646px -495px;
+}
+
+.recentpay .carousel-control {
+    opacity: 1;
+}
+
+.recentpay .carousel-control.right, .recentpay .carousel-control.left {
+    background: none;
+}
+
+.recentpay .carousel-caption {
+    background: url(/assets/images/bg-caption.png) repeat;
+    right: 0;
+    left: 0;
+    padding: 10px 10px 0;
+    text-align: left;
+    margin-bottom: -20px;
+}
+
+.recentpay h2 {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.btn.request {
+    background: #d19f42;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+}
+
+.btn.request:hover {
+    background-color: #070c12;
+}
+
+.howtosell {
+    padding: 80px 0;
+}
+
+.webuy.diamond {
+    background: url(/assets/images/bg-blue.jpg) repeat;
+    color: #bababa;
+    padding: 100px 0 80px;
+}
+
+.webuy.diamond h2 {
+    color: #bababa;
+    text-transform: capitalize;
+}
+
+.pricing {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+}
+
+.pricing .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0
+}
+
+.pricing p {
+    color: #414141;
+}
+
+.pricing h4, .recent-post h4 {
+    color: #3c3c3c;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+
+.btn.download {
+    background-color: #d19f42;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn.download:hover {
+    background-color: #070c12;
+}
+
+.btn.download span {
+    display: inline-block;
+    padding-top: 2px;
+    background: url(/assets/images/group-icons.png) no-repeat -539px -649px;
+    padding-left: 28px;
+}
+
+.whatwepay {
+    position: relative;
+}
+
+.whatwepay .img-responsive {
+    width: 100%;
+}
+
+.text-ads {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text-cnt {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 137px;
+    margin-top: -34px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.text-cnt img {
+    margin-top: -24px;
+}
+
+.blog img[alt="intro-img"] {
+    width: 100%;
+}
+
+.body-blog ul, .body-blog ol {
+    margin-left: 15px;
+}
+
+.body-blog ul li {
+    list-style-type: disc;
+    background-image: none;
+    padding-left: 10px;
+}
+
+.body-blog ul li li {
+    list-style-type: circle;
+}
+
+.body-blog ol li {
+    list-style-type: decimal;
+}
+
+.pagination-share {
+    border-top: solid 1px #2c3a4c;
+    border-bottom: solid 1px #2c3a4c;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.webuy .pagination-share li {
+    background-image: none;
+    padding-left: 10px;
+}
+
+.share {
+    float: right;
+}
+
+.share ul.social-buttons li a {
+    background-color: transparent;
+    border: solid 2px #bababa;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+}
+
+.share .list-inline > li {
+    padding-left: 5px;
+}
+
+.pagi {
+    float: left;
+    padding-top: 25px;
+}
+
+.pagi a, .recent-post li a {
+    color: #bababa;
+}
+
+.pagi a:hover, .recent-post li a:hover {
+    color: #d19f42;
+}
+
+.recent-post h4 {
+    color: #bababa;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.recent-post li {
+    background: url(/assets/images/icon-arrow-next.png) 0 2px no-repeat;
+    padding-left: 18px;
+    font-weight: 600;
+}
+
+.bg-banner-how.mail-in-service {
+    background-image: url(/assets/images/bg-mail-in-service.jpg);
+}
+
+.list-step {
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.list-step .fa {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 60px;
+    height: 60px;
+}
+
+.list-step .fa.step1 {
+    background-position: 0 -1076px;
+}
+
+.list-step .fa.step2 {
+    background-position: -88px -1076px;
+}
+
+.list-step .fa.step3 {
+    background-position: -178px -1076px;
+}
+
+.list-step .fa.step4 {
+    background-position: -279px -1076px;
+}
+
+.list-step .fa.step5 {
+    background-position: -372px -1076px;
+}
+
+.body-step .step {
+    color: #313233;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.body-step .step span {
+    display: block;
+    color: #d19f42;
+}
+
+.request-form {
+    background-color: #f5f5f5;
+    padding: 15px 0;
+    border: solid 1px #c6c6c6;
+}
+
+.request-form h4 {
+    font-size: 26px;
+    color: #313233;
+    font-weight: 600;
+}
+
+.request-form hr {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.request-form [class^="col-"] {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.request-form .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.request-form label {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 13px;
+    color: #2a2a2a;
+}
+
+.request-form label span {
+    color: red;
+}
+
+.request-form form {
+    padding: 15px 40px;
+}
+
+.request-form .text-danger ul {
+    padding-left: 0;
+}
+
+.request-form .text-danger li {
+    list-style-type: none;
+    color: red;
+}
+
+.radio {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 38px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.request-form label.radio {
+    text-transform: none;
+}
+
+.radio:hover .inner {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: .5;
+}
+
+.radio input {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.radio input:checked + .outer .inner {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.radio input:checked + .outer {
+    border: 1px solid #d19f42;
+}
+
+.radio input:focus + .outer .inner {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    background-color: #d19f42;
+}
+
+.radio .outer {
+    width: 15px;
+    height: 15px;
+    display: block;
+    float: left;
+    margin: 10px 9px 10px 10px;
+    border: 1px solid #9a9a9a;
+    border-radius: 50%;
+}
+
+.radio .inner {
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    width: 9px;
+    height: 9px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    display: block;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #f08b3b;
+    opacity: 0;
+}
+
+.btn.mail {
+    padding: 10px 40px 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn.mail span {
+    background: url(/assets/images/icon-email.png) 0 -3px no-repeat;
+    padding-left: 38px;
+    color: #fff;
+}
+
+.map-contact {
+    margin-top: 70px;
+}
+
+.place-ct {
+    padding: 50px 0;
+}
+
+.place-ct p {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    color: #2e2e2e;
+}
+
+.place-ct .fa {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 88px;
+    height: 88px;
+}
+
+.place-ct .fa.icon-place-lg {
+    background-position: -1px -1161px;
+}
+
+.place-ct .fa.icon-phone-lg {
+    background-position: -146px -1161px;
+}
+
+.place-ct .fa.icon-clock-lg {
+    background-position: -289px -1161px;
+}
+
+.icon-phone-call, .icon-email-small {
+    padding-left: 28px;
+}
+
+.icon-phone-call {
+    background: url(/assets/images/icon-phone-call.png) no-repeat;
+}
+
+.icon-email-small {
+    background: url(/assets/images/icon-email-small.png) no-repeat;
+}
+
+.form-message {
+    padding: 0 0 50px 0;
+}
+
+.form-message hr {
+    width: 100%;
+}
+
+.title-form {
+    color: #313233;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-message textarea.form-control {
+    height: 130px;
+}
+
+.banner-thank-you {
+    background: #d19f42 url(/assets/images/bg-thk.jpg) repeat-x top left;
+    margin-top: 71px;
+    padding: 90px 0 120px;
+    color: #fff;
+}
+
+.banner-thank-you .intro-heading {
+    font-size: 54px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.banner-thank-you .intro-lead-in {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.services.thanks {
+    padding-top: 0;
+    margin-top: -36px;
+}
+
+.services.thanks .fa-stack {
+    background: url(/assets/images/group-icons.png) -525px -1103px no-repeat;
+    width: 146px;
+    height: 146px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.services.thanks .text-muted {
+    color: #565656;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+    .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 10px;
+    }
+
+    .navbar-default .nav li a {
+        padding: 25px 22px;
+    }
+
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    header .intro-text {
+        background: none;
+        padding-bottom: 100px;
+    }
+
+    .services {
+        padding: 80px 0;
+    }
+
+    .services .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    body h2 {
+        font-weight: 600;
+        font-size: 22px;
+    }
+
+    #whatwebuy .nav-tabs > li > a {
+        font-size: 14px;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+        top: 0;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 12%;
+    }
+
+    #whatwebuy .icon-next {
+        margin-right: 0;
+    }
+
+    .bg-diamond {
+        background: none;
+    }
+
+    #howwepay .nav-tabs > li > a {
+        padding: 20px 22px;
+    }
+
+    .roundabout-moveable-item {
+        width: 320px;
+        height: 320px;
+    }
+
+    #myRoundabout {
+        margin-left: 124px;
+        margin-top: 142px;
+    }
+
+    .sphere-content {
+        padding-top: 25px;
+    }
+
+    .sphere-content h3 {
+        font-size: 18px;
+    }
+
+    .sphere-content p {
+        font-size: 13px;
+    }
+
+    .sphere-content .btn.body-content {
+        margin-top: -39px;
+        font-size: 11px;
+    }
+
+    #team .col-xs-12 {
+        width: 50%;
+    }
+
+    .btn.request {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .sidebar-whywepay h3 {
+        font-size: 22px;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -11px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -12px;
+    }
+
+    .recentpay h2 {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+
+    .fullscreen .col-sm-9, .fullscreen .col-sm-3 {
+        width: 100%;
+    }
+
+    .fullscreen .carousel {
+        width: 38%;
+        margin-left: 31%;
+    }
+
+    #whatwebuy.fullscreen .icon-next {
+        margin-right: -21px;
+    }
+
+    #whatwebuy.fullscreen .icon-prev {
+        margin-left: -21px;
+    }
+
+    .fullscreen .sidebar-whywepay h3 {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .banner-thank-you .intro-heading {
+        font-size: 48px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 18px;
+    }
+
+    .services h3 {
+        font-size: 24px;
+    }
+
+    .place-ct .col-md-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+
+    .radio {
+        padding-right: 0;
+    }
+
+    .request-form h4 {
+        font-size: 22px;
+    }
+
+    .request-form form {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 40px;
+    }
+
+    #myRoundabout {
+        margin-left: 25%;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 150px;
+        height: 150px;
+        border-radius: 120px;
+        left: 20%;
+        top: 0;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 20%;
+    }
+
+    .btn.request {
+        font-size: 16px;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -15px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -16px;
+    }
+
+    .sidebar-whywepay .form-horizontal .control-label {
+        font-size: 12px;
+    }
+
+    .btn.call {
+        font-size: 11px;
+    }
+
+    .place-ct .col-md-3 {
+        width: 30%;
+    }
+
+    .place-ct .col-md-9 {
+        width: 63%;
+    }
+
+    .title-form {
+        font-size: 15px;
+    }
+
+    .radio {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header .intro-text {
+        padding-top: 30px;
+        background: none;
+    }
+
+    header {
+        padding-bottom: 30px;
+    }
+
+    header .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    header .intro-text .intro-lead-in {
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    header .intro-text .intro-heading {
+        font-size: 44px;
+        line-height: 1;
+    }
+
+    .services .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    #whatwebuy .col-sm-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+
+    #whatwebuy .pull-right {
+        float: left !important;
+        margin-left: 15px;
+    }
+
+    #whatwebuy .nav.nav-tabs li {
+        float: left;
+        text-align: right;
+        margin-right: 30px;
+    }
+
+    #whatwebuy .nav-tabs {
+        float: left;
+    }
+
+    #whatwebuy .col-sm-9 {
+        clear: both;
+    }
+
+    #whatwebuy h2 {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+        left: 20%;
+        top: 0;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 20%;
+    }
+
+    #whatwebuy .icon-next {
+        margin-right: 10px;
+    }
+
+    .bg-diamond {
+        background: none;
+    }
+
+    #howwepay .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    #howwepay .nav-tabs > li > a {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    #howwepay .table > thead > tr > th, #howwepay .table > tbody > tr > td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .small-screen {
+        display: block;
+    }
+
+    #myRoundabout {
+        display: none;
+    }
+
+    #contact .col-sm-5.col-md-6 {
+        clear: both;
+    }
+
+    #contact .col-sm-5.col-md-6 .col-md-5, #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 50%;
+        float: left;
+    }
+
+    section#contact #contactForm .col-md-6:first-child {
+        padding-right: 15px;
+    }
+
+    section#contact #contactForm .col-md-6:last-child {
+        padding-left: 15px;
+    }
+
+    #team .col-xs-12 {
+        width: 50%;
+    }
+
+    .navbar-header.page-scroll {
+        border-bottom: solid 1px #ddd;
+    }
+
+    .bg-banner-how {
+        margin-top: 22px;
+    }
+
+    .howtosell {
+        padding: 40px 0;
+    }
+
+    .howtosell .carousel {
+        width: 48%;
+        margin-left: 28%;
+    }
+
+    .sidebar-whywepay {
+        margin-top: 20px;
+    }
+
+    .sidebar-whywepay h3 {
+        text-align: center;
+    }
+
+    #whatwebuy .icon-next {
+        margin-right: -20px;
+    }
+
+    #whatwebuy .carousel-caption h2 {
+        margin-bottom: 10px;
+    }
+
+    .banner-thank-you {
+        margin-top: 52px;
+        padding: 80px 0;
+    }
+
+    .banner-thank-you .intro-heading {
+        font-size: 38px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .map-contact {
+        margin-top: 52px;
+    }
+
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .list-step .col-sm-2 {
+        width: 20%;
+    }
+
+    .request-form .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .carousel.recentpay {
+        width: 49%;
+        margin-left: 25%;
+    }
+
+}
+
+@media only screen and (max-width: 991px) and  (orientation: landscape) {
+    header .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 10px;
+    }
+
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 10px 6px;
+    }
+
+    header .intro-text {
+        padding-bottom: 205px;
+        background-position: -28px bottom;
+    }
+
+    .navbar-right {
+        margin-right: 0;
+    }
+
+    .services .col-md-4 {
+        margin-bottom: 20px;
+    }
+
+    #whatwebuy h2 {
+        font-size: 23px;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 12%;
+    }
+
+    .bg-diamond {
+        background: none;
+    }
+
+    #howwepay .nav-tabs > li > a {
+        padding: 20px;
+    }
+
+    #myRoundabout {
+        margin-left: 100px;
+    }
+
+    #team .col-xs-12 {
+        width: 50%;
+    }
+
+    #contact .col-sm-5.col-md-6 {
+        clear: both;
+        width: 100%;
+    }
+
+    #contact .col-sm-5.col-md-6 .col-md-5, #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 50%;
+        float: left;
+    }
+
+    section#contact #contactForm .col-md-6:first-child {
+        padding-right: 15px;
+    }
+
+    section#contact #contactForm .col-md-6:last-child {
+        padding-left: 15px;
+    }
+
+    .howtosell {
+        padding: 40px 0;
+    }
+
+    .btn.request {
+        font-size: 12px;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -11px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -12px;
+    }
+
+    .recentpay h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .fullscreen .col-sm-9, .fullscreen .col-sm-3 {
+        width: 100%;
+    }
+
+    .fullscreen .carousel {
+        width: 38%;
+        margin-left: 31%;
+    }
+
+    #whatwebuy.fullscreen .icon-next {
+        margin-right: -21px;
+    }
+
+    #whatwebuy.fullscreen .icon-prev {
+        margin-left: -21px;
+    }
+
+    .fullscreen .sidebar-whywepay h3 {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .map-contact {
+        margin-top: 71px;
+    }
+
+    .map-contact iframe {
+        height: 280px;
+    }
+
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    footer .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .request-form h4 {
+        font-size: 22px;
+    }
+
+    .request-form form {
+        padding: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 768px)   and  (orientation: landscape) {
+    header .intro-text {
+        padding-top: 54px;
+    }
+
+    #howwepay .col-sm-5, footer .col-md-6 {
+        width: 50%;
+    }
+
+    footer .col-md-6 {
+        float: left;
+    }
+
+    .navbar-default .nav li a {
+        font-size: 11px;
+    }
+
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 10px 5px;
+    }
+
+    .banner-thank-you .intro-heading {
+        font-size: 48px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 18px;
+    }
+
+    .map-contact iframe {
+        height: 200px;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #howwepay .nav-tabs > li > a {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #team .col-xs-12 {
+        width: 100%;
+    }
+
+    header .intro-text .intro-lead-in {
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-weight: 100;
+    }
+
+    header .intro-text .intro-heading {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    header .phone-banner {
+        font-size: 22px;
+    }
+
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+
+    #howwepay .panel-body {
+        padding: 0;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 12%;
+    }
+
+    #whatwebuy span.mb20 {
+        margin-bottom: 10px !important;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -16px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -16px;
+    }
+
+    #whatwebuy.fullscreen .recentpay .icon-next {
+        margin-right: -15px;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
+
+    .sidebar-whywepay h3 {
+        margin-top: 20px;
+    }
+
+    .recentpay h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .banner-thank-you .intro-heading {
+        font-size: 28px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 13px;
+    }
+
+    .map-contact iframe {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    header .intro-text .intro-lead-in {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    header .intro-text .intro-heading {
+        font-size: 20px;
+    }
+
+    header a.sub-phone {
+        display: none;
+    }
+
+    .navbar-brand {
+        padding: 14px 0 0 15px;
+        width: 258px;
+    }
+
+    #whatwebuy .nav-tabs > li > a {
+        font-size: 12px;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 25%;
+    }
+
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content strong {
+        margin-bottom: 10px;
+        display: block;
+        font-size: 16px;
+    }
+
+    #whatwebuy span {
+        display: none;
+    }
+
+    .webuy, section, #team {
+        padding: 40px 0;
+    }
+
+    #howwepay .col-md-6 {
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .tfoot-tbl {
+        padding: 20px;
+    }
+
+    .bg-blue-dark {
+        height: 515px;
+    }
+
+    #contact .col-sm-5.col-md-6 .col-md-5, #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 100%;
+        clear: both;
+    }
+
+    .bg-banner-how p {
+        font-size: 13px;
+    }
+
+    .akordeon-heading {
+        padding-top: 11px;
+        font-size: 16px;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -12px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -12px;
+    }
+
+    #whatwebuy .recentpay.carousel-control span {
+        display: block;
+    }
+
+    #whatwebuy.fullscreen {
+        margin-top: 40px;
+    }
+
+    .about-page {
+        margin-top: 20px;
+    }
+
+    .banner-thank-you .intro-heading {
+        font-size: 22px;
+    }
+
+    .place-ct .col-md-3 {
+        width: 28%;
+    }
+
+    .place-ct .col-md-9 {
+        width: 64%;
+    }
+
+    .pagi {
+        padding-top: 17px;
+    }
+
+    .request-form form {
+        padding: 15px;
+    }
+
+    #whatwebuy .carousel.recentpay span {
+        display: block;
+    }
+
+    #whatwebuy .whatwebuy-item {
+        width: 28%
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) and  (orientation: landscape) {
+    header .intro-text .intro-lead-in {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    header .intro-text .intro-heading {
+        font-size: 36px;
+    }
+
+    header .intro-text {
+        padding-bottom: 10px;
+    }
+
+    #howwepay .nav-tabs > li > a {
+        padding: 9px;
+    }
+
+    .akordeon-heading {
+        font-size: 14px;
+        padding-left: 6px;
+        padding-top: 12px;
+    }
+
+    .bg-banner-how {
+        height: 224px;
+    }
+
+    .banner-thank-you .intro-heading {
+        font-size: 40px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 15px;
+    }
+
+    .map-contact {
+        margin-top: 52px;
+    }
+
+    .recentpay.carousel {
+        width: 46%;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -21px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -21px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
+        width: 80%;
+    }
+
+    header .intro-text .intro-lead-in {
+        font-size: 18px;
+    }
+
+    header .phone-banner {
+        font-size: 18px;
+    }
+
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+
+    #howwepay .panel-body {
+        padding: 0;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
+
+    #whatwebuy, #howwepay {
+        padding-bottom: 20px;
+    }
+
+    #whatwebuy .nav.nav-tabs li {
+        margin-right: 22px;
+    }
+
+    #whatwebuy .carousel {
+        width: 90%;
+        margin: 10px 20px;
+    }
+
+    .bg-blue-dark .title {
+        width: 90%;
+    }
+
+    .sphere-content {
+        width: 90%;
+    }
+
+    footer span.copyright {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer .col-md-6 {
+        text-align: center !important;
+    }
+
+    #whatwebuy .whatwebuy-item {
+        width: 31.7%;
+    }
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+
+    #howwepay .panel-body {
+        padding: 0;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
+
+    #whatwebuy .carousel {
+        width: 94%;
+        margin-left: 16px;
+        margin-top: 16px;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -17px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -17px;
+    }
+
+    #whatwebuy .carousel.recentpay {
+        width: 49%;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+    header img {
+        width: 100%;
+    }
+
+    header .intro-text .intro-lead-in {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    header .intro-text .intro-heading {
+        font-size: 23px;
+    }
+
+    #whatwebuy .nav.nav-tabs li {
+        margin-right: 16px;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
+
+    #howwepay .col-md-6 {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .tfoot-tbl {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .sphere-content, .bg-blue-dark .title {
+        width: 90%;
+    }
+
+    footer span.copyright {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer .col-md-6 {
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 667px) and (orientation: landscape) {
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+
+    #howwepay .panel-body {
+        padding: 0;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
 }

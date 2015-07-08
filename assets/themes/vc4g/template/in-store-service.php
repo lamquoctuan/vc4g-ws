@@ -1,4 +1,4 @@
-<section class="bg-banner-how">
+<section class="bg-light-white bg-banner-how">
     <div class="container">
         <h2>IN-STORE Service</h2>
 

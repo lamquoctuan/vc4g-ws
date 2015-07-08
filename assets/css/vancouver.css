@@ -328,6 +328,429 @@ body h2 {
 
 .howtosell {padding: 80px 0;}
 
+.webuy.diamond {
+    background: url(/assets/images/bg-blue.jpg) repeat;
+    color: #bababa;
+    padding: 100px 0 80px;
+}
+
+.webuy.diamond h2 {
+    color: #bababa;
+    text-transform: capitalize;
+}
+
+.pricing {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+}
+
+.pricing .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0
+}
+
+.pricing p {
+    color: #414141;
+}
+
+.pricing h4, .recent-post h4 {
+    color: #3c3c3c;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+
+.btn.download {
+    background-color: #d19f42;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn.download:hover {
+    background-color: #070c12;
+}
+
+.btn.download span {
+    display: inline-block;
+    padding-top: 2px;
+    background: url(/assets/images/group-icons.png) no-repeat -539px -649px;
+    padding-left: 28px;
+}
+
+.whatwepay {
+    position: relative;
+}
+
+.whatwepay .img-responsive {
+    width: 100%;
+}
+
+.text-ads {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text-cnt {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 137px;
+    margin-top: -34px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.text-cnt img {
+    margin-top: -24px;
+}
+
+.blog img[alt="intro-img"] {
+    width: 100%;
+}
+
+.pagination-share {
+    border-top: solid 1px #2c3a4c;
+    border-bottom: solid 1px #2c3a4c;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.webuy .pagination-share li {
+    background-image: none;
+    padding-left: 10px;
+}
+
+.share {
+    float: right;
+}
+
+.share ul.social-buttons li a {
+    background-color: transparent;
+    border: solid 2px #bababa;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+}
+
+.share .list-inline > li {
+    padding-left: 5px;
+}
+
+.pagi {
+    float: left;
+    padding-top: 25px;
+}
+
+.pagi a, .recent-post li a {
+    color: #bababa;
+}
+
+.pagi a:hover, .recent-post li a:hover {
+    color: #d19f42;
+}
+
+.recent-post h4 {
+    color: #bababa;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.recent-post li {
+    background: url(/assets/images/icon-arrow-next.png) 0 2px no-repeat;
+    padding-left: 18px;
+    font-weight: 600;
+}
+
+.bg-banner-how.mail-in-service {
+    background-image: url(/assets/images/bg-mail-in-service.jpg);
+}
+
+.list-step {
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.list-step .fa {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 60px;
+    height: 60px;
+}
+
+.list-step .fa.step1 {
+    background-position: 0 -1076px;
+}
+
+.list-step .fa.step2 {
+    background-position: -88px -1076px;
+}
+
+.list-step .fa.step3 {
+    background-position: -178px -1076px;
+}
+
+.list-step .fa.step4 {
+    background-position: -279px -1076px;
+}
+
+.list-step .fa.step5 {
+    background-position: -372px -1076px;
+}
+
+.body-step .step {
+    color: #313233;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.body-step .step span {
+    display: block;
+    color: #d19f42;
+}
+
+.request-form {
+    background-color: #f5f5f5;
+    padding: 15px 0;
+    border: solid 1px #c6c6c6;
+}
+
+.request-form h4 {
+    font-size: 26px;
+    color: #313233;
+    font-weight: 600;
+}
+
+.request-form hr {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.request-form [class^="col-"] {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.request-form .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.request-form label {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 13px;
+    color: #2a2a2a;
+}
+
+.request-form label span {
+    color: red;
+}
+
+.request-form form {
+    padding: 15px 40px;
+}
+
+.request-form .text-danger ul {
+    padding-left: 0;
+}
+
+.request-form .text-danger li {
+    list-style-type: none;
+    color: red;
+}
+
+.radio {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 38px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.request-form label.radio {
+    text-transform: none;
+}
+
+.radio:hover .inner {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: .5;
+}
+
+.radio input {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.radio input:checked + .outer .inner {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.radio input:checked + .outer {
+    border: 1px solid #d19f42;
+}
+
+.radio input:focus + .outer .inner {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    background-color: #d19f42;
+}
+
+.radio .outer {
+    width: 15px;
+    height: 15px;
+    display: block;
+    float: left;
+    margin: 10px 9px 10px 10px;
+    border: 1px solid #9a9a9a;
+    border-radius: 50%;
+}
+
+.radio .inner {
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    width: 9px;
+    height: 9px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    display: block;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #f08b3b;
+    opacity: 0;
+}
+
+.btn.mail {
+    padding: 10px 40px 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn.mail span {
+    background: url(/assets/images/icon-email.png) 0 -3px no-repeat;
+    padding-left: 38px;
+    color: #fff;
+}
+
+.map-contact {
+    margin-top: 70px;
+}
+
+.place-ct {
+    padding: 50px 0;
+}
+
+.place-ct p {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    color: #2e2e2e;
+}
+
+.place-ct .fa {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 88px;
+    height: 88px;
+}
+
+.place-ct .fa.icon-place-lg {
+    background-position: -1px -1161px;
+}
+
+.place-ct .fa.icon-phone-lg {
+    background-position: -146px -1161px;
+}
+
+.place-ct .fa.icon-clock-lg {
+    background-position: -289px -1161px;
+}
+
+.icon-phone-call, .icon-email-small {
+    padding-left: 28px;
+}
+
+.icon-phone-call {
+    background: url(/assets/images/icon-phone-call.png) no-repeat;
+}
+
+.icon-email-small {
+    background: url(/assets/images/icon-email-small.png) no-repeat;
+}
+
+.form-message {
+    padding: 0 0 50px 0;
+}
+
+.form-message hr {
+    width: 100%;
+}
+
+.title-form {
+    color: #313233;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-message textarea.form-control {
+    height: 130px;
+}
+
+.banner-thank-you {
+    background: #d19f42 url(/assets/images/bg-thk.jpg) repeat-x top left;
+    margin-top: 71px;
+    padding: 90px 0 120px;
+    color: #fff;
+}
+
+.banner-thank-you .intro-heading {
+    font-size: 54px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.banner-thank-you .intro-lead-in {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.services.thanks {
+    padding-top: 0;
+    margin-top: -36px;
+}
+
+.services.thanks .fa-stack {
+    background: url(/assets/images/group-icons.png) -525px -1103px no-repeat;
+    width: 146px;
+    height: 146px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.services.thanks .text-muted {
+    color: #565656;
+}
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
     .col-md-6 { width: 50%;float: left;}
@@ -369,7 +792,37 @@ body h2 {
     #whatwebuy.fullscreen  .icon-next {  margin-right: -21px;}
     #whatwebuy.fullscreen  .icon-prev {  margin-left: -21px;}
     .fullscreen .sidebar-whywepay h3 {text-align: center;  margin-top: 40px;}
+
+    .banner-thank-you .intro-heading {
+        font-size: 48px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 18px;
+    }
+
+    .services h3 {
+        font-size: 24px;
+    }
+
+    .place-ct .col-md-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+
+    .radio {
+        padding-right: 0;
+    }
+
+    .request-form h4 {
+        font-size: 22px;
+    }
+
+    .request-form form {
+        padding: 15px;
+    }
 }
+
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
     .navbar-fixed-top.navbar-shrink .navbar-right {  position: absolute;  right: 40px;}
     #myRoundabout {margin-left: 25%;}
@@ -386,6 +839,22 @@ body h2 {
     .recentpay .icon-next {margin-right: -16px;}
     .sidebar-whywepay .form-horizontal .control-label {font-size: 12px;}
     .btn.call {font-size: 11px;}
+
+    .place-ct .col-md-3 {
+        width: 30%;
+    }
+
+    .place-ct .col-md-9 {
+        width: 63%;
+    }
+
+    .title-form {
+        font-size: 15px;
+    }
+
+    .radio {
+        padding-right: 0;
+    }
 }
 @media  only screen and (max-width: 767px)  {
     header .intro-text {padding-top: 30px;  background: none;}
@@ -423,11 +892,57 @@ body h2 {
     .navbar-header.page-scroll {border-bottom: solid 1px #ddd;}
     .bg-banner-how {margin-top: 22px;}
     .howtosell {padding: 40px 0;}
-    .carousel {  width: 48%;  margin-left: 28%;}
+
+    .howtosell .carousel {
+        width: 48%;
+        margin-left: 28%;
+    }
     .sidebar-whywepay {margin-top: 20px;}
     .sidebar-whywepay h3 {text-align: center;}
     #whatwebuy .icon-next { margin-right: -20px;}
     #whatwebuy  .carousel-caption h2 {margin-bottom:10px;}
+
+    .banner-thank-you {
+        margin-top: 52px;
+        padding: 80px 0;
+    }
+
+    .banner-thank-you .intro-heading {
+        font-size: 38px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .map-contact {
+        margin-top: 52px;
+    }
+
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .list-step .col-sm-2 {
+        width: 20%;
+    }
+
+    .request-form .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
 }
 @media only screen and (max-width: 991px) and  (orientation: landscape)  {
     header .col-md-6 { width: 50%;float: left;}
@@ -462,6 +977,43 @@ body h2 {
     #whatwebuy.fullscreen  .icon-next {  margin-right: -21px;}
     #whatwebuy.fullscreen  .icon-prev {  margin-left: -21px;}
     .fullscreen .sidebar-whywepay h3 {text-align: center;  margin-top: 40px;}
+
+    .map-contact {
+        margin-top: 71px;
+    }
+
+    .map-contact iframe {
+        height: 280px;
+    }
+
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    footer .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+
+    .request-form h4 {
+        font-size: 22px;
+    }
+
+    .request-form form {
+        padding: 15px;
+    }
+
 }
 
 @media  only screen and (max-width: 768px)   and  (orientation: landscape) {
@@ -470,6 +1022,22 @@ body h2 {
     footer .col-md-6 {float: left;}
     .navbar-default .nav li a {font-size: 11px;}
     .navbar-default.navbar-shrink .nav li a {padding: 10px 5px;}
+
+    .banner-thank-you .intro-heading {
+        font-size: 48px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 18px;
+    }
+
+    .map-contact iframe {
+        height: 200px;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 480px)  {
@@ -478,6 +1046,34 @@ body h2 {
     header .intro-text .intro-lead-in {font-size:28px;  margin-bottom: 10px;font-weight: 100;}
     header .intro-text .intro-heading {font-size: 32px; line-height:1;}
     header .phone-banner {  font-size: 22px;}
+
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+
+    #howwepay .panel-body {
+        padding: 0;
+    }
+
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
         width:100%;
         height: 100%;
@@ -489,9 +1085,26 @@ body h2 {
     .recentpay .icon-prev {  margin-left: -16px;}
     .recentpay .icon-next {  margin-right: -16px;}
     #whatwebuy.fullscreen .recentpay .icon-next {  margin-right: -15px;}
+
+    .webuy ul {
+        padding: 0;
+    }
     .sidebar-whywepay h3 {margin-top:20px;}
     .recentpay h2 {  font-size: 20px;  margin-top: 10px;}
+
+    .banner-thank-you .intro-heading {
+        font-size: 28px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 13px;
+    }
+
+    .map-contact iframe {
+        height: 250px;
+    }
 }
+
 
 @media only screen and (max-width: 360px)  {
     header .intro-text .intro-lead-in {  font-size: 18px; margin-bottom:0;}
@@ -511,9 +1124,32 @@ body h2 {
     .akordeon-heading {padding-top: 11px; font-size:16px;}
     .recentpay .icon-prev {  margin-left: -12px;}
     .recentpay .icon-next {  margin-right: -12px;}
-    #whatwebuy .carousel-control span {display: block;}
+
+    #whatwebuy .recentpay.carousel-control span {
+        display: block;
+    }
     #whatwebuy.fullscreen {margin-top:40px;}
     .about-page {margin-top:20px;}
+
+    .banner-thank-you .intro-heading {
+        font-size: 22px;
+    }
+
+    .place-ct .col-md-3 {
+        width: 28%;
+    }
+
+    .place-ct .col-md-9 {
+        width: 64%;
+    }
+
+    .pagi {
+        padding-top: 17px;
+    }
+
+    .request-form form {
+        padding: 15px;
+    }
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) and  (orientation: landscape)  {
     header .intro-text .intro-lead-in {  font-size: 32px; margin-bottom:0;}
@@ -522,4 +1158,235 @@ body h2 {
     #howwepay .nav-tabs>li>a {  padding: 9px;}
     .akordeon-heading {font-size: 14px;padding-left: 6px;  padding-top: 12px;}
     .bg-banner-how {height: 224px;}
+
+    .banner-thank-you .intro-heading {
+        font-size: 40px;
+    }
+
+    .banner-thank-you .intro-lead-in {
+        font-size: 15px;
+    }
+
+    .map-contact {
+        margin-top: 52px;
+    }
+
+    .recentpay.carousel {
+        width: 46%;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -21px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -21px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
+        width: 80%;
+    }
+
+    header .intro-text .intro-lead-in {
+        font-size: 18px;
+    }
+
+    header .phone-banner {
+        font-size: 18px;
+    }
+
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+
+    #howwepay .panel-body {
+        padding: 0;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
+
+    #whatwebuy, #howwepay {
+        padding-bottom: 20px;
+    }
+
+    #whatwebuy .nav.nav-tabs li {
+        margin-right: 22px;
+    }
+
+    #whatwebuy .carousel {
+        width: 90%;
+        margin: 10px 20px;
+    }
+
+    .bg-blue-dark .title {
+        width: 90%;
+    }
+
+    .sphere-content {
+        width: 90%;
+    }
+
+    footer span.copyright {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer .col-md-6 {
+        text-align: center !important;
+    }
+
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+
+    #howwepay .panel-body {
+        padding: 0;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
+
+    #whatwebuy .carousel {
+        width: 94%;
+        margin-left: 16px;
+        margin-top: 16px;
+    }
+
+    .recentpay .icon-prev {
+        margin-left: -18px;
+    }
+
+    .recentpay .icon-next {
+        margin-right: -18px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+    header img {
+        width: 100%;
+    }
+
+    header .intro-text .intro-lead-in {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    header .intro-text .intro-heading {
+        font-size: 23px;
+    }
+
+    #whatwebuy .nav.nav-tabs li {
+        margin-right: 16px;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
+
+    #howwepay .col-md-6 {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .tfoot-tbl {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .sphere-content, .bg-blue-dark .title {
+        width: 90%;
+    }
+
+    footer span.copyright {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer .col-md-6 {
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 667px) and (orientation: landscape) {
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+
+    #howwepay .panel-body {
+        padding: 0;
+    }
+
+    .webuy ul {
+        padding: 0;
+    }
 }
