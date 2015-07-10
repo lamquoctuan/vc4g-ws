@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <p><strong>Please note</strong> we do buy any 100% natural diamonds in any shape, colour and cut but we do not accept “clarity enhanced”, synthetic or lab-grown diamonds. As always, you are protected by our 100% satisfaction guarantee.</p>
-                <button type="submit" class="btn body-content mt20">Learn More...</button>
+                <button type="submit" class="btn body-content mt20" onclick="window.location.href='/buy-diamond/';">Learn More...</button>
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@
                     <li><a href="#platinum" data-toggle="tab">platinum</a></li>
                     <li><a href="#jewellery" data-toggle="tab" class="last">Jewellery</a></li>
                 </ul>
-                <a href="#" class="viewall">View all</a>
+                <a href="/what-we-buy/" class="viewall">View all</a>
             </div>
             <div class="col-sm-9">
                 <div class="tab-content">
