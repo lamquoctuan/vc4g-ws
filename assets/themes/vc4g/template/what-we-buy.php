@@ -1,269 +1,55 @@
+<?php
+$purchasedItems = getPurchasedItems(['Gold', 'Silver', 'Platinum', 'Jewellery']);
+?>
 <!-- What we buy Section -->
 <section id="whatwebuy" class="bg-light-white whatwebuy fullscreen">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2>What we buy</h2>
+                <?php the_title('<h2>','</h2>');?>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-9">
+<?php
+if (! empty($purchasedItems)) :
+    foreach ($purchasedItems as $type => $items) {
+?>
                 <div class="title-prd">
-                    <h4>Gold</h4>
+                    <h4><?php echo $type;?></h4>
                     <hr />
-                    <a href="#" class="viewall mb10">View list</a>
+<?php   if (array_search($type, array_keys($purchasedItems)) == 0) { ?>
+                    <a href="/#what-we-buy" class="viewall mb10">View list</a>
+<?php   } ?>
                 </div>
                 <div class="row">
+<?php
+        foreach ($items as $item) {
+?>
                     <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
+                        <a href="tel:16045582026" class="whatwebuy-link">
                             <div class="whatwebuy-hover">
                                 <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
+                                    <strong>$<?php echo $item->price;?></strong>
                                     <span>Call for</span>
                                     <span class="mb20">better price</span>
                                     <i class="fa icon-call"></i>
                                 </div>
                             </div>
-                            <img src="/assets/images/whatwebuy/gold/gold1.jpg" class="img-responsive" alt="">
+                            <img src="<?php echo $item->image;?>" class="img-responsive" alt="<?php echo $item->title;?>">
                         </a>
                         <div class="whatwebuy-caption">
-                            <h5>Gold Bars & Coins</h5>
+                            <h5><?php echo $item->title;?></h5>
                         </div>
                     </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/gold/gold2.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Gold Nugget</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/gold/gold3.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Placer Gold</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/gold/gold4.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Dental Gold</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/gold/gold5.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Gold Watches</h5>
-                        </div>
-                    </div>
+<?php
+        }
+?>
                 </div>
-                <!--Silver -->
-                <div class="title-prd">
-                    <h4>silver</h4>
-                    <hr />
-                </div>
-                <div class="row">
-
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/silver/silver1.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Silver Coins </h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/silver/silver2.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Silver Bullion</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/silver/silver3.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Silverware</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--Platinum -->
-                <div class="title-prd">
-                    <h4>Platinum</h4>
-                    <hr />
-                </div>
-                <div class="row">
-
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/platinum/pla1.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Platinum Bullion</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/platinum/pla2.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Palladium</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/platinum/pla3.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Platinum coins</h5>
-                        </div>
-                    </div>
-                </div>
-                <!--jewellery -->
-                <div class="title-prd">
-                    <h4>jewellery</h4>
-                    <hr />
-                </div>
-                <div class="row">
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/jew/jew1.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Gold Jewellery</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/jew/jew2.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Silver Jewellery</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4 whatwebuy-item">
-                        <a href="#portfolioModal1" class="whatwebuy-link" data-toggle="modal">
-                            <div class="whatwebuy-hover">
-                                <div class="whatwebuy-hover-content">
-                                    <strong>$1259.54</strong>
-                                    <span>Call for</span>
-                                    <span class="mb20">better price</span>
-                                    <i class="fa icon-call"></i>
-                                </div>
-                            </div>
-                            <img src="/assets/images/whatwebuy/jew/jew3.jpg" class="img-responsive" alt="">
-                        </a>
-                        <div class="whatwebuy-caption">
-                            <h5>Platinum Jewellery</h5>
-                        </div>
-                    </div>
-
-                </div>
-
+<?php
+    }
+endif;
+?>
             </div>
             <div class="col-sm-3 mt30 sidebar-whywepay">
                 <div class="calculator mt40">

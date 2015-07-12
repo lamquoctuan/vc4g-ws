@@ -202,3 +202,6 @@ function no_wordpress_errors()
 
 add_filter('login_errors', 'no_wordpress_errors');
 define('DISALLOW_FILE_EDIT', true);
+
+include_once 'inc/post_types.php';
+include_once 'inc/functions.php';
