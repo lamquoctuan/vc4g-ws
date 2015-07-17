@@ -1,28 +1,32 @@
 <div class="pricing mt40">
-    <h4>Download Pricing</h4>
-    <form accept-charset="UTF-8" action=""  method="post" >
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Name" id="name" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
-            <p class="help-block text-danger"></p>
-        </div>
-
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your mail." aria-invalid="false">
-            <p class="help-block text-danger"></p>
-        </div>
-    </form>
-    <a href="" class="btn download"><span>DOWNLOAD</span></a>
-    <p class="text-center small">Enter your name and email below and click, "DOWNLOAD!"</p>
+    <?php get_template_part('template/download-pricing', 'form');?>
 </div>
-<div class="recent-post mt30">
-    <h4>Recent Posts</h4>
-    <ul class="list-unstyled">
-        <li><a href="#">Seamlessly enable multimedia based technologies</a></li>
-        <li><a href="#">Distinctively provide access to backend</a></li>
-        <li><a href="#">Intrinsicly plagiarize interactive</a></li>
-        <li><a href="#">Uniquely develop quality catalysts</a></li>
-    </ul>
-</div>
+<?php
+$args = array(
+    'category_name'     => 'blog',
+    'orderby'           => 'date',
+    'order'             => 'DESC',
+    'posts_per_page'    => 4,
+    'post__not_in'      => array(get_the_ID())
+);
+$the_query = new WP_Query( $args );
+if ( $the_query->have_posts() ) {
+?>
+    <div class="recent-post mt30">
+        <h4>Recent Posts</h4>
+        <ul class="list-unstyled">
+<?php
+    while ( $the_query->have_posts() ) {
+        $the_query->the_post();
+        echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+    }
+?>
+        </ul>
+    </div>
+<?php
+}
+wp_reset_postdata();
+?>
 <div class="whatwepay mt30">
     <div class="text-ads">
         <div class="text-cnt">
