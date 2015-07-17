@@ -99,8 +99,8 @@ if (!function_exists('vc4g_fonts_url')) :
          * Translators: If there are characters in your language that are not supported
          * by Roboto Condensed, translate this to 'off'. Do not translate into your own language.
          */
-        if ('off' !== _x('on', 'Roboto+Condensed font: on or off', 'vc4g')) {
-            $fonts[] = 'Roboto+Condensed:300italic,400italic,700italic,400,300,700';
+        if ('off' !== _x('on', 'Roboto Condensed font: on or off', 'vc4g')) {
+            $fonts[] = 'Roboto Condensed:300italic,400italic,700italic,400,300,700';
         }
 
         /*

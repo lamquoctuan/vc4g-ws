@@ -9,8 +9,10 @@ $types = array_keys($purchasedItems);
             <div class="col-sm-3">
                 <h2 class="text-right">What we buy</h2>
                 <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-<?php foreach ($types as $type) { ?>
-                    <li<?php echo (array_search($type, $types) == 0)?' class="active"':'';?>><a href="#<?php echo strtolower($type);?>" data-toggle="tab" class="first"><?php echo $type;?></a></li>
+<?php foreach ($types as $type) {
+    $index = array_search($type, $types);
+    ?>
+                    <li<?php echo ($index == 0)?' class="active"':'';?>><a href="#<?php echo strtolower($type);?>" data-toggle="tab" <?php echo ($index == 0)?' class="first"':'';?>><?php echo $type;?></a></li>
 <?php } ?>
                 </ul>
                 <a href="/what-we-buy/" class="viewall">View all</a>
