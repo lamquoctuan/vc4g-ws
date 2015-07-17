@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     color: #4f4f4f;
     font-size: 14px;
@@ -14,7 +14,7 @@ body {
 }
 
 .text-muted {
-    color: #777;
+    color: #565656;
 }
 
 .text-primary {
@@ -60,75 +60,259 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 100;
     text-transform: uppercase;
     color: #303030;
 }
 
-.m0                     { margin: 0; }
-.ml1                    { margin-left: 1px; }
-.mt1                    { margin-top: 1px; }
-.mr1                    { margin-right: 1px; }
-.mb1                    { margin-bottom: 1px; }
-.ml2                    { margin-left: 2px; }
-.mt2                    { margin-top: 2px; }
-.mr2                    { margin-right: 2px; }
-.mb2                    { margin-bottom: 2px; }
-.ml5                    { margin-left: 5px; }
-.mt5                    { margin-top: 5px; }
-.mr5                    { margin-right: 5px; }
-.mb5                    { margin-bottom: 5px; }
-.ml10                   { margin-left: 10px; }
-.mt10                   { margin-top: 10px; }
-.mr10                   { margin-right: 10px; }
-.mb10                   { margin-bottom: 10px; }
-.ml15                   { margin-left: 15px; }
-.mt15                   { margin-top: 15px; }
-.mr15                   { margin-right: 15px; }
-.mb15                   { margin-bottom: 15px; }
-.ml20                   { margin-left: 20px; }
-.mt20                   { margin-top: 20px; }
-.mr20                   { margin-right: 20px; }
-.mb20                   { margin-bottom: 20px; }
-.ml30                   { margin-left: 30px; }
-.mt30                   { margin-top: 30px; }
-.mr30                   { margin-right: 30px; }
-.mb30                   { margin-bottom: 30px; }
-.ml40                   { margin-left: 40px; }
-.mt40                   { margin-top: 40px; }
-.mr40                   { margin-right: 40px; }
-.mb40                   { margin-bottom: 40px; }
+.m0 {
+    margin: 0;
+}
 
-.p0                     { padding: 0; }
-.pl1                    { padding-left: 1px; }
-.pt1                    { padding-top: 1px !important; }
-.pr1                    { padding-right: 1px; }
-.pb1                    { padding-bottom: 1px; }
-.pl2                    { padding-left: 2px; }
-.pt2                    { padding-top: 2px; }
-.pr2                    { padding-right: 2px; }
-.pb2                    { padding-bottom: 2px; }
-.pl5                    { padding-left: 5px; }
-.pt5                    { padding-top: 5px; }
-.pr5                    { padding-right: 5px; }
-.pb5                    { padding-bottom: 5px; }
-.pl10                   { padding-left: 10px; }
-.pt10                   { padding-top: 10px; }
-.pr10                   { padding-right: 10px; }
-.pb10                   { padding-bottom: 10px; }
-.pl15                   { padding-left: 15px; }
-.pt15                   { padding-top: 15px; }
-.pr15                   { padding-right: 15px; }
-.pb15                   { padding-bottom: 15px; }
-.pl20                   { padding-left: 20px; }
-.pt20                   { padding-top: 20px; }
-.pr20                   { padding-right: 20px; }
-.pb20                   { padding-bottom: 20px; }
-.pl30                   { padding-left: 30px; }
-.pt30                   { padding-top: 30px; }
-.pr30                   { padding-right: 30px; }
-.pb30                   { padding-bottom: 30px; }
+.ml1 {
+    margin-left: 1px;
+}
+
+.mt1 {
+    margin-top: 1px;
+}
+
+.mr1 {
+    margin-right: 1px;
+}
+
+.mb1 {
+    margin-bottom: 1px;
+}
+
+.ml2 {
+    margin-left: 2px;
+}
+
+.mt2 {
+    margin-top: 2px;
+}
+
+.mr2 {
+    margin-right: 2px;
+}
+
+.mb2 {
+    margin-bottom: 2px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.ml30 {
+    margin-left: 30px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.ml40 {
+    margin-left: 40px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mr40 {
+    margin-right: 40px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.pl1 {
+    padding-left: 1px;
+}
+
+.pt1 {
+    padding-top: 1px !important;
+}
+
+.pr1 {
+    padding-right: 1px;
+}
+
+.pb1 {
+    padding-bottom: 1px;
+}
+
+.pl2 {
+    padding-left: 2px;
+}
+
+.pt2 {
+    padding-top: 2px;
+}
+
+.pr2 {
+    padding-right: 2px;
+}
+
+.pb2 {
+    padding-bottom: 2px;
+}
+
+.pl5 {
+    padding-left: 5px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.pr15 {
+    padding-right: 15px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pl30 {
+    padding-left: 30px;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
 
 .img-centered {
     margin: 0 auto;
@@ -145,7 +329,7 @@ h6 {
 .btn-primary {
     border: none;
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #8e8e8e;
@@ -193,13 +377,16 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl {
-    border: 2px solid #ccc; /* stroke */
+    border: 2px solid #ccc;
+    /* stroke */
     -moz-border-radius: 24px / 24px 24px 25px 25px;
     -webkit-border-radius: 24px / 24px 24px 25px 25px;
-    border-radius: 24px / 24px 24px 25px 25px; /* border radius */
+    border-radius: 24px / 24px 24px 25px 25px;
+    /* border radius */
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
-    background-clip: padding-box; /* prevents bg color from leaking outside the border */
+    background-clip: padding-box;
+    /* prevents bg color from leaking outside the border */
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 300;
@@ -212,7 +399,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #f6bf01;
+    border-color: transparent;
     color: #fff;
     background-color: #d19f42;
 }
@@ -247,14 +434,13 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
-
 .navbar-default {
     border-color: transparent;
     background-color: #fff;
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
     color: #fed136;
 }
 
@@ -266,7 +452,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-collapse {
-    border-color: rgba(255,255,255,.02);
+    border-color: rgba(255, 255, 255, .02);
 }
 
 .navbar-default .navbar-toggle {
@@ -280,12 +466,12 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #fed136;
+    background-color: #dedede;
 }
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
     color: #181c2a;
@@ -310,27 +496,23 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-        padding:0;
+        padding: 0;
         border: 0;
         background-color: #fff;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
-
     .navbar-default .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
     }
-
     .navbar-default.navbar-shrink {
-        padding: 10px 0;
         background-color: #fff;
         border-bottom: solid 1px #ddd;
     }
-
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
@@ -353,7 +535,7 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 45px;
     font-weight: 300;
     line-height: 22px;
@@ -362,7 +544,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
@@ -373,29 +555,40 @@ header .phone-banner {
     margin-top: 20px;
 }
 
+header .phone-banner a {
+    color: #fff;
+}
+
+header .phone-banner a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 @media(min-width:768px) {
     header .intro-text {
         padding-top: 110px;
         padding-bottom: 300px;
     }
-
     header .intro-text .intro-lead-in {
         margin-bottom: 0;
-        font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 45px;
         font-weight: 100;
         line-height: 40px;
         text-transform: uppercase;
     }
-
     header .intro-text .intro-heading {
         margin-bottom: 20px;
         text-transform: uppercase;
-        font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 48px;
         font-weight: 900;
         line-height: 1;
     }
+}
+
+.form-control {
+    box-shadow: none;
+    border-radius: 3px;
 }
 
 section {
@@ -411,7 +604,7 @@ section h2.section-heading {
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -431,7 +624,7 @@ section h3.section-subheading {
     right: 0;
     margin: 0 0 15px;
     width: 33.33333333%;
-    float:left;
+    float: left;
 }
 
 #whatwebuy .whatwebuy-item .whatwebuy-link {
@@ -446,21 +639,30 @@ section h3.section-subheading {
     width: 160px;
     height: 160px;
     opacity: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    border-radius:130px;
-    left:20%;
+    border-radius: 130px;
+    left: 20%;
     top: 10px;
 }
 
 #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover:hover {
     opacity: 1;
 }
-#whatwebuy span {display: block; font-size: 13px; text-transform: uppercase;}
 
-#whatwebuy .icon-call {background: url(/assets/images/group-icons.png) no-repeat -400px -144px; width: 30px; height: 30px;}
+#whatwebuy span {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#whatwebuy .icon-call {
+    background: url(/assets/images/group-icons.png) no-repeat -400px -144px;
+    width: 30px;
+    height: 30px;
+}
 
 #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
     position: absolute;
@@ -495,13 +697,23 @@ section h3.section-subheading {
     font-size: 16px;
 }
 
-#whatwebuy .btn-row-next {position: absolute; z-index:6; right: 0; top: 30%;}
-#whatwebuy .icon-next.btn {width: 24px; height: 24px; background: url(/assets/images/icon-next.png) no-repeat 0 0; margin-right: -15px;}
+#whatwebuy .btn-row-next {
+    position: absolute;
+    z-index: 6;
+    right: 0;
+    top: 30%;
+}
+
+#whatwebuy .icon-next.btn {
+    width: 24px;
+    height: 24px;
+    background: url(/assets/images/icon-next.png) no-repeat 0 0;
+    margin-right: -15px;
+}
 
 #whatwebuy * {
     z-index: 2;
 }
-
 
 .team-member {
     margin-bottom: 50px;
@@ -523,33 +735,100 @@ section h3.section-subheading {
     margin-top: 0;
 }
 
+section#contact {
+    padding-top: 60px;
+    color: #848484;
+}
 
-section#contact  {padding-top: 60px;}
+section#contact a {
+    color: #848484;
+}
+
+section#contact a:hover {
+    color: #d19f42;
+}
+
 section#contact .menu-footer li {
     margin-bottom: 15px;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 13px;
 }
-section#contact .menu-footer li a {color:#797979;}
-section#contact .menu-footer li a:hover {color: #d19f42;}
-section#contact .place-contact li {padding-left: 22px; font-weight: normal; margin-bottom: 15px; font-size: 12px;}
-section#contact .icon-phone-small, section#contact .icon-email-small, section#contact .icon-place, section#contact .icon-date{background: url(/assets/images/group-icons.png) no-repeat;}
-section#contact .icon-phone-small {background-position: 0 -672px;}
-section#contact .icon-email-small {background-position: 0 -706px;}
-section#contact .icon-place {background-position: 0 -742px;}
-section#contact .icon-date {background-position: 0 -779px; }
-.temperature {font-size: 72px; font-weight: 300; line-height: 1;}
-.temperature sup {font-size: 24px; top: -1.6em}
-.temperature + p {font-size: 12px; line-height: 16px;}
+
+section#contact .menu-footer li a {
+    color: #797979;
+}
+
+section#contact .menu-footer li a:hover {
+    color: #d19f42;
+}
+
+section#contact .place-contact li {
+    padding-left: 22px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+section#contact .icon-phone-small,
+section#contact .icon-email-small,
+section#contact .icon-place,
+section#contact .icon-date {
+    background: url(/assets/images/group-icons.png) no-repeat;
+}
+
+section#contact .icon-phone-small {
+    background-position: 0 -672px;
+}
+
+section#contact .icon-email-small {
+    background-position: 0 -706px;
+}
+
+section#contact .icon-place {
+    background-position: 0 -742px;
+}
+
+section#contact .icon-date {
+    background-position: 0 -779px;
+}
+
+.temperature {
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.temperature sup {
+    font-size: 24px;
+    top: -1.6em
+}
+
+.temperature + p {
+    font-size: 12px;
+    line-height: 16px;
+}
 
 section#contact .form-group {
     margin-bottom: 2px;
     height: 43px;
 }
-section#contact #contactForm .col-md-6:first-child {padding-right: 2px}
-section#contact #contactForm .col-md-6:last-child {padding-left: 2px}
-section#contact .btn.btn-yellow {margin-top: 20px; color: #fff; width: 100%; padding-left: 0; padding-right: 0;}
+
+section#contact #contactForm .col-md-6:first-child {
+    padding-right: 2px
+}
+
+section#contact #contactForm .col-md-6:last-child {
+    padding-left: 2px
+}
+
+section#contact .btn.btn-yellow {
+    margin-top: 20px;
+    color: #fff;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 section#contact .form-group input,
 section#contact .form-group textarea {
@@ -572,28 +851,28 @@ section#contact .form-control:focus {
 
 section#contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-moz-placeholder {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact::-moz-placeholder {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
@@ -611,7 +890,9 @@ footer span.copyright {
     color: #a9a9a9;
 }
 
-footer .container {border-top: solid 1px #cdcdcd;}
+footer .container {
+    border-top: solid 1px #cdcdcd;
+}
 
 ul.social-buttons {
     margin-bottom: 0;
@@ -667,7 +948,7 @@ ul.social-buttons li a:active {
 
 .whatwebuy-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 45px;
     font-weight: 300;
 }
@@ -797,22 +1078,21 @@ header {
 
 .navbar-fixed-top.navbar-shrink .navbar-right {
     width: auto;
-    margin-top: 8px;
+    margin-top: 0;
 }
 
 .navbar-default.navbar-shrink .nav li a {
-    padding: 10px;
+    padding: 15px;
 }
 
-.navbar-default.navbar-shrink .nav li.active a {
-    background: transparent;
-    color: #d19f42;
-}
-
+.navbar-default.navbar-shrink .nav li.active a,
 .navbar-default.navbar-shrink .nav li a:hover,
 .navbar-default.navbar-shrink .nav li a:focus {
-    background-color: transparent;
-    color: #d19f42;
+    color: #181c2a;
+}
+
+.navbar-default.navbar-shrink .nav li a:hover {
+    color: rgba(24, 28, 42, 0.5);
 }
 
 .navbar-default .sub-phone {
@@ -826,6 +1106,10 @@ a.sub-phone {
     color: #555b65;
     font-size: 16px;
     font-weight: 600;
+}
+
+a.sub-phone:hover {
+    color: rgba(95, 91, 101, 08);
 }
 
 .icon-phone {
@@ -851,7 +1135,7 @@ a.sub-phone {
 
 .navbar-default.navbar-shrink .sub-phone .icon-phone {
     left: -20px;
-    top: 7px;
+    top: 12px;
     background-position: -216px -144px;
 }
 
@@ -863,7 +1147,8 @@ a.sub-phone {
     background: transparent
 }
 
-#blog h3, .webuy h2 {
+#blog h3,
+.webuy h2 {
     color: #fff;
 }
 
@@ -875,7 +1160,8 @@ a.sub-phone {
     margin-top: 102px;
 }
 
-#myRoundabout ul, #myRoundabout li {
+#myRoundabout ul,
+#myRoundabout li {
     list-style-type: none;
 }
 
@@ -915,7 +1201,10 @@ a.sub-phone {
     color: #303030;
 }
 
-.fa.icon-best, .fa.icon-trust, .fa.icon-fast, .fa.icon-snow {
+.fa.icon-best,
+.fa.icon-trust,
+.fa.icon-fast,
+.fa.icon-snow {
     background: url(/assets/images/group-icons.png) no-repeat;
     width: 90px;
     height: 90px;
@@ -942,7 +1231,6 @@ a.sub-phone {
 body h2 {
     font-weight: 900;
     font-size: 26px;
-
 }
 
 #whatwebuy h2 {
@@ -952,7 +1240,8 @@ body h2 {
 #whatwebuy h5 {
     text-transform: none;
     font-weight: 600;
-
+    color: #8e8e8e;
+    font-size: 14px;
 }
 
 #whatwebuy .nav.nav-tabs li {
@@ -960,7 +1249,7 @@ body h2 {
     text-align: right;
 }
 
-#whatwebuy .nav-tabs > li > a {
+#whatwebuy .nav-tabs>li>a {
     margin-right: 2px;
     line-height: 1.42857143;
     border: none;
@@ -973,14 +1262,14 @@ body h2 {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-#whatwebuy .nav-tabs > li:hover > a {
+#whatwebuy .nav-tabs>li:hover>a {
     background-color: transparent;
     color: #d19f42;
 }
 
-#whatwebuy .nav-tabs > li.active > a,
-#whatwebuy .nav-tabs > li.active > a:focus,
-#whatwebuy .nav-tabs > li.active > a:hover {
+#whatwebuy .nav-tabs>li.active>a,
+#whatwebuy .nav-tabs>li.active>a:focus,
+#whatwebuy .nav-tabs>li.active>a:hover {
     color: #d19f42 !important;
     background-color: transparent;
     border: transparent;
@@ -990,11 +1279,11 @@ body h2 {
     border: none;
 }
 
-#whatwebuy .nav-tabs > li > a.first {
+#whatwebuy .nav-tabs>li>a.first {
     border-top: solid 1px #ddd !important;
 }
 
-#whatwebuy .nav-tabs > li > a.last {
+#whatwebuy .nav-tabs>li>a.last {
     border-bottom: solid 1px #ddd !important;
 }
 
@@ -1048,7 +1337,8 @@ body h2 {
     border-color: #d19f42;
 }
 
-.section hr, section hr {
+.section hr,
+section hr {
     width: 50px;
 }
 
@@ -1058,32 +1348,37 @@ body h2 {
     border-bottom: none;
 }
 
-#howwepay .nav-tabs > li {
+#howwepay .nav-tabs>li {
     margin-bottom: 0;
     border-right: solid 1px #454a5e;
 }
 
-#howwepay .nav-tabs > li.active, #howwepay .nav-tabs > li:last-child {
+#howwepay .nav-tabs>li.active {
+    background: #d19f42;
+}
+
+#howwepay .nav-tabs>li.active,
+#howwepay .nav-tabs>li:last-child {
     border-right: none;
 }
 
-#howwepay .nav-tabs > li > a {
+#howwepay .nav-tabs>li>a {
     font-size: 18px;
     color: #7b7d87;
     border: none;
-    padding: 30px 60px;
+    padding: 30px 10px;
     font-weight: normal;
 }
 
-#howwepay .nav-tabs > li:hover > a {
+#howwepay .nav-tabs>li:hover >a {
     color: #d19f42;
     background: none;
     border-radius: 0;
 }
 
-#howwepay .nav-tabs > li.active > a,
-#howwepay .nav-tabs > li.active > a:focus,
-#howwepay .nav-tabs > li.active > a:hover {
+#howwepay .nav-tabs>li.active>a,
+#howwepay .nav-tabs>li.active>a:focus,
+#howwepay .nav-tabs>li.active>a:hover {
     border-radius: 0;
     color: #fff;
     background: #d19f42;
@@ -1095,32 +1390,32 @@ body h2 {
     font-weight: 300;
 }
 
-#howwepay .table > thead > tr > th {
+#howwepay .table>thead>tr>th {
     font-size: 16px;
-    padding: 20px 60px;
+    padding: 20px;
     background: #fafafa;
     border-bottom: none;
 }
 
-#howwepay .table > tbody > tr > td {
+#howwepay .table>tbody>tr>td {
     border-top: none;
-    padding: 15px 60px;
+    padding: 15px 20px;
     border-right: solid 1px #e4e4e4;
 }
 
-#howwepay .table > tbody > tr > td:last-child {
+#howwepay .table>tbody>tr>td:last-child {
     border-right: none;
 }
 
-#howwepay .table-striped > tbody > tr {
+#howwepay .table-striped>tbody>tr {
     background-color: #f9f9f9;
 }
 
-#howwepay .table-striped > tbody > tr:nth-of-type(odd) {
+#howwepay .table-striped>tbody>tr:nth-of-type(odd) {
     background-color: #fff;
 }
 
-#howwepay .table-striped > tbody > tr:hover {
+#howwepay .table-striped>tbody>tr:hover {
     background-color: #fafafa;
 }
 
@@ -1153,6 +1448,29 @@ body h2 {
 
 #howwepay .btn.body-content:hover .fa.btn2 {
     background-position: 0 -932px;
+}
+
+.btn.body-content.dload {
+    font-weight: 500;
+    padding: 2px 4px;
+}
+
+.btn.body-content.dload span {
+    background: url(/assets/images/group-icons.png) -289px -846px no-repeat;
+    padding-left: 40px;
+    padding-top: 8px;
+    height: 32px;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.btn.body-content.dload span:hover {
+    background-position: -289px -975px;
+}
+
+.bthome {
+    color: #393939;
+    text-decoration: underline;
 }
 
 #blog {
@@ -1202,7 +1520,8 @@ body h2 {
     max-width: 100px;
 }
 
-#team hr, .webuy hr {
+#team hr,
+.webuy hr {
     margin-left: 0;
 }
 
@@ -1218,14 +1537,6 @@ body h2 {
     text-transform: none;
     font-size: 20px;
     font-weight: 700;
-}
-
-#team .btn.body-content {
-    font-size: 12px;
-    text-transform: none;
-    font-weight: 300;
-    border-width: 1px;
-    padding: 5px 20px;
 }
 
 .carousel-indicators {
@@ -1252,7 +1563,7 @@ body h2 {
     font-weight: 300;
     padding: 60px 0;
     height: 251px;
-    margin-top: 70px;
+    margin-top: 51px;
     text-align: center;
 }
 
@@ -1371,12 +1682,12 @@ body h2 {
 }
 
 .calculator .form-horizontal .form-group {
-    margin: 5px 0;
+    margin: 7px 0;
 }
 
 .bar-prd {
     background: #d7d7d7;
-    padding: 5px 0;
+    padding: 10px 0;
     margin-left: -20px;
     margin-right: -20px;
     margin-bottom: 20px;
@@ -1390,7 +1701,8 @@ body h2 {
     margin-right: 30px;
 }
 
-.bar-prd a:hover, .bar-prd a.active {
+.bar-prd a:hover,
+.bar-prd a.active {
     color: #242424;
     text-decoration: underline;
 }
@@ -1422,7 +1734,8 @@ body h2 {
     background-color: #070c12;
 }
 
-.recentpay .icon-next, .recentpay .icon-prev {
+.recentpay .icon-next,
+.recentpay .icon-prev {
     width: 26px;
     height: 42px;
     background: url(/assets/images/group-icons.png) no-repeat;
@@ -1461,7 +1774,8 @@ body h2 {
     opacity: 1;
 }
 
-.recentpay .carousel-control.right, .recentpay .carousel-control.left {
+.recentpay .carousel-control.right,
+.recentpay .carousel-control.left {
     background: none;
 }
 
@@ -1524,7 +1838,8 @@ body h2 {
     color: #414141;
 }
 
-.pricing h4, .recent-post h4 {
+.pricing h4,
+.recent-post h4 {
     color: #3c3c3c;
     font-size: 26px;
     text-align: center;
@@ -1584,7 +1899,8 @@ body h2 {
     width: 100%;
 }
 
-.body-blog ul, .body-blog ol {
+.body-blog ul,
+.body-blog ol {
     margin-left: 15px;
 }
 
@@ -1628,7 +1944,7 @@ body h2 {
     line-height: 28px;
 }
 
-.share .list-inline > li {
+.share .list-inline>li {
     padding-left: 5px;
 }
 
@@ -1637,11 +1953,13 @@ body h2 {
     padding-top: 25px;
 }
 
-.pagi a, .recent-post li a {
+.pagi a,
+.recent-post li a {
     color: #bababa;
 }
 
-.pagi a:hover, .recent-post li a:hover {
+.pagi a:hover,
+.recent-post li a:hover {
     color: #d19f42;
 }
 
@@ -1841,7 +2159,7 @@ body h2 {
 }
 
 .map-contact {
-    margin-top: 70px;
+    margin-top: 51px;
 }
 
 .place-ct {
@@ -1873,7 +2191,8 @@ body h2 {
     background-position: -289px -1161px;
 }
 
-.icon-phone-call, .icon-email-small {
+.icon-phone-call,
+.icon-email-small {
     padding-left: 28px;
 }
 
@@ -1940,48 +2259,52 @@ body h2 {
     color: #565656;
 }
 
+.navbar-toggle {
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
+        width: 54%;
+    }
     .col-md-6 {
         width: 50%;
         float: left;
     }
-
     .navbar-fixed-top.navbar-shrink .navbar-right {
         position: absolute;
         right: 10px;
     }
-
     .navbar-default .nav li a {
         padding: 25px 22px;
     }
-
     .navbar-default.navbar-shrink .nav li a {
-        padding: 10px 5px;
+        padding: 15px 5px;
         font-size: 12px;
     }
-
     header .intro-text {
         background: none;
         padding-bottom: 100px;
     }
-
     .services {
-        padding: 80px 0;
+        padding: 80px 0 20px 0;
+    ;
     }
-
     .services .col-md-4 {
         margin-bottom: 20px;
     }
-
+    .services button {
+        margin-bottom: 30px;
+    }
     body h2 {
         font-weight: 600;
         font-size: 22px;
     }
-
-    #whatwebuy .nav-tabs > li > a {
+    #whatwebuy .nav-tabs>li>a {
         font-size: 14px;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
         width: 100%;
         height: 100%;
@@ -1989,123 +2312,96 @@ body h2 {
         left: 0;
         top: 0;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
         top: 12%;
     }
-
     #whatwebuy .icon-next {
         margin-right: 0;
     }
-
     .bg-diamond {
         background: none;
     }
-
-    #howwepay .nav-tabs > li > a {
-        padding: 20px 22px;
+    #howwepay .table>thead>tr>th {
+        padding: 20px;
     }
-
     .roundabout-moveable-item {
         width: 320px;
         height: 320px;
     }
-
     #myRoundabout {
         margin-left: 124px;
         margin-top: 142px;
     }
-
     .sphere-content {
         padding-top: 25px;
     }
-
     .sphere-content h3 {
         font-size: 18px;
     }
-
     .sphere-content p {
         font-size: 13px;
     }
-
     .sphere-content .btn.body-content {
         margin-top: -39px;
         font-size: 11px;
     }
-
     #team .col-xs-12 {
         width: 50%;
     }
-
     .btn.request {
         font-size: 12px;
         font-weight: 500;
     }
-
     .sidebar-whywepay h3 {
         font-size: 22px;
     }
-
     .recentpay .icon-prev {
         margin-left: -11px;
     }
-
     .recentpay .icon-next {
         margin-right: -12px;
     }
-
     .recentpay h2 {
         margin: 5px 0;
         font-size: 18px;
     }
-
-    .fullscreen .col-sm-9, .fullscreen .col-sm-3 {
+    .fullscreen .col-sm-9,
+    .fullscreen .col-sm-3 {
         width: 100%;
     }
-
     .fullscreen .carousel {
         width: 38%;
         margin-left: 31%;
     }
-
     #whatwebuy.fullscreen .icon-next {
         margin-right: -21px;
     }
-
     #whatwebuy.fullscreen .icon-prev {
         margin-left: -21px;
     }
-
     .fullscreen .sidebar-whywepay h3 {
         text-align: center;
         margin-top: 40px;
     }
-
     .banner-thank-you .intro-heading {
         font-size: 48px;
     }
-
     .banner-thank-you .intro-lead-in {
         font-size: 18px;
     }
-
     .services h3 {
         font-size: 24px;
     }
-
     .place-ct .col-md-4 {
         width: 33.33333333%;
         float: left;
     }
-
     .radio {
         padding-right: 0;
     }
-
     .request-form h4 {
         font-size: 22px;
     }
-
     .request-form form {
         padding: 15px;
     }
@@ -2116,11 +2412,9 @@ body h2 {
         position: absolute;
         right: 40px;
     }
-
     #myRoundabout {
         margin-left: 25%;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
         width: 150px;
         height: 150px;
@@ -2128,43 +2422,33 @@ body h2 {
         left: 20%;
         top: 0;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
         top: 20%;
     }
-
     .btn.request {
         font-size: 16px;
     }
-
     .recentpay .icon-prev {
         margin-left: -15px;
     }
-
     .recentpay .icon-next {
         margin-right: -16px;
     }
-
     .sidebar-whywepay .form-horizontal .control-label {
         font-size: 12px;
     }
-
     .btn.call {
         font-size: 11px;
     }
-
     .place-ct .col-md-3 {
         width: 30%;
     }
-
     .place-ct .col-md-9 {
         width: 63%;
     }
-
     .title-form {
         font-size: 15px;
     }
-
     .radio {
         padding-right: 0;
     }
@@ -2175,62 +2459,56 @@ body h2 {
         padding-top: 30px;
         background: none;
     }
-
     header {
         padding-bottom: 30px;
     }
-
     header .col-md-6 {
         width: 50%;
         float: left;
     }
-
     header .intro-text .intro-lead-in {
         font-weight: 100;
         text-transform: uppercase;
         font-size: 38px;
         margin-bottom: 10px;
     }
-
     header .intro-text .intro-heading {
         font-size: 44px;
         line-height: 1;
     }
-
     .services .col-md-4 {
         margin-bottom: 20px;
     }
-
+    .services button {
+        margin-bottom: 30px;
+    }
+    #whatwebuy.fullscreen {
+        padding-top: 81px !important;
+    }
     #whatwebuy .col-sm-4 {
         width: 33.33333333%;
         float: left;
     }
-
     #whatwebuy .pull-right {
-        float: left !important;
+        float: left!important;
         margin-left: 15px;
     }
-
     #whatwebuy .nav.nav-tabs li {
         float: left;
         text-align: right;
         margin-right: 30px;
     }
-
     #whatwebuy .nav-tabs {
         float: left;
     }
-
     #whatwebuy .col-sm-9 {
         clear: both;
     }
-
     #whatwebuy h2 {
         margin-top: 0;
         text-align: center;
         margin-bottom: 20px;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
         width: 120px;
         height: 120px;
@@ -2238,376 +2516,36 @@ body h2 {
         left: 20%;
         top: 0;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
         top: 20%;
     }
-
     #whatwebuy .icon-next {
         margin-right: 10px;
     }
-
     .bg-diamond {
         background: none;
     }
-
     #howwepay .col-md-6 {
         width: 50%;
         float: left;
     }
-
-    #howwepay .nav-tabs > li > a {
+    #howwepay .nav-tabs>li>a {
         font-size: 15px;
-        padding: 10px;
+        padding: 10px 2px;
     }
-
-    #howwepay .table > thead > tr > th, #howwepay .table > tbody > tr > td {
+    #howwepay .table>thead>tr>th,
+    #howwepay .table>tbody>tr>td {
         font-size: 14px;
         padding: 10px;
     }
-
-    .small-screen {
-        display: block;
-    }
-
-    #myRoundabout {
-        display: none;
-    }
-
-    #contact .col-sm-5.col-md-6 {
-        clear: both;
-    }
-
-    #contact .col-sm-5.col-md-6 .col-md-5, #contact .col-sm-5.col-md-6 .col-md-7 {
-        width: 50%;
-        float: left;
-    }
-
-    section#contact #contactForm .col-md-6:first-child {
-        padding-right: 15px;
-    }
-
-    section#contact #contactForm .col-md-6:last-child {
-        padding-left: 15px;
-    }
-
-    #team .col-xs-12 {
-        width: 50%;
-    }
-
-    .navbar-header.page-scroll {
-        border-bottom: solid 1px #ddd;
-    }
-
-    .bg-banner-how {
-        margin-top: 22px;
-    }
-
-    .howtosell {
-        padding: 40px 0;
-    }
-
-    .howtosell .carousel {
-        width: 48%;
-        margin-left: 28%;
-    }
-
-    .sidebar-whywepay {
-        margin-top: 20px;
-    }
-
-    .sidebar-whywepay h3 {
-        text-align: center;
-    }
-
-    #whatwebuy .icon-next {
-        margin-right: -20px;
-    }
-
-    #whatwebuy .carousel-caption h2 {
-        margin-bottom: 10px;
-    }
-
-    .banner-thank-you {
-        margin-top: 52px;
-        padding: 80px 0;
-    }
-
-    .banner-thank-you .intro-heading {
-        font-size: 38px;
-    }
-
-    .banner-thank-you .intro-lead-in {
-        font-size: 14px;
-        font-weight: 400;
-    }
-
-    .map-contact {
-        margin-top: 52px;
-    }
-
-    .place-ct .col-md-3 {
-        width: 25%;
-        float: left;
-    }
-
-    .place-ct .col-md-9 {
-        width: 75%;
-        float: left;
-    }
-
-    .form-message .col-md-6 .row .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-
-    .list-step .col-sm-2 {
-        width: 20%;
-    }
-
-    .request-form .row .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-
-    .carousel.recentpay {
-        width: 49%;
-        margin-left: 25%;
-    }
-
-}
-
-@media only screen and (max-width: 991px) and  (orientation: landscape) {
-    header .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-
-    .navbar-fixed-top.navbar-shrink .navbar-right {
-        position: absolute;
-        right: 10px;
-    }
-
-    .navbar-default.navbar-shrink .nav li a {
-        padding: 10px 6px;
-    }
-
-    header .intro-text {
-        padding-bottom: 205px;
-        background-position: -28px bottom;
-    }
-
-    .navbar-right {
-        margin-right: 0;
-    }
-
-    .services .col-md-4 {
-        margin-bottom: 20px;
-    }
-
-    #whatwebuy h2 {
-        font-size: 23px;
-    }
-
-    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        left: 0;
-    }
-
-    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
-        top: 12%;
-    }
-
-    .bg-diamond {
-        background: none;
-    }
-
-    #howwepay .nav-tabs > li > a {
-        padding: 20px;
-    }
-
-    #myRoundabout {
-        margin-left: 100px;
-    }
-
-    #team .col-xs-12 {
-        width: 50%;
-    }
-
-    #contact .col-sm-5.col-md-6 {
-        clear: both;
-        width: 100%;
-    }
-
-    #contact .col-sm-5.col-md-6 .col-md-5, #contact .col-sm-5.col-md-6 .col-md-7 {
-        width: 50%;
-        float: left;
-    }
-
-    section#contact #contactForm .col-md-6:first-child {
-        padding-right: 15px;
-    }
-
-    section#contact #contactForm .col-md-6:last-child {
-        padding-left: 15px;
-    }
-
-    .howtosell {
-        padding: 40px 0;
-    }
-
-    .btn.request {
-        font-size: 12px;
-    }
-
-    .recentpay .icon-prev {
-        margin-left: -11px;
-    }
-
-    .recentpay .icon-next {
-        margin-right: -12px;
-    }
-
-    .recentpay h2 {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-
-    .fullscreen .col-sm-9, .fullscreen .col-sm-3 {
-        width: 100%;
-    }
-
-    .fullscreen .carousel {
-        width: 38%;
-        margin-left: 31%;
-    }
-
-    #whatwebuy.fullscreen .icon-next {
-        margin-right: -21px;
-    }
-
-    #whatwebuy.fullscreen .icon-prev {
-        margin-left: -21px;
-    }
-
-    .fullscreen .sidebar-whywepay h3 {
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .map-contact {
-        margin-top: 71px;
-    }
-
-    .map-contact iframe {
-        height: 280px;
-    }
-
-    .place-ct .col-md-3 {
-        width: 25%;
-        float: left;
-    }
-
-    .place-ct .col-md-9 {
-        width: 75%;
-        float: left;
-    }
-
-    .form-message .col-md-6 .row .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-
-    footer .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-
-    .request-form h4 {
-        font-size: 22px;
-    }
-
-    .request-form form {
-        padding: 15px;
-    }
-
-}
-
-@media only screen and (max-width: 768px)   and  (orientation: landscape) {
-    header .intro-text {
-        padding-top: 54px;
-    }
-
-    #howwepay .col-sm-5, footer .col-md-6 {
-        width: 50%;
-    }
-
-    footer .col-md-6 {
-        float: left;
-    }
-
-    .navbar-default .nav li a {
-        font-size: 11px;
-    }
-
-    .navbar-default.navbar-shrink .nav li a {
-        padding: 10px 5px;
-    }
-
-    .banner-thank-you .intro-heading {
-        font-size: 48px;
-    }
-
-    .banner-thank-you .intro-lead-in {
-        font-size: 18px;
-    }
-
-    .map-contact iframe {
-        height: 200px;
-    }
-
-    .webuy ul {
-        padding: 0;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    #howwepay .nav-tabs > li > a {
-        font-size: 12px;
-        padding: 5px;
-    }
-
-    #team .col-xs-12 {
-        width: 100%;
-    }
-
-    header .intro-text .intro-lead-in {
-        font-size: 28px;
-        margin-bottom: 10px;
-        font-weight: 100;
-    }
-
-    header .intro-text .intro-heading {
-        font-size: 32px;
-        line-height: 1;
-    }
-
-    header .phone-banner {
-        font-size: 22px;
-    }
-
     #howwepay .panel-heading {
         overflow: hidden;
         padding: 0;
     }
-
     #howwepay h4.panel-title {
         text-transform: none;
         font-weight: 500;
     }
-
     #howwepay .panel-title a {
         padding: 15px 0;
         background: #2b3042;
@@ -2615,64 +2553,356 @@ body h2 {
         width: 100%;
         display: block;
     }
-
     #howwepay .panel-title a[aria-expanded="true"] {
         background-color: #d19f42;
         color: #fff;
     }
-
-    #howwepay .panel-body {
+    #howwepay .panel-body,
+    #howwepay .panel-group .panel {
         padding: 0;
     }
+    .small-screen {
+        display: block;
+    }
+    #myRoundabout {
+        display: none;
+    }
+    #contact .col-sm-5.col-md-6 {
+        clear: both;
+    }
+    #contact .col-sm-5.col-md-6 .col-md-5,
+    #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 50%;
+        float: left;
+    }
+    section#contact #contactForm .col-md-6:first-child {
+        padding-right: 15px;
+    }
+    section#contact #contactForm .col-md-6:last-child {
+        padding-left: 15px;
+    }
+    #team .col-xs-12 {
+        width: 50%;
+    }
+    .navbar-header.page-scroll {
+        border-bottom: solid 1px #ddd;
+    }
+    .bg-banner-how {
+        margin-top: 22px;
+    }
+    .howtosell {
+        padding: 70px 0 40px;
+    }
+    .howtosell .carousel {
+        width: 48%;
+        margin-left: 28%;
+    }
+    .sidebar-whywepay {
+        margin-top: 20px;
+    }
+    .sidebar-whywepay h3 {
+        text-align: center;
+    }
+    #whatwebuy .icon-next {
+        margin-right: -20px;
+    }
+    #whatwebuy .carousel-caption h2 {
+        margin-bottom: 10px;
+    }
+    .banner-thank-you {
+        margin-top: 52px;
+        padding: 80px 0;
+    }
+    .banner-thank-you .intro-heading {
+        font-size: 38px;
+    }
+    .banner-thank-you .intro-lead-in {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .map-contact {
+        margin-top: 52px;
+    }
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .list-step .col-sm-2 {
+        width: 20%;
+    }
+    .request-form .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .carousel.recentpay {
+        width: 49%;
+        margin-left: 25%;
+    }
+}
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+    header .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 10px;
+    }
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 15px 5px;
+    }
+    header .intro-text {
+        padding-bottom: 205px;
+        background-position: -28px bottom;
+    }
+    .navbar-right {
+        margin-right: 0;
+    }
+    .services .col-md-4 {
+        margin-bottom: 20px;
+    }
+    .services button {
+        margin-bottom: 30px;
+    }
+    #whatwebuy h2 {
+        font-size: 23px;
+    }
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
         width: 100%;
         height: 100%;
         border-radius: 0;
         left: 0;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
         top: 12%;
     }
-
-    #whatwebuy span.mb20 {
-        margin-bottom: 10px !important;
+    .bg-diamond {
+        background: none;
     }
-
+    #howwepay .nav-tabs>li>a {
+        padding: 20px 13px;
+    }
+    #howwepay .table>thead>tr>th {
+        padding: 20px;
+    }
+    #myRoundabout {
+        margin-left: 100px;
+    }
+    #team .col-xs-12 {
+        width: 50%;
+    }
+    #contact .col-sm-5.col-md-6 {
+        clear: both;
+        width: 100%;
+    }
+    #contact .col-sm-5.col-md-6 .col-md-5,
+    #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 50%;
+        float: left;
+    }
+    section#contact #contactForm .col-md-6:first-child {
+        padding-right: 15px;
+    }
+    section#contact #contactForm .col-md-6:last-child {
+        padding-left: 15px;
+    }
+    .howtosell {
+        padding: 60px 0 40px;
+    }
+    .howtosell .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .btn.request {
+        font-size: 12px;
+    }
     .recentpay .icon-prev {
-        margin-left: -16px;
+        margin-left: -11px;
     }
-
     .recentpay .icon-next {
-        margin-right: -16px;
+        margin-right: -12px;
     }
-
-    #whatwebuy.fullscreen .recentpay .icon-next {
-        margin-right: -15px;
-    }
-
-    .webuy ul {
-        padding: 0;
-    }
-
-    .sidebar-whywepay h3 {
-        margin-top: 20px;
-    }
-
     .recentpay h2 {
         font-size: 20px;
         margin-top: 10px;
     }
+    .fullscreen .col-sm-9,
+    .fullscreen .col-sm-3 {
+        width: 100%;
+    }
+    .fullscreen .carousel {
+        width: 38%;
+        margin-left: 31%;
+    }
+    #whatwebuy.fullscreen .icon-next {
+        margin-right: -21px;
+    }
+    #whatwebuy.fullscreen .icon-prev {
+        margin-left: -21px;
+    }
+    .fullscreen .sidebar-whywepay h3 {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .map-contact {
+        margin-top: 71px;
+    }
+    .map-contact iframe {
+        height: 280px;
+    }
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    footer .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .request-form h4 {
+        font-size: 22px;
+    }
+    .request-form form {
+        padding: 15px;
+    }
+}
 
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    header .intro-text {
+        padding-top: 54px;
+    }
+    #howwepay .col-sm-5,
+    footer .col-md-6 {
+        width: 50%;
+    }
+    footer .col-md-6 {
+        float: left;
+    }
+    .navbar-default .nav li a {
+        font-size: 11px;
+    }
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
+        width: 55%;
+    }
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 15px 5px;
+    }
+    .services {
+        padding-bottom: 10px;
+    }
+    .banner-thank-you .intro-heading {
+        font-size: 48px;
+    }
+    .banner-thank-you .intro-lead-in {
+        font-size: 18px;
+    }
+    .map-contact iframe {
+        height: 200px;
+    }
+    .webuy ul {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #howwepay .nav-tabs>li>a {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .howtosell {
+        padding-top: 60px;
+    }
+    #team .col-xs-12 {
+        width: 100%;
+    }
+    header .intro-text .intro-lead-in {
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-weight: 100;
+    }
+    header .intro-text .intro-heading {
+        font-size: 32px;
+        line-height: 1;
+    }
+    header .phone-banner {
+        font-size: 22px;
+    }
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+    #howwepay .panel-body,
+    #howwepay .panel-group .panel {
+        padding: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 12%;
+    }
+    #whatwebuy span.mb20 {
+        margin-bottom: 10px !important;
+    }
+    .recentpay .icon-prev {
+        margin-left: -16px;
+    }
+    .recentpay .icon-next {
+        margin-right: -16px;
+    }
+    #whatwebuy.fullscreen .recentpay .icon-next {
+        margin-right: -15px;
+    }
+    .webuy ul {
+        padding: 0;
+    }
+    .sidebar-whywepay h3 {
+        margin-top: 20px;
+    }
+    .recentpay h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
     .banner-thank-you .intro-heading {
         font-size: 28px;
     }
-
     .banner-thank-you .intro-lead-in {
         font-size: 13px;
     }
-
     .map-contact iframe {
         height: 250px;
     }
@@ -2683,195 +2913,168 @@ body h2 {
         font-size: 18px;
         margin-bottom: 0;
     }
-
     header .intro-text .intro-heading {
         font-size: 20px;
     }
-
     header a.sub-phone {
         display: none;
     }
-
     .navbar-brand {
         padding: 14px 0 0 15px;
         width: 258px;
     }
-
-    #whatwebuy .nav-tabs > li > a {
+    #whatwebuy.fullscreen {
+        padding-top: 50px !important;
+    }
+    #whatwebuy .nav-tabs>li>a {
         font-size: 12px;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
         top: 25%;
     }
-
     #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content strong {
         margin-bottom: 10px;
         display: block;
         font-size: 16px;
     }
-
     #whatwebuy span {
         display: none;
     }
-
-    .webuy, section, #team {
+    .webuy,
+    section,
+    #team {
         padding: 40px 0;
     }
-
     #howwepay .col-md-6 {
         width: 100%;
         text-align: center !important;
     }
-
     .tfoot-tbl {
         padding: 20px;
     }
-
     .bg-blue-dark {
         height: 515px;
     }
-
-    #contact .col-sm-5.col-md-6 .col-md-5, #contact .col-sm-5.col-md-6 .col-md-7 {
+    #contact .col-sm-5.col-md-6 .col-md-5,
+    #contact .col-sm-5.col-md-6 .col-md-7 {
         width: 100%;
         clear: both;
     }
-
     .bg-banner-how p {
         font-size: 13px;
     }
-
     .akordeon-heading {
         padding-top: 11px;
         font-size: 16px;
     }
-
     .recentpay .icon-prev {
         margin-left: -12px;
     }
-
     .recentpay .icon-next {
         margin-right: -12px;
     }
-
     #whatwebuy .recentpay.carousel-control span {
         display: block;
     }
-
     #whatwebuy.fullscreen {
         margin-top: 40px;
     }
-
     .about-page {
         margin-top: 20px;
     }
-
     .banner-thank-you .intro-heading {
         font-size: 22px;
     }
-
     .place-ct .col-md-3 {
         width: 28%;
     }
-
     .place-ct .col-md-9 {
         width: 64%;
     }
-
     .pagi {
         padding-top: 17px;
     }
-
     .request-form form {
         padding: 15px;
     }
-
     #whatwebuy .carousel.recentpay span {
         display: block;
     }
-
     #whatwebuy .whatwebuy-item {
         width: 28%
     }
 }
 
-@media only screen and (max-width: 767px) and (min-width: 480px) and  (orientation: landscape) {
+@media only screen and (max-width: 767px) and (min-width: 480px) and (orientation: landscape) {
     header .intro-text .intro-lead-in {
         font-size: 32px;
         margin-bottom: 0;
     }
-
     header .intro-text .intro-heading {
         font-size: 36px;
     }
-
     header .intro-text {
         padding-bottom: 10px;
     }
-
-    #howwepay .nav-tabs > li > a {
+    #howwepay .nav-tabs>li>a {
         padding: 9px;
     }
-
     .akordeon-heading {
         font-size: 14px;
         padding-left: 6px;
         padding-top: 12px;
     }
-
     .bg-banner-how {
         height: 224px;
     }
-
     .banner-thank-you .intro-heading {
         font-size: 40px;
     }
-
     .banner-thank-you .intro-lead-in {
         font-size: 15px;
     }
-
     .map-contact {
         margin-top: 52px;
     }
-
     .recentpay.carousel {
         width: 46%;
     }
-
     .recentpay .icon-prev {
         margin-left: -21px;
     }
-
     .recentpay .icon-next {
         margin-right: -21px;
     }
-
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 10px;
+        width: 100%;
+        padding: 10px;
+        overflow: auto;
+        max-height: 245px;
+        background-color: #fff;
+    }
 }
 
 @media only screen and (max-width: 320px) and (orientation: portrait) {
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
-        width: 80%;
+        width: 78%;
+        margin-top: 5px;
     }
-
     header .intro-text .intro-lead-in {
         font-size: 18px;
     }
-
     header .phone-banner {
         font-size: 18px;
     }
-
     #howwepay .panel-heading {
         overflow: hidden;
         padding: 0;
     }
-
     #howwepay h4.panel-title {
         text-transform: none;
         font-weight: 500;
     }
-
     #howwepay .panel-title a {
         padding: 15px 0;
         background: #2b3042;
@@ -2879,51 +3082,41 @@ body h2 {
         width: 100%;
         display: block;
     }
-
     #howwepay .panel-title a[aria-expanded="true"] {
         background-color: #d19f42;
         color: #fff;
     }
-
     #howwepay .panel-body {
         padding: 0;
     }
-
     .webuy ul {
         padding: 0;
     }
-
-    #whatwebuy, #howwepay {
+    #whatwebuy,
+    #howwepay {
         padding-bottom: 20px;
     }
-
     #whatwebuy .nav.nav-tabs li {
         margin-right: 22px;
     }
-
     #whatwebuy .carousel {
         width: 90%;
         margin: 10px 20px;
     }
-
     .bg-blue-dark .title {
         width: 90%;
     }
-
     .sphere-content {
         width: 90%;
     }
-
     footer span.copyright {
         display: block;
         text-align: center;
         margin-bottom: 10px;
     }
-
     footer .col-md-6 {
         text-align: center !important;
     }
-
     #whatwebuy .whatwebuy-item {
         width: 31.7%;
     }
@@ -2934,12 +3127,10 @@ body h2 {
         overflow: hidden;
         padding: 0;
     }
-
     #howwepay h4.panel-title {
         text-transform: none;
         font-weight: 500;
     }
-
     #howwepay .panel-title a {
         padding: 15px 0;
         background: #2b3042;
@@ -2947,34 +3138,27 @@ body h2 {
         width: 100%;
         display: block;
     }
-
     #howwepay .panel-title a[aria-expanded="true"] {
         background-color: #d19f42;
         color: #fff;
     }
-
     #howwepay .panel-body {
         padding: 0;
     }
-
     .webuy ul {
         padding: 0;
     }
-
     #whatwebuy .carousel {
         width: 94%;
         margin-left: 16px;
         margin-top: 16px;
     }
-
     .recentpay .icon-prev {
         margin-left: -17px;
     }
-
     .recentpay .icon-next {
         margin-right: -17px;
     }
-
     #whatwebuy .carousel.recentpay {
         width: 49%;
         margin-left: 25%;
@@ -2985,45 +3169,37 @@ body h2 {
     header img {
         width: 100%;
     }
-
     header .intro-text .intro-lead-in {
         font-size: 20px;
         margin-bottom: 0;
     }
-
     header .intro-text .intro-heading {
         font-size: 23px;
     }
-
     #whatwebuy .nav.nav-tabs li {
         margin-right: 16px;
     }
-
     .webuy ul {
         padding: 0;
     }
-
     #howwepay .col-md-6 {
         width: 100%;
         float: none;
         text-align: center;
     }
-
     .tfoot-tbl {
         padding: 20px;
         text-align: center;
     }
-
-    .sphere-content, .bg-blue-dark .title {
+    .sphere-content,
+    .bg-blue-dark .title {
         width: 90%;
     }
-
     footer span.copyright {
         display: block;
         text-align: center;
         margin-bottom: 10px;
     }
-
     footer .col-md-6 {
         text-align: center !important;
     }
@@ -3034,12 +3210,10 @@ body h2 {
         overflow: hidden;
         padding: 0;
     }
-
     #howwepay h4.panel-title {
         text-transform: none;
         font-weight: 500;
     }
-
     #howwepay .panel-title a {
         padding: 15px 0;
         background: #2b3042;
@@ -3047,16 +3221,13 @@ body h2 {
         width: 100%;
         display: block;
     }
-
     #howwepay .panel-title a[aria-expanded="true"] {
         background-color: #d19f42;
         color: #fff;
     }
-
     #howwepay .panel-body {
         padding: 0;
     }
-
     .webuy ul {
         padding: 0;
     }

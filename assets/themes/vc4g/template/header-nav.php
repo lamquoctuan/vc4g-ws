@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="index.html"><img src="/assets/images/logo.png" /></a>
+            <a class="navbar-brand page-scroll" href="<?php echo site_url();?>"><img src="/assets/images/logo.png" /></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
