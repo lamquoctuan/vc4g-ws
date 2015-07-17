@@ -7,9 +7,10 @@ function getPurchasedItems($types = array()) {
         }
     }
     $args = array(
-        'post_type' => 'purchased_item',
-        'orderby'   => 'meta_value',
-        'meta_key'  => 'type',
+        'post_type'         => 'purchased_item',
+        'orderby'           => 'meta_value',
+        'meta_key'          => 'type',
+        'posts_per_page'    => -1,
     );
     $theQuery = new WP_Query( $args );
     while( $theQuery->have_posts() ) {

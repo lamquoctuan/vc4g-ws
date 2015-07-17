@@ -55,26 +55,23 @@ endif; // vc4g_setup
 add_action('after_setup_theme', 'vc4g_setup');
 
 /**
- * Register widget area.
+ * Register widget area Blog Sidebar.
  *
- * @since Twenty Fifteen 1.0
- *
- * @link https://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function vc4g_widgets_init()
+function vc4g_blog_widgets_init()
 {
     register_sidebar(array(
-        'name' => __('Widget Area', 'vc4g'),
-        'id' => 'sidebar-1',
-        'description' => __('Add widgets here to appear in your sidebar.', 'vc4g'),
+        'name' => __('Blog Sidebar', 'vc4g'),
+        'id' => 'sidebar-blog',
+        'description' => __('Add widgets here to appear in your blog sidebar.', 'vc4g'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => '</aside>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
     ));
 }
 
-add_action('widgets_init', 'vc4g_widgets_init');
+add_action('widgets_init', 'vc4g_blog_widgets_init');
 
 if (!function_exists('vc4g_fonts_url')) :
     /**
