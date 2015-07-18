@@ -1228,6 +1228,11 @@ a.sub-phone:hover {
     height: 54px;
 }
 
+#contact .wi {
+    font-size: 44px;
+    font-weight: lighter;
+}
+
 body h2 {
     font-weight: 900;
     font-size: 26px;

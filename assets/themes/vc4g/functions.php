@@ -1,4 +1,7 @@
 <?php
+if (! defined('CUR_THEME_DIR')) {
+    define('CUR_THEME_DIR', get_template_directory());
+}
 if (!function_exists('vc4g_setup')) :
     function vc4g_setup()
     {
@@ -139,9 +142,13 @@ function vc4g_scripts()
 
     // Add custom fonts, used in the main stylesheet.
     wp_enqueue_style('vc4g-font-awesome', WP_CONTENT_URL . '/font-awesome/css/font-awesome.min.css');
+    wp_enqueue_style('vc4g-weather-icons', WP_CONTENT_URL . '/weather-icons/css/weather-icons.css');
+//    wp_enqueue_style('vc4g-weather-icons', '//cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.css');
+
     wp_enqueue_style('vc4g-fonts', vc4g_fonts_url());
 
     wp_enqueue_style('vc4g-bootstrap', WP_CONTENT_URL . '/css/bootstrap.min.css');
+
     // Load our main stylesheet.
     wp_enqueue_style('vc4g-style', WP_CONTENT_URL . '/css/styles.css');
     if (!is_front_page() && !is_home()) {
@@ -200,5 +207,5 @@ function no_wordpress_errors()
 add_filter('login_errors', 'no_wordpress_errors');
 define('DISALLOW_FILE_EDIT', true);
 
-include_once 'inc/post_types.php';
-include_once 'inc/functions.php';
+include_once CUR_THEME_DIR . '/inc/post_types.php';
+include_once CUR_THEME_DIR . '/inc/functions.php';
