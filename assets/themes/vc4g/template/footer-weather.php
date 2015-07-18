@@ -8,5 +8,5 @@ echo setWeatherIcon($condition->code);
 ?>
 <p><?php echo $condition->text;?></p>
 <!--<i class="fa icon-snow"></i>-->
-<p class="temperature"><?php echo $condition->temp;?><sup>o</sup>F</p>
+<p class="temperature"><?php echo $condition->temp;?><sup>o</sup></p>
 <p><?php echo setWarmMessageBy($condition->code);?></p>
