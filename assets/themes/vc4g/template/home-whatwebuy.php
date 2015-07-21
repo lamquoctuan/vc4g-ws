@@ -7,8 +7,8 @@ $types = array_keys($purchasedItems);
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <h2 class="text-right">What we buy</h2>
-                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <h2 class="text-right pr10">What we buy</h2>
+                <ul id="tabs" class="nav nav-tabs pr10" data-tabs="tabs">
 <?php foreach ($types as $type) {
     $index = array_search($type, $types);
     ?>

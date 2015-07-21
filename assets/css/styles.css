@@ -715,6 +715,12 @@ section h3.section-subheading {
     z-index: 2;
 }
 
+#prd-gold .whatwebuy-item {
+  padding-right: 11px;
+  padding-left: 11px;
+}
+#prd-gold .row {margin-left:5px;}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
@@ -818,7 +824,7 @@ section#contact #contactForm .col-md-6:first-child {
     padding-right: 2px
 }
 
-section#contact #contactForm .col-md-6:last-child {
+section#contact #contactForm .col-md-6:last-chifld {
     padding-left: 2px
 }
 
@@ -1226,11 +1232,6 @@ a.sub-phone:hover {
     background-position: -539px -166px;
     width: 51px;
     height: 54px;
-}
-
-#contact .wi {
-    font-size: 44px;
-    font-weight: lighter;
 }
 
 body h2 {
@@ -2085,7 +2086,7 @@ section hr {
     padding-right: 20px;
     font-size: 18px;
     line-height: 38px;
-    cursor: pointer;
+    cursor: pointe;
     margin-top: 5px;
     margin-bottom: 0;
 }
@@ -2295,7 +2296,7 @@ section hr {
     }
     .services {
         padding: 80px 0 20px 0;
-    ;
+        ;
     }
     .services .col-md-4 {
         margin-bottom: 20px;

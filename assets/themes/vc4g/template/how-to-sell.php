@@ -50,14 +50,14 @@
                 }
                 $datePublished = 0;
                 ?>
-                <ul class="nav nav-tabs responsive">
-                    <li class="active">
+                <ul class="nav nav-tabs responsive row row-offset-0">
+                    <li class="col-md-2 active">
                         <a data-toggle="tab" href="#tab1">Gold Rates</a>
                     </li>
-                    <li>
+                    <li class="col-md-5">
                         <a data-toggle="tab" href="#tab2">Gold Bullion and Coin Rates</a>
                     </li>
-                    <li>
+                    <li class="col-md-5">
                         <a data-toggle="tab" href="#tab3">Dental Gold Rates & Silver Rates</a>
                     </li>
                 </ul>
@@ -69,9 +69,9 @@
                     <div id="tab1" class="tab-pane fade active in">
                         <table class="table table-striped table-hover footable toggle-medium">
                             <thead>
-                            <th>Scrap Gold</th>
-                            <th data-hide="all">Individuals (<100g)</th>
-                            <th data-hide="all" class="text-right">Lots (>=100g)</th>
+                                <th>Scrap Gold</th>
+                                <th data-hide="all">Individuals (<100g)</th>
+                                <th data-hide="all" class="text-right">Lots (>=100g)</th>
                             </thead>
                             <tbody>
                             <?php
@@ -102,172 +102,100 @@
                     <div id="tab2" class="tab-pane fade">
                         <table class="table table-striped table-hover footable toggle-medium">
                             <thead>
-                            <th>Gold bar .999</th>
-                            <th data-hide="all">Canadian Gold Coin</th>
-                            <th data-hide="all">Other Gold Coins</th>
+                                <th>Gold bar .999</th>
+                                <th data-hide="all">Canadian Gold Coin</th>
+                                <th data-hide="all">Other Gold Coins</th>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td class="text-left">
-                                    <table class="table table-striped table-hover toggle-medium">
-                                        <tbody>
-                                        <?php
-                                        $goldBarsArgs = array();
-                                        $goldBarsIds = get_objects_in_term( $termsMap['gold-bars-999']['id'], 'rate', $goldBarsArgs );
-                                        foreach ($goldBarsIds as $goldBarsId) :
-                                            $type = get_field('type', $goldBarsId);
-                                            $price = get_field('price', $goldBarsId);
-                                            if ($price == false) {
-                                                $price = 0;
-                                            }
-                                            $dateModified = strtotime(get_the_date('Y-m-d H:i:s', $goldBarsId));
-                                            if ($dateModified > $datePublished) {
-                                                $datePublished = $dateModified;
-                                            } ?>
-                                            <tr>
-                                                <td class="text-left"><?php echo $type;?></td>
-                                                <td class="text-right">$<?php echo number_format($price, 2);?>/g</td>
-                                            </tr>
-                                        <?php
-                                        endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table class="table table-striped table-hover toggle-medium">
-                                        <tbody>
-                                        <?php
-                                        $coinCanArgs = array();
-                                        $coinCanIds = get_objects_in_term( $termsMap['canadian-gold-coins']['id'], 'rate', $coinCanArgs );
-                                        foreach ($coinCanIds as $coinCanId) :
-                                            $type = get_field('type', $coinCanId);
-                                            $price = get_field('price', $coinCanId);
-                                            if ($price == false) {
-                                                $price = 0;
-                                            }
-                                            $dateModified = strtotime(get_the_date('Y-m-d H:i:s', $coinCanId));
-                                            if ($dateModified > $datePublished) {
-                                                $datePublished = $dateModified;
-                                            } ?>
-                                            <tr>
-                                                <td class="text-left"><?php echo $type;?></td>
-                                                <td class="text-right">$<?php echo number_format($price, 2);?>/g</td>
-                                            </tr>
-                                        <?php
-                                        endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="text-right">
+                                <?php
+                                $tab2Data = array();
+                                $goldBarsArgs = array();
+                                $goldBarsIds = get_objects_in_term( $termsMap['gold-bars-999']['id'], 'rate', $goldBarsArgs );
+                                $coinCanArgs = array();
+                                $coinCanIds = get_objects_in_term( $termsMap['canadian-gold-coins']['id'], 'rate', $coinCanArgs );
+                                $coinOtherArgs = array();
+                                $coinOtherIds = get_objects_in_term( $termsMap['canadian-gold-coins']['id'], 'rate', $coinOtherArgs );
+                                array_push($tab2Data, $goldBarsIds, $coinCanIds, $coinOtherIds);
+                                $idx = 0;
+                                while (isset($goldBarsIds[$idx]) || isset($coinCanIds[$idx]) || isset($coinOtherIds[$idx])) : ?>
+                                <tr>
+                                <?php
+                                    for ($i=0; $i<3;$i++) : ?> 
+                                    <td class="text-left">
                                     <?php
-                                    $coinOtherArgs = array();
-                                    $coinOtherIds = get_objects_in_term( $termsMap['canadian-gold-coins']['id'], 'rate', $coinOtherArgs );
-                                    foreach ($coinOtherIds as $coinOtherId) :
-                                    $type = get_field('type', $coinOtherId);
-                                    $price = get_field('price', $coinOtherId);
-                                    if ($price == false) {
-                                        $price = 0;
-                                    }
-                                    $dateModified = strtotime(get_the_date('Y-m-d H:i:s', $coinOtherId));
-                                    if ($dateModified > $datePublished) {
-                                        $datePublished = $dateModified;
-                                    } ?>
-                            <tr>
-                                <td class="text-left"><?php echo $type;?></td>
-                                <td class="text-right">$<?php echo number_format($price, 2);?>/g</td>
-                            </tr>
-                            <?php
-                            endforeach; ?>
-                            </td>
-                            </tr>
+                                        if (isset($tab2Data[$i][$idx])) {
+                                            $type = get_field('type', $tab2Data[$i][$idx]);
+                                            $price = get_field('price', $tab2Data[$i][$idx]);
+                                            if ($price == false) {
+                                                $price = 0;
+                                            }
+                                            $dateModified = strtotime(get_the_date('Y-m-d H:i:s', $tab2Data[$i][$idx]));
+                                            if ($dateModified > $datePublished) {
+                                                $datePublished = $dateModified;
+                                            } ?>
+                                        <div class="row">
+                                            <div class="col-md-6"><?php echo $type;?></div>
+                                            <div class="col-md-6 text-right">$<?php echo number_format($price, 2);?>/g</div>
+                                        </div>
+                                        <?php
+                                        } ?>
+                                    </td>
+                                    <?php
+                                    endfor;
+                                    $idx++; ?>
+                                </tr>
+                                <?php
+                                endwhile; ?>
                             </tbody>
                         </table>
                     </div>
                     <div id="tab3" class="tab-pane fade">
                         <table class="table table-striped table-hover footable toggle-medium">
                             <thead>
-                            <th>Dental Gold Rates</th>
-                            <th data-hide="all">Silver Rates</th>
-                            <th data-hide="all">Silver Bars</th>
+                                <th>Dental Gold Rates</th>
+                                <th data-hide="all">Silver Rates</th>
+                                <th data-hide="all">Silver Bars</th>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td class="text-left">
-                                    <table class="table table-striped table-hover toggle-medium">
-                                        <tbody>
-                                        <?php
-                                        $dentalArgs = array();
-                                        $dentalIds = get_objects_in_term( $termsMap['dental-gold-rates']['id'], 'rate', $dentalArgs );
-                                        foreach ($dentalIds as $dentalId) :
-                                            $type = get_field('type', $dentalId);
-                                            $price = get_field('price', $dentalId);
+                                <?php
+                                $tab3Data = array();
+                                $dentalArgs = array();
+                                $dentalIds = get_objects_in_term( $termsMap['dental-gold-rates']['id'], 'rate', $dentalArgs );
+                                $silverRateArgs = array();
+                                $silverRateIds = get_objects_in_term( $termsMap['silver-rates']['id'], 'rate', $silverRateArgs );
+                                $silverBarArgs = array();
+                                $silverBarIds = get_objects_in_term( $termsMap['silver-bars']['id'], 'rate', $silverBarArgs );
+                                array_push($tab3Data, $goldBarsIds, $coinCanIds, $coinOtherIds);
+                                $idx = 0;
+                                while (isset($dentalIds[$idx]) || isset($silverRateIds[$idx]) || isset($silverBarIds[$idx])) : ?>
+                                <tr>
+                                <?php
+                                    for ($i=0; $i<3;$i++) : ?> 
+                                    <td class="text-left">
+                                    <?php
+                                        if (isset($tab3Data[$i][$idx])) {
+                                            $type = get_field('type', $tab3Data[$i][$idx]);
+                                            $price = get_field('price', $tab3Data[$i][$idx]);
                                             if ($price == false) {
                                                 $price = 0;
                                             }
-                                            $dateModified = strtotime(get_the_date('Y-m-d H:i:s', $dentalId));
+                                            $dateModified = strtotime(get_the_date('Y-m-d H:i:s', $tab3Data[$i][$idx]));
                                             if ($dateModified > $datePublished) {
                                                 $datePublished = $dateModified;
                                             } ?>
-                                            <tr>
-                                                <td class="text-left"><?php echo $type;?></td>
-                                                <td class="text-right">$<?php echo number_format($price, 2);?>/g</td>
-                                            </tr>
+                                        <div class="row">
+                                            <div class="col-md-6"><?php echo $type;?></div>
+                                            <div class="col-md-6 text-right">$<?php echo number_format($price, 2);?>/g</div>
+                                        </div>
                                         <?php
-                                        endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td>
-                                    <table class="table table-striped table-hover toggle-medium">
-                                        <tbody>
-                                        <?php
-                                        $silverRateArgs = array();
-                                        $silverRateIds = get_objects_in_term( $termsMap['silver-rates']['id'], 'rate', $silverRateArgs );
-                                        foreach ($silverRateIds as $silverRateId) :
-                                            $type = get_field('type', $silverRateId);
-                                            $price = get_field('price', $silverRateId);
-                                            if ($price == false) {
-                                                $price = 0;
-                                            }
-                                            $dateModified = strtotime(get_the_date('Y-m-d H:i:s', $silverRateId));
-                                            if ($dateModified > $datePublished) {
-                                                $datePublished = $dateModified;
-                                            } ?>
-                                            <tr>
-                                                <td class="text-left"><?php echo $type;?></td>
-                                                <td class="text-right">$<?php echo number_format($price, 2);?>/g</td>
-                                            </tr>
-                                        <?php
-                                        endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="text-right">
-                                    <table class="table table-striped table-hover toggle-medium">
-                                        <tbody>
-                                        <?php
-                                        $silverBarArgs = array();
-                                        $silverBarIds = get_objects_in_term( $termsMap['silver-bars']['id'], 'rate', $silverBarArgs );
-                                        foreach ($silverBarIds as $silverBarId) :
-                                            $type = get_field('type', $silverBarId);
-                                            $price = get_field('price', $silverBarId);
-                                            if ($price == false) {
-                                                $price = 0;
-                                            }
-                                            $dateModified = strtotime(get_the_date('Y-m-d H:i:s', $silverBarId));
-                                            if ($dateModified > $datePublished) {
-                                                $datePublished = $dateModified;
-                                            } ?>
-                                            <tr>
-                                                <td class="text-left"><?php echo $type;?></td>
-                                                <td class="text-right">$<?php echo number_format($price, 2);?>/g</td>
-                                            </tr>
-                                        <?php
-                                        endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
+                                        } ?>
+                                    </td>
+                                    <?php
+                                    endfor;
+                                    $idx++; ?>
+                                </tr>
+                                <?php
+                                endwhile; ?>
                             </tbody>
                         </table>
                     </div>
