@@ -107,3 +107,43 @@ function vc4g_price_init() {
 
     register_post_type( 'price', $args );
 }
+
+add_action( 'init', 'vc4g_testimonial_init' );
+/**
+ * Register a testimonial post type.
+ *
+ */
+function vc4g_testimonial_init() {
+    $labels = array(
+        'name'               => _x( 'Testimonials', 'post type general name', 'vc4g' ),
+        'singular_name'      => _x( 'Testimonial', 'post type singular name', 'vc4g' ),
+        'menu_name'          => _x( 'Testimonials', 'admin menu', 'vc4g' ),
+        'name_admin_bar'     => _x( 'Testimonial', 'add new on admin bar', 'vc4g' ),
+        'add_new'            => _x( 'Add New', 'testimonial', 'vc4g' ),
+        'add_new_item'       => __( 'Add New Testimonial', 'vc4g' ),
+        'new_item'           => __( 'New Testimonial', 'vc4g' ),
+        'edit_item'          => __( 'Edit Testimonial', 'vc4g' ),
+        'view_item'          => __( 'View Testimonial', 'vc4g' ),
+        'all_items'          => __( 'All Testimonials', 'vc4g' ),
+        'search_items'       => __( 'Search Testimonials', 'vc4g' ),
+        'parent_item_colon'  => __( 'Parent Testimonials:', 'vc4g' ),
+        'not_found'          => __( 'No testimonials found.', 'vc4g' ),
+        'not_found_in_trash' => __( 'No testimonials found in Trash.', 'vc4g' )
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => false,
+        'show_ui'             => true,
+        'query_var'          => false,
+        'can_export'         => true,
+        'rewrite'            => false,
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'revisions' )
+    );
+
+    register_post_type( 'testimonial', $args );
+}
