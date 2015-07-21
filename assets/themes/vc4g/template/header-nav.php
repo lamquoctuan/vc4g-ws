@@ -35,7 +35,7 @@
                     }
                     $menu_list .= '<li'. $class . '><a href="' . $url . '">' . $title . '</a></li>';
                 }
-                $menu_list .= '<li class="phone-text"><a class="sub-phone"><b class="icon-phone"></b>604-558-2026</a></li>';
+                $menu_list .= '<li class="phone-text"><a class="sub-phone" href="tel:16045582026"><b class="icon-phone"></b>604-558-2026</a></li>';
                 $menu_list .= '</ul>';
                 echo $menu_list;
             }

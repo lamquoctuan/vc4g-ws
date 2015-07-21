@@ -37,7 +37,7 @@
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
                 <li class="phone-text">
-                    <a class="sub-phone"><b class="icon-phone"></b>604-558-2026</a>
+                    <a class="sub-phone" href="tel:16045582026"><b class="icon-phone"></b>604-558-2026</a>
                 </li>
             </ul>
         </div>
