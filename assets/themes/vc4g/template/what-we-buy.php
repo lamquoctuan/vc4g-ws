@@ -97,7 +97,7 @@ endif;
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-xs-3 control-label btn">Result</label>
+                            <label class="col-xs-3 control-label btn">Calculate</label>
                             <div class="col-xs-9">
                                 <input type="text" class="form-control result" name="" value="$0" />
                             </div>
