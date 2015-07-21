@@ -14,9 +14,4 @@ else :
 
 endif;
 ?>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.akordeon').akordeon();
-        });
-    </script>
 <?php get_footer(); ?>
