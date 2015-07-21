@@ -494,6 +494,54 @@ fieldset[disabled] .btn-xl.active {
     background-color: #dedede;
 }
 
+#aboutTerms .term-heading {
+    height: 44px;
+}
+
+#aboutTerms .term-title {
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+#aboutTerms .term-title a {
+    width: 100%;
+    position: absolute;left: -8px;
+    cursor: pointer;
+}
+
+#aboutTerms .term-title a div:first-child {
+    width: 34px;
+    height: 30px;
+    margin: 0;
+    float: left;
+    cursor: pointer;
+    padding: 8px;
+}
+
+#aboutTerms .term-title a div:last-child {
+    float: left;
+    padding-left: 10px;
+    padding-top: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #d19f42;
+}
+#aboutTerms .fa-arrow-circle-o-down {
+    color:#d19f42;
+}
+#aboutTerms .fa-arrow-circle-o-right {
+    color:#565656;
+}
+#aboutTerms .term-body {
+    padding: 10px 10px 10px 35px;
+    min-height: 120px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #4f4f4f;
+}
+
 @media(min-width:768px) {
     .navbar-default {
         padding: 0;

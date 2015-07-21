@@ -24,3 +24,10 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$('#aboutTerms').on('hidden.bs.collapse', function () {
+    $(this).find('a.collapsed div:first-child').html('<i class="fa fa-arrow-circle-o-right fa-fw"></i>');
+});
+$('#aboutTerms').on('shown.bs.collapse', function () {
+    $(this).find('a').not('.collapsed').find('div:first-child').html('<i class="fa fa-arrow-circle-o-down fa-fw"></i>');
+});
