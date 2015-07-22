@@ -17,9 +17,8 @@
                         <i class="fa icon-phone-lg"></i>
                     </div>
                     <div class="col-md-9">
-                        <p>Phone<br/>(604) 449-4798</p>
-
-                        <p class="icon-phone-call">(778) 882-8908</p>
+                        <p>Phone<br/><a href="16044494798">(604) 449-4798</a></p>
+                        <p class="icon-phone-call"><a href="16044494798">(778) 882-8908</a></p>
                     </div>
                 </div>
             </div>

@@ -4,10 +4,9 @@
     <p>Listed below are our current prices. Precious metal pricing is changing constantly so please contact us by phone for our most up-to-date pricing.</p>
     <p>Current buying rates are below We will match all local competitors, guaranteed!</p>
     <div class="row">
-        <div class="col-sm-5 col-md-6 text-right"><button type="submit" class="btn body-content mt20" onclick="window.location.href='/sell-gold-in-person/';"><i class="fa btn1">&nbsp;</i>In-store service</button></div>
-        <div class="col-sm-5 col-md-6 text-left"><button type="submit" class="btn body-content mt20" onclick="window.location.href='/mail-in-service/';"><i class="fa btn2">&nbsp;</i>Mail-in service</button></div>
+        <div class="col-sm-5 col-md-6 text-right"><button type="submit" class="btn body-content mt20" onclick="window.location.href='/sell-gold-in-person/';"><span class="btn1">In-store service</span></div>
+        <div class="col-sm-5 col-md-6 text-left"><button type="submit" class="btn body-content mt20" onclick="window.location.href='/mail-in-service/';"><span class="btn2">Mail-in service</span></div>
     </div>
-
     <div class="row mt30">
         <div class="col-lg-12">
             <div class="bs-component">

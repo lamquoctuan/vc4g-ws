@@ -502,6 +502,7 @@ fieldset[disabled] .btn-xl.active {
     width: 100%;
     position: absolute;
     cursor: pointer;
+    line-height:6px;
 }
 
 #aboutTerms .term-title a {
@@ -510,13 +511,14 @@ fieldset[disabled] .btn-xl.active {
     cursor: pointer;
 }
 
+
 #aboutTerms .term-title a div:first-child {
     width: 34px;
-    height: 30px;
+    height: 24px;
     margin: 0;
     float: left;
     cursor: pointer;
-    padding: 8px;
+    padding:0 8px;
 }
 
 #aboutTerms .term-title a div:last-child {
@@ -528,11 +530,20 @@ fieldset[disabled] .btn-xl.active {
     text-transform: uppercase;
     color: #d19f42;
 }
+#aboutTerms .term-title a[aria-expanded="false"] div:last-child {
+    color:#4f4f4f ;
+}
+#aboutTerms .fa {
+    width: 24px;
+    height: 24px;
+    background: url(/assets/images/group-icons.png) -539px -846px no-repeat;
+    color: transparent;
+}
 #aboutTerms .fa-arrow-circle-o-down {
-    color:#d19f42;
+    background-position: -539px -975px;
 }
 #aboutTerms .fa-arrow-circle-o-right {
-    color:#565656;
+    background-position: -539px -846px;
 }
 #aboutTerms .term-body {
     padding: 10px 10px 10px 35px;
@@ -1255,32 +1266,26 @@ a.sub-phone:hover {
     color: #303030;
 }
 
-.fa.icon-best,
-.fa.icon-trust,
-.fa.icon-fast,
-.fa.icon-snow {
+.fa.icon-best {background: url(/assets/images/bestprice.gif) no-repeat; width:90px; height:89px;}
+.fa.icon-trust {background: url(/assets/images/trustable.gif) no-repeat; width:90px; height:89px;}
+.fa.icon-fast {background: url(/assets/images/fast-convenient-service.gif) no-repeat; width:90px; height:89px;}
+
+.fa.icon-snow,
+.fa.icon-cool,
+.fa.icon-rainy,
+.fa.icon-sunny,
+.fa.icon-lightning {
     background: url(/assets/images/group-icons.png) no-repeat;
-    width: 90px;
-    height: 90px;
-}
-
-.fa.icon-best {
-    background-position: 0 0;
-}
-
-.fa.icon-trust {
-    background-position: -274px 0;
-}
-
-.fa.icon-fast {
-    background-position: -539px 0;
-}
-
-.fa.icon-snow {
-    background-position: -539px -166px;
-    width: 51px;
+    width: 55px;
     height: 54px;
 }
+
+.fa.icon-snow {background-position: 0 -443px;  width: 51px;height: 54px;}
+.fa.icon-cool {background-position: -91px -443px;}
+.fa.icon-rainy {background-position: -177px -443px;}
+.fa.icon-sunny {background-position: -282px -443px; }
+.fa.icon-lightning {background-position: -372px -443px;}
+
 
 body h2 {
     font-weight: 900;
@@ -1481,27 +1486,29 @@ section hr {
     font-size: 13px;
 }
 
-#howwepay .fa {
+#howwepay .btn1, #howwepay .btn2  {
     background: url(/assets/images/group-icons.png) no-repeat;
-    width: 28px;
-    height: 18px;
+    line-height: 26px;
+    padding-bottom: 4px;
 }
 
-#howwepay .fa.btn1 {
-    background-position: 0 -326px;
+#howwepay .btn1 {
+    background-position: 0 -327px;
+    padding-left: 26px;
+    padding-top: 4px;  
 }
 
-#howwepay .fa.btn2 {
+#howwepay .btn2 {
     background-position: 0 -592px;
-    margin-right: 10px;
+    padding-left:40px;
 }
 
-#howwepay .btn.body-content:hover .fa.btn1 {
+#howwepay .btn.body-content:hover .btn1 {
     background-position: 0 -846px;
 }
 
-#howwepay .btn.body-content:hover .fa.btn2 {
-    background-position: 0 -932px;
+#howwepay .btn.body-content:hover .btn2 {
+    background-position: 0 -933px;
 }
 
 .btn.body-content.dload {
@@ -2219,6 +2226,9 @@ section hr {
 .place-ct {
     padding: 50px 0;
 }
+
+.place-ct a {color:#2e2e2e;}
+.place-ct a:hover {color:#d19f42;}
 
 .place-ct p {
     font-size: 13px;
