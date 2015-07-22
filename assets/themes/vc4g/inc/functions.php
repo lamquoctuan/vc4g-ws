@@ -65,13 +65,13 @@ function setWeatherIcon($conditionId)
             $iconTag = '<i class="wi wi-thunderstorm"></i>';
             break;
         case '5':
-            $iconTag = '<i class="wi wi-snow"></i>';
+            $iconTag = '<i class="fa icon-snow"></i>';
             break;
         case '6':
-            $iconTag = '<i class="wi wi-rain-mix"></i>';
+            $iconTag = '<i class="fa icon-rainy"></i>';
             break;
         case '7':
-            $iconTag = '<i class="wi wi-rain-mix"></i>';
+            $iconTag = '<i class="fa icon-rainy"></i>';
             break;
         case '8':
             $iconTag = '<i class="wi wi-sprinkle"></i>';
@@ -89,16 +89,16 @@ function setWeatherIcon($conditionId)
             $iconTag = '<i class="wi wi-showers"></i>';
             break;
         case '13':
-            $iconTag = '<i class="wi wi-snow"></i>';
+            $iconTag = '<i class="fa icon-snow"></i>';
             break;
         case '14':
             $iconTag = '<i class="wi wi-storm-showers"></i>';
             break;
         case '15':
-            $iconTag = '<i class="wi wi-snow"></i>';
+            $iconTag = '<i class="fa icon-snow"></i>';
             break;
         case '16':
-            $iconTag = '<i class="wi wi-snow"></i>';
+            $iconTag = '<i class="fa icon-snow"></i>';
             break;
         case '17':
             $iconTag = '<i class="wi wi-hail"></i>';
@@ -128,7 +128,7 @@ function setWeatherIcon($conditionId)
             $iconTag = '<i class="wi wi-thermometer"></i>';
             break;
         case '26':
-            $iconTag = '<i class="wi wi-cloudy"></i>';
+            $iconTag = '<i class="fa icon-cool"></i>';
             break;
         case '27':
             $iconTag = '<i class="wi wi-night-cloudy"></i>';
@@ -146,7 +146,7 @@ function setWeatherIcon($conditionId)
             $iconTag = '<i class="wi wi-night-clear"></i>';
             break;
         case '32':
-            $iconTag = '<i class="wi wi-day-sunny"></i>';
+            $iconTag = '<i class="fa icon-sunny"></i>';
             break;
         case '33':
             $iconTag = '<i class="wi wi-night-clear"></i>';
@@ -158,7 +158,7 @@ function setWeatherIcon($conditionId)
             $iconTag = '<i class="wi wi-hail"></i>';
             break;
         case '36':
-            $iconTag = '<i class="wi wi-day-sunny"></i>';
+            $iconTag = '<i class="fa icon-sunny"></i>';
             break;
         case '37':
             $iconTag = '<i class="wi wi-thunderstorm"></i>';
@@ -173,22 +173,22 @@ function setWeatherIcon($conditionId)
             $iconTag = '<i class="wi wi-storm-showers"></i>';
             break;
         case '41':
-            $iconTag = '<i class="wi wi-snow"></i>';
+            $iconTag = '<i class="fa icon-snow"></i>';
             break;
         case '42':
-            $iconTag = '<i class="wi wi-snow"></i>';
+            $iconTag = '<i class="fa icon-snow"></i>';
             break;
         case '43':
-            $iconTag = '<i class="wi wi-snow"></i>';
+            $iconTag = '<i class="fa icon-snow"></i>';
             break;
         case '44':
-            $iconTag = '<i class="wi wi-cloudy"></i>';
+            $iconTag = '<i class="fa icon-cool"></i>';
             break;
         case '45':
-            $iconTag = '<i class="wi wi-lightning"></i>';
+            $iconTag = '<i class="fa icon-lightning"></i>';
             break;
         case '46':
-            $iconTag = '<i class="wi wi-snow"></i>';
+            $iconTag = '<i class="fa icon-snow"></i>';
             break;
         case '47':
             $iconTag = '<i class="wi wi-thunderstorm"></i>';
