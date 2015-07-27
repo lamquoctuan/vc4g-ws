@@ -51,7 +51,7 @@ $types = array_keys($purchasedItems);
                                                 <div class="whatwebuy-hover">
                                                     <div class="whatwebuy-hover-content">
                                                         <strong>$<?php echo $item->price;?></strong>
-                                                        <span>Call for</span>
+                                                        <span>Call us for</span>
                                                         <span class="mb20">better price</span>
                                                         <i class="fa icon-call"></i>
                                                     </div>
