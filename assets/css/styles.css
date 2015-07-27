@@ -858,6 +858,7 @@ section#contact .icon-date {
     background-position: 0 -779px;
 }
 
+
 .temperature {
     font-size: 72px;
     font-weight: 300;
@@ -1680,6 +1681,21 @@ section hr {
     padding-right: 1px;
     padding-left: 1px;
 }
+
+.bg-comming {
+    color: #fff;
+    background: url(/assets/images/coming-soon.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 60px 0;
+    text-align: center;
+}
+.bg-comming h2 {color: #fff; font-weight: 100; font-size: 44px;}
+.bg-comming h2 span {font-weight: 600;}
 
 .small-screen {
     display: none;
