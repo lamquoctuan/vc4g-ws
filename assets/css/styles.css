@@ -2655,11 +2655,14 @@ section hr {
         width: 50%;
         float: left;
     }
-    section#contact #contactForm .col-md-6:first-child {
+    #contact #contactForm .col-md-6:first-child {
         padding-right: 15px;
     }
-    section#contact #contactForm .col-md-6:last-child {
+    #contact #contactForm .col-md-6:last-child {
         padding-left: 15px;
+    }
+    #contact .wi {
+        font-size: 51px;
     }
     #team .col-xs-12 {
         width: 50%;

@@ -134,13 +134,13 @@ function setWeatherIcon($conditionId)
             $iconTag = '<i class="wi wi-night-cloudy"></i>';
             break;
         case '28':
-            $iconTag = '<i class="wi wi-day-cloudy"></i>';
+            $iconTag = '<i class="fa icon-cool"></i>';
             break;
         case '29':
             $iconTag = '<i class="wi wi-night-cloudy"></i>';
             break;
         case '30':
-            $iconTag = '<i class="wi wi-day-cloudy"></i>';
+            $iconTag = '<i class="fa icon-cool"></i>';
             break;
         case '31':
             $iconTag = '<i class="wi wi-night-clear"></i>';
@@ -197,7 +197,7 @@ function setWeatherIcon($conditionId)
             $iconTag = '<i class="wi wi-cloud"></i>';
             break;
         default:
-            $iconTag = '<i class="wi wi-cloud"></i>';
+            $iconTag = '<i class="fa icon-cool"></i>';
             break;
     }
 
