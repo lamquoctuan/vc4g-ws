@@ -2345,6 +2345,16 @@ section hr {
     border-radius: 0;
 }
 
+li.roundabout-moveable-item {
+    top: -116px !important;
+    width: 473px !important;
+    height: 473px !important;
+}
+
+#contact .wi {
+    font-size: 51px;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
         width: 54%;
@@ -2425,6 +2435,7 @@ section hr {
         margin-top: -39px;
         font-size: 11px;
     }
+
     #team .col-xs-12 {
         width: 50%;
     }
@@ -2660,9 +2671,6 @@ section hr {
     }
     #contact #contactForm .col-md-6:last-child {
         padding-left: 15px;
-    }
-    #contact .wi {
-        font-size: 51px;
     }
     #team .col-xs-12 {
         width: 50%;
