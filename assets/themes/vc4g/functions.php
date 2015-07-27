@@ -171,9 +171,9 @@ function vc4g_scripts()
 //    Plugin JavaScript
     wp_enqueue_script('vc4g-jquery-easing', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array(), '20150630');
     wp_enqueue_script('vc4g-classie', WP_CONTENT_URL . '/js/classie.js', array(), '20150630');
-    if (is_front_page() || is_home()) {
-        wp_enqueue_script('vc4g-cbpAnimatedHeader', WP_CONTENT_URL . '/js/cbpAnimatedHeader.js', array(), '20150630');
-    }
+    // if (is_front_page() || is_home()) {
+    //     load home page header script
+    // }
     wp_enqueue_script('vc4g-responsive-tabs', WP_CONTENT_URL . '/js/responsive-tabs.js', array(), '20150630');
 //    Contact Form JavaScript
 //    wp_enqueue_script('vc4g-bootstrap-validation', WP_CONTENT_URL . '/js/jqBootstrapValidation.js', array(), '20150630');
