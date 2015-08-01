@@ -15,7 +15,7 @@ $types = array_keys($purchasedItems);
                     <li<?php echo ($index == 0)?' class="active"':'';?>><a href="#<?php echo strtolower($type);?>" data-toggle="tab" <?php echo ($index == 0)?' class="first"':'';?>><?php echo $type;?></a></li>
 <?php } ?>
                 </ul>
-                <a href="<?php echo site_url('/what-we-buy/');?>" class="viewall">View all</a>
+                <div class="switch"><a href="<?php echo site_url('/what-we-buy/');?>" class="display-view list"></a><a href="" class="display-view griditem"></a></div>
             </div>
             <div class="col-sm-9">
                 <div class="tab-content">

@@ -609,6 +609,20 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
+header .intro-text .intro-heading acronym {
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #fff;
+	display: inline-block;
+	padding: 0 18px 5px;
+    line-height: 40px;
+    margin-left: 15px;
+}
+header .intro-text .intro-heading acronym img {
+    
+}
+
 header .phone-banner {
     font-size: 25px;
     margin-top: 20px;
@@ -774,6 +788,26 @@ section h3.section-subheading {
     z-index: 2;
 }
 
+#whatwebuy .display-view {
+    background: url(/assets/images/icon-view.jpg) no-repeat 0 0;
+    width: 24px;
+    height:24px;
+    display: inline-block;
+}
+.switch {text-align: right;padding-top:16px;}
+#whatwebuy .display-view.list {
+    background-position: 0 0;
+}
+#whatwebuy .display-view.griditem {
+    background-position: -24px 0;
+}
+#whatwebuy .display-view.list:hover {
+    background-position: 0 -24px;
+}
+#whatwebuy .display-view.griditem:hover {
+    background-position: -24px -24px;
+}
+
 #prd-gold .whatwebuy-item {
   padding-right: 11px;
   padding-left: 11px;
@@ -858,6 +892,7 @@ section#contact .icon-date {
     background-position: 0 -779px;
 }
 
+section#contact #contactForm .col-md-5 {padding-left: 2px;}
 
 .temperature {
     font-size: 72px;
@@ -880,11 +915,11 @@ section#contact .form-group {
     height: 43px;
 }
 
-section#contact #contactForm .col-md-6:first-child {
+section#contact #contactForm .col-md-7 {
     padding-right: 2px
 }
 
-section#contact #contactForm .col-md-6:last-chifld {
+section#contact #contactForm .col-md-5 {
     padding-left: 2px
 }
 
@@ -1167,7 +1202,7 @@ header {
 
 a.sub-phone {
     position: relative;
-    margin: 20px 0 20px 30px;
+    margin: 20px 0 5px 30px;
     display: inline-block;
     color: #555b65;
     font-size: 16px;
@@ -1191,7 +1226,12 @@ a.sub-phone:hover {
     background-position: 0 -78px;
     top: 4px;
 }
-
+.address-banner {
+    font-size: 13px;
+    display: block;
+    color: #555b65;
+    font-weight: 500;
+}
 .navbar-default.navbar-shrink .sub-phone {
     display: block;
     margin: 0;
@@ -1232,6 +1272,7 @@ a.sub-phone:hover {
 }
 
 .roundabout-moveable-item {
+    top: -111px !important;
     height: 460px;
     width: 460px;
     cursor: pointer;
@@ -1451,16 +1492,20 @@ section hr {
 }
 
 #howwepay .table>thead>tr>th {
-    font-size: 16px;
-    padding: 20px;
-    background: #fafafa;
+    font-size: 14px;
+    padding: 16px 30px;
+    background: #d8dbe0;
     border-bottom: none;
+    text-transform: uppercase;
+    color: #686868;
+    border-right: solid 1px #e2e3e3;
 }
 
 #howwepay .table>tbody>tr>td {
     border-top: none;
-    padding: 15px 20px;
+    padding: 16px 30px;
     border-right: solid 1px #e4e4e4;
+    font-weight:normal;
 }
 
 #howwepay .table>tbody>tr>td:last-child {
@@ -1468,17 +1513,46 @@ section hr {
 }
 
 #howwepay .table-striped>tbody>tr {
-    background-color: #f9f9f9;
+    background-color: #fafafa;
 }
 
 #howwepay .table-striped>tbody>tr:nth-of-type(odd) {
-    background-color: #fff;
+    background-color: #f6f6f6;
 }
 
 #howwepay .table-striped>tbody>tr:hover {
     background-color: #fafafa;
 }
 
+.tables {text-align: left;}
+.tables h3 {
+    background:#d19f42; 
+    color: #fff; 
+    margin-bottom:0; 
+    padding: 22px 0; 
+    font-weight:600;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    font-size:20px;
+}
+#howwepay button.btn.body-content.download {
+    margin-top:60px;
+    border: none;
+    font-size: 20px;
+    width: 372px;
+	height: 67px;
+	-webkit-border-radius: 34px 33px 33px 34px/33px 33px 34px 34px;
+	-moz-border-radius: 34px 33px 33px 34px/33px 33px 34px 34px;
+	border-radius: 34px 33px 33px 34px/33px 33px 34px 34px;
+	background-color: #d19f42;
+}
+#howwepay .btn.download span {
+    background-position: -539px -644px;
+}
+#howwepay p.note {
+    font-size:13px;
+    text-align: center;
+}
 .tfoot-tbl {
     padding: 20px 60px;
     background: #fafafa;
@@ -2345,16 +2419,6 @@ section hr {
     border-radius: 0;
 }
 
-li.roundabout-moveable-item {
-    top: -116px !important;
-    width: 473px !important;
-    height: 473px !important;
-}
-
-#contact .wi {
-    font-size: 51px;
-}
-
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
         width: 54%;
@@ -2411,8 +2475,17 @@ li.roundabout-moveable-item {
     .bg-diamond {
         background: none;
     }
-    #howwepay .table>thead>tr>th {
-        padding: 20px;
+    .tables h3 {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+    #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
+        padding: 10px;
+        font-size:13px;
+    }
+    #howwepay button.btn.body-content.download {
+        width: 272px;
+        height: 57px;
     }
     .roundabout-moveable-item {
         width: 320px;
@@ -2435,7 +2508,6 @@ li.roundabout-moveable-item {
         margin-top: -39px;
         font-size: 11px;
     }
-
     #team .col-xs-12 {
         width: 50%;
     }
@@ -2542,6 +2614,14 @@ li.roundabout-moveable-item {
     }
     .radio {
         padding-right: 0;
+    }
+    .tables h3 {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+     #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
+        padding: 10px;
+        font-size:13px;
     }
 }
 
@@ -2652,6 +2732,9 @@ li.roundabout-moveable-item {
     #howwepay .panel-group .panel {
         padding: 0;
     }
+    .list-price .col-md-6 {
+        width: 100% !important;
+    }
     .small-screen {
         display: block;
     }
@@ -2666,11 +2749,12 @@ li.roundabout-moveable-item {
         width: 50%;
         float: left;
     }
-    #contact #contactForm .col-md-6:first-child {
-        padding-right: 15px;
+    #contact #contactForm .col-md-7 {
+        padding-right: 15px
     }
-    #contact #contactForm .col-md-6:last-child {
-        padding-left: 15px;
+    
+    #contact #contactForm .col-md-5 {
+        padding-left: 15px
     }
     #team .col-xs-12 {
         width: 50%;
@@ -2800,11 +2884,11 @@ li.roundabout-moveable-item {
         width: 50%;
         float: left;
     }
-    section#contact #contactForm .col-md-6:first-child {
-        padding-right: 15px;
+    #contact #contactForm .col-md-7 {
+        padding-right: 15px
     }
-    section#contact #contactForm .col-md-6:last-child {
-        padding-left: 15px;
+    #contact #contactForm .col-md-5 {
+        padding-left: 15px
     }
     .howtosell {
         padding: 60px 0 40px;
@@ -3039,6 +3123,17 @@ li.roundabout-moveable-item {
     #howwepay .col-md-6 {
         width: 100%;
         text-align: center !important;
+    }
+    .tables h3 {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+     #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
+        padding: 10px;
+        font-size:13px;
+    }
+    #howwepay button.btn.body-content.download {
+        width: 100%;
     }
     .tfoot-tbl {
         padding: 20px;

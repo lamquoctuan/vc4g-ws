@@ -1,12 +1,12 @@
-<form name="subscribeForm" id="subscribeForm">
+<form name="subscribeForm" id="contactForm">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Email *" id="email" required="" data-validation-required-message="Please enter your mail." aria-invalid="false">
                 <p class="help-block text-danger"></p>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="form-group">
                 <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required="" data-validation-required-message="Please enter your phone number." aria-invalid="false">
                 <p class="help-block text-danger"></p>
