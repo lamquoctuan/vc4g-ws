@@ -1,6 +1,7 @@
 <?php
 if (! (is_single() || is_page('buy-diamond'))) {
-    get_template_part( 'template/footer', 'onedaydeal' );
+    // get_template_part( 'template/footer', 'onedaydeal' );
+    get_template_part( 'template/footer', 'coming-soon' );
 }
 //get_template_part( 'template/footer', 'contact' );
 ?>

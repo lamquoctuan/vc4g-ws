@@ -858,6 +858,7 @@ section#contact .icon-date {
     background-position: 0 -779px;
 }
 
+
 .temperature {
     font-size: 72px;
     font-weight: 300;
@@ -1681,6 +1682,21 @@ section hr {
     padding-left: 1px;
 }
 
+.bg-comming {
+    color: #fff;
+    background: url(/assets/images/coming-soon.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 60px 0;
+    text-align: center;
+}
+.bg-comming h2 {color: #fff; font-weight: 100; font-size: 44px;}
+.bg-comming h2 span {font-weight: 600;}
+
 .small-screen {
     display: none;
 }
@@ -2329,6 +2345,16 @@ section hr {
     border-radius: 0;
 }
 
+li.roundabout-moveable-item {
+    top: -116px !important;
+    width: 473px !important;
+    height: 473px !important;
+}
+
+#contact .wi {
+    font-size: 51px;
+}
+
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
         width: 54%;
@@ -2409,6 +2435,7 @@ section hr {
         margin-top: -39px;
         font-size: 11px;
     }
+
     #team .col-xs-12 {
         width: 50%;
     }
@@ -2639,10 +2666,10 @@ section hr {
         width: 50%;
         float: left;
     }
-    section#contact #contactForm .col-md-6:first-child {
+    #contact #contactForm .col-md-6:first-child {
         padding-right: 15px;
     }
-    section#contact #contactForm .col-md-6:last-child {
+    #contact #contactForm .col-md-6:last-child {
         padding-left: 15px;
     }
     #team .col-xs-12 {
