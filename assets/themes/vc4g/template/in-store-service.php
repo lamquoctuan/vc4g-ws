@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="col-sm-3 sidebar-whywepay">
-                <a class="btn request">Mail-in Request Form</a>
+                <a class="btn request" href="/mail-in-service/">Mail-in Request Form</a>
 
                 <h3>Recent Pay</h3>
 
