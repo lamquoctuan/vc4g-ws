@@ -147,3 +147,43 @@ function vc4g_testimonial_init() {
 
     register_post_type( 'testimonial', $args );
 }
+
+add_action( 'init', 'vc4g_thank_init' );
+/**
+ * Register a thank post type.
+ *
+ */
+function vc4g_thank_init() {
+    $labels = array(
+        'name'               => _x( 'Thanks Pages', 'post type general name', 'vc4g' ),
+        'singular_name'      => _x( 'Thanks Page', 'post type singular name', 'vc4g' ),
+        'menu_name'          => _x( 'Thanks Pages', 'admin menu', 'vc4g' ),
+        'name_admin_bar'     => _x( 'Thanks Page', 'add new on admin bar', 'vc4g' ),
+        'add_new'            => _x( 'Add New', 'thank', 'vc4g' ),
+        'add_new_item'       => __( 'Add New Thanks Page', 'vc4g' ),
+        'new_item'           => __( 'New Thanks Page', 'vc4g' ),
+        'edit_item'          => __( 'Edit Thanks Page', 'vc4g' ),
+        'view_item'          => __( 'View Thanks Page', 'vc4g' ),
+        'all_items'          => __( 'All Thanks Pages', 'vc4g' ),
+        'search_items'       => __( 'Search Thanks Pages', 'vc4g' ),
+        'parent_item_colon'  => __( 'Parent Thanks Pages:', 'vc4g' ),
+        'not_found'          => __( 'No thanks found.', 'vc4g' ),
+        'not_found_in_trash' => __( 'No thanks found in Trash.', 'vc4g' )
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'show_ui'            => true,
+        'query_var'          => false,
+        'can_export'         => true,
+        'rewrite'            => array( 'slug' => 'thank' ),
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'revisions' )
+    );
+
+    register_post_type( 'thank', $args );
+}

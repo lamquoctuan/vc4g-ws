@@ -1,8 +1,23 @@
-/*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+$.extend({
+    getQueryParameters : function(str) {
+        return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+    },
+    parseName : function(name) {
+        var firstName = name;
+        if (firstName.indexOf(' ') >= 0) {
+            firstName = name.split(' ').slice(0, -1).join(' ');
+        }
+        var lastName = name.replace(firstName + ' ', '');
+        return 'first_name='+firstName+'&last_name='+lastName;
+    },
+    parseNameInObj : function(obj) {
+        if ( typeof(obj.name) != 'undefined' ) {
+            var tempObj = $.getQueryParameters($.parseName(obj.name));
+            obj.first_name  = tempObj.first_name;
+            obj.last_name   = tempObj.last_name;
+        }
+    }
+});
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {

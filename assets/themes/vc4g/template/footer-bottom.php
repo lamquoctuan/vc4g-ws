@@ -2,7 +2,7 @@
     <div class="container pt20">
         <div class="row">
             <div class="col-md-6">
-                <span class="copyright">Copyright &copy; Your Website <?php echo date('Y');?></span>
+                <span class="copyright">Copyright &copy; <?php echo get_bloginfo() . ' ' . date('Y');?></span>
             </div>
             <div class="col-md-6 text-right">
                 <ul class="list-inline social-buttons">

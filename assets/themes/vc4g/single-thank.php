@@ -6,7 +6,6 @@ get_header();
     <?php
     // Start the loop.
     while (have_posts()) : the_post();
-
         get_template_part('template/thanks');
         // End the loop.
     endwhile;
