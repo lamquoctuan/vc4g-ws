@@ -15,7 +15,7 @@ class MailChimp
         $this->apikey = '682ace4cced312f880d762423702abc7-us11';
     }
     
-    public function listSubscribe($listId, $email, $firstName = '', $lastName = '', $phone = '', $subject = '', $message = '') {
+    public function listSubscribe($listId, $source, $email, $firstName = '', $lastName = '', $phone = '', $subject = '', $message = '') {
         $apikey = $this->apikey;
         $auth = base64_encode( 'user:'.$apikey );
 
@@ -24,11 +24,12 @@ class MailChimp
             'email_address' => $email,
             'status'        => 'subscribed',
             'merge_fields'  => array(
+                'SOURCE' => $source,
                 'FNAME' => $firstName,
                 'LNAME' => $lastName,
                 'PHONE' => $phone,
-                'MESSAGE' => $message,
                 'SUBJECT' => $subject,
+                'MESSAGE' => $message,
             )
         );
         $json_data = json_encode($data);

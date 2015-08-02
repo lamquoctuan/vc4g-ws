@@ -10,9 +10,8 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
+            var errorMessage = 'Your request is temporarily unable to be processed. Please try again later.';
             // get values from FORM
-            console.log($form);
-            console.log('submit success');
             var actionName  = $form.find('input[name="action"]').val();
             var leadData = $.getQueryParameters($form.serialize());
             $.parseNameInObj(leadData);
@@ -24,16 +23,18 @@ $(function() {
                 beforeSend: function() {
                     $form.css('cursor', 'wait');
                 },
-                done: function(response) {
+                success: function(response) {
+                    $form.css('cursor', 'default');
                     if (typeof(response.id) != 'undefined') {
                         window.location.href = $form.find('#thanks').val();
                     }
+                    else {
+                        alert(errorMessage);
+                    }
                 },
-                fail: function() {
-                    // $form.css('cursor', 'default');
-                },
-                alwawys: function() {
+                error: function(response) {
                     $form.css('cursor', 'default');
+                    alert(errorMessage);
                 }
             });
         },

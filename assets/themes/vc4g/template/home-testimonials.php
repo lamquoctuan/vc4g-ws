@@ -41,7 +41,9 @@ if (count($testimonials) > 0) : ?>
         $class = ($idx==0)?' active"':''; ?>
         <div class="item <?php echo $class;?>">
             <div class="team-member">
+                <?php if ($item->author_image != false) :?>
                 <img src="<?php echo $item->author_image;?>" class="img-responsive img-circle" alt="<?php echo "-{$item->author_name}, {$item->author_from}";?>">
+                <?php endif;?>
                 <blockquote><?php echo $item->quote;?></blockquote>
                 <p class="text-muted"><?php echo "-{$item->author_name}, {$item->author_from}";?></p>
             </div>
