@@ -182,19 +182,12 @@
     		</div>
     		<button type="submit" class="btn body-content download"><span>Download pdf</span></button>
     		<p class="note">Date Published: <strong>June 11 2015, 13:26:31</strong></p>
+    		<p class="note">
+    		    <a href="http://www.kitco.com/connecting.html">
+    		        <img src="http://www.kitconet.com/charts/metals/gold/t24_au_en_caoz_2.gif" border="0" alt="[Most Recent Quotes from www.kitco.com]"
+    		                style="width: 58%;">
+                </a>
+            </p>
     	</div>
     </div>
-	
-	<div class="row">
-        <div class="col-md-6 text-left pt30"><a href="#" class="bthome">Back to Home</a></div>
-        <div class="col-md-6 text-right"><button type="submit" class="btn body-content dload mt20"><span>Download now</span></button></div>
-    </div>
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-		    fakewaffle.responsiveTabs(['xs']);
-		    // $('.footable').footable();
-		
-		});
-	</script>
 </div>
