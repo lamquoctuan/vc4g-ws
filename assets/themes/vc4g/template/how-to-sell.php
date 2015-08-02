@@ -117,7 +117,7 @@
     			<h3>Silver and Platinum</h3>
     			<table class="table table-striped table-hover footable toggle-medium">
                     <thead>
-                         <th width="70%">Silver jewellery and other silver</th>
+                         <th width="70%">Silver</th>
                          <th>Price</th>
                      </thead>
                      <tbody>
@@ -161,7 +161,7 @@
                  </table>
                  <table class="table table-striped table-hover footable toggle-medium">
                     <thead>
-                         <th width="70%">Jewellery and other platinum </th>
+                         <th width="70%">Platinum </th>
                          <th>Price</th>
                      </thead>
                      <tbody>
@@ -180,7 +180,7 @@
                      </tbody>
                  </table>
     		</div>
-    		<button type="submit" class="btn body-content download"><span>Download pdf</span></button>
+    		<button type="submit" class="btn body-content download" onclick="window.location.href='<?php echo site_url('/blog/');?>';"><span>Download pdf</span></button>
     		<p class="note">Date Published: <strong>June 11 2015, 13:26:31</strong></p>
     		<p class="note">
     		    <a href="http://www.kitco.com/connecting.html">
