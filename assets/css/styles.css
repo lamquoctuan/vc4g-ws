@@ -434,6 +434,8 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+.help-block.text-danger li {color: red; font-size:11px;}
+
 .navbar-default {
     border-color: transparent;
     background-color: #fff;
@@ -912,7 +914,6 @@ section#contact #contactForm .col-md-5 {padding-left: 2px;}
 
 section#contact .form-group {
     margin-bottom: 2px;
-    height: 43px;
 }
 
 section#contact #contactForm .col-md-7 {
@@ -924,7 +925,6 @@ section#contact #contactForm .col-md-5 {
 }
 
 section#contact .btn.btn-yellow {
-    margin-top: 20px;
     color: #fff;
     width: 100%;
     padding-left: 0;
@@ -978,9 +978,8 @@ section#contact:-ms-input-placeholder {
     color: #bbb;
 }
 
-section#contact .text-danger {
-    color: #e74c3c;
-}
+section#contact .help-block {margin-bottom:0;}
+section#contact .help-block.text-danger ul {padding-left: 15px;}
 
 footer {
     padding: 25px 0;
@@ -1428,7 +1427,8 @@ body h2 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+.webuy .help-block ul {padding:0 20px;}
+.webuy .help-block li {background-image: none; padding-left:0; }
 .webuy .btn.body-content {
     color: #fff;
     border-color: #fff;
@@ -1732,6 +1732,9 @@ section hr {
     color: #acacac;
     font-size: 13px;
 }
+
+.bg-deal .help-block ul, .form-message .help-block ul {padding-left: 15px;}
+.bg-deal .help-block.text-danger li {color: rgba(255,255,255,0.3);}
 
 .btn.btn-yellow {
     background: #d19f42;
@@ -2050,9 +2053,16 @@ section hr {
     width: 100%;
 }
 
+.body-blog h2, .body-blog h3, .body-blog h4 {
+    color:#bababa;
+    font-weight:600;
+    text-transform: none;
+    margin: 20px 0 15px;
+}
 .body-blog ul,
 .body-blog ol {
-    margin-left: 15px;
+    margin: 0 15px;
+    padding: 0;
 }
 
 .body-blog ul li {
@@ -2418,6 +2428,8 @@ section hr {
     padding: 20px;
     border-radius: 0;
 }
+
+
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
