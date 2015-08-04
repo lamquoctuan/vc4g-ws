@@ -1,3 +1,35 @@
+<?php
+$queryGTable = 'SELECT id, name, modified_time
+                FROM  `vc4g_gold_table` 
+                ORDER BY modified_time DESC 
+                LIMIT 0 , 1';
+$goldTables = $wpdb->get_results( $queryGTable, OBJECT );
+if ($goldTables) {
+    $goldTable = $goldTables[0];
+    $query = "SELECT purity.id purity_id, purity.name purity_name, purity purity_value, price.id price_id, price.table_id, price.purity_id price_purity_id, price.price_individuals, price.price_lots
+                    FROM  `vc4g_gold_purity` purity
+                    LEFT JOIN  `vc4g_gold_price` price ON ( purity.id = price.purity_id ) 
+                    LEFT JOIN  `vc4g_gold_table` gtable ON ( price.table_id = gtable.id ) 
+                    WHERE price.table_id = '{$goldTable->id}'
+                    GROUP BY price.table_id, purity.purity
+                    ORDER BY purity.purity DESC , purity.modified_time DESC";
+    $goldRates = $wpdb->get_results( $query, OBJECT );
+}
+
+$taxonomy = 'rate';
+$termGoldCoin = get_term_by('slug','gold-coin', $taxonomy);
+$goldCoinArgs = array();
+$goldCoinIds = get_objects_in_term( $termGoldCoin->term_id, $taxonomy, $goldCoinArgs );
+$termGoldBullion = get_term_by('slug','gold-bullion', $taxonomy);
+$goldBullionArgs = array();
+$goldBullionIds = get_objects_in_term( $termGoldBullion->term_id, $taxonomy, $goldBullionArgs );
+$termSilver = get_term_by('slug','silver', $taxonomy);
+$silverArgs = array();
+$silverIds = get_objects_in_term( $termSilver->term_id, $taxonomy, $silverArgs );
+$termPlatinum = get_term_by('slug','platinum', $taxonomy);
+$platinumArgs = array();
+$platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverArgs );
+?>
 <div class="container text-center">
 	<h2>How To Sell</h2>
 	<hr />
@@ -13,47 +45,21 @@
     			<h3>Gold Rates</h3>
     			<table class="table table-striped table-hover footable toggle-medium">
                     <thead>
-                         <th>Scrap Gold</th>
-                         <th>Individuals (<100g)</th>
-                         <th>Lots (>=100g)</th>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>24k Gold (-99.9%)</td>
-                             <td>$37.20/g</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>24k Gold (-99.9%)</td>
-                             <td>$37.20/g</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>24k Gold (-99.9%)</td>
-                             <td>$37.20/g</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>24k Gold (-99.9%)</td>
-                             <td>$37.20/g</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>24k Gold (-99.9%)</td>
-                             <td>$37.20/g</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>24k Gold (-99.9%)</td>
-                             <td>$37.20/g</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>24k Gold (-99.9%)</td>
-                             <td>$37.20/g</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                     </tbody>
+                        <th>Scrap Gold</th>
+                        <th>Individuals (<100g)</th>
+                        <th>Lots (>=100g)</th>
+                    </thead>
+<?php if ($goldRates) : ?>
+                    <tbody>
+<?php foreach ($goldRates as $goldRate) :?>
+                        <tr>
+                            <td><?php echo $goldRate->purity_name;?></td>            
+                            <td>$<?php echo $goldRate->price_individuals;?>/g</td>            
+                            <td>$<?php echo $goldRate->price_lots;?>/g</td>            
+                        </tr>
+<?php endforeach;?>
+                    </tbody>
+<?php endif;?>
                  </table>
     		</div>
     		<div class="tables mb10">
@@ -62,52 +68,42 @@
                     <thead>
                          <th width="70%">Coin</th>
                          <th>Buy Price</th>
-                     </thead>
-                     <tbody>
-                         <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                     </tbody>
+                    </thead>
+<?php if (! empty($goldCoinIds)) : ?>
+                    <tbody>
+    <?php foreach ($goldCoinIds as $priceId) :
+            $type   = get_field('type', $priceId);
+            $price  = get_field('price', $priceId);
+            $unit   = get_field('unit', $priceId); ?>
+                        <tr>
+                            <td><?php echo $type; ?></td>
+                            <td><?php echo ($unit) ? $price . '/' . $unit: $price; ?></td>
+                        </tr>
+    <?php endforeach;?>
+                    <tbody>
+<?php endif;?>
                  </table>
     		</div>
     		<div class="tables">
-    			<h3>Gold Bars</h3>
+    			<h3>Gold Bullion</h3>
     			<table class="table table-striped table-hover footable toggle-medium">
                     <thead>
-                         <th width="70%">Gold Bars</th>
+                         <th width="70%">Gold Bullion</th>
                          <th>Buy Price</th>
                      </thead>
-                     <tbody>
-                         <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                     </tbody>
+<?php if (! empty($goldBullionIds)) : ?>
+                    <tbody>
+    <?php foreach ($goldBullionIds as $priceId) :
+            $type   = get_field('type', $priceId);
+            $price  = get_field('price', $priceId);
+            $unit   = get_field('unit', $priceId); ?>
+                        <tr>
+                            <td><?php echo $type; ?></td>
+                            <td><?php echo ($unit) ? $price . '/' . $unit: $price; ?></td>
+                        </tr>
+    <?php endforeach;?>
+                    <tbody>
+<?php endif;?>
                  </table>
     		</div>
     		
@@ -120,64 +116,38 @@
                          <th width="70%">Silver</th>
                          <th>Price</th>
                      </thead>
-                     <tbody>
-                         <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                     </tbody>
+<?php if (! empty($silverIds)) : ?>
+                    <tbody>
+    <?php foreach ($silverIds as $priceId) :
+            $type   = get_field('type', $priceId);
+            $price  = get_field('price', $priceId);
+            $unit   = get_field('unit', $priceId); ?>
+                        <tr>
+                            <td><?php echo $type; ?></td>
+                            <td><?php echo ($unit) ? $price . '/' . $unit: $price; ?></td>
+                        </tr>
+    <?php endforeach;?>
+                    <tbody>
+<?php endif;?>
                  </table>
                  <table class="table table-striped table-hover footable toggle-medium">
                     <thead>
                          <th width="70%">Platinum </th>
                          <th>Price</th>
                      </thead>
-                     <tbody>
-                         <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                          <tr>
-                             <td>Canada 1 ounce</td>
-                             <td>$39.16/g</td>
-                          </tr>
-                     </tbody>
+<?php if (! empty($platinumIds)) : ?>
+                    <tbody>
+    <?php foreach ($platinumIds as $priceId) :
+            $type   = get_field('type', $priceId);
+            $price  = get_field('price', $priceId);
+            $unit   = get_field('unit', $priceId); ?>
+                        <tr>
+                            <td><?php echo $type; ?></td>
+                            <td><?php echo ($unit) ? $price . '/' . $unit: $price; ?></td>
+                        </tr>
+    <?php endforeach;?>
+                    <tbody>
+<?php endif;?>
                  </table>
     		</div>
     		<button type="submit" class="btn body-content download" onclick="window.location.href='<?php echo site_url('/blog/');?>';"><span>Download pdf</span></button>

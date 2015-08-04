@@ -1,5 +1,5 @@
 <?php
-get_template_part('template/download-pricing', 'pdf');
+// get_template_part('template/download-pricing', 'pdf');
 ?>
 <!-- About Section -->
 <section id="team" class="bg-light-white about-page">
