@@ -108,4 +108,20 @@
     'italic' => DOMPDF_FONT_DIR . 'DejaVuSerifCondensed-Italic',
     'normal' => DOMPDF_FONT_DIR . 'DejaVuSerifCondensed',
   ),
+  'cabinbold' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'd84b5136ec1737891622edb9203bcf6e',
+  ),
+  'cabinitalic' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'd25b61fe20677e25e560b374457ebc5e',
+  ),
+  'cabinregular' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . '0d729cd704b238a2d83fd61e3e286778',
+  ),
+  'belloscript' => 
+  array (
+    'normal' => DOMPDF_FONT_DIR . 'c4a5cd3e2efa6e9519fe1fec2b35edbe',
+  ),
 ) ?>
