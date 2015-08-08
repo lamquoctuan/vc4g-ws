@@ -26,7 +26,12 @@ $(function() {
                 success: function(response) {
                     $form.css('cursor', 'default');
                     if (typeof(response.id) != 'undefined') {
-                        window.location.href = $form.find('#thanks').val();
+                        if (typeof(response.download_url) != 'undefined') {
+                            window.location.href = response.download_url;
+                        }
+                        else {
+                            window.location.href = $form.find('#thanks').val();
+                        }
                     }
                     else {
                         alert(errorMessage);

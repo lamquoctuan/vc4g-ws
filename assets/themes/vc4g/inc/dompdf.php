@@ -140,7 +140,4 @@ function generatePdf () {
 
     return $fileUri;
 }
-
-$fileUri = generatePdf();
-var_dump($fileUri);
 ?>

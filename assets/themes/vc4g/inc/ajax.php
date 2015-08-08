@@ -58,7 +58,10 @@ function ajax_download_callback() {
 
 	$mcConnector = new MailChimp();
 	$result = $mcConnector->listSubscribe('0d40c495ab', $source, $email, $first_name, $last_name);
-	
+	if (isset ($result->id)) {
+		$fileUri = generatePdf();
+		$result->download_url = $fileUri;
+	}
 	$response = $result;
 	wp_die(json_encode($response));
 }

@@ -219,3 +219,4 @@ include_once CUR_THEME_DIR . '/inc/post_types.php';
 include_once CUR_THEME_DIR . '/inc/functions.php';
 include_once CUR_THEME_DIR . '/inc/ajax.php';
 include_once CUR_THEME_DIR . '/inc/admin-area.php';
+include_once CUR_THEME_DIR . '/inc/dompdf.php';
