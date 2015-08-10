@@ -19,7 +19,8 @@ if (! empty($purchasedItems)) :
                     <h4><?php echo $type;?></h4>
                     <hr />
 <?php   if (array_search($type, array_keys($purchasedItems)) == 0) { ?>
-                    <a href="/#what-we-buy" class="viewall mb10">View list</a>
+                    <!--<a href="/#what-we-buy" class="viewall mb10">View list</a>-->
+                    <div class="switch"><a class="display-view list active"></a><a href="<?php echo site_url('/#whatwebuy');?>" class="display-view griditem"></a></div>
 <?php   } ?>
                 </div>
                 <div class="row">
@@ -96,7 +97,7 @@ foreach ($purities as $purity) {
                                 <div class="form-group">
                                     <label class="col-xs-3 control-label btn">Calc.</label>
                                     <div class="col-xs-9">
-                                        <input type="text" class="form-control result" id="calculatedPrice" name="" value="$0" />
+                                        <input type="text" class="form-control result" id="calculatedPrice" kname="" value="$0" />
                                     </div>
                                 </div>
                             </form>

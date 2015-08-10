@@ -809,6 +809,8 @@ section h3.section-subheading {
 #whatwebuy .display-view.griditem:hover {
     background-position: -24px -24px;
 }
+#whatwebuy .switch a.list.active {background-position: 0 -24px;}
+#whatwebuy .switch a.griditem.active {background-position: -24px -24px;}
 
 #prd-gold .whatwebuy-item {
   padding-right: 11px;
