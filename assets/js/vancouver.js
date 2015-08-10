@@ -1,20 +1,22 @@
 $.extend({
-    getQueryParameters : function(str) {
-        return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+    getQueryParameters: function(str) {
+        return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
+            return n = n.split("="), this[n[0]] = n[1], this
+        }.bind({}))[0];
     },
-    parseName : function(name) {
+    parseName: function(name) {
         var firstName = name;
         if (firstName.indexOf(' ') >= 0) {
             firstName = name.split(' ').slice(0, -1).join(' ');
         }
         var lastName = name.replace(firstName + ' ', '');
-        return 'first_name='+firstName+'&last_name='+lastName;
+        return 'first_name=' + firstName + '&last_name=' + lastName;
     },
-    parseNameInObj : function(obj) {
-        if ( typeof(obj.name) != 'undefined' ) {
+    parseNameInObj: function(obj) {
+        if (typeof(obj.name) != 'undefined') {
             var tempObj = $.getQueryParameters($.parseName(obj.name));
-            obj.first_name  = tempObj.first_name;
-            obj.last_name   = tempObj.last_name;
+            obj.first_name = tempObj.first_name;
+            obj.last_name = tempObj.last_name;
         }
     }
 });
@@ -40,21 +42,49 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-$('#aboutTerms').on('hidden.bs.collapse', function () {
+$('#aboutTerms').on('hidden.bs.collapse', function() {
     $(this).find('a.collapsed div:first-child').html('<i class="fa fa-arrow-circle-o-right fa-fw"></i>');
 });
-$('#aboutTerms').on('shown.bs.collapse', function () {
+$('#aboutTerms').on('shown.bs.collapse', function() {
     $(this).find('a').not('.collapsed').find('div:first-child').html('<i class="fa fa-arrow-circle-o-down fa-fw"></i>');
 });
 
-$(document).ready(function(){
+$(document).ready(function() {
     //Header animate
     headerAnimate();
-    $(window).scroll(function(){
+    $(window).scroll(function() {
         headerAnimate();
     });
-    $( window ).resize(function() {
+    $(window).resize(function() {
         headerAnimate();
+    });
+
+    //What we buy
+    $('.calculator a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        $(e.target).closest('.bar-prd').find('a').removeClass('active');
+        $(e.target).addClass('active');
+    });
+    $('.calculator label.btn').click(function(){
+        var $form = $(this).closest('form');
+        var data = $.getQueryParameters($form.serialize());
+        if (data.weight > 0) {
+            data.action = 'ajax_caltulate';
+            $.ajax({
+                url: vc4g.ajax_url,
+                type: "POST",
+                data: data,
+                dataType: 'json',
+                success: function(response) {
+                    $form.find('#calculatedPrice').val('$'+response.price);
+                },
+                error: function(response) {
+                    alert('So sorry! We are unable to progress your request at this time, please try again later or call!');
+                }
+            });
+        }
+        else {
+            alert('Please all enter valid values.');
+        }
     });
 });
 
@@ -62,9 +92,9 @@ function headerAnimate() {
     var thresHold = $('header').outerHeight();
     var top = $(window).scrollTop();
     if (top < thresHold) {
-        $('.navbar-default').css('top',thresHold-top).removeClass('navbar-shrink');;
+        $('.navbar-default').css('top', thresHold - top).removeClass('navbar-shrink');;
     }
     else {
-        $('.navbar-default').css('top',0).addClass('navbar-shrink');;
+        $('.navbar-default').css('top', 0).addClass('navbar-shrink');;
     }
 }

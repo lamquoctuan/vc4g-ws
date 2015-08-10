@@ -16,3 +16,14 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("form .btn").ajaxStart(function() {
+        $(this).css('cursor', 'wait');
+    });
+
+    $("form .btn").ajaxComplete(function() {
+        $(this).css('cursor', 'auto');
+    });
+});
+</script>

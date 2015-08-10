@@ -65,4 +65,32 @@ function ajax_download_callback() {
 	$response = $result;
 	wp_die(json_encode($response));
 }
+
+add_action( 'wp_ajax_ajax_caltulate', 'ajax_caltulate_callback' );
+add_action( 'wp_ajax_nopriv_ajax_caltulate', 'ajax_caltulate_callback' );
+function ajax_caltulate_callback() {
+	global $wpdb;
+    $action = sanitize_text_field( $_POST['action'] );
+	
+	$type		= sanitize_text_field($_POST['type']);
+	$weight		= sanitize_text_field($_POST['weight']);
+	$unit		= sanitize_text_field($_POST['unit']);
+	$purityId	= sanitize_text_field($_POST['purity']);
+	
+	$tableQuery = "SELECT id FROM `vc4g_{$type}_table` ORDER BY modified_time DESC LIMIT 0 , 1";
+	$tableId	= $wpdb->get_var($tableQuery);
+	$priceQuery 		= "SELECT price_individuals FROM `vc4g_gold_price`
+					WHERE table_id = {$tableId} AND purity_id = {$purityId}";
+	$pricePerGram	= $wpdb->get_var($priceQuery);
+	
+	$convertionRate = array (
+		'g'		=> 1,
+		'oz'	=> 31.1,
+		'dwt'	=> 1.555
+	);
+	$price = $weight * $convertionRate[$unit] * $pricePerGram;
+	
+	$response = array('price' => $price);
+	wp_die(json_encode($response));
+}
 ?>
