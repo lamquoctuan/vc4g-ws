@@ -66,6 +66,36 @@ function ajax_download_callback() {
 	wp_die(json_encode($response));
 }
 
+add_action( 'wp_ajax_ajax_mail_in_service', 'ajax_mail_in_service_callback' );
+add_action( 'wp_ajax_nopriv_ajax_mail_in_service', 'ajax_mail_in_service_callback' );
+function ajax_mail_in_service_callback() {
+    $action = sanitize_text_field( $_POST['action'] );
+    $strSpecial = CUR_THEME_NAME . gmdate('Y-m-d') . '-' . $action;
+    check_ajax_referer( $strSpecial, 'security' );
+	
+	$first_name = urldecode(sanitize_text_field($_POST['first_name']));
+	$last_name = urldecode(sanitize_text_field($_POST['last_name']));
+	$email = urldecode($_POST['email']);
+	$source = 'Web Form - Mail-in-Service';
+	$phone = sanitize_text_field($_POST['phone']);
+	$type = sanitize_text_field($_POST['type']);
+	$address = array(
+		'address' => sanitize_text_field($_POST['address']),
+		'city' => sanitize_text_field($_POST['city']),
+		'state' => sanitize_text_field($_POST['state']),
+		'zip' => sanitize_text_field($_POST['zip']),
+	);
+
+	$mcConnector = new MailChimp();
+	$result = $mcConnector->listSubscribe('bff0c06eb6', $source, $email, $first_name, $last_name, $phone, '', '', $address, $type);
+	if (isset ($result->id)) {
+		$fileUri = generatePdf();
+		$result->download_url = $fileUri;
+	}
+	$response = $result;
+	wp_die(json_encode($response));
+}
+
 add_action( 'wp_ajax_ajax_caltulate', 'ajax_caltulate_callback' );
 add_action( 'wp_ajax_nopriv_ajax_caltulate', 'ajax_caltulate_callback' );
 function ajax_caltulate_callback() {

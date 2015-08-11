@@ -1,8 +1,12 @@
+<?php
+$strMailInServiceForm = CUR_THEME_NAME . gmdate('Y-m-d') . '-ajax_mail_in_service';
+$ajaxMailInServiceForm = wp_create_nonce( $strMailInServiceForm );
+?>
 <div class="request-form">
     <h4 class="text-center">Mail-in Request Form</h4>
     <p class="small text-center">Please fill out the form below to receive your FREE Mail-in Kit</p>
     <hr/>
-    <form novalidate>
+    <form id="mailInServiceForm" name="mailInServiceForm" novalidate>
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -126,5 +130,8 @@
                 <button type="submit" class="btn btn-yellow mail"><span>Submit</span></button>
             </div>
         </div>
+        <input type="hidden" name="action" value="ajax_mail_in_service"/>
+        <input type="hidden" name="security" value="<?php echo $ajaxMailInServiceForm;?>"/>
+        <input type="hidden" id="thanks" value="/thank/mailing/"/>
     </form>
 </div>
