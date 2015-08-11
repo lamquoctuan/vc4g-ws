@@ -6,10 +6,10 @@
             </div>
             <div class="col-md-6 text-right">
                 <ul class="list-inline social-buttons">
-                    <li class="text-center"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="text-center"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="text-center"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li class="text-center"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="text-center"><a href="//www.yelp.com/biz/vancouver-cash-for-gold-vancouver" target="_blank"><i class="fa fa fa-yelp"></i></a></li>
+                    <li class="text-center"><a href="//twitter.com/VanCash4Gold" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li class="text-center"><a href="//www.facebook.com/VancouverCashforGold" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li class="text-center"><a href="//plus.google.com/+Vancouvercashforgoldbuyer/about" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                 </ul>
             </div>
 
