@@ -88,10 +88,6 @@ function ajax_mail_in_service_callback() {
 
 	$mcConnector = new MailChimp();
 	$result = $mcConnector->listSubscribe('bff0c06eb6', $source, $email, $first_name, $last_name, $phone, '', '', $address, $type);
-	if (isset ($result->id)) {
-		$fileUri = generatePdf();
-		$result->download_url = $fileUri;
-	}
 	$response = $result;
 	wp_die(json_encode($response));
 }

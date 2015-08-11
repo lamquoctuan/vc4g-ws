@@ -88,6 +88,15 @@ $(document).ready(function() {
     });
 });
 
+var timer = 0;
+$(document).ajaxStart(function (e) {
+    timer = setTimeout(function () { $('body .btn').css('cursor', 'progress'); }, 50)
+});
+$(document).ajaxStop(function () {
+    $(this).css('cursor', 'auto');
+    clearTimeout(timer);
+});
+
 function headerAnimate() {
     var thresHold = $('header').outerHeight();
     var top = $(window).scrollTop();
