@@ -19,10 +19,14 @@
                          <?php } ?>
                     </div>
                     <div class="share">
+                    <?php 
+                        $shareTitle = urlencode(get_the_title());
+                        $shareUrl   = urlencode(get_permalink());
+                    ?>
                         <ul class="list-inline social-buttons">
                             <li>Share</li>
-                            <li class="text-center"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="text-center"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="text-center"><a href="//twitter.com/intent/tweet?status=<?php echo $shareTitle;?>+<?php echo $shareUrl;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li class="text-center"><a href="//www.facebook.com/share.php?u=<?php echo $shareTitle;?>&title=<?php echo $shareUrl;?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         </ul>
                     </div>
                 </div>
