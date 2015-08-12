@@ -92,9 +92,9 @@ function ajax_mail_in_service_callback() {
 	wp_die(json_encode($response));
 }
 
-add_action( 'wp_ajax_ajax_caltulate', 'ajax_caltulate_callback' );
-add_action( 'wp_ajax_nopriv_ajax_caltulate', 'ajax_caltulate_callback' );
-function ajax_caltulate_callback() {
+add_action( 'wp_ajax_ajax_calculate', 'ajax_calculate_callback' );
+add_action( 'wp_ajax_nopriv_ajax_calculate', 'ajax_calculate_callback' );
+function ajax_calculate_callback() {
 	global $wpdb;
     $action = sanitize_text_field( $_POST['action'] );
 	

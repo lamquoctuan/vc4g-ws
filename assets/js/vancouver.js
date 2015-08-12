@@ -69,7 +69,7 @@ $(document).ready(function() {
         var data = $.getQueryParameters($form.serialize());
         var mixProperties = data;
         if (data.weight > 0) {
-            data.action = 'ajax_caltulate';
+            data.action = 'ajax_calculate';
             $.ajax({
                 url: vc4g.ajax_url,
                 type: "POST",
