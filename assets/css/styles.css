@@ -695,128 +695,7 @@ section h3.section-subheading {
     margin: 15px 0;
 }
 
-#whatwebuy .whatwebuy-item {
-    right: 0;
-    margin: 0 0 15px;
-    width: 33.33333333%;
-    float: left;
-}
 
-#whatwebuy .whatwebuy-item .whatwebuy-link {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    opacity: 0;
-    background: rgba(0, 0, 0, .5);
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
-    border-radius: 130px;
-    left: 20%;
-    top: 10px;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover:hover {
-    opacity: 1;
-}
-
-#whatwebuy span {
-    display: block;
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
-#whatwebuy .icon-call {
-    background: url(/assets/images/group-icons.png) no-repeat -400px -144px;
-    width: 30px;
-    height: 30px;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
-    position: absolute;
-    top: 30%;
-    width: 100%;
-    height: 20px;
-    margin-top: -12px;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content i {
-    margin-top: -12px;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content h3,
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content h4 {
-    margin: 0;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-caption {
-    margin: 0 auto;
-    padding: 10px 0;
-    color: #8e8e8e;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-caption h4 {
-    margin: 0;
-    text-transform: none;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-#whatwebuy .btn-row-next {
-    position: absolute;
-    z-index: 6;
-    right: 0;
-    top: 30%;
-}
-
-#whatwebuy .icon-next.btn {
-    width: 24px;
-    height: 24px;
-    background: url(/assets/images/icon-next.png) no-repeat 0 0;
-    margin-right: -15px;
-}
-
-#whatwebuy * {
-    z-index: 2;
-}
-
-#whatwebuy .display-view {
-    background: url(/assets/images/icon-view.jpg) no-repeat 0 0;
-    width: 24px;
-    height:24px;
-    display: inline-block;
-}
-.switch {text-align: right;padding-top:16px;}
-#whatwebuy .display-view.list {
-    background-position: 0 0;
-}
-#whatwebuy .display-view.griditem {
-    background-position: -24px 0;
-}
-#whatwebuy .display-view.list:hover {
-    background-position: 0 -24px;
-}
-#whatwebuy .display-view.griditem:hover {
-    background-position: -24px -24px;
-}
-#whatwebuy .switch a.list.active {background-position: 0 -24px;}
-#whatwebuy .switch a.griditem.active {background-position: -24px -24px;}
-
-#prd-gold .whatwebuy-item {
-  padding-right: 11px;
-  padding-left: 11px;
-}
-#prd-gold .row {margin-left:5px;}
 
 .team-member {
     margin-bottom: 50px;
@@ -1335,6 +1214,129 @@ body h2 {
     font-size: 26px;
 }
 
+#whatwebuy .whatwebuy-item {
+    right: 0;
+    margin: 0 0 15px;
+    width: 33.33333333%;
+    float: left;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    opacity: 0;
+    background: rgba(0, 0, 0, .5);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+    border-radius: 130px;
+    left: 20%;
+    top: 10px;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover:hover {
+    opacity: 1;
+}
+
+#whatwebuy span {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#whatwebuy .icon-call {
+    background: url(/assets/images/group-icons.png) no-repeat -400px -144px;
+    width: 30px;
+    height: 30px;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content i {
+    margin-top: -12px;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content h3,
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content h4 {
+    margin: 0;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-caption {
+    margin: 0 auto;
+    padding: 10px 0;
+    color: #8e8e8e;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-caption h4 {
+    margin: 0;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#whatwebuy .btn-row-next {
+    position: absolute;
+    z-index: 6;
+    right: 0;
+    top: 30%;
+}
+
+#whatwebuy .icon-next.btn {
+    width: 24px;
+    height: 24px;
+    background: url(/assets/images/icon-next.png) no-repeat 0 0;
+    margin-right: -15px;
+}
+
+#whatwebuy * {
+    z-index: 2;
+}
+
+#whatwebuy .display-view {
+    background: url(/assets/images/icon-view.jpg) no-repeat 0 0;
+    width: 24px;
+    height:24px;
+    display: inline-block;
+}
+
+#whatwebuy .display-view.list {
+    background-position: 0 0;
+}
+#whatwebuy .display-view.griditem {
+    background-position: -24px 0;
+}
+#whatwebuy .display-view.list:hover {
+    background-position: 0 -24px;
+}
+#whatwebuy .display-view.griditem:hover {
+    background-position: -24px -24px;
+}
+#whatwebuy .switch a.list.active {background-position: 0 -24px;}
+#whatwebuy .switch a.griditem.active {background-position: -24px -24px;}
+
+#prd-gold .whatwebuy-item {
+  padding-right: 11px;
+  padding-left: 11px;
+}
+#prd-gold .row {margin-left:5px;}
+
 #whatwebuy h2 {
     margin-top: 0;
 }
@@ -1379,14 +1381,23 @@ body h2 {
 
 #whatwebuy .nav-tabs {
     border: none;
+    border-bottom: solid 1px #ddd;
+    float: right;
+    clear: left;
 }
 
 #whatwebuy .nav-tabs>li>a.first {
     border-top: solid 1px #ddd !important;
 }
+#whatwebuy .switch {
+    clear: both;
+    text-align: right;
+    padding-top: 10px;
+}
 
-#whatwebuy .nav-tabs>li>a.last {
-    border-bottom: solid 1px #ddd !important;
+#whatwebuy .title-prd .switch {
+    clear: none;
+    padding-top: 0;
 }
 
 .viewall {
