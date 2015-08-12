@@ -4,7 +4,8 @@ add_action( 'admin_menu', 'register_vc4g_adjustment' );
 function register_vc4g_adjustment(){
 	add_menu_page( 'Adjustment', 'Adjustment', 'manage_options', 'vc4g-adjustment-page', 'vc4g_adjustment_page', 'dashicons-admin-generic', 79 ); 
     
-    add_submenu_page( 'vc4g-adjustment-page', 'Gold Rate Generator', 'Generator', 'manage_options', 'vc4g-gold-rate-generator-page', 'vc4g_gold_rate_generator_page' );
+    add_submenu_page( 'vc4g-adjustment-page', 'Gold Rate Generator', 'Generator - Gold Rate', 'manage_options', 'vc4g-gold-rate-generator-page', 'vc4g_gold_rate_generator_page' );
+    add_submenu_page( 'vc4g-adjustment-page', 'Silver Rate Generator', 'Generator - Silver Rate', 'manage_options', 'vc4g-silver-rate-generator-page', 'vc4g_silver_rate_generator_page' );
 }
 
 function vc4g_adjustment_page(){
@@ -21,11 +22,24 @@ function vc4g_gold_rate_generator_page(){
 	} ?>
 	<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 <?php
+    vc4g_the_rate_generator_page('gold');
+}
+
+function vc4g_silver_rate_generator_page(){
+	if (!current_user_can('manage_options'))  {
+		wp_die( __('You do not have sufficient permissions to access this page.') );
+	} ?>
+	<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
+<?php
+    vc4g_the_rate_generator_page('silver');
+}
+
+function vc4g_the_rate_generator_page($type){
     global $wpdb;
     if (! empty($_POST)) {
         $userId = get_current_user_id();
         $wpdb->insert( 
-        	'vc4g_gold_table', 
+        	"vc4g_{$type}_table", 
         	array( 
         		'name' => 'value1', 
         		'modified_by' => $userId 
@@ -36,11 +50,32 @@ function vc4g_gold_rate_generator_page(){
         	) 
         );
         $gtableId = $wpdb->insert_id;
+
+        $pricePerTroyOz         = $_POST['price-per-troy-oz'];
+        $priceRatioIndividuals  = $_POST['price-ratio-individuals'];
+        $priceRatioLots         = $_POST['price-ratio-lots'];
+        $wpdb->insert( 
+        	"vc4g_{$type}_indicator", 
+        	array( 
+        		'table_id' => $gtableId, 
+        		'troy_oz_price' => $pricePerTroyOz, 
+        		'ratio_individuals' => $priceRatioIndividuals, 
+        		'ratio_lots' => $priceRatioLots, 
+        		'modified_by' => $userId 
+        	), 
+        	array(
+        	    '%d',
+        		'%f', 
+        		'%f', 
+        		'%f', 
+        		'%d' 
+        	) 
+        );
         
         $rates = $_POST['rate'];
         foreach($rates as $purityId=>$ratesValues) {
             $wpdb->insert( 
-            	'vc4g_gold_price', 
+            	"vc4g_{$type}_price", 
             	array(
             	    'table_id' => $gtableId,
             		'purity_id' => $purityId, 
@@ -59,18 +94,30 @@ function vc4g_gold_rate_generator_page(){
         
         }
     }
-    $pricePerTroyOz         = get_option('price-per-troy-oz');
-    $priceRatioIndividuals  = get_option('price-ratio-individuals');
-    $priceRatioLots         = get_option('price-ratio-lots');
+    $priceTableId = $wpdb->get_var("SELECT id FROM `vc4g_{$type}_table` ORDER BY modified_time DESC LIMIT 0,1");
     
-    $query = 'SELECT purity.id purity_id, purity.name purity_name, purity purity_value, price.id price_id, price.table_id, price.purity_id price_purity_id, price.price_individuals, price.price_lots
-                FROM  `vc4g_gold_purity` purity
-                LEFT JOIN  `vc4g_gold_price` price ON ( purity.id = price.purity_id ) 
-                LEFT JOIN  `vc4g_gold_table` gtable ON ( price.table_id = gtable.id ) 
-                GROUP BY price.table_id, purity.purity
-                ORDER BY purity.purity DESC , purity.modified_time DESC ';
-    $goldRates = $wpdb->get_results( $query, OBJECT );
-    // var_dump($_POST, $goldRates);
+    $pricePerTroyOz         = '';
+    $priceRatioIndividuals  = '';
+    $priceRatioLots         = '';
+    if (! is_null($priceTableId)) {
+        $theIndicator = $wpdb->get_row("SELECT id, troy_oz_price, ratio_individuals, ratio_lots FROM `vc4g_{$type}_indicator` WHERE table_id = {$priceTableId} LIMIT 0,1");
+        if (! is_null($theIndicator)) {
+            $pricePerTroyOz         = $theIndicator->troy_oz_price;
+            $priceRatioIndividuals  = $theIndicator->ratio_individuals;
+            $priceRatioLots         = $theIndicator->ratio_lots;
+        }
+    }
+    
+    $query = "SELECT purity.id purity_id, purity.name purity_name, purity purity_value, price.id price_id, price.table_id, price.purity_id price_purity_id, price.price_individuals, price.price_lots
+                FROM  `vc4g_{$type}_purity` purity
+                LEFT JOIN  `vc4g_{$type}_price` price ON ( purity.id = price.purity_id ) 
+                LEFT JOIN  `vc4g_{$type}_table` gtable ON ( price.table_id = gtable.id ) ";
+    if (! is_null($priceTableId)) {
+        $query .= "WHERE gtable.id = '{$priceTableId}'";
+    }
+    $query .= "GROUP BY price.table_id, purity.purity
+                ORDER BY purity.purity DESC , purity.modified_time DESC ";
+    $theRates = $wpdb->get_results( $query, OBJECT );
 ?>
     <div class="widget-liquid-left">
         <div id="widgets-left">
@@ -124,26 +171,17 @@ function vc4g_gold_rate_generator_page(){
                             <th id="columnname" class="manage-column column-columnname num" scope="col">Lots ($/g)</th> <!--"num" added because the column contains numbers-->
                         </tr>
                     </thead>
-            <!--        <tfoot>
-                        <tr>
-                            <th class="manage-column column-cb check-column" scope="col"></th>
-                            <th class="manage-column column-columnname" scope="col"></th>
-                            <th class="manage-column column-columnname" scope="col"></th>
-                            <th class="manage-column column-columnname num" scope="col"></th>
-                            <th class="manage-column column-columnname num" scope="col"></th>
-                        </tr>
-                    </tfoot>-->
-        <?php if ($goldRates) :?>
+        <?php if ($theRates) :?>
                     <tbody>
         <?php
-            for($idx = 0; $idx<count($goldRates); $idx++) :
-                $goldRate = $goldRates[$idx];
+            for($idx = 0; $idx<count($theRates); $idx++) :
+                $theRate = $theRates[$idx];
                 $isAlternate = ($idx % 2 == 0);
         ?>
                         <tr<?php echo ($isAlternate)?' class="alternate"':'';?>>
                             <th class="check-column" scope="row">
-                                <input type="hidden" name="rate[<?php echo $goldRate->purity_id;?>][price_id]" value="<?php echo $goldRate->price_id;?>"/>
-                                <input type="hidden" name="rate[<?php echo $goldRate->purity_id;?>][table_id]" value="<?php echo $goldRate->table_id;?>"/>
+                                <input type="hidden" name="rate[<?php echo $theRate->purity_id;?>][price_id]" value="<?php echo $theRate->price_id;?>"/>
+                                <input type="hidden" name="rate[<?php echo $theRate->purity_id;?>][table_id]" value="<?php echo $theRate->table_id;?>"/>
                             </th>
                             <td class="column-columnname">
                                 <div class="row-actions">
@@ -152,16 +190,16 @@ function vc4g_gold_rate_generator_page(){
                                 </div>
                             </td>
                             <td class="column-columnname">
-                                <?php echo $goldRate->purity_name;?>
-                                <input type="hidden" name="rate[<?php echo $goldRate->purity_id;?>][purity_value]" value="<?php echo $goldRate->purity_value;?>"/>
+                                <?php echo $theRate->purity_name;?>
+                                <input type="hidden" name="rate[<?php echo $theRate->purity_id;?>][purity_value]" value="<?php echo $theRate->purity_value;?>"/>
                             </td>
                             <td class="column-columnname" style="text-align: right;">
-                                <span><?php echo $goldRate->price_individuals;?></span>
-                                <input type="hidden" name="rate[<?php echo $goldRate->purity_id;?>][price_individuals]" value="<?php echo $goldRate->price_individuals;?>"/>
+                                <span><?php echo $theRate->price_individuals;?></span>
+                                <input type="hidden" name="rate[<?php echo $theRate->purity_id;?>][price_individuals]" value="<?php echo $theRate->price_individuals;?>"/>
                             </td>
                             <td class="column-columnname" style="text-align: right;">
-                                <span><?php echo $goldRate->price_lots;?></span>
-                                <input type="hidden" name="rate[<?php echo $goldRate->purity_id;?>][price_lots]" value="<?php echo $goldRate->price_lots;?>"/>
+                                <span><?php echo $theRate->price_lots;?></span>
+                                <input type="hidden" name="rate[<?php echo $theRate->purity_id;?>][price_lots]" value="<?php echo $theRate->price_lots;?>"/>
                             </td>
                         </tr>
         <?php
@@ -169,7 +207,12 @@ function vc4g_gold_rate_generator_page(){
                     </tbody>
         <?php endif;?>
                 </table>
-                <p class="submit"><input type="submit" value="Save Changes" class="button-primary" name="save"></p>
+                <p class="submit">
+                    <input type="submit" value="Save Changes" class="button-primary" name="save">
+                    <input type="hidden" value="<?php echo $pricePerTroyOz;?>" id="price-per-troy-oz" name="price-per-troy-oz">
+                    <input type="hidden" value="<?php echo $priceRatioIndividuals;?>" id="price-ratio-individuals" name="price-ratio-individuals">
+                    <input type="hidden" value="<?php echo $priceRatioLots;?>" id="price-ratio-lots" name="price-ratio-lots">
+                </p>
             </form>
         </div>
     </div>
@@ -210,6 +253,11 @@ $v(document).ready(function(){
                 alert('Please enter a right ratio.');
             }
             else {
+                var $formSave = $v('#saveRatesForm');
+                $formSave.find('#price-per-troy-oz').val(priceOz);
+                $formSave.find('#price-ratio-individuals').val(priceRatioInds);
+                $formSave.find('#price-ratio-lots').val(priceRatioLots);
+                
                 var pricePerGram = priceOz / 31.1;
                 var pricePerGramInds = pricePerGram;
                 var pricePerGramLots = pricePerGram;
