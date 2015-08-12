@@ -76,11 +76,13 @@ $(document).ready(function() {
                 data: data,
                 dataType: 'json',
                 success: function(response) {
+                    ga('send', 'event', data.type + ' calculator', 'estimate price', 'success');
                     mixProperties.result = 'success';
                     mixProperties.price = response.price;
                     $form.find('#calculatedPrice').val('$'+response.price);
                 },
                 error: function(response) {
+                    ga('send', 'event', data.type + ' calculator', 'estimate price', 'failure');
                     mixProperties.result = 'failure';
                     mixProperties.message = 'Not valid output';
                     alert('So sorry! We are unable to progress your request at this time, please try again later or call!');
@@ -88,6 +90,7 @@ $(document).ready(function() {
             });
         }
         else {
+            ga('send', 'event', 'gold calculator', 'estimate price', 'failure');
             mixProperties.result = 'failure';
             mixProperties.message = 'Not valid weight value';
             alert('Please all enter valid values.');
