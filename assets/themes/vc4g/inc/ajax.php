@@ -105,10 +105,9 @@ function ajax_caltulate_callback() {
 	
 	$tableQuery = "SELECT id FROM `vc4g_{$type}_table` ORDER BY modified_time DESC LIMIT 0 , 1";
 	$tableId	= $wpdb->get_var($tableQuery);
-	$priceQuery 		= "SELECT price_individuals FROM `vc4g_gold_price`
+	$priceQuery = "SELECT price_individuals FROM `vc4g_{$type}_price`
 					WHERE table_id = {$tableId} AND purity_id = {$purityId}";
 	$pricePerGram	= $wpdb->get_var($priceQuery);
-	
 	$convertionRate = array (
 		'g'		=> 1,
 		'oz'	=> 31.1,
