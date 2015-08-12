@@ -67,6 +67,7 @@ $(document).ready(function() {
     $('.calculator label.btn').click(function(){
         var $form = $(this).closest('form');
         var data = $.getQueryParameters($form.serialize());
+        var mixProperties = data;
         if (data.weight > 0) {
             data.action = 'ajax_caltulate';
             $.ajax({
@@ -75,15 +76,24 @@ $(document).ready(function() {
                 data: data,
                 dataType: 'json',
                 success: function(response) {
+                    mixProperties.result = 'success';
+                    mixProperties.price = response.price;
                     $form.find('#calculatedPrice').val('$'+response.price);
                 },
                 error: function(response) {
+                    mixProperties.result = 'failure';
+                    mixProperties.message = 'Not valid output';
                     alert('So sorry! We are unable to progress your request at this time, please try again later or call!');
                 }
             });
         }
         else {
+            mixProperties.result = 'failure';
+            mixProperties.message = 'Not valid weight value';
             alert('Please all enter valid values.');
+        }
+        if (typeof(mixpanel) != 'undefined') {
+            mixpanel.track("Estimate Price", mixProperties);
         }
     });
 });
