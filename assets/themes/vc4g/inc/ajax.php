@@ -118,4 +118,44 @@ function ajax_calculate_callback() {
 	$response = array('price' => $price);
 	wp_die(json_encode($response));
 }
+
+add_action( 'wp_ajax_ajax_gold_prices', 'ajax_gold_prices_callback' );
+add_action( 'wp_ajax_nopriv_ajax_gold_prices', 'ajax_gold_prices_callback' );
+function ajax_gold_prices_callback() {
+	global $wpdb;
+	$response = new \StdClass();
+    $action = sanitize_text_field( $_GET['action'] );
+	$dateStart = date('Y-m-d', strtotime('-7 day'));
+	
+	$url = "https://www.quandl.com/api/v1/datasets/WGC/GOLD_DAILY_CAD.json?trim_start={$dateStart}";
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+     
+	$resultJson = curl_exec($ch);
+	curl_close($ch);
+	
+	$result = json_decode($resultJson);
+	$error = '';
+	if (isset($result->data) ) {
+		$columnNames	= $result->column_names;
+		$data			= $result->data;
+		
+		$response->success = true;
+		$response->data = array();
+		array_push($response->data, $columnNames);
+		for($idx = count($data)-1; $idx>=0; $idx--) {
+			array_push($response->data, $data[$idx]);
+		}
+		// $response->data = json_encode($response->data);
+	}
+	else {
+		$response->success = false;
+		$response->error = $result->error;
+	}
+	wp_die(json_encode($response));
+}
 ?>

@@ -152,12 +152,54 @@ $platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverAr
     		</div>
     		<button type="submit" class="btn body-content download" onclick="window.location.href='<?php echo site_url('/blog/');?>';"><span>Download pdf</span></button>
     		<p class="note">Date Published: <strong>June 11 2015, 13:26:31</strong></p>
-    		<p class="note">
-    		    <a href="http://www.kitco.com/connecting.html">
-    		        <img src="http://www.kitconet.com/charts/metals/gold/t24_au_en_caoz_2.gif" border="0" alt="[Most Recent Quotes from www.kitco.com]"
-    		                style="width: 58%;">
-                </a>
+    		<!--<p class="note">-->
+    		<!--    <a href="http://www.kitco.com/connecting.html">-->
+    		<!--        <img src="http://www.kitconet.com/charts/metals/gold/t24_au_en_caoz_2.gif" border="0" alt="[Most Recent Quotes from www.kitco.com]"-->
+    		<!--                style="width: 58%;">-->
+      <!--          </a>-->
+      <!--      </p>-->
+            <p class="note">
+                <script type="text/javascript"
+                      src="https://www.google.com/jsapi?autoload={
+                        'modules':[{
+                          'name':'visualization',
+                          'version':'1',
+                          'packages':['corechart']
+                        }]
+                      }"></script>
+            
+              <div id="chart_div"></div>
             </p>
     	</div>
     </div>
 </div>
+<script type="text/javascript">
+google.setOnLoadCallback(drawChart);
+
+function drawChart(chartData) {
+    var data = google.visualization.arrayToDataTable(chartData);
+
+    var options = {
+      title: 'CAD Gold Price in last 5 days',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+    chart.draw(data, options);
+}
+
+$.ajax({
+    url: 'https://vgc-lumpynroo.c9.io/vc4g-ws/wp-admin/admin-ajax.php?action=ajax_gold_prices',
+    method: "GET",
+    dataType: "json",
+    complete: function(response){
+        var result = response.responseJSON;
+        if (result.success != false) {
+            var chartData = result.data;
+            drawChart(chartData);
+        }
+    }
+},'json');    
+</script>
