@@ -191,7 +191,7 @@ function drawChart(chartData) {
 }
 
 $.ajax({
-    url: 'https://vgc-lumpynroo.c9.io/vc4g-ws/wp-admin/admin-ajax.php?action=ajax_gold_prices',
+    url: vc4g.ajax_url + '?action=ajax_gold_prices',
     method: "GET",
     dataType: "json",
     complete: function(response){
