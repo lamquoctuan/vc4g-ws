@@ -57,5 +57,5 @@ $(function() {
 
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
-    $('#success').html('');
+    $(this).closest('form').find('#success').html('');
 });

@@ -60,6 +60,9 @@ $(document).ready(function() {
     });
 
     //What we buy
+    $('#calcGoldForm,#calcSilverForm').focusin(function(){
+        $(this).find('#success').html('');
+    });
     $('.calculator a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
         $(e.target).closest('.bar-prd').find('a').removeClass('active');
         $(e.target).addClass('active');
@@ -85,7 +88,8 @@ $(document).ready(function() {
                     ga('send', 'event', data.type + ' calculator', 'estimate price', 'failure');
                     mixProperties.result = 'failure';
                     mixProperties.message = 'Not valid output';
-                    alert('So sorry! We are unable to progress your request at this time, please try again later or call!');
+                    $form.find('#success').html('So sorry! We are unable to progress your request at this time, please try again later or call!');
+                    // alert('So sorry! We are unable to progress your request at this time, please try again later or call!');
                 }
             });
         }
@@ -93,7 +97,8 @@ $(document).ready(function() {
             ga('send', 'event', 'gold calculator', 'estimate price', 'failure');
             mixProperties.result = 'failure';
             mixProperties.message = 'Not valid weight value';
-            alert('Please all enter valid values.');
+            $form.find('#success').html('Please all enter valid values.');
+            // alert('Please all enter valid values.');
         }
         if (typeof(mixpanel) != 'undefined') {
             mixpanel.track("Estimate Price", mixProperties);
@@ -103,10 +108,12 @@ $(document).ready(function() {
 
 var timer = 0;
 $(document).ajaxStart(function (e) {
-    timer = setTimeout(function () { $('body .btn').css('cursor', 'progress'); }, 50)
+    timer = setTimeout(function () { $('body .btn').css('cursor', 'progress'); }, 50);
+    console.log(timer);
 });
 $(document).ajaxStop(function () {
-    $(this).css('cursor', 'auto');
+    $('body .btn').css('cursor', 'pointer');
+    console.log(timer);
     clearTimeout(timer);
 });
 

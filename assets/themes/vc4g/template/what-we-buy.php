@@ -31,8 +31,10 @@ if (! empty($purchasedItems)) :
                         <a href="tel:16045582026" class="whatwebuy-link">
                             <div class="whatwebuy-hover">
                                 <div class="whatwebuy-hover-content">
+<?php if (! empty($item->price)) { ?>
                                     <strong>$<?php echo $item->price;?></strong>
-                                    <span>Call for</span>
+<?php }?>
+                                    <span>Call us for</span>
                                     <span class="mb20">better price</span>
                                     <i class="fa icon-call"></i>
                                 </div>
@@ -100,9 +102,13 @@ foreach ($purities as $purity) {
                                         <input type="text" class="form-control result" id="calculatedPrice" kname="" value="$0" />
                                     </div>
                                 </div>
+                                <div id="success"></div>
                             </form>
-                            <a href="" class="btn call">Call for better price</a>
-                            <p class="text-center small">Today's Gold Price: $1314.36/oz</p>
+<?php
+$theGoldIndicator = $wpdb->get_row("SELECT id, troy_oz_price, ratio_individuals, ratio_lots FROM `vc4g_gold_indicator` ORDER BY modified_time DESC LIMIT 0,1");
+?>
+                            <a href="tel:16045582026" class="btn call">Call for better price</a>
+                            <p class="text-center small">Today's Gold Price: $<?php echo $theGoldIndicator->troy_oz_price;?>/oz</p>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="calcSilver">
                             <form id="calcSilverForm" method="post" class="form-horizontal">
@@ -135,7 +141,6 @@ foreach ($purities as $purity) {
 }
 ?>
                                         </select>
-        
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -144,9 +149,13 @@ foreach ($purities as $purity) {
                                         <input type="text" class="form-control result" id="calculatedPrice" name="" value="$0" />
                                     </div>
                                 </div>
+                                <div id="success"></div>
                             </form>
-                            <a href="" class="btn call">Call for better price</a>
-                            <p class="text-center small">Today's Siver Price: $1314.36/oz</p>
+                            <a href="tel:16045582026" class="btn call">Call us for better price</a>
+<?php
+$theSilverIndicator = $wpdb->get_row("SELECT id, troy_oz_price, ratio_individuals, ratio_lots FROM `vc4g_silver_indicator` ORDER BY modified_time DESC LIMIT 0,1");
+?>
+                            <p class="text-center small">Today's Siver Price: $<?php echo $theSilverIndicator->troy_oz_price;?>/oz</p>
                         </div>
                     </div>
                 </div>
