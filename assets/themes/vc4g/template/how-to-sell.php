@@ -174,7 +174,7 @@ $platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverAr
     </div>
 </div>
 <script type="text/javascript">
-google.setOnLoadCallback(drawChart);
+// google.setOnLoadCallback(drawChart);
 
 function drawChart(chartData) {
     var data = google.visualization.arrayToDataTable(chartData);

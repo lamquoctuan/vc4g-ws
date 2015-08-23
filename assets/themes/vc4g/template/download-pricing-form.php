@@ -20,7 +20,7 @@ $ajaxDownloadForm = wp_create_nonce( $strDownloadForm );
     <input type="hidden" name="security" value="<?php echo $ajaxDownloadForm;?>"/>
     <input type="hidden" id="thanks" value="/thank/download/"/>
 </form>
-<p class="text-center small">Enter your name and email below and click, "DOWNLOAD!"</p>
+<p class="text-center small">Enter your name and email above and click, "DOWNLOAD!"</p>
 <script type="text/javascript">
 var $formDownload = $('#downloadForm');
 $formDownload.find('.btn.download').click(function(){
