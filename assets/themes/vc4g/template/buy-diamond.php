@@ -11,18 +11,7 @@
                     <?php get_template_part('template/download-pricing', 'form');?>
                 </div>
                 <div class="whatwepay mt30">
-                    <?php
-                        $imgAds = (get_field('ads_image'))?get_field('ads_image'):'/assets/images/whatwepay.png';
-                        $imgAdsRes = (get_field('ads_image_responsive')) ? get_field('ads_image_responsive') : '/assets/images/img-ads.jpg';
-                    ?>
-                    <a href="/what-we-buy/">
-                        <div class="text-ads">
-                            <div class="text-cnt">
-                                <img src="<?php echo $imgAds;?>" alt="What we pay"/>
-                            </div>
-                        </div>
-                        <img src="<?php echo $imgAdsRes;?>" class="img-responsive" alt="What we pay">
-                    </a>
+                    <?php get_template_part('template/ads-image', 'whatwebuy');?>
                 </div>
             </div>
         </div>

@@ -28,11 +28,5 @@ if ( $the_query->have_posts() ) {
 wp_reset_postdata();
 ?>
 <div class="whatwepay mt30">
-    <div class="text-ads">
-        <div class="text-cnt">
-            <img src="/assets/images/whatwepay.png"  alt=""/>
-        </div>
-
-    </div>
-    <img src="/assets/images/img-ads.jpg" class="img-responsive" alt="">
+     <?php get_template_part('template/ads-image', 'whatwebuy');?>
 </div>
