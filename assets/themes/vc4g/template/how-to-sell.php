@@ -150,7 +150,7 @@ $platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverAr
 <?php endif;?>
                  </table>
     		</div>
-    		<button type="submit" class="btn body-content download" onclick="window.location.href='<?php echo site_url('/blog/');?>';"><span>Download pdf</span></button>
+    		<button type="submit" class="btn body-content download" onclick="window.location.href='<?php echo site_url('/cash-gold/blog/');?>';"><span>Download pdf</span></button>
     		<p class="note">Date Published: <strong>June 11 2015, 13:26:31</strong></p>
     		<!--<p class="note">-->
     		<!--    <a href="http://www.kitco.com/connecting.html">-->
