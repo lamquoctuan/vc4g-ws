@@ -582,16 +582,19 @@ fieldset[disabled] .btn-xl.active {
 header {
     text-align: center;
     color: #fff;
-    background: url(/assets/images/header-bg.jpg) no-repeat scroll center center;
+}
+header .bg-header {
+    background: url(/assets/images/header-bg.jpg) no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 }
 
 header .intro-text {
-    padding-top: 100px;
-    background: url(/assets/images/gold.png) 184px bottom no-repeat;
+    background: url(/assets/images/gold.png) center bottom no-repeat;
 }
 
 header .intro-text .intro-lead-in {
@@ -638,9 +641,22 @@ header .phone-banner a:hover {
     color: rgba(255, 255, 255, 0.8);
 }
 
+header img[alt="goldvcg"] {
+    margin-top: 120px; 
+}
+
+.ad-banner {
+    background: #ee4c4c;
+    color: #fff;
+    font-size: 26px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 22px 0;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 110px;
         padding-bottom: 300px;
     }
     header .intro-text .intro-lead-in {
@@ -2442,7 +2458,11 @@ section hr {
     border-radius: 0;
 }
 
-
+@media only screen and (max-width: 1400px) and (min-width: 1024px) {
+    header img[alt="goldvcg"] {
+        margin-top: 52px;
+    }
+}
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
@@ -2463,9 +2483,18 @@ section hr {
         padding: 15px 5px;
         font-size: 12px;
     }
+    
     header .intro-text {
         background: none;
         padding-bottom: 100px;
+    }
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
     }
     .services {
         padding: 80px 0 20px 0;
@@ -2849,6 +2878,14 @@ section hr {
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
     header .col-md-6 {
         width: 50%;
         float: left;
@@ -2982,11 +3019,22 @@ section hr {
         padding: 15px;
     }
 }
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+}
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     header .intro-text {
         padding-top: 54px;
     }
+    
     #howwepay .col-sm-5,
     footer .col-md-6 {
         width: 50%;
@@ -3217,6 +3265,14 @@ section hr {
 }
 
 @media only screen and (max-width: 767px) and (min-width: 480px) and (orientation: landscape) {
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
     header .intro-text .intro-lead-in {
         font-size: 32px;
         margin-bottom: 0;
@@ -3268,6 +3324,7 @@ section hr {
 }
 
 @media only screen and (max-width: 320px) and (orientation: portrait) {
+    
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
         width: 78%;
         margin-top: 5px;
@@ -3334,6 +3391,14 @@ section hr {
 }
 
 @media only screen and (max-width: 568px) and (orientation: landscape) {
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
     #howwepay .panel-heading {
         overflow: hidden;
         padding: 0;
