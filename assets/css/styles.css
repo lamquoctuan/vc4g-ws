@@ -655,6 +655,11 @@ header img[alt="goldvcg"] {
     font-weight: 300;
 }
 
+.ad-banner strong {
+    font-size: 30px;
+    font-weight: 700;
+}
+
 @media(min-width:768px) {
     header .intro-text {
         padding-bottom: 300px;
@@ -2496,9 +2501,11 @@ section hr {
         font-size: 20px;
         padding: 10px 0;
     }
+    .ad-banner {
+        font-size: 24px;
+    }
     .services {
         padding: 80px 0 20px 0;
-        ;
     }
     .services .col-md-4 {
         margin-bottom: 20px;
@@ -2886,6 +2893,9 @@ section hr {
         font-size: 20px;
         padding: 10px 0;
     }
+    .ad-banner strong {
+        font-size: 24px;
+    }
     header .col-md-6 {
         width: 50%;
         float: left;
@@ -3027,6 +3037,9 @@ section hr {
     .ad-banner {
         font-size: 20px;
         padding: 10px 0;
+    }
+    .ad-banner strong {
+        font-size: 24px;
     }
 }
 
@@ -3273,6 +3286,9 @@ section hr {
         font-size: 20px;
         padding: 10px 0;
     }
+    .ad-banner strong {
+        font-size: 24px;
+    }
     header .intro-text .intro-lead-in {
         font-size: 32px;
         margin-bottom: 0;
@@ -3398,6 +3414,9 @@ section hr {
     .ad-banner {
         font-size: 20px;
         padding: 10px 0;
+    }
+    .ad-banner strong {
+        font-size: 24px;
     }
     #howwepay .panel-heading {
         overflow: hidden;
