@@ -14,6 +14,7 @@
             </div>
         </div>
     </div>    
+    
     <div class="ad-banner">
         <div class="container">
             Earn <strong>$50</strong> Extra Cash by <strong>Selling</strong> your gold or engagement rings
