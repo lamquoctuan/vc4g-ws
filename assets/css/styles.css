@@ -6,15 +6,15 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
-    color: #797979;
+    color: #4f4f4f;
     font-size: 14px;
     background: #f5f5f5;
 }
 
 .text-muted {
-    color: #777;
+    color: #565656;
 }
 
 .text-primary {
@@ -28,6 +28,10 @@ p {
 
 p.large {
     font-size: 16px;
+}
+
+p.small {
+    font-size: 12px;
 }
 
 a,
@@ -56,75 +60,259 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 100;
     text-transform: uppercase;
     color: #303030;
 }
 
-.m0                     { margin: 0; }
-.ml1                    { margin-left: 1px; }
-.mt1                    { margin-top: 1px; }
-.mr1                    { margin-right: 1px; }
-.mb1                    { margin-bottom: 1px; }
-.ml2                    { margin-left: 2px; }
-.mt2                    { margin-top: 2px; }
-.mr2                    { margin-right: 2px; }
-.mb2                    { margin-bottom: 2px; }
-.ml5                    { margin-left: 5px; }
-.mt5                    { margin-top: 5px; }
-.mr5                    { margin-right: 5px; }
-.mb5                    { margin-bottom: 5px; }
-.ml10                   { margin-left: 10px; }
-.mt10                   { margin-top: 10px; }
-.mr10                   { margin-right: 10px; }
-.mb10                   { margin-bottom: 10px; }
-.ml15                   { margin-left: 15px; }
-.mt15                   { margin-top: 15px; }
-.mr15                   { margin-right: 15px; }
-.mb15                   { margin-bottom: 15px; }
-.ml20                   { margin-left: 20px; }
-.mt20                   { margin-top: 20px; }
-.mr20                   { margin-right: 20px; }
-.mb20                   { margin-bottom: 20px; }
-.ml30                   { margin-left: 30px; }
-.mt30                   { margin-top: 30px; }
-.mr30                   { margin-right: 30px; }
-.mb30                   { margin-bottom: 30px; }
-.ml-50                  { margin-left: -50px; }
-.mt-50                  { margin-top: -50px; }
-.mr-50                  { margin-right: -50px; }
-.mb-50                  { margin-bottom: -50px; }
+.m0 {
+    margin: 0;
+}
 
-.p0                     { padding: 0; }
-.pl1                    { padding-left: 1px; }
-.pt1                    { padding-top: 1px; }
-.pr1                    { padding-right: 1px; }
-.pb1                    { padding-bottom: 1px; }
-.pl2                    { padding-left: 2px; }
-.pt2                    { padding-top: 2px; }
-.pr2                    { padding-right: 2px; }
-.pb2                    { padding-bottom: 2px; }
-.pl5                    { padding-left: 5px; }
-.pt5                    { padding-top: 5px; }
-.pr5                    { padding-right: 5px; }
-.pb5                    { padding-bottom: 5px; }
-.pl10                   { padding-left: 10px; }
-.pt10                   { padding-top: 10px; }
-.pr10                   { padding-right: 10px; }
-.pb10                   { padding-bottom: 10px; }
-.pl15                   { padding-left: 15px; }
-.pt15                   { padding-top: 15px; }
-.pr15                   { padding-right: 15px; }
-.pb15                   { padding-bottom: 15px; }
-.pl20                   { padding-left: 20px; }
-.pt20                   { padding-top: 20px; }
-.pr20                   { padding-right: 20px; }
-.pb20                   { padding-bottom: 20px; }
-.pl30                   { padding-left: 30px; }
-.pt30                   { padding-top: 30px; }
-.pr30                   { padding-right: 30px; }
-.pb30                   { padding-bottom: 30px; }
+.ml1 {
+    margin-left: 1px;
+}
+
+.mt1 {
+    margin-top: 1px;
+}
+
+.mr1 {
+    margin-right: 1px;
+}
+
+.mb1 {
+    margin-bottom: 1px;
+}
+
+.ml2 {
+    margin-left: 2px;
+}
+
+.mt2 {
+    margin-top: 2px;
+}
+
+.mr2 {
+    margin-right: 2px;
+}
+
+.mb2 {
+    margin-bottom: 2px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.ml30 {
+    margin-left: 30px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.ml40 {
+    margin-left: 40px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mr40 {
+    margin-right: 40px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.pl1 {
+    padding-left: 1px;
+}
+
+.pt1 {
+    padding-top: 1px !important;
+}
+
+.pr1 {
+    padding-right: 1px;
+}
+
+.pb1 {
+    padding-bottom: 1px;
+}
+
+.pl2 {
+    padding-left: 2px;
+}
+
+.pt2 {
+    padding-top: 2px;
+}
+
+.pr2 {
+    padding-right: 2px;
+}
+
+.pb2 {
+    padding-bottom: 2px;
+}
+
+.pl5 {
+    padding-left: 5px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.pr15 {
+    padding-right: 15px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pl30 {
+    padding-left: 30px;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
 
 .img-centered {
     margin: 0 auto;
@@ -141,7 +329,7 @@ h6 {
 .btn-primary {
     border: none;
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #fff;
     background-color: #8e8e8e;
@@ -189,13 +377,16 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl {
-    border: 2px solid #ccc; /* stroke */
+    border: 2px solid #ccc;
+    /* stroke */
     -moz-border-radius: 24px / 24px 24px 25px 25px;
     -webkit-border-radius: 24px / 24px 24px 25px 25px;
-    border-radius: 24px / 24px 24px 25px 25px; /* border radius */
+    border-radius: 24px / 24px 24px 25px 25px;
+    /* border radius */
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
-    background-clip: padding-box; /* prevents bg color from leaking outside the border */
+    background-clip: padding-box;
+    /* prevents bg color from leaking outside the border */
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 300;
@@ -208,7 +399,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #f6bf01;
+    border-color: transparent;
     color: #fff;
     background-color: #d19f42;
 }
@@ -243,6 +434,7 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+.help-block.text-danger li {color: red; font-size:11px;}
 
 .navbar-default {
     border-color: transparent;
@@ -250,7 +442,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
     color: #fed136;
 }
 
@@ -262,12 +454,12 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-collapse {
-    border-color: rgba(255,255,255,.02);
+    border-color: rgba(255, 255, 255, .02);
 }
 
 .navbar-default .navbar-toggle {
-    border-color: none;
-    background-color: none;
+    border-color: transparent;
+    background-color: transparent;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -276,12 +468,12 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #fed136;
+    background-color: #dedede;
 }
 
 .navbar-default .nav li a {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
     color: #181c2a;
@@ -304,29 +496,84 @@ fieldset[disabled] .btn-xl.active {
     background-color: #dedede;
 }
 
+#aboutTerms .term-heading {
+    height: 44px;
+}
+
+#aboutTerms .term-title {
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+    line-height:6px;
+}
+
+#aboutTerms .term-title a {
+    width: 100%;
+    position: absolute;left: -8px;
+    cursor: pointer;
+}
+
+
+#aboutTerms .term-title a div:first-child {
+    width: 34px;
+    height: 24px;
+    margin: 0;
+    float: left;
+    cursor: pointer;
+    padding:0 8px;
+}
+
+#aboutTerms .term-title a div:last-child {
+    float: left;
+    padding-left: 10px;
+    padding-top: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #d19f42;
+}
+#aboutTerms .term-title a[aria-expanded="false"] div:last-child {
+    color:#4f4f4f ;
+}
+#aboutTerms .fa {
+    width: 24px;
+    height: 24px;
+    background: url(/assets/images/group-icons.png) -539px -846px no-repeat;
+    color: transparent;
+}
+#aboutTerms .fa-arrow-circle-o-down {
+    background-position: -539px -975px;
+}
+#aboutTerms .fa-arrow-circle-o-right {
+    background-position: -539px -846px;
+}
+#aboutTerms .term-body {
+    padding: 10px 10px 10px 35px;
+    min-height: 120px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #4f4f4f;
+}
+
 @media(min-width:768px) {
     .navbar-default {
-        padding:0;
+        padding: 0;
         border: 0;
         background-color: #fff;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
-
     .navbar-default .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
     }
-
     .navbar-default.navbar-shrink {
-        padding: 10px 0;
         background-color: #fff;
         border-bottom: solid 1px #ddd;
     }
-
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
@@ -335,24 +582,24 @@ fieldset[disabled] .btn-xl.active {
 header {
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
-    background-image: url(/assets/images/header-bg.jpg);
+}
+header .bg-header {
+    background: url(/assets/images/header-bg.jpg) no-repeat center top;
+    background-attachment: relative;
     background-position: center center;
-    background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 }
 
 header .intro-text {
-    padding-top: 100px;
-    background: url(/assets/images/gold.png) 184px bottom no-repeat;
+    background: url(/assets/images/gold.png) center bottom no-repeat;
 }
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 45px;
     font-weight: 300;
     line-height: 22px;
@@ -361,10 +608,24 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
+}
+
+header .intro-text .intro-heading acronym {
+    -webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #fff;
+	display: inline-block;
+	padding: 0 18px 5px;
+    line-height: 40px;
+    margin-left: 15px;
+}
+header .intro-text .intro-heading acronym img {
+    
 }
 
 header .phone-banner {
@@ -372,29 +633,58 @@ header .phone-banner {
     margin-top: 20px;
 }
 
+header .phone-banner a {
+    color: #fff;
+}
+
+header .phone-banner a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+header img[alt="goldvcg"] {
+    margin-top: 120px; 
+}
+
+.ad-banner {
+    background: #ee4c4c;
+    color: #fff;
+    font-size: 26px;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 22px 0;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.ad-banner strong {
+    font-size: 30px;
+    font-weight: 700;
+}
+
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 110px;
         padding-bottom: 300px;
     }
-
     header .intro-text .intro-lead-in {
         margin-bottom: 0;
-        font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 45px;
         font-weight: 100;
         line-height: 40px;
         text-transform: uppercase;
     }
-
     header .intro-text .intro-heading {
         margin-bottom: 20px;
         text-transform: uppercase;
-        font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 48px;
         font-weight: 900;
         line-height: 1;
     }
+}
+
+.form-control {
+    box-shadow: none;
+    border-radius: 3px;
 }
 
 section {
@@ -410,7 +700,7 @@ section h2.section-heading {
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -426,280 +716,7 @@ section h3.section-subheading {
     margin: 15px 0;
 }
 
-#whatwebuy .whatwebuy-item {
-    right: 0;
-    margin: 0 0 15px;
-    width: 33.33333333%;
-    float:left;
-}
 
-#whatwebuy .whatwebuy-item .whatwebuy-link {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    max-width: 400px;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    opacity: 0;
-    background: rgba(0,0,0,.5);
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
-    border-radius:130px;
-    left:20%;
-    top: 10px;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover:hover {
-    opacity: 1;
-}
-#whatwebuy span {display: block; font-size: 13px; text-transform: uppercase;}
-
-#whatwebuy .icon-call {background: url(/assets/images/group-icons.png) no-repeat -400px -144px; width: 30px; height: 30px;}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
-    position: absolute;
-    top: 30%;
-    width: 100%;
-    height: 20px;
-    margin-top: -12px;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content i {
-    margin-top: -12px;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content h3,
-#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content h4 {
-    margin: 0;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-caption {
-    margin: 0 auto;
-    padding: 10px 0;
-    color: #8e8e8e;
-}
-
-#whatwebuy .whatwebuy-item .whatwebuy-caption h4 {
-    margin: 0;
-    text-transform: none;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-#whatwebuy .btn-row-next {position: absolute; z-index:6; right: 0; top: 30%;}
-#whatwebuy .icon-next {width: 24px; height: 24px; background: url(/assets/images/icon-next.png) no-repeat 0 0; margin-right: -15px;}
-
-#whatwebuy * {
-    z-index: 2;
-}
-
-.timeline {
-    position: relative;
-    padding: 0;
-    list-style: none;
-}
-
-.timeline:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    margin-left: -1.5px;
-    background-color: #f1f1f1;
-}
-
-.timeline>li {
-    position: relative;
-    margin-bottom: 50px;
-    min-height: 50px;
-}
-
-.timeline>li:before,
-.timeline>li:after {
-    content: " ";
-    display: table;
-}
-
-.timeline>li:after {
-    clear: both;
-}
-
-.timeline>li .timeline-panel {
-    float: right;
-    position: relative;
-    width: 100%;
-    padding: 0 20px 0 100px;
-    text-align: left;
-}
-
-.timeline>li .timeline-panel:before {
-    right: auto;
-    left: -15px;
-    border-right-width: 15px;
-    border-left-width: 0;
-}
-
-.timeline>li .timeline-panel:after {
-    right: auto;
-    left: -14px;
-    border-right-width: 14px;
-    border-left-width: 0;
-}
-
-.timeline>li .timeline-image {
-    z-index: 100;
-    position: absolute;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    margin-left: 0;
-    border: 7px solid #f1f1f1;
-    border-radius: 100%;
-    text-align: center;
-    color: #fff;
-    background-color: #fed136;
-}
-
-.timeline>li .timeline-image h4 {
-    margin-top: 12px;
-    font-size: 10px;
-    line-height: 14px;
-}
-
-.timeline>li.timeline-inverted>.timeline-panel {
-    float: right;
-    padding: 0 20px 0 100px;
-    text-align: left;
-}
-
-.timeline>li.timeline-inverted>.timeline-panel:before {
-    right: auto;
-    left: -15px;
-    border-right-width: 15px;
-    border-left-width: 0;
-}
-
-.timeline>li.timeline-inverted>.timeline-panel:after {
-    right: auto;
-    left: -14px;
-    border-right-width: 14px;
-    border-left-width: 0;
-}
-
-.timeline>li:last-child {
-    margin-bottom: 0;
-}
-
-.timeline .timeline-heading h4 {
-    margin-top: 0;
-    color: inherit;
-}
-
-.timeline .timeline-heading h4.subheading {
-    text-transform: none;
-}
-
-.timeline .timeline-body>p,
-.timeline .timeline-body>ul {
-    margin-bottom: 0;
-}
-
-@media(min-width:768px) {
-    .timeline:before {
-        left: 50%;
-    }
-
-    .timeline>li {
-        margin-bottom: 100px;
-        min-height: 100px;
-    }
-
-    .timeline>li .timeline-panel {
-        float: left;
-        width: 41%;
-        padding: 0 20px 20px 30px;
-        text-align: right;
-    }
-
-    .timeline>li .timeline-image {
-        left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 16px;
-        font-size: 13px;
-        line-height: 18px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        float: right;
-        padding: 0 30px 20px 20px;
-        text-align: left;
-    }
-}
-
-@media(min-width:992px) {
-    .timeline>li {
-        min-height: 150px;
-    }
-
-    .timeline>li .timeline-panel {
-        padding: 0 20px 20px;
-    }
-
-    .timeline>li .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 30px;
-        font-size: 18px;
-        line-height: 26px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 20px 20px;
-    }
-}
-
-@media(min-width:1200px) {
-    .timeline>li {
-        min-height: 170px;
-    }
-
-    .timeline>li .timeline-panel {
-        padding: 0 20px 20px 100px;
-    }
-
-    .timeline>li .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 40px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 100px 20px 20px;
-    }
-}
 
 .team-member {
     margin-bottom: 50px;
@@ -721,37 +738,100 @@ section h3.section-subheading {
     margin-top: 0;
 }
 
-aside.clients img {
-    margin: 50px auto;
+section#contact {
+    padding-top: 60px;
+    color: #848484;
 }
 
+section#contact a {
+    color: #848484;
+}
 
-section#contact  {padding-top: 60px;}
+section#contact a:hover {
+    color: #d19f42;
+}
+
 section#contact .menu-footer li {
     margin-bottom: 15px;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 13px;
 }
-section#contact .menu-footer li a {color:#797979;}
-section#contact .menu-footer li a:hover {color: #d19f42;}
-section#contact .place-contact li {padding-left: 22px; font-weight: normal; margin-bottom: 15px; font-size: 12px;}
-section#contact .icon-phone-small, section#contact .icon-email-small, section#contact .icon-place, section#contact .icon-date{background: url(/assets/images/group-icons.png) no-repeat;}
-section#contact .icon-phone-small {background-position: 0 -672px;}
-section#contact .icon-email-small {background-position: 0 -706px;}
-section#contact .icon-place {background-position: 0 -742px;}
-section#contact .icon-date {background-position: 0 -779px; }
-.temperature {font-size: 72px; font-weight: 300; line-height: 1;}
-.temperature sup {font-size: 24px; top: -1.6em}
-.temperature + p {font-size: 12px; line-height: 16px;}
+
+section#contact .menu-footer li a {
+    color: #797979;
+}
+
+section#contact .menu-footer li a:hover {
+    color: #d19f42;
+}
+
+section#contact .place-contact li {
+    padding-left: 22px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+section#contact .icon-phone-small,
+section#contact .icon-email-small,
+section#contact .icon-place,
+section#contact .icon-date {
+    background: url(/assets/images/group-icons.png) no-repeat;
+}
+
+section#contact .icon-phone-small {
+    background-position: 0 -672px;
+}
+
+section#contact .icon-email-small {
+    background-position: 0 -706px;
+}
+
+section#contact .icon-place {
+    background-position: 0 -742px;
+}
+
+section#contact .icon-date {
+    background-position: 0 -779px;
+}
+
+section#contact #contactForm .col-md-5 {padding-left: 2px;}
+
+.temperature {
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.temperature sup {
+    font-size: 24px;
+    top: -1.6em
+}
+
+.temperature + p {
+    font-size: 12px;
+    line-height: 16px;
+}
 
 section#contact .form-group {
     margin-bottom: 2px;
-    height: 43px;
 }
-section#contact #contactForm .col-md-6:first-child {padding-right: 2px}
-section#contact #contactForm .col-md-6:last-child {padding-left: 2px}
-section#contact .btn.btn-yellow {margin-top: 20px; color: #fff; width: 100%; padding-left: 0; padding-right: 0;}
+
+section#contact #contactForm .col-md-7 {
+    padding-right: 2px
+}
+
+section#contact #contactForm .col-md-5 {
+    padding-left: 2px
+}
+
+section#contact .btn.btn-yellow {
+    color: #fff;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 section#contact .form-group input,
 section#contact .form-group textarea {
@@ -774,35 +854,34 @@ section#contact .form-control:focus {
 
 section#contact::-webkit-input-placeholder {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-moz-placeholder {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact::-moz-placeholder {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
 section#contact:-ms-input-placeholder {
     text-transform: uppercase;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #bbb;
 }
 
-section#contact .text-danger {
-    color: #e74c3c;
-}
+section#contact .help-block {margin-bottom:0;}
+section#contact .help-block.text-danger ul {padding-left: 15px;}
 
 footer {
     padding: 25px 0;
@@ -813,14 +892,8 @@ footer span.copyright {
     color: #a9a9a9;
 }
 
-footer .container {border-top: solid 1px #cdcdcd;}
-
-footer ul.quicklinks {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
+footer .container {
+    border-top: solid 1px #cdcdcd;
 }
 
 ul.social-buttons {
@@ -877,7 +950,7 @@ ul.social-buttons li a:active {
 
 .whatwebuy-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 45px;
     font-weight: 300;
 }
@@ -949,8 +1022,2508 @@ img::-moz-selection {
     background: 0 0;
 }
 
-body {
-    webkit-tap-highlight-color: #fed136;
+hr {
+    border-top: 1px solid #cdcdcd;
 }
 
+.btn.body-content {
+    border: 2px solid #a1a3a3;
+    -moz-border-radius: 19px / 19px 19px 20px 20px;
+    -webkit-border-radius: 19px / 19px 19px 20px 20px;
+    border-radius: 19px / 19px 19px 20px 20px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: transparent;
+    padding: 6px 24px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #8e8e8e;
+    font-size: 13px;
+}
 
+.btn.body-content:hover {
+    background: #d19f42;
+    border-color: #d19f42;
+    color: #fff;
+}
+
+header {
+    position: relative;
+}
+
+.navbar-default .navbar-brand {
+    text-indent: -99999px;
+    display: none;
+}
+
+.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
+    display: block;
+}
+
+.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
+    width: 60%;
+    margin-top: -11px;
+}
+
+.navbar-fixed-top {
+    top: auto;
+}
+
+.navbar-right {
+    width: 100%
+}
+
+.navbar-fixed-top.navbar-shrink {
+    top: 0;
+}
+
+.navbar-fixed-top.navbar-shrink .navbar-right {
+    width: auto;
+    margin-top: 0;
+}
+
+.navbar-default.navbar-shrink .nav li a {
+    padding: 15px;
+}
+
+.navbar-default.navbar-shrink .nav li.active a,
+.navbar-default.navbar-shrink .nav li a:hover,
+.navbar-default.navbar-shrink .nav li a:focus {
+    color: #181c2a;
+}
+
+.navbar-default.navbar-shrink .nav li a:hover {
+    color: rgba(24, 28, 42, 0.5);
+}
+
+.navbar-default .sub-phone {
+    display: none;
+}
+
+a.sub-phone {
+    position: relative;
+    margin: 20px 0 5px 30px;
+    display: inline-block;
+    color: #555b65;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+a.sub-phone:hover {
+    color: rgba(95, 91, 101, 08);
+}
+
+.icon-phone {
+    position: absolute;
+    font-size: 30px;
+    left: -34px;
+    background: url(/assets/images/group-icons.png) no-repeat 0 -144px;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-search {
+    background-position: 0 -78px;
+    top: 4px;
+}
+.address-banner {
+    font-size: 13px;
+    display: block;
+    color: #555b65;
+    font-weight: 500;
+}
+.navbar-default.navbar-shrink .sub-phone {
+    display: block;
+    margin: 0;
+    font-size: 13px;
+    padding-left: 8px !important;
+}
+
+.navbar-default.navbar-shrink .sub-phone .icon-phone {
+    left: -20px;
+    top: 12px;
+    background-position: -216px -144px;
+}
+
+.navbar-default.navbar-shrink .phone-text {
+    padding-left: 25px;
+}
+
+.navbar-default.navbar-shrink .phone-text:hover a {
+    background: transparent
+}
+
+#blog h3,
+.webuy h2 {
+    color: #fff;
+}
+
+#myRoundabout {
+    width: 500px;
+    height: 250px;
+    padding-left: 100px;
+    margin-left: 30%;
+    margin-top: 102px;
+}
+
+#myRoundabout ul,
+#myRoundabout li {
+    list-style-type: none;
+}
+
+.roundabout-moveable-item {
+    top: -111px !important;
+    height: 460px;
+    width: 460px;
+    cursor: pointer;
+    background-color: #091126;
+    border: 1px solid #fff;
+    border-radius: 230px;
+    color: #fff;
+}
+
+.roundabout-in-focus {
+    cursor: auto;
+}
+
+.blog-latest {
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.no-side-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.services {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.services h3 {
+    text-transform: none;
+    font-weight: 300;
+    font-size: 26px;
+    color: #303030;
+}
+
+.fa.icon-best {background: url(/assets/images/bestprice.gif) no-repeat; width:90px; height:89px;}
+.fa.icon-trust {background: url(/assets/images/trustable.gif) no-repeat; width:90px; height:89px;}
+.fa.icon-fast {background: url(/assets/images/fast-convenient-service.gif) no-repeat; width:90px; height:89px;}
+
+.fa.icon-snow,
+.fa.icon-cool,
+.fa.icon-rainy,
+.fa.icon-sunny,
+.fa.icon-lightning {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 55px;
+    height: 54px;
+}
+
+.fa.icon-snow {background-position: 0 -443px;  width: 51px;height: 54px;}
+.fa.icon-cool {background-position: -91px -443px;}
+.fa.icon-rainy {background-position: -177px -443px;}
+.fa.icon-sunny {background-position: -282px -443px; }
+.fa.icon-lightning {background-position: -372px -443px;}
+
+
+body h2 {
+    font-weight: 900;
+    font-size: 26px;
+}
+
+#whatwebuy .whatwebuy-item {
+    right: 0;
+    margin: 0 0 15px;
+    width: 33.33333333%;
+    float: left;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    opacity: 0;
+    background: rgba(0, 0, 0, .5);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+    border-radius: 130px;
+    left: 20%;
+    top: 10px;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover:hover {
+    opacity: 1;
+}
+
+#whatwebuy span {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#whatwebuy .icon-call {
+    background: url(/assets/images/group-icons.png) no-repeat -400px -144px;
+    width: 30px;
+    height: 30px;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content i {
+    margin-top: -12px;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content h3,
+#whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content h4 {
+    margin: 0;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-caption {
+    margin: 0 auto;
+    padding: 10px 0;
+    color: #8e8e8e;
+}
+
+#whatwebuy .whatwebuy-item .whatwebuy-caption h4 {
+    margin: 0;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#whatwebuy .btn-row-next {
+    position: absolute;
+    z-index: 6;
+    right: 0;
+    top: 30%;
+}
+
+#whatwebuy .icon-next.btn {
+    width: 24px;
+    height: 24px;
+    background: url(/assets/images/icon-next.png) no-repeat 0 0;
+    margin-right: -15px;
+}
+
+#whatwebuy * {
+    z-index: 2;
+}
+
+#whatwebuy .display-view {
+    background: url(/assets/images/icon-view.jpg) no-repeat 0 0;
+    width: 24px;
+    height:24px;
+    display: inline-block;
+}
+
+#whatwebuy .display-view.list {
+    background-position: 0 0;
+}
+#whatwebuy .display-view.griditem {
+    background-position: -24px 0;
+}
+#whatwebuy .display-view.list:hover {
+    background-position: 0 -24px;
+}
+#whatwebuy .display-view.griditem:hover {
+    background-position: -24px -24px;
+}
+#whatwebuy .switch a.list.active {background-position: 0 -24px;}
+#whatwebuy .switch a.griditem.active {background-position: -24px -24px;}
+
+#prd-gold .whatwebuy-item {
+  padding-right: 11px;
+  padding-left: 11px;
+}
+#prd-gold .row {margin-left:5px;}
+
+#whatwebuy h2 {
+    margin-top: 0;
+}
+
+#whatwebuy h5 {
+    text-transform: none;
+    font-weight: 600;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+#whatwebuy .nav.nav-tabs li {
+    float: none;
+    text-align: right;
+}
+
+#whatwebuy .nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+    color: #525252;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 6px 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#whatwebuy .nav-tabs>li:hover>a {
+    background-color: transparent;
+    color: #d19f42;
+}
+
+#whatwebuy .nav-tabs>li.active>a,
+#whatwebuy .nav-tabs>li.active>a:focus,
+#whatwebuy .nav-tabs>li.active>a:hover {
+    color: #d19f42 !important;
+    background-color: transparent;
+    border: transparent;
+}
+
+#whatwebuy .nav-tabs {
+    border: none;
+    border-bottom: solid 1px #ddd;
+    float: right;
+    clear: left;
+}
+
+#whatwebuy .nav-tabs>li>a.first {
+    border-top: solid 1px #ddd !important;
+}
+#whatwebuy .switch {
+    clear: both;
+    text-align: right;
+    padding-top: 10px;
+}
+
+#whatwebuy .title-prd .switch {
+    clear: none;
+    padding-top: 0;
+}
+
+.viewall {
+    background: url(/assets/images/icon-view.png) right 2px no-repeat;
+    padding-right: 20px;
+    color: #7b7b7b;
+    font-size: 13px;
+    float: right;
+    line-height: 1;
+    margin-top: 15px;
+}
+
+.viewall:hover {
+    background-position: right -11px;
+}
+
+.bg-diamond {
+    background: url(/assets/images/diamond.png) no-repeat;
+}
+
+.webuy {
+    color: #fff;
+    background: url(/assets/images/header-bg.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 80px 0;
+}
+
+.webuy ul {
+    padding: 10px 0;
+}
+
+.webuy li {
+    background: url(/assets/images/group-icons.png) 0 -220px no-repeat;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.webuy .help-block ul {padding:0 20px;}
+.webuy .help-block li {background-image: none; padding-left:0; }
+.webuy .btn.body-content {
+    color: #fff;
+    border-color: #fff;
+}
+
+.webuy .btn.body-content:hover {
+    border-color: #d19f42;
+}
+
+.section hr,
+section hr {
+    width: 50px;
+}
+
+#howwepay .nav-tabs {
+    background: #2b3042;
+    margin-top: 30px;
+    border-bottom: none;
+}
+
+#howwepay .nav-tabs>li {
+    margin-bottom: 0;
+    border-right: solid 1px #454a5e;
+}
+
+#howwepay .nav-tabs>li.active {
+    background: #d19f42;
+}
+
+#howwepay .nav-tabs>li.active,
+#howwepay .nav-tabs>li:last-child {
+    border-right: none;
+}
+
+#howwepay .nav-tabs>li>a {
+    font-size: 18px;
+    color: #7b7d87;
+    border: none;
+    padding: 30px 10px;
+    font-weight: normal;
+}
+
+#howwepay .nav-tabs>li:hover >a {
+    color: #d19f42;
+    background: none;
+    border-radius: 0;
+}
+
+#howwepay .nav-tabs>li.active>a,
+#howwepay .nav-tabs>li.active>a:focus,
+#howwepay .nav-tabs>li.active>a:hover {
+    border-radius: 0;
+    color: #fff;
+    background: #d19f42;
+    border: none;
+}
+
+#howwepay .table {
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+#howwepay .table>thead>tr>th {
+    font-size: 14px;
+    padding: 16px 30px;
+    background: #d8dbe0;
+    border-bottom: none;
+    text-transform: uppercase;
+    color: #686868;
+    border-right: solid 1px #e2e3e3;
+}
+
+#howwepay .table>tbody>tr>td {
+    border-top: none;
+    padding: 16px 30px;
+    border-right: solid 1px #e4e4e4;
+    font-weight:normal;
+}
+
+#howwepay .table>tbody>tr>td:last-child {
+    border-right: none;
+}
+
+#howwepay .table-striped>tbody>tr {
+    background-color: #fafafa;
+}
+
+#howwepay .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f6f6f6;
+}
+
+#howwepay .table-striped>tbody>tr:hover {
+    background-color: #fafafa;
+}
+
+.tables {text-align: left;}
+.tables h3 {
+    background:#d19f42; 
+    color: #fff; 
+    margin-bottom:0; 
+    padding: 22px 0; 
+    font-weight:600;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    font-size:20px;
+}
+#howwepay button.btn.body-content.download {
+    margin-top:60px;
+    border: none;
+    font-size: 20px;
+    width: 372px;
+	height: 67px;
+	-webkit-border-radius: 34px 33px 33px 34px/33px 33px 34px 34px;
+	-moz-border-radius: 34px 33px 33px 34px/33px 33px 34px 34px;
+	border-radius: 34px 33px 33px 34px/33px 33px 34px 34px;
+	background-color: #d19f42;
+}
+#howwepay .btn.download span {
+    background-position: -539px -644px;
+}
+#howwepay p.note {
+    font-size:13px;
+    text-align: center;
+}
+.tfoot-tbl {
+    padding: 20px 60px;
+    background: #fafafa;
+    margin: 0;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+#howwepay .btn1, #howwepay .btn2  {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    line-height: 26px;
+    padding-bottom: 4px;
+}
+
+#howwepay .btn1 {
+    background-position: 0 -327px;
+    padding-left: 26px;
+    padding-top: 4px;  
+}
+
+#howwepay .btn2 {
+    background-position: 0 -592px;
+    padding-left:40px;
+}
+
+#howwepay .btn.body-content:hover .btn1 {
+    background-position: 0 -846px;
+}
+
+#howwepay .btn.body-content:hover .btn2 {
+    background-position: 0 -933px;
+}
+
+.btn.body-content.dload {
+    font-weight: 500;
+    padding: 2px 4px;
+}
+
+.btn.body-content.dload span {
+    background: url(/assets/images/group-icons.png) -289px -846px no-repeat;
+    padding-left: 40px;
+    padding-top: 8px;
+    height: 32px;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.btn.body-content.dload span:hover {
+    background-position: -289px -975px;
+}
+
+.bthome {
+    color: #393939;
+    text-decoration: underline;
+}
+
+#blog {
+    padding: 60px 0 0;
+}
+
+#blog h2 {
+    color: #fff;
+}
+
+.bg-blue-dark {
+    color: #fff;
+    background: url(/assets/images/bg-blog.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    overflow: hidden;
+    height: 442px;
+}
+
+.bg-blue-dark .container {
+    position: relative;
+}
+
+.bg-blue-dark .title {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.sphere-content {
+    width: 75%;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+}
+
+#team {
+    padding-bottom: 60px;
+    padding-top: 80px;
+}
+
+#team .img-responsive {
+    max-width: 100px;
+}
+
+#team hr,
+.webuy hr {
+    margin-left: 0;
+}
+
+#team blockquote {
+    font-size: 14px;
+    line-height: 1.75;
+    border-left: none;
+    background: url(/assets/images/icon-blockquote.png) top left no-repeat;
+}
+
+#team h3 {
+    color: #b7b7b7;
+    text-transform: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.carousel-indicators {
+    bottom: 0;
+}
+
+.carousel-indicators li {
+    background-color: #f0ece0;
+    border: none;
+}
+
+.carousel-indicators li.active {
+    background-color: #d9d0b1;
+}
+
+.bg-banner-how {
+    color: #fff;
+    background: url(/assets/images/bg-banner-how.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 60px 0;
+    height: 251px;
+    margin-top: 51px;
+    text-align: center;
+}
+
+.bg-banner-how h2 {
+    color: #fff;
+}
+
+.bg-deal {
+    color: #fff;
+    background: url(/assets/images/bg-contact.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 60px 0;
+}
+
+.bg-deal p.help-block.text-danger {
+    color: red !important;
+}
+
+.bg-deal h2 {
+    margin: 0;
+    color: #fff;
+}
+
+.bg-deal p {
+    color: #acacac;
+    font-size: 13px;
+}
+
+.bg-deal .help-block ul, .form-message .help-block ul {padding-left: 15px;}
+.bg-deal .help-block.text-danger li {color: rgba(255,255,255,0.3);}
+
+.btn.btn-yellow {
+    background: #d19f42;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.btn.btn-yellow:hover {
+    color: #fff;
+}
+
+.bg-deal .form-control {
+    background: #3c4c5f;
+    padding: 10px 20px;
+    border: none;
+    height: 43px;
+}
+
+.bg-deal #contactForm [class^="col-"] {
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+.bg-comming {
+    color: #fff;
+    background: url(/assets/images/coming-soon.jpg) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 60px 0;
+    text-align: center;
+}
+.bg-comming h2 {color: #fff; font-weight: 100; font-size: 44px;}
+.bg-comming h2 span {font-weight: 600;}
+
+.small-screen {
+    display: none;
+}
+
+.about-page img[alt="about"] {
+    width: 100%;
+}
+
+.title-prd {
+    width: 100%;
+    overflow: hidden;
+}
+
+.title-prd h4 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.title-prd hr {
+    float: left;
+    margin-top: 10px;
+}
+
+.whatwebuy h5 {
+    color: #8e8e8e;
+}
+
+.calculator {
+    background: #f5f5f5;
+    border: solid 1px #eaeaea;
+    padding: 15px 20px;
+}
+
+.calculator h4 {
+    color: #d19f42;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calculator .form-control {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 600;
+    color: #8e8e8e;
+}
+
+.calculator .form-control.result {
+    text-align: right;
+}
+
+.calculator select.form-control {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.calculator .form-group [class^="col"] {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.calculator .form-horizontal .form-group {
+    margin: 7px 0;
+}
+
+.bar-prd {
+    background: #d7d7d7;
+    padding: 10px 0;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bar-prd a {
+    color: #989898;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.bar-prd a:hover,
+.bar-prd a.active {
+    color: #242424;
+    text-decoration: underline;
+}
+
+.control-label.btn {
+    background-color: #6e6e6e;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.control-label.btn:hover {
+    background-color: #d19f42
+}
+
+.btn.call {
+    background: #d19f42 url(/assets/images/group-icons.png) -536px -740px no-repeat;
+    border-radius: 20px;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 0 10px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn.call:hover {
+    background-color: #070c12;
+}
+
+.recentpay .icon-next,
+.recentpay .icon-prev {
+    width: 26px;
+    height: 42px;
+    background: url(/assets/images/group-icons.png) no-repeat;
+    color: transparent;
+    text-shadow: none;
+    margin-top: -30px;
+}
+
+.recentpay .icon-next {
+    margin-right: -20px;
+    background-position: -539px -394px;
+}
+
+.recentpay .icon-next:hover {
+    background-position: -646px -394px;
+}
+
+.sidebar-whywepay h3 {
+    color: #bababa;
+    font-size: 26px;
+    text-transform: none;
+    font-weight: 600;
+    margin-top: 60px;
+}
+
+.recentpay .icon-prev {
+    margin-left: -20px;
+    background-position: -539px -495px;
+}
+
+.recentpay .icon-prev:hover {
+    background-position: -646px -495px;
+}
+
+.recentpay .carousel-control {
+    opacity: 1;
+}
+
+.recentpay .carousel-control.right,
+.recentpay .carousel-control.left {
+    background: none;
+}
+
+.recentpay .carousel-caption {
+    background: url(/assets/images/bg-caption.png) repeat;
+    right: 0;
+    left: 0;
+    padding: 10px 10px 0;
+    text-align: left;
+    margin-bottom: -20px;
+}
+
+.recentpay h2 {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.btn.request {
+    background: #d19f42;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 20px;
+    color: #fff;
+}
+
+.btn.request:hover {
+    background-color: #070c12;
+}
+
+.howtosell {
+    padding: 80px 0;
+}
+
+.webuy.diamond {
+    background: url(/assets/images/bg-blue.jpg) repeat;
+    color: #bababa;
+    padding: 100px 0 80px;
+}
+
+.webuy.diamond h2 {
+    color: #bababa;
+    text-transform: capitalize;
+}
+
+.pricing {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+}
+
+.pricing .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0
+}
+
+.pricing p {
+    color: #414141;
+}
+
+.pricing h4,
+.recent-post h4 {
+    color: #3c3c3c;
+    font-size: 26px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+
+.btn.download {
+    background-color: #d19f42;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn.download:hover {
+    background-color: #070c12;
+}
+
+.btn.download span {
+    display: inline-block;
+    padding-top: 2px;
+    background: url(/assets/images/group-icons.png) no-repeat -539px -649px;
+    padding-left: 28px;
+}
+
+.whatwepay {
+    position: relative;
+}
+
+.whatwepay .img-responsive {
+    width: 100%;
+}
+
+.text-ads {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text-cnt {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 137px;
+    margin-top: -34px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.text-cnt img {
+    margin-top: -24px;
+}
+
+.blog img[alt="intro-img"] {
+    width: 100%;
+}
+
+.body-blog h2, .body-blog h3, .body-blog h4 {
+    color:#bababa;
+    font-weight:600;
+    text-transform: none;
+    margin: 20px 0 15px;
+}
+.body-blog ul,
+.body-blog ol {
+    margin: 0 15px;
+    padding: 0;
+}
+
+.body-blog ul li {
+    list-style-type: disc;
+    background-image: none;
+    padding-left: 10px;
+}
+
+.body-blog ul li li {
+    list-style-type: circle;
+}
+
+.body-blog ol li {
+    list-style-type: decimal;
+}
+
+.pagination-share {
+    border-top: solid 1px #2c3a4c;
+    border-bottom: solid 1px #2c3a4c;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.webuy .pagination-share li {
+    background-image: none;
+    padding-left: 10px;
+}
+
+.share {
+    float: right;
+}
+
+.share ul.social-buttons li a {
+    background-color: transparent;
+    border: solid 2px #bababa;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+}
+
+.share .list-inline>li {
+    padding-left: 5px;
+}
+
+.pagi {
+    float: left;
+    padding-top: 25px;
+}
+
+.pagi a,
+.recent-post li a {
+    color: #bababa;
+}
+
+.pagi a:hover,
+.recent-post li a:hover {
+    color: #d19f42;
+}
+
+.recent-post h4 {
+    color: #bababa;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.recent-post li {
+    background: url(/assets/images/icon-arrow-next.png) 0 2px no-repeat;
+    padding-left: 18px;
+    font-weight: 600;
+}
+
+.bg-banner-how.mail-in-service {
+    background-image: url(/assets/images/bg-mail-in-service.jpg);
+}
+
+.list-step {
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.list-step .fa {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 60px;
+    height: 60px;
+}
+
+.list-step .fa.step1 {
+    background-position: 0 -1076px;
+}
+
+.list-step .fa.step2 {
+    background-position: -88px -1076px;
+}
+
+.list-step .fa.step3 {
+    background-position: -178px -1076px;
+}
+
+.list-step .fa.step4 {
+    background-position: -279px -1076px;
+}
+
+.list-step .fa.step5 {
+    background-position: -372px -1076px;
+}
+
+.body-step .step {
+    color: #313233;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.body-step .step span {
+    display: block;
+    color: #d19f42;
+}
+
+.request-form {
+    background-color: #f5f5f5;
+    padding: 15px 0;
+    border: solid 1px #c6c6c6;
+}
+
+.request-form h4 {
+    font-size: 26px;
+    color: #313233;
+    font-weight: 600;
+}
+
+.request-form hr {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.request-form [class^="col-"] {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.request-form .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.request-form label {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 13px;
+    color: #2a2a2a;
+}
+
+.request-form label span {
+    color: red;
+}
+
+.request-form form {
+    padding: 15px 40px;
+}
+
+.request-form .text-danger ul {
+    padding-left: 0;
+}
+
+.request-form .text-danger li {
+    list-style-type: none;
+    color: red;
+}
+
+.radio {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 18px;
+    line-height: 38px;
+    cursor: pointe;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.request-form label.radio {
+    text-transform: none;
+}
+
+.radio:hover .inner {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: .5;
+}
+
+.radio input {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.radio input:checked + .outer .inner {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.radio input:checked + .outer {
+    border: 1px solid #d19f42;
+}
+
+.radio input:focus + .outer .inner {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    background-color: #d19f42;
+}
+
+.radio .outer {
+    width: 15px;
+    height: 15px;
+    display: block;
+    float: left;
+    margin: 10px 9px 10px 10px;
+    border: 1px solid #9a9a9a;
+    border-radius: 50%;
+}
+
+.radio .inner {
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    width: 9px;
+    height: 9px;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    display: block;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #f08b3b;
+    opacity: 0;
+}
+
+.btn.mail {
+    padding: 10px 40px 10px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn.mail span {
+    background: url(/assets/images/icon-email.png) 0 -3px no-repeat;
+    padding-left: 38px;
+    color: #fff;
+}
+
+.map-contact {
+    margin-top: 51px;
+}
+
+.place-ct {
+    padding: 50px 0;
+}
+
+.place-ct a {color:#2e2e2e;}
+.place-ct a:hover {color:#d19f42;}
+
+.place-ct p {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    color: #2e2e2e;
+}
+
+.place-ct .fa {
+    background: url(/assets/images/group-icons.png) no-repeat;
+    width: 88px;
+    height: 88px;
+}
+
+.place-ct .fa.icon-place-lg {
+    background-position: -1px -1161px;
+}
+
+.place-ct .fa.icon-phone-lg {
+    background-position: -146px -1161px;
+}
+
+.place-ct .fa.icon-clock-lg {
+    background-position: -289px -1161px;
+}
+
+.icon-phone-call,
+.icon-email-small {
+    padding-left: 28px;
+}
+
+.icon-phone-call {
+    background: url(/assets/images/icon-phone-call.png) no-repeat;
+}
+
+.icon-email-small {
+    background: url(/assets/images/icon-email-small.png) no-repeat;
+}
+
+.form-message {
+    padding: 0 0 50px 0;
+}
+
+.form-message hr {
+    width: 100%;
+}
+
+.title-form {
+    color: #313233;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-message textarea.form-control {
+    height: 130px;
+}
+
+.banner-thank-you {
+    background: #d19f42 url(/assets/images/bg-thk.jpg) repeat-x top left;
+    margin-top: 71px;
+    padding: 90px 0 120px;
+    color: #fff;
+}
+
+.banner-thank-you .intro-heading {
+    font-size: 54px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.banner-thank-you .intro-lead-in {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.services.thanks {
+    padding-top: 0;
+    margin-top: -36px;
+}
+
+.services.thanks .fa-stack {
+    background: url(/assets/images/group-icons.png) -525px -1103px no-repeat;
+    width: 146px;
+    height: 146px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.services.thanks .text-muted {
+    color: #565656;
+}
+
+.navbar-toggle {
+    margin: 0;
+    padding: 20px;
+    border-radius: 0;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1024px) {
+    header img[alt="goldvcg"] {
+        margin-top: 52px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
+        width: 54%;
+    }
+    .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 10px;
+    }
+    .navbar-default .nav li a {
+        padding: 25px 22px;
+    }
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 15px 5px;
+        font-size: 12px;
+    }
+    
+    header .intro-text {
+        background: none;
+        padding-bottom: 100px;
+    }
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .ad-banner {
+        font-size: 24px;
+    }
+    .services {
+        padding: 80px 0 20px 0;
+    }
+    .services .col-md-4 {
+        margin-bottom: 20px;
+    }
+    .services button {
+        margin-bottom: 30px;
+    }
+    body h2 {
+        font-weight: 600;
+        font-size: 22px;
+    }
+    #whatwebuy .nav-tabs>li>a {
+        font-size: 14px;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+        top: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 12%;
+    }
+    #whatwebuy .icon-next {
+        margin-right: 0;
+    }
+    .bg-diamond {
+        background: none;
+    }
+    .tables h3 {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+    #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
+        padding: 10px;
+        font-size:13px;
+    }
+    #howwepay button.btn.body-content.download {
+        width: 272px;
+        height: 57px;
+    }
+    .roundabout-moveable-item {
+        width: 320px;
+        height: 320px;
+    }
+    #myRoundabout {
+        margin-left: 124px;
+        margin-top: 142px;
+    }
+    .sphere-content {
+        padding-top: 25px;
+    }
+    .sphere-content h3 {
+        font-size: 18px;
+    }
+    .sphere-content p {
+        font-size: 13px;
+    }
+    .sphere-content .btn.body-content {
+        margin-top: -39px;
+        font-size: 11px;
+    }
+    #team .col-xs-12 {
+        width: 50%;
+    }
+    .btn.request {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .sidebar-whywepay h3 {
+        font-size: 22px;
+    }
+    .recentpay .icon-prev {
+        margin-left: -11px;
+    }
+    .recentpay .icon-next {
+        margin-right: -12px;
+    }
+    .recentpay h2 {
+        margin: 5px 0;
+        font-size: 18px;
+    }
+    .fullscreen .col-sm-9,
+    .fullscreen .col-sm-3 {
+        width: 100%;
+    }
+    .fullscreen .carousel {
+        width: 38%;
+        margin-left: 31%;
+    }
+    #whatwebuy.fullscreen .icon-next {
+        margin-right: -21px;
+    }
+    #whatwebuy.fullscreen .icon-prev {
+        margin-left: -21px;
+    }
+    .fullscreen .sidebar-whywepay h3 {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .banner-thank-you .intro-heading {
+        font-size: 48px;
+    }
+    .banner-thank-you .intro-lead-in {
+        font-size: 18px;
+    }
+    .services h3 {
+        font-size: 24px;
+    }
+    .place-ct .col-md-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+    .radio {
+        padding-right: 0;
+    }
+    .request-form h4 {
+        font-size: 22px;
+    }
+    .request-form form {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 40px;
+    }
+    #myRoundabout {
+        margin-left: 25%;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 150px;
+        height: 150px;
+        border-radius: 120px;
+        left: 20%;
+        top: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 20%;
+    }
+    .btn.request {
+        font-size: 16px;
+    }
+    .recentpay .icon-prev {
+        margin-left: -15px;
+    }
+    .recentpay .icon-next {
+        margin-right: -16px;
+    }
+    .sidebar-whywepay .form-horizontal .control-label {
+        font-size: 12px;
+    }
+    .btn.call {
+        font-size: 11px;
+    }
+    .place-ct .col-md-3 {
+        width: 30%;
+    }
+    .place-ct .col-md-9 {
+        width: 63%;
+    }
+    .title-form {
+        font-size: 15px;
+    }
+    .radio {
+        padding-right: 0;
+    }
+    .tables h3 {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+     #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
+        padding: 10px;
+        font-size:13px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header .intro-text {
+        padding-top: 30px;
+        background: none;
+    }
+    header {
+        padding-bottom: 30px;
+    }
+    header .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    header .intro-text .intro-lead-in {
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+    header .intro-text .intro-heading {
+        font-size: 44px;
+        line-height: 1;
+    }
+    .services .col-md-4 {
+        margin-bottom: 20px;
+    }
+    .services button {
+        margin-bottom: 30px;
+    }
+    #whatwebuy.fullscreen {
+        padding-top: 81px !important;
+    }
+    #whatwebuy .col-sm-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+    #whatwebuy .pull-right {
+        float: left!important;
+        margin-left: 15px;
+    }
+    #whatwebuy .nav.nav-tabs li {
+        float: left;
+        text-align: right;
+        margin-right: 30px;
+    }
+    #whatwebuy .nav-tabs {
+        float: left;
+    }
+    #whatwebuy .col-sm-9 {
+        clear: both;
+    }
+    #whatwebuy h2 {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 120px;
+        height: 120px;
+        border-radius: 100px;
+        left: 20%;
+        top: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 20%;
+    }
+    #whatwebuy .icon-next {
+        margin-right: 10px;
+    }
+    .bg-diamond {
+        background: none;
+    }
+    #howwepay .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    #howwepay .nav-tabs>li>a {
+        font-size: 15px;
+        padding: 10px 2px;
+    }
+    #howwepay .table>thead>tr>th,
+    #howwepay .table>tbody>tr>td {
+        font-size: 14px;
+        padding: 10px;
+    }
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+    #howwepay .panel-body,
+    #howwepay .panel-group .panel {
+        padding: 0;
+    }
+    .list-price .col-md-6 {
+        width: 100% !important;
+    }
+    .small-screen {
+        display: block;
+    }
+    #myRoundabout {
+        display: none;
+    }
+    #contact .col-sm-5.col-md-6 {
+        clear: both;
+    }
+    #contact .col-sm-5.col-md-6 .col-md-5,
+    #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 50%;
+        float: left;
+    }
+    #contact #contactForm .col-md-7 {
+        padding-right: 15px
+    }
+    
+    #contact #contactForm .col-md-5 {
+        padding-left: 15px
+    }
+    #team .col-xs-12 {
+        width: 50%;
+    }
+    .navbar-header.page-scroll {
+        border-bottom: solid 1px #ddd;
+    }
+    .bg-banner-how {
+        margin-top: 22px;
+    }
+    .howtosell {
+        padding: 70px 0 40px;
+    }
+    .howtosell .carousel {
+        width: 48%;
+        margin-left: 28%;
+    }
+    .sidebar-whywepay {
+        margin-top: 20px;
+    }
+    .sidebar-whywepay h3 {
+        text-align: center;
+    }
+    #whatwebuy .icon-next {
+        margin-right: -20px;
+    }
+    #whatwebuy .carousel-caption h2 {
+        margin-bottom: 10px;
+    }
+    .banner-thank-you {
+        margin-top: 52px;
+        padding: 80px 0;
+    }
+    .banner-thank-you .intro-heading {
+        font-size: 38px;
+    }
+    .banner-thank-you .intro-lead-in {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .map-contact {
+        margin-top: 52px;
+    }
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .list-step .col-sm-2 {
+        width: 20%;
+    }
+    .request-form .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .carousel.recentpay {
+        width: 49%;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .ad-banner strong {
+        font-size: 24px;
+    }
+    header .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 10px;
+    }
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 15px 5px;
+    }
+    header .intro-text {
+        padding-bottom: 205px;
+        background-position: -28px bottom;
+    }
+    .navbar-right {
+        margin-right: 0;
+    }
+    .services .col-md-4 {
+        margin-bottom: 20px;
+    }
+    .services button {
+        margin-bottom: 30px;
+    }
+    #whatwebuy h2 {
+        font-size: 23px;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 12%;
+    }
+    .bg-diamond {
+        background: none;
+    }
+    #howwepay .nav-tabs>li>a {
+        padding: 20px 13px;
+    }
+    #howwepay .table>thead>tr>th {
+        padding: 20px;
+    }
+    #myRoundabout {
+        margin-left: 100px;
+    }
+    #team .col-xs-12 {
+        width: 50%;
+    }
+    #contact .col-sm-5.col-md-6 {
+        clear: both;
+        width: 100%;
+    }
+    #contact .col-sm-5.col-md-6 .col-md-5,
+    #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 50%;
+        float: left;
+    }
+    #contact #contactForm .col-md-7 {
+        padding-right: 15px
+    }
+    #contact #contactForm .col-md-5 {
+        padding-left: 15px
+    }
+    .howtosell {
+        padding: 60px 0 40px;
+    }
+    .howtosell .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .btn.request {
+        font-size: 12px;
+    }
+    .recentpay .icon-prev {
+        margin-left: -11px;
+    }
+    .recentpay .icon-next {
+        margin-right: -12px;
+    }
+    .recentpay h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .fullscreen .col-sm-9,
+    .fullscreen .col-sm-3 {
+        width: 100%;
+    }
+    .fullscreen .carousel {
+        width: 38%;
+        margin-left: 31%;
+    }
+    #whatwebuy.fullscreen .icon-next {
+        margin-right: -21px;
+    }
+    #whatwebuy.fullscreen .icon-prev {
+        margin-left: -21px;
+    }
+    .fullscreen .sidebar-whywepay h3 {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .map-contact {
+        margin-top: 71px;
+    }
+    .map-contact iframe {
+        height: 280px;
+    }
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    footer .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .request-form h4 {
+        font-size: 22px;
+    }
+    .request-form form {
+        padding: 15px;
+    }
+}
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .ad-banner strong {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    header .intro-text {
+        padding-top: 54px;
+    }
+    
+    #howwepay .col-sm-5,
+    footer .col-md-6 {
+        width: 50%;
+    }
+    footer .col-md-6 {
+        float: left;
+    }
+    .navbar-default .nav li a {
+        font-size: 11px;
+    }
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
+        width: 55%;
+    }
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 15px 5px;
+    }
+    .services {
+        padding-bottom: 10px;
+    }
+    .banner-thank-you .intro-heading {
+        font-size: 48px;
+    }
+    .banner-thank-you .intro-lead-in {
+        font-size: 18px;
+    }
+    .map-contact iframe {
+        height: 200px;
+    }
+    .webuy ul {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #howwepay .nav-tabs>li>a {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .howtosell {
+        padding-top: 60px;
+    }
+    #team .col-xs-12 {
+        width: 100%;
+    }
+    header .intro-text .intro-lead-in {
+        font-size: 28px;
+        margin-bottom: 10px;
+        font-weight: 100;
+    }
+    header .intro-text .intro-heading {
+        font-size: 32px;
+        line-height: 1;
+    }
+    header .phone-banner {
+        font-size: 22px;
+    }
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+    #howwepay .panel-body,
+    #howwepay .panel-group .panel {
+        padding: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 12%;
+    }
+    #whatwebuy span.mb20 {
+        margin-bottom: 10px !important;
+    }
+    .recentpay .icon-prev {
+        margin-left: -16px;
+    }
+    .recentpay .icon-next {
+        margin-right: -16px;
+    }
+    #whatwebuy.fullscreen .recentpay .icon-next {
+        margin-right: -15px;
+    }
+    .webuy ul {
+        padding: 0;
+    }
+    .sidebar-whywepay h3 {
+        margin-top: 20px;
+    }
+    .recentpay h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .banner-thank-you .intro-heading {
+        font-size: 28px;
+    }
+    .banner-thank-you .intro-lead-in {
+        font-size: 13px;
+    }
+    .map-contact iframe {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    header .intro-text .intro-lead-in {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    header .intro-text .intro-heading {
+        font-size: 20px;
+    }
+    header a.sub-phone {
+        display: none;
+    }
+    .navbar-brand {
+        padding: 14px 0 0 15px;
+        width: 258px;
+    }
+    #whatwebuy.fullscreen {
+        padding-top: 50px !important;
+    }
+    #whatwebuy .nav-tabs>li>a {
+        font-size: 12px;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 25%;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content strong {
+        margin-bottom: 10px;
+        display: block;
+        font-size: 16px;
+    }
+    #whatwebuy span {
+        display: none;
+    }
+    .webuy,
+    section,
+    #team {
+        padding: 40px 0;
+    }
+    #howwepay .col-md-6 {
+        width: 100%;
+        text-align: center !important;
+    }
+    .tables h3 {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+     #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
+        padding: 10px;
+        font-size:13px;
+    }
+    #howwepay button.btn.body-content.download {
+        width: 100%;
+    }
+    .tfoot-tbl {
+        padding: 20px;
+    }
+    .bg-blue-dark {
+        height: 515px;
+    }
+    #contact .col-sm-5.col-md-6 .col-md-5,
+    #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 100%;
+        clear: both;
+    }
+    .bg-banner-how p {
+        font-size: 13px;
+    }
+    .akordeon-heading {
+        padding-top: 11px;
+        font-size: 16px;
+    }
+    .recentpay .icon-prev {
+        margin-left: -12px;
+    }
+    .recentpay .icon-next {
+        margin-right: -12px;
+    }
+    #whatwebuy .recentpay.carousel-control span {
+        display: block;
+    }
+    #whatwebuy.fullscreen {
+        margin-top: 40px;
+    }
+    .about-page {
+        margin-top: 20px;
+    }
+    .banner-thank-you .intro-heading {
+        font-size: 22px;
+    }
+    .place-ct .col-md-3 {
+        width: 28%;
+    }
+    .place-ct .col-md-9 {
+        width: 64%;
+    }
+    .pagi {
+        padding-top: 17px;
+    }
+    .request-form form {
+        padding: 15px;
+    }
+    #whatwebuy .carousel.recentpay span {
+        display: block;
+    }
+    #whatwebuy .whatwebuy-item {
+        width: 28%
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px) and (orientation: landscape) {
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .ad-banner strong {
+        font-size: 24px;
+    }
+    header .intro-text .intro-lead-in {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+    header .intro-text .intro-heading {
+        font-size: 36px;
+    }
+    header .intro-text {
+        padding-bottom: 10px;
+    }
+    #howwepay .nav-tabs>li>a {
+        padding: 9px;
+    }
+    .akordeon-heading {
+        font-size: 14px;
+        padding-left: 6px;
+        padding-top: 12px;
+    }
+    .bg-banner-how {
+        height: 224px;
+    }
+    .banner-thank-you .intro-heading {
+        font-size: 40px;
+    }
+    .banner-thank-you .intro-lead-in {
+        font-size: 15px;
+    }
+    .map-contact {
+        margin-top: 52px;
+    }
+    .recentpay.carousel {
+        width: 46%;
+    }
+    .recentpay .icon-prev {
+        margin-left: -21px;
+    }
+    .recentpay .icon-next {
+        margin-right: -21px;
+    }
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 10px;
+        width: 100%;
+        padding: 10px;
+        overflow: auto;
+        max-height: 245px;
+        background-color: #fff;
+    }
+}
+
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
+        width: 78%;
+        margin-top: 5px;
+    }
+    header .intro-text .intro-lead-in {
+        font-size: 18px;
+    }
+    header .phone-banner {
+        font-size: 18px;
+    }
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+    #howwepay .panel-body {
+        padding: 0;
+    }
+    .webuy ul {
+        padding: 0;
+    }
+    #whatwebuy,
+    #howwepay {
+        padding-bottom: 20px;
+    }
+    #whatwebuy .nav.nav-tabs li {
+        margin-right: 22px;
+    }
+    #whatwebuy .carousel {
+        width: 90%;
+        margin: 10px 20px;
+    }
+    .bg-blue-dark .title {
+        width: 90%;
+    }
+    .sphere-content {
+        width: 90%;
+    }
+    footer span.copyright {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer .col-md-6 {
+        text-align: center !important;
+    }
+    #whatwebuy .whatwebuy-item {
+        width: 31.7%;
+    }
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .ad-banner strong {
+        font-size: 24px;
+    }
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+    #howwepay .panel-body {
+        padding: 0;
+    }
+    .webuy ul {
+        padding: 0;
+    }
+    #whatwebuy .carousel {
+        width: 94%;
+        margin-left: 16px;
+        margin-top: 16px;
+    }
+    .recentpay .icon-prev {
+        margin-left: -17px;
+    }
+    .recentpay .icon-next {
+        margin-right: -17px;
+    }
+    #whatwebuy .carousel.recentpay {
+        width: 49%;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+    header img {
+        width: 100%;
+    }
+    header .intro-text .intro-lead-in {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    header .intro-text .intro-heading {
+        font-size: 23px;
+    }
+    #whatwebuy .nav.nav-tabs li {
+        margin-right: 16px;
+    }
+    .webuy ul {
+        padding: 0;
+    }
+    #howwepay .col-md-6 {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .tfoot-tbl {
+        padding: 20px;
+        text-align: center;
+    }
+    .sphere-content,
+    .bg-blue-dark .title {
+        width: 90%;
+    }
+    footer span.copyright {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer .col-md-6 {
+        text-align: center !important;
+    }
+}
+
+@media only screen and (max-width: 667px) and (orientation: landscape) {
+    #howwepay .panel-heading {
+        overflow: hidden;
+        padding: 0;
+    }
+    #howwepay h4.panel-title {
+        text-transform: none;
+        font-weight: 500;
+    }
+    #howwepay .panel-title a {
+        padding: 15px 0;
+        background: #2b3042;
+        color: #7b7d87;
+        width: 100%;
+        display: block;
+    }
+    #howwepay .panel-title a[aria-expanded="true"] {
+        background-color: #d19f42;
+        color: #fff;
+    }
+    #howwepay .panel-body {
+        padding: 0;
+    }
+    .webuy ul {
+        padding: 0;
+    }
+}

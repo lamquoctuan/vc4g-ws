@@ -7,56 +7,37 @@
                 <hr />
             </div>
             <ul id="myRoundabout">
-                <li>
-                    <div class="sphere-content">
-                        <h3>Who We Are The #1<br />Vancouver Gold Buyer</h3>
-                        <p>What a difference, I was quoted $10 a gram for 10kt gold at this mall kiosk by someone who did not seem like they knew what they were doing. Vancouver cash for gold paid me over $20 per gram; I will only be dealing with them in the future...</p>
-                        <p>&nbsp;</p>
-                        <a href="#" class="btn body-content">read more ></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="sphere-content">
-                        <h3>Who We Are The #1<br />Vancouver Gold Buyer</h3>
-                        <p>What a difference, I was quoted $10 a gram for 10kt gold at this mall kiosk by someone who did not seem like they knew what they were doing. Vancouver cash for gold paid me over $20 per gram; I will only be dealing with them in the future...</p>
-                        <p>&nbsp;</p>
-                        <a href="#" class="btn body-content">read more ></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="sphere-content">
-                        <h3>Who We Are The #1<br />Vancouver Gold Buyer</h3>
-                        <p>What a difference, I was quoted $10 a gram for 10kt gold at this mall kiosk by someone who did not seem like they knew what they were doing. Vancouver cash for gold paid me over $20 per gram; I will only be dealing with them in the future...</p>
-                        <p>&nbsp;</p>
-                        <a href="#" class="btn body-content">read more ></a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="small-screen list-unstyled">
-                <li>
-                    <div class="sphere-content">
-                        <h3>Who We Are The #1<br />Vancouver Gold Buyer</h3>
-                        <p>What a difference, I was quoted $10 a gram for 10kt gold at this mall kiosk by someone who did not seem like they knew what they were doing. Vancouver cash for gold paid me over $20 per gram; I will only be dealing with them in the future...</p>
-                        <p>&nbsp;</p>
-                        <a href="#" class="btn body-content">read more ></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="sphere-content">
-                        <h3>Who We Are The #1<br />Vancouver Gold Buyer</h3>
-                        <p>What a difference, I was quoted $10 a gram for 10kt gold at this mall kiosk by someone who did not seem like they knew what they were doing. Vancouver cash for gold paid me over $20 per gram; I will only be dealing with them in the future...</p>
-                        <p>&nbsp;</p>
-                        <a href="#" class="btn body-content">read more ></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="sphere-content">
-                        <h3>Who We Are The #1<br />Vancouver Gold Buyer</h3>
-                        <p>What a difference, I was quoted $10 a gram for 10kt gold at this mall kiosk by someone who did not seem like they knew what they were doing. Vancouver cash for gold paid me over $20 per gram; I will only be dealing with them in the future...</p>
-                        <p>&nbsp;</p>
-                        <a href="#" class="btn body-content">read more ></a>
-                    </div>
-                </li>
+<?php
+$args = array(
+    'category_name'     => 'blog',
+    'orderby'           => 'date',
+    'order'             => 'DESC',
+    'posts_per_page'    => 3
+);
+$the_query = new WP_Query( $args );
+if ( $the_query->have_posts() ) {
+    ?>
+    <?php
+    while ( $the_query->have_posts() ) {
+        $the_query->the_post();
+        global $post;
+        $excerpt = get_the_excerpt();?>
+        <li>
+            <div class="sphere-content">
+                <h3><?php echo get_the_title();?></h3>
+                <p><?php echo str_replace( '[...]', '...', $excerpt );?></p>
+                <p>&nbsp;</p>
+                <a href="<?php echo get_the_permalink();?>" class="btn body-content">read more ></a>
+            </div>
+        </li>
+    <?php }
+    ?>
+
+<?php
+}
+wp_reset_postdata();
+?>
+
             </ul>
         </div>
     </div>
