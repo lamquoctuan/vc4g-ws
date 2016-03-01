@@ -1,0 +1,1 @@
+<img src="/assets/images/about.jpg" alt="about" class="mb20" />
