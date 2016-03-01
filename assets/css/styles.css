@@ -654,7 +654,6 @@ header img[alt="goldvcg"] {
     text-transform: uppercase;
     font-weight: 300;
 }
-
 .ad-banner strong {
     font-size: 30px;
     font-weight: 700;
@@ -1441,7 +1440,7 @@ body h2 {
 
 .webuy {
     color: #fff;
-    background: url(/assets/images/header-bg.jpg) no-repeat scroll center center;
+    background: url(/assets/images/bg-diamond.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1795,15 +1794,23 @@ section hr {
 
 .bg-comming {
     color: #fff;
-    background: url(/assets/images/coming-soon.jpg) no-repeat scroll center center;
+    background: url(/assets/images/bg-ad.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    font-size: 14px;
+    font-size: 27px;
     font-weight: 300;
-    padding: 60px 0;
     text-align: center;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding: 0;
+}
+
+.bg-comming  strong {
+    font-size: 30px;
+    font-weight: 700;
 }
 .bg-comming h2 {color: #fff; font-weight: 100; font-size: 44px;}
 .bg-comming h2 span {font-weight: 600;}
@@ -2629,6 +2636,27 @@ section hr {
     .request-form form {
         padding: 15px;
     }
+    
+    .bg-comming {
+        font-weight: 300;
+    }
+    .bg-comming img {
+       
+    }
+    .bg-comming .col-xs-7 {
+        width: 100%;
+    }
+    .bg-comming .col-md-5 {
+        width: 41.66666667%;
+        float: left;
+    }
+    .bg-comming .col-md-7 {
+        width: 58.33333333%;
+        float: left;
+    }
+    #contactForm [class^="col-"] {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
@@ -2683,6 +2711,19 @@ section hr {
      #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
         padding: 10px;
         font-size:13px;
+    }
+    .bg-comming .col-xs-7 {
+        width: 100%;
+    }
+    .bg-comming .col-md-offset-2 {
+        margin-left: 0
+    }
+    .bg-comming {
+        font-weight: 300;
+        line-height: 36px;
+    }
+    .bg-comming .col-md-7 {
+        width: 40%;
     }
 }
 
@@ -2882,6 +2923,32 @@ section hr {
         width: 49%;
         margin-left: 25%;
     }
+    .bg-comming .col-xs-7 {
+        width: 100%;
+    }
+    .bg-comming .col-md-offset-2 {
+        margin-left: 0
+    }
+    .bg-comming {
+        font-weight: 300;
+        line-height: 28px;
+        font-size: 24px;
+    }
+    .bg-comming strong {
+        font-size: 28px;
+    }
+    .bg-comming img {
+        width: 100%;
+    }
+    .bg-comming .col-md-5 {
+        width: 41.66666667%;
+        float: left;
+    }
+    .bg-comming .col-md-7 {
+        width: 58.33333333%;
+        float: left;
+        padding-top: 10px;
+    }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
@@ -2910,6 +2977,9 @@ section hr {
     header .intro-text {
         padding-bottom: 205px;
         background-position: -28px bottom;
+    }
+    .navbar-default .nav li a {
+        padding: 25px;
     }
     .navbar-right {
         margin-right: 0;
@@ -3028,6 +3098,24 @@ section hr {
     .request-form form {
         padding: 15px;
     }
+    .bg-comming .col-xs-7 {
+        width: 100%;
+    }
+    .bg-comming .col-md-offset-2 {
+        margin-left: 0
+    }
+    .bg-comming {
+        font-weight: 300;
+        line-height: 36px;
+    }
+    .bg-comming .col-md-5 {
+        width: 41.66666667%;
+        float: left;
+    }
+    .bg-comming .col-md-7 {
+        width: 58.33333333%;
+        float: left;
+    }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
     header img[alt="goldvcg"] {
@@ -3078,6 +3166,9 @@ section hr {
     }
     .webuy ul {
         padding: 0;
+    }
+    .bg-comming .col-md-7 {
+        line-height: 30px;
     }
 }
 
@@ -3166,6 +3257,16 @@ section hr {
     }
     .map-contact iframe {
         height: 250px;
+    }
+    .bg-comming .col-md-5 {
+        display: none;
+    }
+    .bg-comming .col-md-7 {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    #contactForm [class^="col-"] {
+        padding: 0;
     }
 }
 
@@ -3275,6 +3376,7 @@ section hr {
     #whatwebuy .whatwebuy-item {
         width: 28%
     }
+    
 }
 
 @media only screen and (max-width: 767px) and (min-width: 480px) and (orientation: landscape) {
