@@ -27,4 +27,13 @@ class Helper
         }
         return $doc;
     }
+    
+    public static function getVal($key_to_check, $array, $default = null) {
+        if ( isset($array[$key_to_check]) ) {
+            return $array[$key_to_check];
+        }
+        else {
+            return $default;
+        }
+    }
 }

@@ -50,9 +50,9 @@ function ajax_download_callback() {
     $action = sanitize_text_field( $_POST['action'] );
     $strSpecial = CUR_THEME_NAME . gmdate('Y-m-d') . '-' . $action;
     check_ajax_referer( $strSpecial, 'security' );
-	
-	$first_name = urldecode(sanitize_text_field($_POST['first_name']));
-	$last_name = urldecode(sanitize_text_field($_POST['last_name']));
+
+	$first_name = urldecode(sanitize_text_field(\LNR\Helper::getVal('first_name', $_POST, '')));
+	$last_name = urldecode(sanitize_text_field(\LNR\Helper::getVal('last_name', $_POST, '')));
 	$email = urldecode($_POST['email']);
 	$source = 'Web Form - Download';
 
@@ -136,6 +136,10 @@ function ajax_gold_prices_callback() {
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
      
 	$resultJson = curl_exec($ch);
+
+	$info = curl_getinfo($ch);
+	$httpCode = $info['http_code'];
+
 	curl_close($ch);
 	
 	$result = json_decode($resultJson);
@@ -154,7 +158,12 @@ function ajax_gold_prices_callback() {
 	}
 	else {
 		$response->success = false;
-		$response->error = $result->error;
+		if (isset($result->error)) {
+			$response->error = $result->error;
+		}
+		else {
+			$response->error = $resultJson;
+		}
 	}
 	wp_die(json_encode($response));
 }

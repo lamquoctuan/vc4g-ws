@@ -4,9 +4,6 @@ $(function() {
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
-            console.log($form);
-            console.log(vc4g);
-            console.log('submit error');
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour

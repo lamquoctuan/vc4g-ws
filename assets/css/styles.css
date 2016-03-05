@@ -377,7 +377,6 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl {
-    border: 2px solid #ccc;
     /* stroke */
     -moz-border-radius: 24px / 24px 24px 25px 25px;
     -webkit-border-radius: 24px / 24px 24px 25px 25px;
@@ -392,6 +391,8 @@ fieldset[disabled] .btn-primary.active {
     font-weight: 300;
     color: #fff;
     padding: 10px 30px;
+    background-color: #d19f42;
+    transition: background-color 0.5s ease;
 }
 
 .btn-xl:hover,
@@ -399,9 +400,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: transparent;
-    color: #fff;
-    background-color: #d19f42;
+    color: #d19f42;
+    background-color: #121926;
 }
 
 .btn-xl:active,
@@ -559,7 +559,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         padding: 0;
         border: 0;
-        background-color: #fff;
+        background-color: #f5f5f5;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -592,9 +592,19 @@ header .bg-header {
     -o-background-size: cover;
     background-size: cover;
 }
+header.bg-header {
+    background: url(/assets/images/bg-banner-header.jpg) no-repeat center top;
+    background-attachment: relative;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 header .intro-text {
-    background: url(/assets/images/gold.png) center bottom no-repeat;
+    /*background: url(/assets/images/gold.png) center bottom no-repeat;*/
+    padding: 54px 0;
 }
 
 header .intro-text .intro-lead-in {
@@ -660,13 +670,11 @@ header img[alt="goldvcg"] {
 }
 
 @media(min-width:768px) {
-    header .intro-text {
-        padding-bottom: 300px;
-    }
+    
     header .intro-text .intro-lead-in {
         margin-bottom: 0;
         font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 45px;
+        font-size: 35px;
         font-weight: 100;
         line-height: 40px;
         text-transform: uppercase;
@@ -675,7 +683,7 @@ header img[alt="goldvcg"] {
         margin-bottom: 20px;
         text-transform: uppercase;
         font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 48px;
+        font-size: 38px;
         font-weight: 900;
         line-height: 1;
     }
@@ -708,6 +716,9 @@ section h3.section-subheading {
 @media(min-width:768px) {
     section {
         padding: 100px 0 40px;
+    }
+    #whatwebuy {
+         padding-top: 120px
     }
 }
 
@@ -1104,13 +1115,13 @@ a.sub-phone {
     position: relative;
     margin: 20px 0 5px 30px;
     display: inline-block;
-    color: #555b65;
+    color: #b3b8c0;
     font-size: 16px;
     font-weight: 600;
 }
 
 a.sub-phone:hover {
-    color: rgba(95, 91, 101, 08);
+    color: #fff;
 }
 
 .icon-phone {
@@ -1129,7 +1140,7 @@ a.sub-phone:hover {
 .address-banner {
     font-size: 13px;
     display: block;
-    color: #555b65;
+    color: #b3b8c0;
     font-weight: 500;
 }
 .navbar-default.navbar-shrink .sub-phone {
@@ -1525,20 +1536,23 @@ section hr {
 }
 
 #howwepay .table>thead>tr>th {
-    font-size: 14px;
-    padding: 16px 30px;
-    background: #d8dbe0;
+    font-size: 11px;
+    padding: 5px 8px;
+    background: #3d4049;
     border-bottom: none;
     text-transform: uppercase;
-    color: #686868;
-    border-right: solid 1px #e2e3e3;
+    color: #fff;
 }
 
 #howwepay .table>tbody>tr>td {
     border-top: none;
-    padding: 16px 30px;
-    border-right: solid 1px #e4e4e4;
-    font-weight:normal;
+    padding: 5px 8px;
+    font-weight:600;
+    background: #fff;
+    border-bottom: solid 2px rgba(94, 94, 94, 0.77);
+    font-size: 11px;
+    color: #414141;
+    text-transform: uppercase;
 }
 
 #howwepay .table>tbody>tr>td:last-child {
@@ -1546,28 +1560,141 @@ section hr {
 }
 
 #howwepay .table-striped>tbody>tr {
-    background-color: #fafafa;
+    /*background-color: #fafafa;*/
 }
 
 #howwepay .table-striped>tbody>tr:nth-of-type(odd) {
-    background-color: #f6f6f6;
+    /*background-color: #f6f6f6;*/
 }
 
 #howwepay .table-striped>tbody>tr:hover {
-    background-color: #fafafa;
+    /*background-color: #fafafa;*/
 }
 
 .tables {text-align: left;}
 .tables h3 {
     background:#d19f42; 
     color: #fff; 
+    margin-top: 10px;
     margin-bottom:0; 
-    padding: 22px 0; 
+    padding: 12px 0; 
     font-weight:600;
-    border-radius: 4px 4px 0 0;
     text-align: center;
-    font-size:20px;
+    font-size:16px;
 }
+.tables h3.right {
+    padding: 19px 0;
+}
+.tables .calculator {
+    padding-top: 0;
+    border: none;
+    background: #e9ebee;
+}
+.tables .bg-grey {
+    background: #e9ebee;
+    padding: 20px;
+}
+.tables .bar-prd .row {
+    margin: 0;
+}
+.tables .bar-prd {
+    background: #3d4049;
+    padding: 0;
+}
+.tables .bar-prd a{
+    margin: 0;
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 8px 0;
+}
+.tables .bar-prd a:hover {
+    text-decoration: none;
+    color: #d19f42;
+}
+.tables .bar-prd a.active {
+    color: #d19f42;
+    text-decoration: none;
+    border-bottom: 3px solid #d19f42;
+}
+.tables .downloadForm {
+    padding: 20px;
+    background: #e9ebee;
+}
+.tables label.control-label {
+    text-transform: uppercase;
+    font-size: 11px;
+    padding-right: 0;
+    padding-top: 10px;
+}
+.tables .downloadForm .form-group {
+    margin-bottom: 0;
+}
+.tables .btn {
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+}
+.tables .btn span {
+    padding: 4px 0 4px 30px;
+    font-size: 11px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+.tables .btn.call {
+    background-image: none;
+    margin-top: 10px;
+}
+.tables .btn.call .fa {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 8px;
+    vertical-align:middle;
+}
+.tables .btn.call span {
+    background-image: none;
+    padding-left: 0;
+    line-height: 15px;
+}
+.tables .btn.calc {
+    border-radius: 0;
+    background: #3d4049;
+    padding: 0;
+    line-height: 30px;
+}
+.tables .calculator select[size] {
+    padding: 6px 10px;
+}
+.tables .form-control {
+    border-radius: 0;
+    border: solid 2px #a5a6a8;
+}
+.tables .calculator .form-control {
+    padding: 0 10px;
+}
+.tables .calculator .form-group [class^="col"] {
+    padding: 0 10px;
+}
+
+.tables .calculator label {
+    padding: 10px 0 !important;
+}
+.tables .btn.calc {
+    padding: 0 !important;
+}
+.tables select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  padding: 6px 10px;
+}
+.tables .calculator .form-group .sizemin {
+    padding-left: 0px;
+}
+
+#chart_div {
+    margin: -10px auto;
+}
+
 #howwepay button.btn.body-content.download {
     margin-top:60px;
     border: none;
@@ -1863,7 +1990,7 @@ section hr {
 }
 
 .calculator .form-control.result {
-    text-align: right;
+    text-align: left;
 }
 
 .calculator select.form-control {
@@ -2470,13 +2597,86 @@ section hr {
     border-radius: 0;
 }
 
+.downloadPopup {
+    padding: 54px;
+}
+.downloadPopup p {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 24px;
+}
+.downloadPopup p.small {
+    font-size: 10px;
+    color: #8d8d8d;
+    font-style: italic;
+}
+.downloadPopup form {
+    padding: 0 20px;
+}
+.modal-dialog.signup{
+    width: 950px;
+    margin-top: 100px;
+}
+.modal-dialog.signup .col-left {
+    width: 520px;
+    overflow: hidden;
+}
+
+.modal-dialog.signup .modal-body {
+    padding: 0;
+    overflow: hidden;
+    background: url(/assets/images/bg-popup.jpg) no-repeat right top;
+}
+.modal-dialog.signup .modal-content {
+    border-radius: 0;
+}
+.modal-dialog.signup .btn.download {
+    border-radius: 0;
+    text-transform: uppercase;
+    
+}
+.modal-dialog.signup .btn.download span {
+    line-height: 40px;
+    font-size: 16px;
+    background: none;
+    padding-left: 0;
+}
+.modal-dialog.signup .form-control {
+    border-radius: 0;
+    text-align: center;
+    padding: 25px 10px;
+    border: solid 2px #b5b6b6;
+}
+.modal-dialog.signup .container {
+    width: 100%;
+    padding: 0;
+}
+
+#chart_div div[dir="ltr"] {
+    margin: 0 auto;
+}
+
+@media (min-width: 1401px) { 
+    header .intro-text {
+        padding: 100px 0;
+    }
+}
+
 @media only screen and (max-width: 1400px) and (min-width: 1024px) {
     header img[alt="goldvcg"] {
         margin-top: 52px;
     }
+    
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
+    .modal-dialog.signup{
+        width: 520px;
+    }
+    .modal-dialog.signup .modal-body {
+        background: none;
+    }
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
         width: 54%;
     }
@@ -2657,12 +2857,29 @@ section hr {
     #contactForm [class^="col-"] {
         padding: 0;
     }
+    
+    
+    .tables .btn.download {
+        margin: 10px auto;
+        display: block;
+        width: 200px;
+        padding-left: 0;
+    }
+    .tables {
+        margin-bottom: 30px;
+    }
+    #howwepay {
+        padding-bottom: 10px;
+    }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
     .navbar-fixed-top.navbar-shrink .navbar-right {
         position: absolute;
         right: 40px;
+    }
+    .navbar-default .nav li a {
+        padding: 32px 42px;
     }
     #myRoundabout {
         margin-left: 25%;
@@ -2704,14 +2921,8 @@ section hr {
     .radio {
         padding-right: 0;
     }
-    .tables h3 {
-        font-size: 18px;
-        padding: 15px 0;
-    }
-     #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
-        padding: 10px;
-        font-size:13px;
-    }
+    
+    
     .bg-comming .col-xs-7 {
         width: 100%;
     }
@@ -2725,11 +2936,18 @@ section hr {
     .bg-comming .col-md-7 {
         width: 40%;
     }
+    .services h3 {
+        font-size: 24px;
+    }
+    .btn.download
 }
 
 @media only screen and (max-width: 767px) {
-    header .intro-text {
-        padding-top: 30px;
+    .modal-dialog.signup{
+        width: 520px;
+        margin: 20px auto;
+    }
+    .modal-dialog.signup .modal-body {
         background: none;
     }
     header {
@@ -2742,12 +2960,15 @@ section hr {
     header .intro-text .intro-lead-in {
         font-weight: 100;
         text-transform: uppercase;
-        font-size: 38px;
+        font-size: 26px;
         margin-bottom: 10px;
     }
     header .intro-text .intro-heading {
-        font-size: 44px;
+        font-size: 30px;
         line-height: 1;
+    }
+    header .phone-banner {
+        font-size: 22px;
     }
     .services .col-md-4 {
         margin-bottom: 20px;
@@ -2806,11 +3027,7 @@ section hr {
         font-size: 15px;
         padding: 10px 2px;
     }
-    #howwepay .table>thead>tr>th,
-    #howwepay .table>tbody>tr>td {
-        font-size: 14px;
-        padding: 10px;
-    }
+    
     #howwepay .panel-heading {
         overflow: hidden;
         padding: 0;
@@ -2949,6 +3166,31 @@ section hr {
         float: left;
         padding-top: 10px;
     }
+    .downloadForm .col-sm-4, .downloadForm .col-sm-8 {
+        float: left;
+    }
+    .downloadForm .col-sm-4 {
+        width: 33.33333333%;
+    }
+    .downloadForm .col-sm-8 {
+        width: 66.66666667%;
+    }
+    .calculator .col-md-6 {
+        float: left;
+        width: 50% !important;
+    }
+    .tables .btn.download {
+        margin: 10px auto;
+        display: block;
+        width: 200px;
+        padding-left: 0;
+    }
+    .tables {
+        margin-bottom: 30px;
+    }
+    #howwepay {
+        padding-bottom: 10px;
+    }
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
@@ -2956,6 +3198,7 @@ section hr {
         width: 80%;
         margin-top: 20px;
     }
+    
     .ad-banner {
         font-size: 20px;
         padding: 10px 0;
@@ -2975,8 +3218,7 @@ section hr {
         padding: 15px 5px;
     }
     header .intro-text {
-        padding-bottom: 205px;
-        background-position: -28px bottom;
+        
     }
     .navbar-default .nav li a {
         padding: 25px;
@@ -3005,12 +3247,7 @@ section hr {
     .bg-diamond {
         background: none;
     }
-    #howwepay .nav-tabs>li>a {
-        padding: 20px 13px;
-    }
-    #howwepay .table>thead>tr>th {
-        padding: 20px;
-    }
+    
     #myRoundabout {
         margin-left: 100px;
     }
@@ -3116,8 +3353,37 @@ section hr {
         width: 58.33333333%;
         float: left;
     }
+    .calculator .col-md-6 {
+        float: left;
+        width: 50% !important;
+    }
+    .tables .btn.download {
+        margin: 10px auto;
+        display: block;
+        width: 200px;
+        padding-left: 0;
+    }
+    .tables {
+        margin-bottom: 30px;
+    }
+    #howwepay {
+        padding-bottom: 10px;
+    }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait) {
+    
+    header .col-md-6{
+        float: none;
+        clear: both;
+        width: 100%;
+        text-align: center;
+    }
+    header .intro-text {
+        padding: 34px 0;
+    }
+    a.sub-phone {
+        display: none;
+    }
     header img[alt="goldvcg"] {
         width: 80%;
         margin-top: 20px;
@@ -3129,13 +3395,25 @@ section hr {
     .ad-banner strong {
         font-size: 24px;
     }
+    .tables {
+        margin-bottom: 20px;
+    }
+    #howwepay {
+        padding-bottom: 10px;
+    }
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     header .intro-text {
         padding-top: 54px;
     }
-    
+    .modal-dialog.signup .modal-body {
+        background: none;
+    }
+    .modal-dialog.signup{
+        width: 520px;
+        margin: 20px auto;
+    }
     #howwepay .col-sm-5,
     footer .col-md-6 {
         width: 50%;
@@ -3170,9 +3448,31 @@ section hr {
     .bg-comming .col-md-7 {
         line-height: 30px;
     }
+    .tables .btn.download {
+        margin: 10px auto;
+        display: block;
+        width: 200px;
+        padding-left: 0;
+    }
 }
 
 @media only screen and (max-width: 480px) {
+    .modal-dialog.signup{
+        width: 420px;
+        margin: 20px auto;
+    }
+    .modal-dialog.signup .col-left {
+         width: 420px;
+    }
+    .downloadPopup {
+        padding: 34px;
+    }
+    .downloadPopup img {
+        width: 100%;
+    }
+    .downloadPopup p {
+        font-size: 14px;
+    }
     #howwepay .nav-tabs>li>a {
         font-size: 10px;
         padding: 5px;
@@ -3184,12 +3484,12 @@ section hr {
         width: 100%;
     }
     header .intro-text .intro-lead-in {
-        font-size: 28px;
+        font-size: 24px;
         margin-bottom: 10px;
         font-weight: 100;
     }
     header .intro-text .intro-heading {
-        font-size: 32px;
+        font-size: 28px;
         line-height: 1;
     }
     header .phone-banner {
@@ -3271,19 +3571,49 @@ section hr {
 }
 
 @media only screen and (max-width: 360px) {
+    .modal-dialog.signup{
+        width: 320px;
+        margin: 20px auto;
+    }
+    .modal-dialog.signup .col-left {
+         width: 320px;
+    }
+    .downloadPopup {
+        padding: 24px;
+    }
+    header {
+        padding-bottom: 0;
+    }
     header .intro-text .intro-lead-in {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 0;
     }
     header .intro-text .intro-heading {
-        font-size: 20px;
+        font-size: 18px;
+    }
+    header .intro-text .intro-heading span {
+        font-size: 16px;
+        font-weight: 400;
     }
     header a.sub-phone {
         display: none;
     }
+    header .phone-banner {
+        font-size: 16px;
+    }
+    header .intro-text .intro-heading acronym {
+        padding: 0 3px;
+        width: 80px;
+    }
+    .btn-xl {
+        font-size: 16px;
+    }
     .navbar-brand {
         padding: 14px 0 0 15px;
         width: 258px;
+    }
+    #whatwebuy {
+        padding-top: 100px;
     }
     #whatwebuy.fullscreen {
         padding-top: 50px !important;
@@ -3310,14 +3640,6 @@ section hr {
     #howwepay .col-md-6 {
         width: 100%;
         text-align: center !important;
-    }
-    .tables h3 {
-        font-size: 18px;
-        padding: 15px 0;
-    }
-     #howwepay .table>thead>tr>th, #howwepay .table>tbody>tr>td {
-        padding: 10px;
-        font-size:13px;
     }
     #howwepay button.btn.body-content.download {
         width: 100%;
@@ -3376,10 +3698,27 @@ section hr {
     #whatwebuy .whatwebuy-item {
         width: 28%
     }
-    
+     .calculator .col-md-6 {
+        float: left;
+        width: 50% !important;
+    }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 480px) and (orientation: landscape) {
+    .downloadPopup {
+        padding: 34px;
+    }
+    .modal-dialog.signup{
+        width: 420px;
+        margin: 20px auto;
+    }
+    .modal-dialog.signup img {
+        width: 100%;
+    }
+    .modal-dialog.signup .col-left {
+        width: 420px;
+        
+    }
     header img[alt="goldvcg"] {
         width: 80%;
         margin-top: 20px;
@@ -3560,6 +3899,7 @@ section hr {
         width: 49%;
         margin-left: 25%;
     }
+   
 }
 
 @media only screen and (max-width: 375px) and (orientation: portrait) {
@@ -3567,11 +3907,11 @@ section hr {
         width: 100%;
     }
     header .intro-text .intro-lead-in {
-        font-size: 20px;
+        font-size: 16px;
         margin-bottom: 0;
     }
     header .intro-text .intro-heading {
-        font-size: 23px;
+        font-size: 18px;
     }
     #whatwebuy .nav.nav-tabs li {
         margin-right: 16px;
@@ -3579,11 +3919,7 @@ section hr {
     .webuy ul {
         padding: 0;
     }
-    #howwepay .col-md-6 {
-        width: 100%;
-        float: none;
-        text-align: center;
-    }
+    
     .tfoot-tbl {
         padding: 20px;
         text-align: center;
@@ -3599,6 +3935,10 @@ section hr {
     }
     footer .col-md-6 {
         text-align: center !important;
+    }
+     .calculator .col-md-6 {
+        float: left;
+        width: 50% !important;
     }
 }
 

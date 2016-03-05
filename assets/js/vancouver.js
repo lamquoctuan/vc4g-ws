@@ -109,11 +109,9 @@ $(document).ready(function() {
 var timer = 0;
 $(document).ajaxStart(function (e) {
     timer = setTimeout(function () { $('body .btn').css('cursor', 'progress'); }, 50);
-    console.log(timer);
 });
 $(document).ajaxStop(function () {
     $('body .btn').css('cursor', 'pointer');
-    console.log(timer);
     clearTimeout(timer);
 });
 
