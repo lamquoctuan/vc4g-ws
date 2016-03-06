@@ -135,12 +135,16 @@ function ajax_gold_prices_callback() {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
      
-	$resultJson = curl_exec($ch);
+	if ( defined('APP_ENV') && APP_ENV == 'pro') {
+		$resultJson = curl_exec($ch);
+		$info = curl_getinfo($ch);
+		$httpCode = $info['http_code'];
 
-	$info = curl_getinfo($ch);
-	$httpCode = $info['http_code'];
-
-	curl_close($ch);
+		curl_close($ch);
+	}
+	else {
+		$resultJson = '{"errors":{},"id":6442027,"source_name":"World Gold Council","source_code":"WGC","code":"GOLD_DAILY_CAD","name":"Gold Prices (Daily) - Currency CAD","urlize_name":"Gold-Prices-Daily-Currency-CAD","display_url":"http://www.gold.org/assets/dynamic/www.gold.org/dc/wgc.spotprice/optimized/oz/wgc.spotprice.sinceInception.cad.csv?","description":"\u003cp\u003eAll values are national currency units per troy ounce (except for index values). The World Gold Council is the market development organisation for the gold industry. Working within the investment, jewellery and technology sectors, as well as engaging in government affairs, our purpose is to provide industry leadership, whilst stimulating and sustaining demand for gold. We develop gold-backed solutions, services and markets, based on true market insight. As a result, we create structural shifts in demand for gold across key market sectors. We provide insights into the international gold markets, helping people to better understand the wealth preservation qualities of gold and its role in meeting the social and environmental needs of society. Based in the UK, with operations in India, the Far East, Europe and the US, the World Gold Council is an association whose 23 members comprise the world\'s leading gold mining companies.\u003c/p\u003e","updated_at":"2016-03-04T18:00:41.256Z","frequency":"daily","from_date":"1971-04-01","to_date":"2016-03-04","column_names":["Date","Value"],"private":false,"type":null,"premium":false,"data":[["2016-03-04",1711.1],["2016-03-03",1679.0],["2016-03-02",1670.4],["2016-03-01",1666.2],["2016-02-29",1667.9]]}';
+	}
 	
 	$result = json_decode($resultJson);
 	$error = '';
@@ -150,9 +154,19 @@ function ajax_gold_prices_callback() {
 		
 		$response->success = true;
 		$response->data = array();
-		array_push($response->data, $columnNames);
+		// array_push($response->data, $columnNames);
+		$colPriceDate = new \StdClass();
+		$colPriceDate->type = 'date';
+		$colPriceDate->label = 'Date';
+		array_push($response->data, [$colPriceDate, 'Gold Price']);
 		for($idx = count($data)-1; $idx>=0; $idx--) {
-			array_push($response->data, $data[$idx]);
+			// $dataRow[0] = date('m/d', strtotime($data[$idx][0]));
+			//"Date(Year, Month, Day, Hours, Minutes, Seconds, Milliseconds)"
+			$partsDatePrice = date_parse($data[$idx][0]." 23:00:00.5");
+			$dataRow[0] = "Date(".$partsDatePrice['year'].", ".$partsDatePrice['month'].", ".$partsDatePrice['day'].")";
+			$dataRow[1] = $data[$idx][1];
+			array_push($response->data, $dataRow);
+			// array_push($response->data, $data[$idx]);
 		}
 		// $response->data = json_encode($response->data);
 	}

@@ -175,21 +175,16 @@ $platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverAr
     	<div class="col-md-4">
     	    <div class="tables">
     			<h3 class="right">Cad Gold Price in Last 5 Days</h3>
-    			<div class="bg-grey">
-    			    <p class="note">
-                        <script type="text/javascript"
-                              src="https://www.google.com/jsapi?autoload={
-                                'modules':[{
-                                  'name':'visualization',
-                                  'version':'1',
-                                  'packages':['corechart']
-                                }]
-                              }"></script>
-                    
-                      <div id="chart_div"></div>
-                    </p>
-    			</div>
-    			
+                <script type="text/javascript"
+                      src="https://www.google.com/jsapi?autoload={
+                        'modules':[{
+                          'name':'visualization',
+                          'version':'1',
+                          'packages':['corechart']
+                        }]
+                      }"></script>
+            
+                 <div id="chart_div" style="padding-bottom: 11px;"></div>
     		</div>
     		
     		<div class="tables ">
@@ -313,11 +308,18 @@ $platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverAr
 
 function drawChart(chartData) {
     var data = google.visualization.arrayToDataTable(chartData);
-
+    
+    var optionsAxisStyle = {bold: true, fontName: "Roboto", fontSize: 11};
     var options = {
     //   title: 'CAD Gold Price in last 5 days',
-      curveType: 'function',
-      legend: { position: 'bottom' }
+    //   curveType: 'function',
+      legend: { position: 'none' },
+      backgroundColor: '#e9ebee',
+      colors: ['#d19f42'],
+      is3D:true,
+      width:'100%',
+      vAxis: {textStyle: optionsAxisStyle, format: '$#,###'},
+      hAxis: {textStyle: optionsAxisStyle, format: 'MMM dd'}
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
