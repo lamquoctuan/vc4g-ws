@@ -58,10 +58,16 @@ function ajax_download_callback() {
 
 	$mcConnector = new MailChimp();
 	$result = $mcConnector->listSubscribe('0d40c495ab', $source, $email, $first_name, $last_name);
-	if (isset ($result->id)) {
-		$fileUri = generatePdf();
-		$result->download_url = $fileUri;
+
+	if ( !isset($result->id) && ($result->status == 400 && $result->title == 'Member Exists') ) {
+		$result = $mcConnector->getListMember('0d40c495ab', $email);
 	}
+	
+	if ( isset($result->id) ) {
+		$fileUri = generatePdf();
+		$result->download_url = site_url() . $fileUri;	
+	}
+
 	$response = $result;
 	wp_die(json_encode($response));
 }
