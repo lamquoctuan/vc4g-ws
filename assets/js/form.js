@@ -23,10 +23,20 @@ $(function() {
                 success: function(response) {
                     $form.css('cursor', 'default');
                     if (typeof(response.id) != 'undefined') {
-                        analytics.identify(response.id, {
+                        var mxProperties = {
                             email: leadData.email,
                             mc_id: response.id
-                        }, function(){
+                        };
+                        if (typeof(leadData.name) != 'undefined') {
+                            mxProperties.name = leadData.name;
+                        }
+                        if (typeof(leadData.first_name) != 'undefined') {
+                            mxProperties['first name'] = leadData.first_name;
+                        }
+                        if (typeof(leadData.last_name) != 'undefined') {
+                            mxProperties['last name'] = leadData.last_name;
+                        }
+                        analytics.identify(response.id, mxProperties, function(){
                             if (typeof(response.download_url) != 'undefined') {
                                 window.location.href = response.download_url;
                             }
