@@ -4,7 +4,6 @@ $(function() {
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
-            console.debug($form);
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
@@ -24,12 +23,17 @@ $(function() {
                 success: function(response) {
                     $form.css('cursor', 'default');
                     if (typeof(response.id) != 'undefined') {
-                        if (typeof(response.download_url) != 'undefined') {
-                            window.location.href = response.download_url;
-                        }
-                        else {
-                            window.location.href = $form.find('#thanks').val();
-                        }
+                        analytics.identify(response.id, {
+                            email: leadData.email,
+                            mc_id: response.id
+                        }, function(){
+                            if (typeof(response.download_url) != 'undefined') {
+                                window.location.href = response.download_url;
+                            }
+                            else {
+                                window.location.href = $form.find('#thanks').val();
+                            }
+                        });
                     }
                     else {
                         alert(errorMessage);

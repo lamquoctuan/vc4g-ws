@@ -20,7 +20,7 @@ $ajaxDownloadForm = wp_create_nonce( $strDownloadForm );
 		</div>
     </div>
     
-    <a href="javascript:void(0);" onclick="$('#downloadForm').submit();" class="btn download"><span>DOWNLOAD</span></a>
+    <a href="javascript:void(0);" class="btn download"><span>DOWNLOAD</span></a>
     <input type="hidden" name="action" value="ajax_download"/>
     <input type="hidden" name="security" value="<?php echo $ajaxDownloadForm;?>"/>
     <input type="hidden" id="thanks" value="/thank/download/"/>
@@ -29,6 +29,11 @@ $ajaxDownloadForm = wp_create_nonce( $strDownloadForm );
 <script type="text/javascript">
     var $formDownload = $('#downloadForm');
     $formDownload.find('.btn.download').click(function(){
-        $formDownload.submit();    
+        analytics.track('form_action', {
+            action: 'download',
+            source: 'Home-HowToSell'
+        }, function(){
+            $formDownload.submit();
+        });
     });
 </script>
