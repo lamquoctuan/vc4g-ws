@@ -175,16 +175,18 @@ $platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverAr
     	<div class="col-md-4">
     	    <div class="tables">
     			<h3 class="right">Cad Gold Price in Last 5 Days</h3>
-                <script type="text/javascript"
-                      src="https://www.google.com/jsapi?autoload={
-                        'modules':[{
-                          'name':'visualization',
-                          'version':'1',
-                          'packages':['corechart']
-                        }]
-                      }"></script>
-            
-                 <div id="chart_div" style="padding-bottom: 11px;"></div>
+    			<div class="bg-grey">
+                    <script type="text/javascript"
+                          src="https://www.google.com/jsapi?autoload={
+                            'modules':[{
+                              'name':'visualization',
+                              'version':'1',
+                              'packages':['corechart']
+                            }]
+                          }"></script>
+                
+                     <div id="chart_div"></div>
+                 </div>
     		</div>
     		
     		<div class="tables ">

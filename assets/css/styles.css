@@ -1668,6 +1668,7 @@ section hr {
 .tables .form-control {
     border-radius: 0;
     border: solid 2px #a5a6a8;
+    font-weight: 600;
 }
 .tables .calculator .form-control {
     padding: 0 10px;
@@ -1691,9 +1692,6 @@ section hr {
     padding-left: 0px;
 }
 
-#chart_div {
-    margin: -10px auto;
-}
 
 #howwepay button.btn.body-content.download {
     margin-top:60px;
@@ -2647,6 +2645,7 @@ section hr {
     text-align: center;
     padding: 25px 10px;
     border: solid 2px #b5b6b6;
+    font-weight: 600;
 }
 .modal-dialog.signup .container {
     width: 100%;
