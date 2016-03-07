@@ -170,25 +170,25 @@ function vc4g_scripts()
 //    }
 
 //    jQuery
-    wp_enqueue_script('vc4g-jquery', WP_CONTENT_URL . '/js/jquery.js', array(), '20150630');
+    wp_enqueue_script('vc4g-jquery', WP_CONTENT_URL . '/js/jquery.js', array(), '20160307');
 //    Bootstrap Core JavaScript
-    wp_enqueue_script('vc4g-bootstrap', WP_CONTENT_URL . '/js/bootstrap.min.js', array(), '20150630');
+    wp_enqueue_script('vc4g-bootstrap', WP_CONTENT_URL . '/js/bootstrap.min.js', array(), '20160307');
 //    Plugin JavaScript
-    wp_enqueue_script('vc4g-jquery-easing', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array(), '20150630');
-    wp_enqueue_script('vc4g-classie', WP_CONTENT_URL . '/js/classie.js', array(), '20150630');
+    wp_enqueue_script('vc4g-jquery-easing', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array(), '20160307');
+    wp_enqueue_script('vc4g-classie', WP_CONTENT_URL . '/js/classie.js', array(), '20160307');
     // if (is_front_page() || is_home()) {
     //     load home page header script
     // }
-    wp_enqueue_script('vc4g-responsive-tabs', WP_CONTENT_URL . '/js/responsive-tabs.js', array(), '20150630');
+    wp_enqueue_script('vc4g-responsive-tabs', WP_CONTENT_URL . '/js/responsive-tabs.js', array(), '20160307');
 //    Contact Form JavaScript
-    wp_enqueue_script('vc4g-bootstrap-validation', WP_CONTENT_URL . '/js/jqBootstrapValidation.js', array(), '20150630');
-    wp_enqueue_script('vc4g-form', WP_CONTENT_URL . '/js/form.js', array(), '20150801');
+    wp_enqueue_script('vc4g-bootstrap-validation', WP_CONTENT_URL . '/js/jqBootstrapValidation.js', array(), '20160307');
+    wp_enqueue_script('vc4g-form', WP_CONTENT_URL . '/js/form.js', array(), '20160307');
     
-//    wp_enqueue_script('vc4g-contact-form', WP_CONTENT_URL . '/js/contact_me.js', array(), '20150630');
+//    wp_enqueue_script('vc4g-contact-form', WP_CONTENT_URL . '/js/contact_me.js', array(), '20160307');
 //    Custom Theme JavaScript
-    wp_enqueue_script('vc4g-vancouver', WP_CONTENT_URL . '/js/vancouver.js', array(), '20150630');
+    wp_enqueue_script('vc4g-vancouver', WP_CONTENT_URL . '/js/vancouver.js', array(), '20160307');
     if (is_front_page() || is_home()) {
-        wp_enqueue_script('vc4g-roundabout', WP_CONTENT_URL . '/js/jquery.roundabout.js', array(), '20150630');
+        wp_enqueue_script('vc4g-roundabout', WP_CONTENT_URL . '/js/jquery.roundabout.js', array(), '20160307');
     } else {
         wp_enqueue_script('vc4g-akordeon', WP_CONTENT_URL . '/js/jquery.akordeon.js', array(), '20150702');
     }
