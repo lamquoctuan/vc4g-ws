@@ -1,8 +1,9 @@
 <?php
-if (! (is_single() || is_page('buy-diamond'))) {
+//skip One day deal event
+// if (! (is_single() || is_page('buy-diamond'))) {
     // get_template_part( 'template/footer', 'onedaydeal' );
-    get_template_part( 'template/footer', 'coming-soon' );
-}
+    // get_template_part( 'template/footer', 'coming-soon' );
+// }
 //get_template_part( 'template/footer', 'contact' );
 ?>
 <!-- Contact Section -->
@@ -24,9 +25,7 @@ if (! (is_single() || is_page('buy-diamond'))) {
                 <div class="col-md-7">
                     <?php get_template_part('template/footer', 'subscribe-form');?>
                 </div>
-
             </div>
-
         </div>
     </div>
 </section>

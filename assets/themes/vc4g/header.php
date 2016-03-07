@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700italic,700,900,100,100italic' rel='stylesheet' type='text/css'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,3 +27,4 @@ else {
     get_template_part('template/header', 'nav');
 }
 ?>
+<?php get_template_part('template/popup', 'download-pdf');?>

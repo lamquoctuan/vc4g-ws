@@ -50,18 +50,24 @@ function ajax_download_callback() {
     $action = sanitize_text_field( $_POST['action'] );
     $strSpecial = CUR_THEME_NAME . gmdate('Y-m-d') . '-' . $action;
     check_ajax_referer( $strSpecial, 'security' );
-	
-	$first_name = urldecode(sanitize_text_field($_POST['first_name']));
-	$last_name = urldecode(sanitize_text_field($_POST['last_name']));
+
+	$first_name = urldecode(sanitize_text_field(\LNR\Helper::getVal('first_name', $_POST, '')));
+	$last_name = urldecode(sanitize_text_field(\LNR\Helper::getVal('last_name', $_POST, '')));
 	$email = urldecode($_POST['email']);
 	$source = 'Web Form - Download';
 
 	$mcConnector = new MailChimp();
 	$result = $mcConnector->listSubscribe('0d40c495ab', $source, $email, $first_name, $last_name);
-	if (isset ($result->id)) {
-		$fileUri = generatePdf();
-		$result->download_url = $fileUri;
+
+	if ( !isset($result->id) && ($result->status == 400 && $result->title == 'Member Exists') ) {
+		$result = $mcConnector->getListMember('0d40c495ab', $email);
 	}
+	
+	if ( isset($result->id) ) {
+		$fileUri = generatePdf();
+		$result->download_url = site_url() . $fileUri;	
+	}
+
 	$response = $result;
 	wp_die(json_encode($response));
 }
@@ -135,8 +141,16 @@ function ajax_gold_prices_callback() {
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
      
-	$resultJson = curl_exec($ch);
-	curl_close($ch);
+	if ( defined('APP_ENV') && APP_ENV == 'pro') {
+		$resultJson = curl_exec($ch);
+		$info = curl_getinfo($ch);
+		$httpCode = $info['http_code'];
+
+		curl_close($ch);
+	}
+	else {
+		$resultJson = '{"errors":{},"id":6442027,"source_name":"World Gold Council","source_code":"WGC","code":"GOLD_DAILY_CAD","name":"Gold Prices (Daily) - Currency CAD","urlize_name":"Gold-Prices-Daily-Currency-CAD","display_url":"http://www.gold.org/assets/dynamic/www.gold.org/dc/wgc.spotprice/optimized/oz/wgc.spotprice.sinceInception.cad.csv?","description":"\u003cp\u003eAll values are national currency units per troy ounce (except for index values). The World Gold Council is the market development organisation for the gold industry. Working within the investment, jewellery and technology sectors, as well as engaging in government affairs, our purpose is to provide industry leadership, whilst stimulating and sustaining demand for gold. We develop gold-backed solutions, services and markets, based on true market insight. As a result, we create structural shifts in demand for gold across key market sectors. We provide insights into the international gold markets, helping people to better understand the wealth preservation qualities of gold and its role in meeting the social and environmental needs of society. Based in the UK, with operations in India, the Far East, Europe and the US, the World Gold Council is an association whose 23 members comprise the world\'s leading gold mining companies.\u003c/p\u003e","updated_at":"2016-03-04T18:00:41.256Z","frequency":"daily","from_date":"1971-04-01","to_date":"2016-03-04","column_names":["Date","Value"],"private":false,"type":null,"premium":false,"data":[["2016-03-04",1711.1],["2016-03-03",1679.0],["2016-03-02",1670.4],["2016-03-01",1666.2],["2016-02-29",1667.9]]}';
+	}
 	
 	$result = json_decode($resultJson);
 	$error = '';
@@ -146,15 +160,30 @@ function ajax_gold_prices_callback() {
 		
 		$response->success = true;
 		$response->data = array();
-		array_push($response->data, $columnNames);
+		// array_push($response->data, $columnNames);
+		$colPriceDate = new \StdClass();
+		$colPriceDate->type = 'date';
+		$colPriceDate->label = 'Date';
+		array_push($response->data, [$colPriceDate, 'Gold Price']);
 		for($idx = count($data)-1; $idx>=0; $idx--) {
-			array_push($response->data, $data[$idx]);
+			// $dataRow[0] = date('m/d', strtotime($data[$idx][0]));
+			//"Date(Year, Month, Day, Hours, Minutes, Seconds, Milliseconds)"
+			$partsDatePrice = date_parse($data[$idx][0]." 23:00:00.5");
+			$dataRow[0] = "Date(".$partsDatePrice['year'].", ".$partsDatePrice['month'].", ".$partsDatePrice['day'].")";
+			$dataRow[1] = $data[$idx][1];
+			array_push($response->data, $dataRow);
+			// array_push($response->data, $data[$idx]);
 		}
 		// $response->data = json_encode($response->data);
 	}
 	else {
 		$response->success = false;
-		$response->error = $result->error;
+		if (isset($result->error)) {
+			$response->error = $result->error;
+		}
+		else {
+			$response->error = $resultJson;
+		}
 	}
 	wp_die(json_encode($response));
 }
