@@ -25,6 +25,10 @@ $.extend({
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
+        analytics.track('Clicked Home Nav', {
+            menu_item: $anchor.html(),
+            nav_shrink: $('.navbar-fixed-top').hasClass('navbar-shrink')
+        });
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
@@ -109,11 +113,9 @@ $(document).ready(function() {
 var timer = 0;
 $(document).ajaxStart(function (e) {
     timer = setTimeout(function () { $('body .btn').css('cursor', 'progress'); }, 50);
-    console.log(timer);
 });
 $(document).ajaxStop(function () {
     $('body .btn').css('cursor', 'pointer');
-    console.log(timer);
     clearTimeout(timer);
 });
 

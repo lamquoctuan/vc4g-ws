@@ -4,9 +4,6 @@ $(function() {
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
-            console.log($form);
-            console.log(vc4g);
-            console.log('submit error');
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
@@ -26,12 +23,27 @@ $(function() {
                 success: function(response) {
                     $form.css('cursor', 'default');
                     if (typeof(response.id) != 'undefined') {
-                        if (typeof(response.download_url) != 'undefined') {
-                            window.location.href = response.download_url;
+                        var mxProperties = {
+                            email: leadData.email,
+                            mc_id: response.id
+                        };
+                        if (typeof(leadData.name) != 'undefined') {
+                            mxProperties.name = leadData.name;
                         }
-                        else {
-                            window.location.href = $form.find('#thanks').val();
+                        if (typeof(leadData.first_name) != 'undefined') {
+                            mxProperties['first name'] = leadData.first_name;
                         }
+                        if (typeof(leadData.last_name) != 'undefined') {
+                            mxProperties['last name'] = leadData.last_name;
+                        }
+                        analytics.identify(response.id, mxProperties, function(){
+                            if (typeof(response.download_url) != 'undefined') {
+                                window.location.href = response.download_url;
+                            }
+                            else {
+                                window.location.href = $form.find('#thanks').val();
+                            }
+                        });
                     }
                     else {
                         alert(errorMessage);
