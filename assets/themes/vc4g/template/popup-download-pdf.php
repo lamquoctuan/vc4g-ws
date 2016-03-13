@@ -10,7 +10,7 @@
       <!--</div>-->
       <div class="modal-body">
         <div class="container">
-            
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <div class="col-left text-center">
                     <div class="downloadPopup">
                         <?php get_template_part('template/download-pricing', 'form-popup');?>
