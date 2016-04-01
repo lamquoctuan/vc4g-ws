@@ -78,13 +78,19 @@ function ajax_mail_in_service_callback() {
     $action = sanitize_text_field( $_POST['action'] );
     $strSpecial = CUR_THEME_NAME . gmdate('Y-m-d') . '-' . $action;
     check_ajax_referer( $strSpecial, 'security' );
-	
+
 	$first_name = urldecode(sanitize_text_field($_POST['first_name']));
 	$last_name = urldecode(sanitize_text_field($_POST['last_name']));
 	$email = urldecode($_POST['email']);
 	$source = 'Web Form - Mail-in-Service';
 	$phone = sanitize_text_field($_POST['phone']);
-	$type = sanitize_text_field($_POST['type']);
+	$typeArr = array(
+		isset($_POST['type_gold'])?'gold':'',
+		isset($_POST['type_silver'])?'silver':'',
+		isset($_POST['type_platinum'])?'platinum':'',
+		isset($_POST['type_diamond'])?'diamond':''
+	);
+	$type = implode(',', array_filter($typeArr) );
 	$address = array(
 		'address' => sanitize_text_field($_POST['address']),
 		'city' => sanitize_text_field($_POST['city']),
@@ -119,6 +125,7 @@ function ajax_mail_in_service_callback() {
 
 	$mcConnector = new MailChimp();
 	$result = $mcConnector->listSubscribe('bff0c06eb6', $source, $email, $first_name, $last_name, $phone, '', '', $address, $type);
+	
 	$response = $result;
 	wp_die(json_encode($response));
 }

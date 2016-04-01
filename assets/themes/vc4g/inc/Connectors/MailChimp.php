@@ -74,8 +74,14 @@ class MailChimp
         curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data);                                                                                                                  
 
         $result = curl_exec($ch);
-
-        return json_decode($result);
+        
+        $resultObj = json_decode($result);
+        if (isset($resultObj->title) && $resultObj->title=='Member Exists') {
+            return $this->getListMember($listId, $email);
+        }
+        else {
+            return json_decode($result);
+        }
     }
 }
 ?>

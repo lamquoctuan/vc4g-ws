@@ -97,22 +97,22 @@ $ajaxMailInServiceForm = wp_create_nonce( $strMailInServiceForm );
                 <label>What are you sending?</label>
                 <div class="row radio-check">
                     <div class="col-md-6 text-left">
-                        <label class="radio">
-                            <input id="radio1" type="radio" name="type" value="gold" checked>
+                        <label class="checkbox">
+                            <input id="typeGold" type="checkbox" name="type_gold" checked>
                             <span class="outer"><span class="inner"></span></span>Gold
                         </label>
-                        <label class="radio">
-                            <input id="radio2" type="radio" name="type" value="silver">
+                        <label class="checkbox">
+                            <input id="typeSilver" type="checkbox" name="type_silver">
                             <span class="outer"><span class="inner"></span></span>Silver
                         </label>
                     </div>
                     <div class="col-md-6 text-left">
-                        <label class="radio">
-                            <input id="radio3" type="radio" name="type" value="platinum">
+                        <label class="checkbox">
+                            <input id="typePlatinum" type="checkbox" name="type_platinum">
                             <span class="outer"><span class="inner"></span></span>Platinum
                         </label>
-                        <label class="radio">
-                            <input id="radio4" type="radio" name="type" value="diamond">
+                        <label class="checkbox">
+                            <input id="typeDiamond" type="checkbox" name="type_diamond">
                             <span class="outer"><span class="inner"></span></span>Diamond
                         </label>
                     </div>
