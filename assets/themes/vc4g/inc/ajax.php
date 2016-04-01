@@ -78,22 +78,54 @@ function ajax_mail_in_service_callback() {
     $action = sanitize_text_field( $_POST['action'] );
     $strSpecial = CUR_THEME_NAME . gmdate('Y-m-d') . '-' . $action;
     check_ajax_referer( $strSpecial, 'security' );
-	
+
 	$first_name = urldecode(sanitize_text_field($_POST['first_name']));
 	$last_name = urldecode(sanitize_text_field($_POST['last_name']));
 	$email = urldecode($_POST['email']);
 	$source = 'Web Form - Mail-in-Service';
 	$phone = sanitize_text_field($_POST['phone']);
-	$type = sanitize_text_field($_POST['type']);
+	$typeArr = array(
+		isset($_POST['type_gold'])?'gold':'',
+		isset($_POST['type_silver'])?'silver':'',
+		isset($_POST['type_platinum'])?'platinum':'',
+		isset($_POST['type_diamond'])?'diamond':''
+	);
+	$type = implode(',', array_filter($typeArr) );
 	$address = array(
 		'address' => sanitize_text_field($_POST['address']),
 		'city' => sanitize_text_field($_POST['city']),
 		'state' => sanitize_text_field($_POST['state']),
 		'zip' => sanitize_text_field($_POST['zip']),
 	);
+	
+	$notifyHeaders = array();
+	$notifyHeaders[] = 'Content-Type: text/html; charset=UTF-8';
+	
+	$notifyTo = array('tuanlam@vancouvercashforgold.com');
+	
+	$notifySubject = 'VC4G - Mail-in-Service';
+	$notifyMessage = "A request from:" . PHP_EOL;
+	$notifyMessage .= "- Email: {$email}" . PHP_EOL;
+	$notifyMessage .= "- First name: {$first_name}" . PHP_EOL;
+	$notifyMessage .= "- Last name: {$last_name}" . PHP_EOL;
+	$notifyMessage .= "- Phone: {$phone}" . PHP_EOL;
+	$notifyMessage .= "- Address: " . PHP_EOL;
+	$notifyMessage .= "  - Street: " . $address['address'] . PHP_EOL;
+	$notifyMessage .= "  - City: " . $address['city'] . PHP_EOL;
+	$notifyMessage .= "  - State: " . $address['state'] . PHP_EOL;
+	$notifyMessage .= "  - Zip: " . $address['zip'] . PHP_EOL;
+	$notifyMessage .= "- Type: " . $type . PHP_EOL;
+	if ( defined('APP_ENV') && APP_ENV == 'pro') {
+		$notifyTo = array(
+			'vancouvercashforgold@gmail.com',
+		);
+		$notifyHeaders[] = 'Bcc: info@vancouvercashforgold.com' . "\r\n";
+	}
+	@wp_mail( $notifyTo, $notifySubject, $notifyMessage, $notifyHeaders );
 
 	$mcConnector = new MailChimp();
 	$result = $mcConnector->listSubscribe('bff0c06eb6', $source, $email, $first_name, $last_name, $phone, '', '', $address, $type);
+	
 	$response = $result;
 	wp_die(json_encode($response));
 }
