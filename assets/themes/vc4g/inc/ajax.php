@@ -91,6 +91,31 @@ function ajax_mail_in_service_callback() {
 		'state' => sanitize_text_field($_POST['state']),
 		'zip' => sanitize_text_field($_POST['zip']),
 	);
+	
+	$notifyHeaders = array();
+	$notifyHeaders[] = 'Content-Type: text/html; charset=UTF-8';
+	
+	$notifyTo = array('tuanlam@vancouvercashforgold.com');
+	
+	$notifySubject = 'VC4G - Mail-in-Service';
+	$notifyMessage = "A request from:" . PHP_EOL;
+	$notifyMessage .= "- Email: {$email}" . PHP_EOL;
+	$notifyMessage .= "- First name: {$first_name}" . PHP_EOL;
+	$notifyMessage .= "- Last name: {$last_name}" . PHP_EOL;
+	$notifyMessage .= "- Phone: {$phone}" . PHP_EOL;
+	$notifyMessage .= "- Address: " . PHP_EOL;
+	$notifyMessage .= "  - Street: " . $address['address'] . PHP_EOL;
+	$notifyMessage .= "  - City: " . $address['city'] . PHP_EOL;
+	$notifyMessage .= "  - State: " . $address['state'] . PHP_EOL;
+	$notifyMessage .= "  - Zip: " . $address['zip'] . PHP_EOL;
+	$notifyMessage .= "- Type: " . $type . PHP_EOL;
+	if ( defined('APP_ENV') && APP_ENV == 'pro') {
+		$notifyTo = array(
+			'vancouvercashforgold@gmail.com',
+		);
+		$notifyHeaders[] = 'Bcc: info@vancouvercashforgold.com' . "\r\n";
+	}
+	@wp_mail( $notifyTo, $notifySubject, $notifyMessage, $notifyHeaders );
 
 	$mcConnector = new MailChimp();
 	$result = $mcConnector->listSubscribe('bff0c06eb6', $source, $email, $first_name, $last_name, $phone, '', '', $address, $type);
