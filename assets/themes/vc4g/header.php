@@ -27,4 +27,6 @@ else {
     get_template_part('template/header', 'nav');
 }
 ?>
-<?php get_template_part('template/popup', 'download-pdf');?>
+<?php
+// get_template_part('template/popup', 'download-pdf'); //hide Download pdf popup
+?>
