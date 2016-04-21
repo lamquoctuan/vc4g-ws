@@ -47,7 +47,7 @@ $types = array_keys($purchasedItems);
             }
             ?>
                                         <div class="col-md-4 whatwebuy-item">
-                                            <a href="tel:16045582026" class="whatwebuy-link">
+                                            <a href="<?php echo site_url('/what-we-buy/');?>" class="whatwebuy-link">
                                                 <div class="whatwebuy-hover">
                                                     <div class="whatwebuy-hover-content">
                                                         <strong>$<?php echo $item->price;?></strong>
