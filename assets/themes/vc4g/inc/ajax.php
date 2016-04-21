@@ -198,15 +198,12 @@ function ajax_gold_prices_callback() {
 		$colPriceDate->label = 'Date';
 		array_push($response->data, [$colPriceDate, 'Gold Price']);
 		for($idx = count($data)-1; $idx>=0; $idx--) {
-			// $dataRow[0] = date('m/d', strtotime($data[$idx][0]));
-			//"Date(Year, Month, Day, Hours, Minutes, Seconds, Milliseconds)"
+			//Google Chart Important: In JavaScript Date objects, months are indexed starting at zero and go up through eleven, with January being month 0 and December being month 11.
 			$partsDatePrice = date_parse($data[$idx][0]." 23:00:00.5");
-			$dataRow[0] = "Date(".$partsDatePrice['year'].", ".$partsDatePrice['month'].", ".$partsDatePrice['day'].")";
+			$dataRow[0] = "Date(".$partsDatePrice['year'].", ".($partsDatePrice['month']-1).", ".$partsDatePrice['day'].")";
 			$dataRow[1] = $data[$idx][1];
 			array_push($response->data, $dataRow);
-			// array_push($response->data, $data[$idx]);
 		}
-		// $response->data = json_encode($response->data);
 	}
 	else {
 		$response->success = false;

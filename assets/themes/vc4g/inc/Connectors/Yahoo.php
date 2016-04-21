@@ -18,7 +18,7 @@ class Yahoo
     {
         $BASE_URL = "http://query.yahooapis.com/v1/public/yql";
 
-        $yql_query = 'select item from weather.forecast where woeid in (9807)';
+        $yql_query = "select item from weather.forecast where woeid in (9807) and u='c'";
         $yql_query_url = $BASE_URL . "?q=" . urlencode($yql_query) . "&format=json";
 
         // Make call with cURL

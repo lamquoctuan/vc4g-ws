@@ -313,15 +313,13 @@ function drawChart(chartData) {
     
     var optionsAxisStyle = {bold: true, fontName: "Roboto", fontSize: 11};
     var options = {
-    //   title: 'CAD Gold Price in last 5 days',
-    //   curveType: 'function',
-      legend: { position: 'none' },
-      backgroundColor: '#e9ebee',
-      colors: ['#d19f42'],
-      is3D:true,
-      width:'100%',
-      vAxis: {textStyle: optionsAxisStyle, format: '$#,###'},
-      hAxis: {textStyle: optionsAxisStyle, format: 'MMM dd'}
+        legend: { position: 'none' },
+        backgroundColor: '#e9ebee',
+        colors: ['#d19f42'],
+        is3D:true,
+        width:'100%',
+        vAxis: {textStyle: optionsAxisStyle, format: '$#,###'},
+        hAxis: {textStyle: optionsAxisStyle, format: 'MMM dd'}
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
