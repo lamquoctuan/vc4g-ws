@@ -28,17 +28,24 @@
   </div>
 </div>
 <script type="text/javascript">
-    var delayTime = 6000;
-    $(window).ready(function(){
-        setTimeout(function(){
-            $('#popupModal').modal('show');
-        }, 6000);
-    });
-    
-    $('#popupModal').on('show.bs.modal', function (e) {
-        analytics.track('popup', {
-            form: 'Download PDF',
-            delayTime: delayTime
+    /*global $,analytics*/
+$(document).ready(function(){
+    var popupShown = false;
+    var htsTop = parseInt($('#howwepay h2').offset().top) - 71;
+    if (popupShown != true ) {
+        $(window).scroll(function(){
+            if ( htsTop < $(window).scrollTop() ) {
+                $('#popupModal').modal('show');
+                popupShown = true;
+            }
         });
-    })
+        
+        $('#popupModal').on('show.bs.modal', function (e) {
+            analytics.track('popup', {
+                form: 'Download PDF',
+                section: 'How to sell'
+            });
+        });
+    }
+});
 </script>

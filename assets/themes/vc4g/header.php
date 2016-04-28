@@ -28,5 +28,5 @@ else {
 }
 ?>
 <?php
-// get_template_part('template/popup', 'download-pdf'); //hide Download pdf popup
+get_template_part('template/popup', 'download-pdf'); //popup if over scroll How to sell section
 ?>
