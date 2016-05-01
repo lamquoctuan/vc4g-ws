@@ -28,24 +28,25 @@
   </div>
 </div>
 <script type="text/javascript">
-    /*global $,analytics*/
+/*global $,analytics*/
 $(document).ready(function(){
     var popupShown = false;
     var htsTop = parseInt($('#howwepay h2').offset().top) - 71;
-    if (popupShown != true ) {
-        $(window).scroll(function(){
-            if ( htsTop < $(window).scrollTop() ) {
-                $('#popupModal').modal('show');
-                popupShown = true;
-            }
+
+    $(window).scroll(function(){
+        if ( popupShown != true && htsTop < $(window).scrollTop() ) {
+            $('#popupModal').modal('show');
+        }
+    });
+    
+    $('#popupModal').on('show.bs.modal', function (e) {
+        analytics.track('popup', {
+            form: 'Download PDF',
+            section: 'How to sell'
         });
-        
-        $('#popupModal').on('show.bs.modal', function (e) {
-            analytics.track('popup', {
-                form: 'Download PDF',
-                section: 'How to sell'
-            });
-        });
-    }
+    });
+    $('#popupModal').on('show.bs.modal', function (e) {
+        popupShown = true;
+    });
 });
 </script>
