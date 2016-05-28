@@ -391,8 +391,9 @@ fieldset[disabled] .btn-primary.active {
     font-weight: 300;
     color: #fff;
     padding: 10px 30px;
-    background-color: #d19f42;
+    background-color: none;
     transition: background-color 0.5s ease;
+    border: solid 2px #fff;
 }
 
 .btn-xl:hover,
@@ -401,7 +402,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
     color: #d19f42;
-    background-color: #121926;
+    background-color: #fff;
 }
 
 .btn-xl:active,
@@ -555,29 +556,7 @@ fieldset[disabled] .btn-xl.active {
     color: #4f4f4f;
 }
 
-@media(min-width:768px) {
-    .navbar-default {
-        padding: 0;
-        border: 0;
-        background-color: #f5f5f5;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-    .navbar-default .navbar-brand {
-        font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-    .navbar-default.navbar-shrink {
-        background-color: #fff;
-        border-bottom: solid 1px #ddd;
-    }
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
-}
+
 
 header {
     text-align: center;
@@ -608,20 +587,20 @@ header .intro-text {
 }
 
 header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 45px;
-    font-weight: 300;
-    line-height: 22px;
+    font-size: 28px;
+    font-weight: lighter;
+    line-height: 1;
+    text-transform: uppercase;  
 }
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1;
 }
 
 header .intro-text .intro-heading acronym {
@@ -634,10 +613,6 @@ header .intro-text .intro-heading acronym {
     line-height: 40px;
     margin-left: 15px;
 }
-header .intro-text .intro-heading acronym img {
-    
-}
-
 header .phone-banner {
     font-size: 25px;
     margin-top: 20px;
@@ -671,21 +646,39 @@ header img[alt="goldvcg"] {
 
 @media(min-width:768px) {
     
-    header .intro-text .intro-lead-in {
-        margin-bottom: 0;
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 35px;
-        font-weight: 100;
-        line-height: 40px;
-        text-transform: uppercase;
+    .navbar-default {
+        padding: 0;
+        border: 0;
+        background-color: #f5f5f5;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
     }
-    header .intro-text .intro-heading {
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 38px;
-        font-weight: 900;
-        line-height: 1;
+    .navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    .navbar-default.navbar-shrink {
+        background-color: #fff;
+        border-bottom: solid 1px #ddd;
+    }
+    .navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+    .navbar .navbar-nav.navbar-right {
+        width: auto;
+        float: none !important;
+        margin-right: auto;
+    }
+    
+    .navbar .navbar-collapse {
+        text-align: center;
     }
 }
 
@@ -1091,6 +1084,7 @@ header {
 .navbar-fixed-top.navbar-shrink .navbar-right {
     width: auto;
     margin-top: 0;
+    margin-bottom: -5px;
 }
 
 .navbar-default.navbar-shrink .nav li a {
@@ -1115,19 +1109,19 @@ a.sub-phone {
     position: relative;
     margin: 20px 0 5px 30px;
     display: inline-block;
-    color: #b3b8c0;
+    color: #d19f42;
     font-size: 16px;
     font-weight: 600;
 }
 
 a.sub-phone:hover {
-    color: #fff;
+    color: #636363;
 }
 
 .icon-phone {
     position: absolute;
     font-size: 30px;
-    left: -34px;
+    left: -25px;
     background: url(/assets/images/group-icons.png) no-repeat 0 -144px;
     width: 24px;
     height: 24px;
@@ -1140,8 +1134,8 @@ a.sub-phone:hover {
 .address-banner {
     font-size: 13px;
     display: block;
-    color: #b3b8c0;
-    font-weight: 500;
+    color: #636363;
+    font-weight: 300;
 }
 .navbar-default.navbar-shrink .sub-phone {
     display: block;
@@ -2661,6 +2655,64 @@ button.close {
     color: #fff;
     opacity: 1;
 }
+ 
+.row-no-padding {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.row-no-padding > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+}
+
+.post {
+    position: relative;
+}
+
+.post .post-inner {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+}
+.post .post-inner:hover {
+    background:#000;
+}
+.post .post-inner:hover img {opacity:0.8;}
+.post-variant-1 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.post-variant-1 img {
+    width: 100%;
+}
+.post .post-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+.post .post-text {
+    position: absolute;
+    opacity: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.post .post-inner.withtext:hover img {opacity:0.3;}
+.post .post-inner.withtext:hover .post-text { 
+    opacity: 1;
+}
 
 @media (min-width: 1401px) { 
     header .intro-text {
@@ -2672,7 +2724,31 @@ button.close {
     header img[alt="goldvcg"] {
         margin-top: 52px;
     }
+    header .intro-text .intro-lead-in span,
+    header .intro-text .intro-heading span {
+        display: block;
+    }
+    header .intro-text .intro-heading {
+        margin-bottom: 22px;
+    }
     
+    .btn-xl {
+        font-size: 19px;
+        padding: 5px 20px;
+    }
+    .post .post-text {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    header .col-lg-5 {
+        width: 41.66666667%;
+        float: left;
+    }
+    header .col-lg-7 {
+        width: 58.33333333%;
+        float: left;
+    }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: portrait) {
@@ -2707,13 +2783,27 @@ button.close {
         font-size: 12px;
     }
     
-    header .intro-text {
-        background: none;
-        padding-bottom: 100px;
+    header .col-md-4 {
+        width: 33.33333333%;
+        float: left;
     }
-    header img[alt="goldvcg"] {
-        width: 80%;
-        margin-top: 20px;
+    header .intro-text {
+        padding: 25px 0;
+    }
+    header .intro-text .intro-lead-in {
+        font-size: 22px;
+    }
+     header .intro-text .intro-heading{
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    header .intro-text .intro-lead-in span,
+    header .intro-text .intro-heading span {
+        display: block;
+    }
+    .btn-xl {
+        font-size: 18px;
+        padding: 5px 10px;
     }
     .ad-banner {
         font-size: 20px;
@@ -2892,6 +2982,7 @@ button.close {
     .navbar-default .nav li a {
         padding: 32px 42px;
     }
+    
     #myRoundabout {
         margin-left: 25%;
     }
@@ -2952,7 +3043,213 @@ button.close {
     }
     
 }
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    header .col-lg-5 {
+        width: 41.66666667%;
+        float: left;
+    }
+    header .col-lg-7 {
+        width: 58.33333333%;
+        float: left;
+    }
+    .navbar-default .nav li a {
+        padding: 28px 45px;
+    }
+}
 
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+    
+    header img[alt="goldvcg"] {
+        width: 80%;
+        margin-top: 20px;
+    }
+    header .intro-text {
+        padding: 44px 0;
+    }
+    header .intro-text .intro-lead-in span,
+    header .intro-text .intro-heading span {
+        display: block;
+    }
+    header .col-md-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+    .btn-xl {
+        font-size: 19px;
+        padding: 5px 20px;
+    }
+    .ad-banner {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .ad-banner strong {
+        font-size: 24px;
+    }
+    header .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .navbar-fixed-top.navbar-shrink .navbar-right {
+        position: absolute;
+        right: 10px;
+    }
+    .navbar-default.navbar-shrink .nav li a {
+        padding: 15px 5px;
+    }
+    header .intro-text {
+        
+    }
+    .navbar-default .nav li a {
+        padding: 25px;
+    }
+    .navbar-right {
+        margin-right: 0;
+    }
+    .services .col-md-4 {
+        margin-bottom: 20px;
+    }
+    .services button {
+        margin-bottom: 30px;
+    }
+    #whatwebuy h2 {
+        font-size: 23px;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        left: 0;
+    }
+    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
+        top: 12%;
+    }
+    .bg-diamond {
+        background: none;
+    }
+    
+    #myRoundabout {
+        margin-left: 100px;
+    }
+    #team .col-xs-12 {
+        width: 50%;
+    }
+    #contact .col-sm-5.col-md-6 {
+        clear: both;
+        width: 100%;
+    }
+    #contact .col-sm-5.col-md-6 .col-md-5,
+    #contact .col-sm-5.col-md-6 .col-md-7 {
+        width: 50%;
+        float: left;
+    }
+    #contact #contactForm .col-md-7 {
+        padding-right: 15px
+    }
+    #contact #contactForm .col-md-5 {
+        padding-left: 15px
+    }
+    .howtosell {
+        padding: 60px 0 40px;
+    }
+    .howtosell .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .btn.request {
+        font-size: 12px;
+    }
+    .recentpay .icon-prev {
+        margin-left: -11px;
+    }
+    .recentpay .icon-next {
+        margin-right: -12px;
+    }
+    .recentpay h2 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .fullscreen .col-sm-9,
+    .fullscreen .col-sm-3 {
+        width: 100%;
+    }
+    .fullscreen .carousel {
+        width: 38%;
+        margin-left: 31%;
+    }
+    #whatwebuy.fullscreen .icon-next {
+        margin-right: -21px;
+    }
+    #whatwebuy.fullscreen .icon-prev {
+        margin-left: -21px;
+    }
+    .fullscreen .sidebar-whywepay h3 {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .map-contact {
+        margin-top: 71px;
+    }
+    .map-contact iframe {
+        height: 280px;
+    }
+    .place-ct .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+    .place-ct .col-md-9 {
+        width: 75%;
+        float: left;
+    }
+    .form-message .col-md-6 .row .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    footer .col-md-6 {
+        width: 50%;
+        float: left;
+    }
+    .request-form h4 {
+        font-size: 22px;
+    }
+    .request-form form {
+        padding: 15px;
+    }
+    .bg-comming .col-xs-7 {
+        width: 100%;
+    }
+    .bg-comming .col-md-offset-2 {
+        margin-left: 0
+    }
+    .bg-comming {
+        font-weight: 300;
+        line-height: 36px;
+    }
+    .bg-comming .col-md-5 {
+        width: 41.66666667%;
+        float: left;
+    }
+    .bg-comming .col-md-7 {
+        width: 58.33333333%;
+        float: left;
+    }
+    .calculator .col-md-6 {
+        float: left;
+        width: 50% !important;
+    }
+    .tables .btn.download {
+        margin: 10px auto;
+        display: block;
+        width: 200px;
+        padding-left: 0;
+    }
+    .tables {
+        margin-bottom: 30px;
+    }
+    #howwepay {
+        padding-bottom: 10px;
+    }
+    
+}
 @media only screen and (max-width: 767px) {
     .modal-dialog.signup{
         width: 520px;
@@ -2967,22 +3264,24 @@ button.close {
     .downloadPopup {
         padding-top: 0;
     }
-    header {
-        padding-bottom: 30px;
+    
+    .btn-xl {
+        font-size: 18px;
+        padding: 5px 10px;
     }
-    header .col-md-6 {
-        width: 50%;
+    header .col-md-4 {
+        width: 33.33333333%;
         float: left;
     }
-    header .intro-text .intro-lead-in {
-        font-weight: 100;
-        text-transform: uppercase;
-        font-size: 26px;
-        margin-bottom: 10px;
+    header .intro-text .intro-lead-in span,
+    header .intro-text .intro-heading span{
+        display: block
     }
-    header .intro-text .intro-heading {
-        font-size: 30px;
-        line-height: 1;
+    header .intro-text {
+        padding: 44px 0;
+    }
+    header .col-md-6 {
+        width: 50%; float: left;
     }
     header .phone-banner {
         font-size: 22px;
@@ -3233,202 +3532,7 @@ button.close {
     }
 }
 
-@media only screen and (max-width: 991px) and (orientation: landscape) {
-    header img[alt="goldvcg"] {
-        width: 80%;
-        margin-top: 20px;
-    }
-    
-    .ad-banner {
-        font-size: 20px;
-        padding: 10px 0;
-    }
-    .ad-banner strong {
-        font-size: 24px;
-    }
-    header .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-    .navbar-fixed-top.navbar-shrink .navbar-right {
-        position: absolute;
-        right: 10px;
-    }
-    .navbar-default.navbar-shrink .nav li a {
-        padding: 15px 5px;
-    }
-    header .intro-text {
-        
-    }
-    .navbar-default .nav li a {
-        padding: 25px;
-    }
-    .navbar-right {
-        margin-right: 0;
-    }
-    .services .col-md-4 {
-        margin-bottom: 20px;
-    }
-    .services button {
-        margin-bottom: 30px;
-    }
-    #whatwebuy h2 {
-        font-size: 23px;
-    }
-    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        left: 0;
-    }
-    #whatwebuy .whatwebuy-item .whatwebuy-link .whatwebuy-hover .whatwebuy-hover-content {
-        top: 12%;
-    }
-    .bg-diamond {
-        background: none;
-    }
-    
-    #myRoundabout {
-        margin-left: 100px;
-    }
-    #team .col-xs-12 {
-        width: 50%;
-    }
-    #contact .col-sm-5.col-md-6 {
-        clear: both;
-        width: 100%;
-    }
-    #contact .col-sm-5.col-md-6 .col-md-5,
-    #contact .col-sm-5.col-md-6 .col-md-7 {
-        width: 50%;
-        float: left;
-    }
-    #contact #contactForm .col-md-7 {
-        padding-right: 15px
-    }
-    #contact #contactForm .col-md-5 {
-        padding-left: 15px
-    }
-    .howtosell {
-        padding: 60px 0 40px;
-    }
-    .howtosell .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-    .btn.request {
-        font-size: 12px;
-    }
-    .recentpay .icon-prev {
-        margin-left: -11px;
-    }
-    .recentpay .icon-next {
-        margin-right: -12px;
-    }
-    .recentpay h2 {
-        font-size: 20px;
-        margin-top: 10px;
-    }
-    .fullscreen .col-sm-9,
-    .fullscreen .col-sm-3 {
-        width: 100%;
-    }
-    .fullscreen .carousel {
-        width: 38%;
-        margin-left: 31%;
-    }
-    #whatwebuy.fullscreen .icon-next {
-        margin-right: -21px;
-    }
-    #whatwebuy.fullscreen .icon-prev {
-        margin-left: -21px;
-    }
-    .fullscreen .sidebar-whywepay h3 {
-        text-align: center;
-        margin-top: 40px;
-    }
-    .map-contact {
-        margin-top: 71px;
-    }
-    .map-contact iframe {
-        height: 280px;
-    }
-    .place-ct .col-md-3 {
-        width: 25%;
-        float: left;
-    }
-    .place-ct .col-md-9 {
-        width: 75%;
-        float: left;
-    }
-    .form-message .col-md-6 .row .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-    footer .col-md-6 {
-        width: 50%;
-        float: left;
-    }
-    .request-form h4 {
-        font-size: 22px;
-    }
-    .request-form form {
-        padding: 15px;
-    }
-    .bg-comming .col-xs-7 {
-        width: 100%;
-    }
-    .bg-comming .col-md-offset-2 {
-        margin-left: 0
-    }
-    .bg-comming {
-        font-weight: 300;
-        line-height: 36px;
-    }
-    .bg-comming .col-md-5 {
-        width: 41.66666667%;
-        float: left;
-    }
-    .bg-comming .col-md-7 {
-        width: 58.33333333%;
-        float: left;
-    }
-    .calculator .col-md-6 {
-        float: left;
-        width: 50% !important;
-    }
-    .tables .btn.download {
-        margin: 10px auto;
-        display: block;
-        width: 200px;
-        padding-left: 0;
-    }
-    .tables {
-        margin-bottom: 30px;
-    }
-    #howwepay {
-        padding-bottom: 10px;
-    }
-    
-}
-@media only screen and (max-width: 768px) and (orientation: portrait) {
-    
-    header .col-md-6{
-        float: none;
-        clear: both;
-        width: 100%;
-        text-align: center;
-    }
-    header .intro-text {
-        padding: 34px 0;
-    }
-    a.sub-phone {
-        display: none;
-    }
-    header img[alt="goldvcg"] {
-        width: 80%;
-        margin-top: 20px;
-    }
+@media only screen and (max-width: 767px) and (orientation: portrait) {
     .ad-banner {
         font-size: 20px;
         padding: 10px 0;
@@ -3445,8 +3549,15 @@ button.close {
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
-    header .intro-text {
-        padding-top: 54px;
+    header .col-md-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+    header .intro-text .intro-lead-in {
+        font-size: 20px;
+    }
+    header .intro-text .intro-heading {
+        font-size: 24px;
     }
     .modal-dialog.signup .modal-body {
         background: none;
@@ -3535,6 +3646,17 @@ button.close {
     .navbar-default {
         background: #f5f5f5;
     }
+    header .col-md-6 {
+        width: 100%;
+        clear: both;
+        text-align: center;
+    }
+    header .col-md-6.text-right.pt20 {
+        padding-top: 0;
+    }
+    .post .post-text {
+        top: 40%;
+    }
     #whatwebuy {
         margin-top: 20px;
     }
@@ -3548,15 +3670,7 @@ button.close {
     #team .col-xs-12 {
         width: 100%;
     }
-    header .intro-text .intro-lead-in {
-        font-size: 24px;
-        margin-bottom: 10px;
-        font-weight: 100;
-    }
-    header .intro-text .intro-heading {
-        font-size: 28px;
-        line-height: 1;
-    }
+    
     header .phone-banner {
         font-size: 22px;
     }
@@ -3649,19 +3763,8 @@ button.close {
     header {
         padding-bottom: 0;
     }
-    header .intro-text .intro-lead-in {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-    header .intro-text .intro-heading {
-        font-size: 18px;
-    }
-    header .intro-text .intro-heading span {
-        font-size: 16px;
-        font-weight: 400;
-    }
-    header a.sub-phone {
-        display: none;
+    header img {
+        width: auto;
     }
     header .phone-banner {
         font-size: 16px;
@@ -3788,6 +3891,12 @@ button.close {
         width: 80%;
         margin-top: 20px;
     }
+    header .intro-text .intro-lead-in {
+        font-size: 18px;
+    }
+    header .intro-text .intro-heading {
+        font-size: 24px;
+    }
     .ad-banner {
         font-size: 20px;
         padding: 10px 0;
@@ -3854,12 +3963,7 @@ button.close {
         width: 78%;
         margin-top: 5px;
     }
-    header .intro-text .intro-lead-in {
-        font-size: 18px;
-    }
-    header .phone-banner {
-        font-size: 18px;
-    }
+    
     #howwepay .panel-heading {
         overflow: hidden;
         padding: 0;
@@ -3924,6 +4028,7 @@ button.close {
         width: 80%;
         margin-top: 20px;
     }
+    
     .ad-banner {
         font-size: 20px;
         padding: 10px 0;
@@ -3975,16 +4080,7 @@ button.close {
 }
 
 @media only screen and (max-width: 375px) and (orientation: portrait) {
-    header img {
-        width: 100%;
-    }
-    header .intro-text .intro-lead-in {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-    header .intro-text .intro-heading {
-        font-size: 18px;
-    }
+    
     .navbar-default .nav li a {
         padding: 5px 0 5px 20px;
     }
