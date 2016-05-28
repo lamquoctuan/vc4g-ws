@@ -1,6 +1,6 @@
 <!-- Header -->
-<header class="bg-header">
-    <div class="container">
+<header>
+    <div class="container mb20">
         <div class="row">
             <div class="col-md-6 text-left pt20">
                 <img src="/assets/images/logo.png" />
@@ -10,11 +10,82 @@
     			<span class="address-banner">3515 Kingsway, Vancouver, BC V5R 5L8</span>
     		</div>
         </div>
-        <div class="intro-text">
-            <div class="intro-lead-in">Payment in Cash Gold, Silver</div>
-            <div class="intro-heading">We Buy Diamond <span>At</span> Any Size<acronym title=""><img src="/assets/images/logo-gia-small.jpg" alt=""></acronym></div>
-            <a href="#services" class="page-scroll btn btn-xl">How it works</a>
-            <p class="phone-banner">or call <strong><a href="tel:16045582026">604-558-2026</a></strong></p>
+    </div>
+    
+    <div class="row row-no-padding">
+        <div class="col-lg-5">
+            <div class="post post-variant-1">
+                <div class="post-inner">
+                    <img src="/assets/images/banners/img1.jpg" alt="" class="img-responsive post-image">
+                    <div class="post-caption">
+                        <div class="intro-text">
+                            <div class="intro-lead-in">Payment in <span>Cash Gold, Silver</span></div>
+                            <div class="intro-heading">We Buy Diamond <span>At Any Size</span></div>
+                            <a href="#services" class="page-scroll btn btn-xl">How it works</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 dpl-none">
+            <div class="row row-no-padding">
+                <div class="col-md-4">
+                    <div class="post post-variant-1">
+                        <div class="post-inner withtext">
+                            <img src="/assets/images/banners/img2.jpg" alt="" class="img-responsive post-image">
+                            <div class="post-text">
+                                20+ years of experiences in refining precious metal industry
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                     <div class="post post-variant-1">
+                        <div class="post-inner withtext">
+                            <img src="/assets/images/banners/img3.jpg" alt="" class="img-responsive post-image">
+                            <div class="post-text">
+                                Where the first-time gold seller can find reliable direction
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                     <div class="post post-variant-1">
+                        <div class="post-inner withtext">
+                            <img src="/assets/images/banners/img4.jpg" alt="" class="img-responsive post-image">
+                            <div class="post-text">
+                                Be willing to spend time with you and answer all of your questions
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-no-padding">
+                <div class="col-md-4">
+                    <div class="post post-variant-1">
+                        <div class="post-inner">
+                            <img src="/assets/images/banners/img5.jpg" alt="" class="img-responsive post-image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                     <div class="post post-variant-1">
+                        <div class="post-inner withtext">
+                            <img src="/assets/images/banners/img6.jpg" alt="" class="img-responsive post-image">
+                            <div class="post-text">
+                                Capable of guiding you the best ways to sell gold, diamonds
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                     <div class="post post-variant-1">
+                        <div class="post-inner">
+                            <a href="tel:16045582026"><img src="/assets/images/banners/img7.jpg" alt="" class="img-responsive post-image"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
