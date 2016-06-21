@@ -13,6 +13,44 @@
 
         <div class="row">
             <div class="col-sm-9">
+                <div id="carousel-example-generic" class="carousel slide mb20" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                  </ol>
+                 
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="/assets/images/instore/1.jpg" alt="...">
+                    </div>
+                    <div class="item">
+                      <img src="/assets/images/instore/2.jpg" alt="...">
+                    </div>
+                    <div class="item">
+                      <img src="/assets/images/instore/3.jpg" alt="...">
+                    </div>
+                    <div class="item">
+                      <img src="/assets/images/instore/4.jpg" alt="...">
+                    </div>
+                    <div class="item">
+                      <img src="/assets/images/instore/5.jpg" alt="...">
+                    </div>
+                  </div>
+                 
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </div> <!-- Carousel -->
                 <div class="akordeon">
                     <div class="akordeon-item">
                         <div class="akordeon-item-head">
@@ -90,7 +128,7 @@
             <div class="col-sm-3 sidebar-whywepay">
                 <a class="btn request" href="/mail-in-service/">Mail-in Request Form</a>
 
-                <h3>Recent Pay</h3>
+                <h3 class="title">Recent Pay</h3>
 
                 <div id="myCarousel" class="carousel slide recentpay">
                     <!-- Wrapper for Slides -->

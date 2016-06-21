@@ -211,7 +211,7 @@ $platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverAr
                                     <!--</div>-->
                                     <!--<div class="form-group">-->
                                         <div class="col-xs-4 selectContainer sizemin">
-                                            <select name="unit" class="form-control">
+                                            <select name="unit" class="form-control arrow">
                                                 <option value="oz">Ounce</option>
                                                 <option selected="" value="g">Grams</option>
                                                 <option value="dwt">DWT (Pennyweight)</option>
@@ -259,7 +259,7 @@ $platinumIds = get_objects_in_term( $termPlatinum->term_id, $taxonomy, $silverAr
                                     <!--</div>-->
                                     <!--<div class="form-group">-->
                                         <div class="col-xs-4 selectContainer sizemin">
-                                            <select name="unit" class="form-control">
+                                            <select name="unit" class="form-control arrow">
                                                 <option value="oz">Ounce</option>
                                                 <option selected="" value="g">Grams</option>
                                                 <option value="dwt">DWT (Pennyweight)</option>

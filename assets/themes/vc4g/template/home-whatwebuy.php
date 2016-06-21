@@ -82,6 +82,7 @@ $types = array_keys($purchasedItems);
 <?php }
 } ?>
                 </div>
+                <button type="submit" class="btn body-content" onclick="window.location.href='what-we-buy/';" style="cursor: pointer;">View all</button>
             </div>
         </div>
         <script type="text/javascript">

@@ -1685,6 +1685,9 @@ section hr {
 .tables .calculator .form-group .sizemin {
     padding-left: 0px;
 }
+.tables .calculator select.arrow {
+    background:#fff url(/assets/images/icon-select.png) right no-repeat;
+}
 
 
 #howwepay button.btn.body-content.download {
@@ -2067,7 +2070,7 @@ section hr {
     background-position: -646px -394px;
 }
 
-.sidebar-whywepay h3 {
+.sidebar-whywepay h3.title {
     color: #bababa;
     font-size: 26px;
     text-transform: none;
