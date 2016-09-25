@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 class FDX_CLASS_P7 extends Total_Security {
  	public static $file_log;
 	public static $current_log;

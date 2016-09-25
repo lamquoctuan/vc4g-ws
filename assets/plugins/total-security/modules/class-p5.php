@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 include_once( ABSPATH . WPINC . '/wp-diff.php' );
 
 if ( class_exists( 'Text_Diff_Renderer' ) ) :

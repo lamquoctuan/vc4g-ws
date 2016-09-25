@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 class FDX_CLASS_P4 extends Total_Security {
 
 /*
@@ -252,11 +253,11 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
 				//Loop through results and take data we need
 			foreach ( $data as $item => $attr ) {
 
-				$rows[$count]['timestamp'] = $attr['timestamp'];
-				$rows[$count]['id'] = $attr['id'];
-				$rows[$count]['host'] = $attr['host'];
-				$rows[$count]['uri'] = $attr['url'];
-				$rows[$count]['referrer'] = $attr['referrer'];
+				$rows[$count]['timestamp'] = sanitize_text_field($attr['timestamp']);
+				$rows[$count]['id'] = sanitize_text_field($attr['id']);
+				$rows[$count]['host'] = sanitize_text_field($attr['host']);
+				$rows[$count]['uri'] = sanitize_text_field($attr['url']);
+				$rows[$count]['referrer'] = sanitize_text_field($attr['referrer']);
                	$count++;
 
 			}

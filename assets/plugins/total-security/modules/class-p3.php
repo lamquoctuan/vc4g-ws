@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 class FDX_CLASS_P3 {
 	var $results;
 
@@ -196,7 +197,7 @@ class File_FDX_Scanner extends FDX_CLASS_P3 {
 /**
  * RunEnd
  */
-class RunEnd extends FDX_CLASS_P3 {
+class RunEnd2 extends FDX_CLASS_P3 {
 	function RunEnd() {
 	  $this->store_results(true);
 

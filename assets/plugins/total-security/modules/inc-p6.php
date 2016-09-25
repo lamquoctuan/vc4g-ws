@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 $settings = Total_Security::fdx_get_settings();
 $p6_url1 = add_query_arg( array( 'popup' => 'pp_page', 'target' => 'debug_log' ), menu_page_url( $this->hook , false ) );
 /* wrap
@@ -30,7 +31,7 @@ echo '<div class="postbox-container"><div class="meta-box-sortables">';
 
 //form
 echo '<form method="post" action="">';
-      wp_nonce_field();
+      wp_nonce_field( 'fdx_nonce' );
 echo '<input type="hidden" name="fdx_page" value="fdx_form_all" />';
 
 // postbox 1
@@ -144,6 +145,7 @@ echo '</form>'; //form 1
 
 echo '<div class="button_reset">';
 echo '<form method="post" action="">';
+wp_nonce_field( 'fdx_nonce' ); 
 echo '<input type="hidden" name="fdx_page" value="fdx_reset" />';
 echo submit_button( __('Restore Defaults', $this->hook ), 'secondary', 'Submit' , false, array( 'id' => 'space', 'onclick' => 'return confirm(\'' . esc_js( __( 'Restore Default Settings?',  $this->hook ) ) . '\');' ) );
 echo '</form>';//form 2

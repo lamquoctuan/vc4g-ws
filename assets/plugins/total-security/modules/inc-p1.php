@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly
 $results = get_option($this->p5_options_key); //time
 $tests = get_option($this->p2_options_key); //time
 $p2_url2 = add_query_arg( array( 'popup' => 'pp_page', 'target' => 'phpinfo' ), menu_page_url( $this->hook , false ) );
@@ -130,11 +131,9 @@ echo '</div></div>';
 
 //------------postbox
 echo '<div class="postbox">';
-echo '<div class="handlediv" title="' . __('Click to toggle', $this->hook) . '"><br /></div><h3 class="hndle"><span>Bookmarklets '. __('and useful information', $this->hook) . '.</span></h3>';
+echo '<div class="handlediv" title="' . __('Click to toggle', $this->hook) . '"><br /></div><h3 class="hndle"><span>'. __('Useful information', $this->hook) . '</span></h3>';
 echo '<div class="inside">';
-echo '<p class="bookmarklet"><code><a class="pluginbuddy_tip" title="'.__('Drag this link to your bookmark bar, or right-click the link and add to Favorites', $this->hook). '" onclick="window.alert(\''.__('Drag this link to your bookmark bar, or right-click the link and add to Favorites', $this->hook). '\');return false;" href="javascript:(function(){w=410;h=650;window.open(\''.plugins_url( 'libs/bookmarklet/password_hash.php',dirname(__FILE__) ).'\',null,\'width=\'+w+\',height=\'+h+\',left=\'+parseInt((screen.availWidth/2)-(765/2))+\',top=\'+parseInt((screen.availHeight/3)-(102/2))+\'resizable=0toolbar=0,scrollbars=1,location=0,status=0,menubar=0\');})();">Password Hash&rsaquo;&rsaquo;&rsaquo;</code></a>';
-echo ' - '.__('Use to generate your passwords. It creates unique, secure passwords that are very easy for you to retrieve but no one else. Nothing is stored anywhere, anytime, so there\'s nothing to be hacked, lost, or stolen.', $this->hook). ' [<strong><a href="http://www.passwordmaker.org/" target="_blank">?</a></strong>]</p>';
-echo '<hr><div style="text-align: center"><a class="button newWindow pluginbuddy_tip" href="'.$p2_url2.'" data-width="700" data-height="600" rel="1" id="pop_lats" title="'.__('Display Extended PHP Settings via phpinfo()', $this->hook).'">Phpinfo()</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="'.$p2_url4.'" class="button fdx-dialog pluginbuddy_tip" title="'.__('Debug information is used to provide help.', $this->hook).'">'.__('Debug', $this->hook).'</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="'.$p2_url3.'" class="button fdx-dialog pluginbuddy_tip" title="'.__('Tables in blue = Wordpress Default, Table in Green = Total Security Plugin', $this->hook).'">'.__('Database Info', $this->hook).'</a></div>';
+echo '<div style="text-align: center"><a class="button newWindow pluginbuddy_tip" href="'.$p2_url2.'" data-width="700" data-height="600" rel="1" id="pop_lats" title="'.__('Display Extended PHP Settings via phpinfo()', $this->hook).'">Phpinfo()</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="'.$p2_url4.'" class="button fdx-dialog pluginbuddy_tip" title="'.__('Debug information is used to provide help.', $this->hook).'">'.__('Debug', $this->hook).'</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="'.$p2_url3.'" class="button fdx-dialog pluginbuddy_tip" title="'.__('Tables in blue = Wordpress Default, Table in Green = Total Security Plugin', $this->hook).'">'.__('Database Info', $this->hook).'</a></div>';
 echo '<div id="fdx-dialog-wrap"><div id="fdx-dialog"></div></div>'; //popup
 
 

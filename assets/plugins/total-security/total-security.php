@@ -3,22 +3,19 @@
  * Plugin Name: Total Security
  * Plugin URI: http://fabrix.net/total-security/
  * Description: Checks your WordPress installation and provides detailed reporting on discovered vulnerabilities, anything suspicious and how to fix them.
- * Version: 3.2.6
+ * Version: 3.4.3
  * Author: Fabrix DoRoMo
  * Author URI: http://fabrix.net
  * License: GPL2+
  * Text Domain: total-security
  * Domain Path: /lang
- * Copyright 2015 - fabrix.net
+ * Copyright 2016 - fabrix.net
  */
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly
 
 class Total_Security {
-        public $min_wp_ver 	        = '4.2.2'; //
-  		public $pluginversion 	    = '3.2.6';
-
-        public $php_lastver 	    = '5.6.8'; // PHP - http://php.net/downloads.php
-        public $mySQL_lastver 	    = '5.6.24'; // MYSQL - http://dev.mysql.com/downloads/
-
+        public $min_wp_ver 	        = '4.6'; //
+  		public $pluginversion 	    = '3.4.3';
         public $pluginname			= 'Total Security';
         public $hook 				= 'total-security';
         public $_p2 	            = 'vulnerability_scan';
@@ -48,7 +45,7 @@ class Total_Security {
         public $option_urllog       = 'http://www.senderbase.org/lookup/?search_string=';  //http://whois.domaintools.com/
         //----------------------------------------------
         public $sbar_homepage       = 'http://wordpress.org/extend/plugins/total-security/';
-        public $sbar_glotpress      = 'http://dev.fabrix.net/translate/projects/total-security';
+        public $sbar_glotpress      = 'https://translate.wordpress.org/projects/wp-plugins/total-security';
         public $sbar_wpratelink     = 'http://wordpress.org/support/view/plugin-reviews/total-security?rate=5#postform';
         public $sbar_rss            = 'http://feeds.feedburner.com/fdxplugins/';
 
@@ -330,7 +327,7 @@ function fdx_ajax_file_scan() {
 */
 function fdx_run_end() {
 	check_ajax_referer( 'fdx-scanner_scan' );
-	$scanner = new RunEnd();
+	$scanner = new RunEnd2();
 	$scanner->RunEnd();
 	exit;
 }
@@ -639,8 +636,7 @@ function fdx_deactivate() {
     delete_option( 'p3_log_time' ); //p3 log
 
 // red
-delete_option('fdx_p2_red2');
-delete_option('fdx_p2_red3');
+//---------------------------------------------------------------------------------
 delete_option('fdx_p2_red4');
 delete_option('fdx_p2_red5');
 delete_option('fdx_p2_red6');
@@ -651,6 +647,7 @@ delete_option('fdx_p2_red10');
 delete_option('fdx_p2_red11');
 delete_option('fdx_p2_red12');
 delete_option('fdx_p2_red13');
+delete_option('fdx_p2_red14');
 //yel
 delete_option('fdx_p2_yel1');
 delete_option('fdx_p2_yel2');

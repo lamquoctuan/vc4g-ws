@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 $settings = Total_Security::fdx_get_settings(); 
 $tests = get_option($this->p2_options_key);
 
