@@ -2,8 +2,9 @@
 .htaccess
 sitemap.xml
 sitemap.xml.gz
-wp-config.php
-wp-config.php*
+*-local.php
+#wp-config.php
+#wp-config.php*
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
