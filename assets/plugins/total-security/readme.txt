@@ -3,9 +3,9 @@ Plugin Name: Total Security
 Contributors: fdoromo
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8DHY4NXW35T4Y
 Tags: security, scan ,scanner, hack, exploit, secure, malware, phishing, vulnerability, scours, unsafe, total, 404 log, error 404, stealth login, hidden login, Bookmarklet,Log Viewer, debug.log
-Requires at least: 4.2.2
-Tested up to: 4.2.2
-Stable tag: 3.2.6
+Requires at least: 4.6
+Tested up to: 4.6
+Stable tag: 3.4.3
 License: GPLv2 or later
 
 Checks your WordPress installation and provides detailed reporting on discovered vulnerabilities, anything suspicious and how to fix them.
@@ -17,8 +17,6 @@ The **Total Security** plugin is the must-have tool when it comes security of yo
 
 * Check your site for security vulnerabilities and holes.
 * Numerous installation parameters tests
-* Apache and PHP related tests
-* File permissions
 * WP options tests
 * Detailed help and description
 
@@ -77,11 +75,9 @@ Color-coded results separate files into categories:
 
 A warning to redo the scan will be informed every 15 days of last inspection.
 
-= Languages Available =
-* English (default)
-* Russian **(ru_RU)** by [zerg959](http://100wines.net/)
+= Translation =
 
-* **Non-English Speaking Users** - Contribute a translation using the GlotPress web interface - no technical knowledge required ([how to](http://dev.fabrix.net/translate/projects/total-security)).
+* **Non-English Speaking Users** - Contribute a translation using the GlotPress web interface - no technical knowledge required ([how to](https://translate.wordpress.org/projects/wp-plugins/total-security)).
 
 
 == Screenshots ==
@@ -127,6 +123,49 @@ A warning to redo the scan will be informed every 15 days of last inspection.
 
 
 == Changelog ==
+* 3.4.3
+    * IMPROVED - Compatibility with WordPress 4.6
+
+* 3.4.2
+    * FIX - Security issues
+
+* 3.4.1
+    * IMPROVED - Compatibility with WordPress 4.5.3
+    * FIX -  Persistent cross-site scripting (XSS) vulnerability
+    * FIX -  Settings change vulnerability
+
+* 3.4
+    * NEW - New Test: SSL Logins and SSL Admin Access 
+    * IMPROVED - Performance Improvements
+    * IMPROVED - Removal of Obsolete Tests
+
+* 3.3.7
+    * IMPROVED - Compatibility with WordPress 4.5.2
+
+* 3.3.6
+    * IMPROVED - Compatibility with WordPress 4.5.1
+
+* 3.3.5
+    * IMPROVED - Compatibility with WordPress 4.5
+
+* 3.3.4
+    * IMPROVED - Compatibility with WordPress 4.4.2
+
+* 3.3.3
+    * IMPROVED - Compatibility with WordPress 4.4.1
+
+* 3.3.2
+    * IMPROVED - Compatibility with WordPress 4.4
+
+* 3.3.1
+    * IMPROVED - Compatibility with WordPress 4.3.1
+
+* 3.3
+    * IMPROVED - Compatibility with WordPress 4.3
+
+* 3.2.7
+    * IMPROVED - Compatibility with WordPress 4.2.3
+
 * 3.2.6
     * IMPROVED - Compatibility with WordPress 4.2.2
 
@@ -258,3 +297,4 @@ A warning to redo the scan will be informed every 15 days of last inspection.
 
 * 1.0
     * Initial release
+

@@ -478,7 +478,7 @@ fieldset[disabled] .btn-xl.active {
     font-weight: 600;
     letter-spacing: 1px;
     color: #181c2a;
-    padding: 32px 47px;
+    padding: 32px 42px;
     font-size: 13px;
 }
 
@@ -495,6 +495,12 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     background-color: #dedede;
+}
+.navbar-nav b.icon-phone {
+    display: block;
+    position: static;
+    background-position: 0 -146px;
+    float: left;
 }
 
 #aboutTerms .term-heading {
@@ -1142,12 +1148,13 @@ a.sub-phone:hover {
     margin: 0;
     font-size: 13px;
     padding-left: 8px !important;
+    color: #d19f42;
 }
 
 .navbar-default.navbar-shrink .sub-phone .icon-phone {
     left: -20px;
     top: 12px;
-    background-position: -216px -144px;
+    /*background-position: -216px -144px;*/
 }
 
 .navbar-default.navbar-shrink .phone-text {
@@ -2717,6 +2724,14 @@ button.close {
     opacity: 1;
 }
 
+.navbar-header a.phone-call {
+    color: #d19f42;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 18px 10px 0 0;
+    display: none;
+}
+
 @media (min-width: 1401px) { 
     header .intro-text {
         padding: 100px 0;
@@ -2779,7 +2794,7 @@ button.close {
         right: 10px;
     }
     .navbar-default .nav li a {
-        padding: 25px 22px;
+        padding: 25px 14px;
     }
     .navbar-default.navbar-shrink .nav li a {
         padding: 15px 5px;
@@ -3056,7 +3071,7 @@ button.close {
         float: left;
     }
     .navbar-default .nav li a {
-        padding: 28px 45px;
+        padding: 28px 30px;
     }
 }
 
@@ -3103,7 +3118,7 @@ button.close {
         
     }
     .navbar-default .nav li a {
-        padding: 25px;
+        padding: 25px 14px;
     }
     .navbar-right {
         margin-right: 0;
@@ -3254,6 +3269,12 @@ button.close {
     
 }
 @media only screen and (max-width: 767px) {
+    .navbar-header a.phone-call {
+        display: block;
+    }
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
+        width: 170px;
+    }
     .modal-dialog.signup{
         width: 520px;
         margin: 20px auto;
@@ -3753,6 +3774,20 @@ button.close {
 }
 
 @media only screen and (max-width: 360px) {
+    .navbar-toggle {
+        padding: 10px;
+        margin-top: 5px;
+    }
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand img {
+        width: 132px;
+    }
+    .navbar-header a.phone-call {
+        font-size: 12px;
+        padding: 10px 0 0;
+    }
+    .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
+        width: auto;
+    }
     .modal-dialog.signup{
         width: 320px;
         margin: 20px auto;
@@ -3963,7 +3998,6 @@ button.close {
 @media only screen and (max-width: 320px) and (orientation: portrait) {
     
     .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
-        width: 78%;
         margin-top: 5px;
     }
     

@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 class FDX_CLASS_P2 extends Total_Security {
 static $security_tests = array(
 'ver_check'                => array(),
@@ -16,14 +17,11 @@ static $security_tests = array(
 'file_editor'              => array(),
 'user_exists'              => array(),
 'id1_user_check'           => array(),
-'bruteforce_login'         => array(),
+'force_ssl_admin'          => array(),
 'secure_hidden_login'      => array() ); //end
 
 function __construct() {
 add_action('wp_ajax_sn_run_tests', array($this, 'run_tests'));
-
-$fail2 = get_site_option( 'fdx_p2_red2' );// p2
-$fail3 = get_site_option( 'fdx_p2_red3' );// p2
 
 $fail4 = get_site_option( 'fdx_p2_red4' );
 $fail5 = get_site_option( 'fdx_p2_red5' );
@@ -35,7 +33,8 @@ $fail10 = get_site_option( 'fdx_p2_red10' );
 $fail11 = get_site_option( 'fdx_p2_red11' );
 $fail12 = get_site_option( 'fdx_p2_red12' );
 $fail13 = get_site_option( 'fdx_p2_red13' );
-$fail_p2_t = $fail2+$fail3+$fail4+$fail5+$fail6+$fail7+$fail8+$fail9+$fail10+$fail11+$fail12+$fail13;  //12
+$fail14 = get_site_option( 'fdx_p2_red14' );
+$fail_p2_t = $fail4+$fail5+$fail6+$fail7+$fail8+$fail9+$fail10+$fail11+$fail12+$fail13+$fail14;
 update_option('fdx_p2_red_total', $fail_p2_t );
 
 $fail15 = get_site_option( 'fdx_p2_yel1' );
@@ -414,45 +413,26 @@ else {
    }
 
 
-
 /* -------16
- * bruteforce user login
+ *
  */
-//-1
- Public static function try_login($username, $password) {
-    $user = apply_filters('authenticate', null, $username, $password);
-    if (isset($user->ID) && !empty($user->ID)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-//-2
-function bruteforce_login() {
-   $msgTIT = sprintf( __('Check admin password strength with a <em>%s</em> most commonly used' , $this->hook) , '1050' );
-   $passwords = file(plugins_url( 'libs/brute-force-dictionary.txt', dirname(__FILE__)), FILE_IGNORE_NEW_LINES);
-   $bad_usernames = array();
-    $users = get_users(array('role' => 'administrator'));
-    foreach ($users as $user) {
-      foreach ($passwords as $password) {
-        if (self::try_login($user->user_login, $password)) {
-          $bad_usernames[] = $user->user_login;
-          break;
-        }
-      }
-    }
-    if (empty($bad_usernames)){
+   function force_ssl_admin() {
+   $url = add_query_arg( array( 'popup' => 'pp_page', 'target' => 'force_ssl_admin' ), menu_page_url( $this->hook . '-'.$this->_p2, false ) );
+   $msgTIT = __('Check if SSL Logins and SSL Admin Access is enabled.', $this->hook);
+    if (defined('FORCE_SSL_ADMIN') && FORCE_SSL_ADMIN) {
       $return['status'] = '<span class="pb_label pb_label-success">&#10003;</span>';
       $return['msg'] = '<tr><td><span class="fdx-actions">'.$msgTIT .'</span></td><td>&nbsp;</td>';
-      update_option('fdx_p2_red13', '0' );
+      update_option('fdx_p2_red14', '0' );
     } else {
       $return['status'] = '<span class="pb_label pb_label-important">X</span>';
-      $return['msg'] = '<tr class="alternate"><td><span class="fdx-actions">'.$msgTIT . '</span></td><td><a href="'. admin_url('profile.php'). '" title="'.__('Fix', $this->hook ).'"><strong>'.__('Weak Password', $this->hook).'</strong></a>&nbsp; <span class="fdx-info"><a class="pluginbuddy_tip" href="javascript:void(0)" title="'.__('Following users have extremely weak passwords: ', $this->hook).implode(' ,', $bad_usernames).'"></a></span></td>';
-      update_option('fdx_p2_red13', '1' );
+      $return['msg'] = '<tr class="alternate"><td><span class="fdx-actions">'.$msgTIT .'</span></td><td><a href="'.$url.'" class="fdx-dialog" title="'.__('Fix', $this->hook ).'"><strong>'.__('Disabled', $this->hook).'</strong></a></td>';
+      update_option('fdx_p2_red14', '1' );
     }
     return $return;
-  }
-//------------------------------------------------------------------------
+   }
+
+
+
 
 /* -------17
  *

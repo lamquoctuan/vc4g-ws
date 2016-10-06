@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 // phpinfo
 if ($target == 'phpinfo'){
 phpinfo();
@@ -107,40 +108,13 @@ echo '<p>' .__('Although technically not a security issue having a user (which i
 echo '</strong></th></tr></thead><tbody><tr class="alternate"><td>';
 echo '<p>' .__('Fixing is easy; create a new user with the same privileges. Then delete the old one with <em> "ID=1" </em> and tell WP to transfer all of his content to the new user.', $this->hook) . '</p>';
 
-//php info
-} elseif ($target == 'php'){
-echo __('Dangerous PHP Functions', $this->hook);
+// force_ssl_admin
+} elseif ($target == 'force_ssl_admin'){
+echo __('Check if SSL Logins and SSL Admin Access is enabled.', $this->hook);
 echo '</strong></th></tr></thead><tbody><tr><td>';
-echo '<p>' .__('When the PHP code is used in an improper way or any insecure php code, potentially it can messed up with a web hosting server and can simply be hacked by hackers. Insecure PHP code can literally harm your server data at the level you cannot even imagine it.', $this->hook) . '</p>';
-echo '<p>' .__('Using the insecure PHP code, as a security hole hackers could enable some very dangerous and powerful PHP functions and can take control over your web hosting server. There are many such php function which should be disabled in the PHP configuration file. Let\'s check out the functions that should be disabled in the php configuration file right away on your web server.', $this->hook) . '</p>';
-
-echo '</tr><tr class="alternate"><td>' .__('<em>disable_functions</em> is a directive used to disable the insecure php functions. Once you find the <em>disable_functions</em> directive in the configuration file <code>php.ini</code> and add the following string to the line starting with:', $this->hook) .'</p>';
-echo '<pre class="fdx_snippet">
-disable_functions = system,exec,passthru,shell_exec,proc_open
-</pre>';
-echo '<br/><p><strong>'.__('A more paranoid list of dangerous functions', $this->hook) . ':</strong></p>';
-echo '<p><em><strong>disable_functions</strong></em> <code>=</code> apache_child_terminate, apache_setenv, define_syslog_variables, escapeshellarg, escapeshellcmd, eval, exec, fp, fput, ftp_connect, ftp_exec, ftp_get, ftp_login, ftp_nb_fput, ftp_put, ftp_raw, ftp_rawlist, highlight_file, ini_alter, ini_get_all, ini_restore, inject_code, mysql_pconnect, openlog, passthru, php_uname, phpAds_remoteInfo, phpAds_XmlRpc, phpAds_xmlrpcDecode, phpAds_xmlrpcEncode, popen, posix_getpwuid, posix_kill, posix_mkfifo, posix_setpgid, posix_setsid, posix_setuid, posix_setuid, posix_uname, proc_close, proc_get_status, proc_nice, proc_open, proc_terminate, shell_exec, syslog, system, xmlrpc_entity_decode</p>';
-
-} elseif ($target == 'php2'){
-echo 'PHP: <em>"allow_url_fopen"</em> - <em>"allow_url_include"</em>';
-echo '</strong></th></tr></thead><tbody><tr><td>';
-echo '<p>' .__('The PHP settings <em>allow_url_fopen</em> and <em>allow_url_include</em> allow the abuse of insecurely coded code within your WordPress setup and have been the cause for many hacked websites in the past.', $this->hook) . '</p>';
-echo '<p>' .__('Having this PHP directive will leave your site exposed to cross-site attacks (XSS). There\'s absolutely no valid reason to enable this directive and using any PHP code that requires it is very risky.', $this->hook) . '</p>';
-
-echo '</tr><tr class="alternate"><td>' .__('Once you find the directive in the configuration file <code>php.ini</code>, disable both settings.', $this->hook) .'</p>';
-echo '<pre class="fdx_snippet">
-allow_url_include = off
-allow_url_fopen = off
-</pre>';
-
-} elseif ($target == 'chmod'){
-echo __('File Permissions - chmod', $this->hook);
-echo '</strong></th></tr></thead><tbody><tr><td>';
-echo '<p>' .__('Some neat features of WordPress come from allowing various files to be writable by the web server. However, allowing write access to your files is potentially dangerous, particularly in a shared hosting environment.', $this->hook) . '</p>';
-echo '<p>' .__('It is best to lock down your file permissions as much as possible and to loosen those restrictions on the occasions that you need to allow write access, or to create specific folders with less restrictions for the purpose of doing things like uploading files.', $this->hook) . '</p>';
-echo '</tr><tr class="alternate"><td>';
-echo '<p>' .sprintf(__('Information on file permissions in WordPress and different ways of how to change permissions can be found <a href="%s"><strong>here!</strong></a>', $this->hook), 'http://codex.wordpress.org/Changing_File_Permissions' ) . '</p>';
-
+echo '<p>' .__('To easily enable (and enforce) WordPress administration over SSL, there are two constants that you can define in your site\'s <code>wp-config.php</code> file. <strong>You must also already have SSL configured on the server and a (virtual) host configured for the secure server before your site will work properly with these constants set to true.</strong>', $this->hook) . '</p>';
+echo '</strong></th></tr></thead><tbody><tr class="alternate"><td>';
+echo '<p>' .sprintf(__('Please read: <a href="%s"><strong>Administration Over SSL</strong></a>', $this->hook), 'http://codex.wordpress.org/Administration_Over_SSL' ) . '</p>';
 
 //table-info
 } elseif ($target == 'tableinfo'){

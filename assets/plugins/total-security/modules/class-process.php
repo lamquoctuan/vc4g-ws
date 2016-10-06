@@ -1,9 +1,10 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 class FDX_Process extends Total_Security {
 
 function __construct() {
               if (isset( $_POST['fdx_page']) ) {
-			  add_filter('init', array( $this, 'fdx_update_post_settings') );
+              add_filter('init', array( $this, 'fdx_update_post_settings') );
               }
 
 $this->fdx_exe_function();
@@ -42,8 +43,9 @@ update_option( 'fdx_db1_version', $fdx_db_version ); //remove only uninstall
  * Executes appropriate process function based on post variable
  */
 function fdx_update_post_settings() {
-		   switch ( $_POST['fdx_page'] ) {
-                    case 'fdx_form_all':
+                   check_admin_referer( 'fdx_nonce' );
+  		           switch ( $_POST['fdx_page'] ) {
+  		            case 'fdx_form_all':
 					$this->fdx_process_all();
                     # first donation hidding time 'now'
                     if( !get_site_option( 'fdx1_hidden_time' ) ) {
@@ -65,6 +67,7 @@ function fdx_update_post_settings() {
                     update_option('fdx1_hidden_time', $time );
 					break;
     }
+
 }
 
 /*

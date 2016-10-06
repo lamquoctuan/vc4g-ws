@@ -83,6 +83,7 @@ $types = array_keys($purchasedItems);
 } ?>
                 </div>
                 <button type="submit" class="btn body-content" onclick="window.location.href='what-we-buy/';" style="cursor: pointer;">View all</button>
+                <button class="btn body-content" onclick="" style="cursor: pointer;"><a class="sub-phone" style="margin: 0 -10px 0 10px; color: #181c2a;" href="tel:16045582026">Call us: <b class="icon-phone"></b>604-558-2026</a></button>
             </div>
         </div>
         <script type="text/javascript">

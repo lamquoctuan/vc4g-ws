@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 $settings = Total_Security::fdx_get_settings(); 
 
 /* wrap
@@ -18,7 +19,7 @@ echo '<h2>'. $this->pluginname . ' : ' . __('File System', $this->hook) . '</h2>
 // minimal version of WP core
  if (!version_compare(get_bloginfo('version'), $this->min_wp_ver,  '>=')) {
 
- echo '<div class="box-shortcode box-red">'. sprintf( __('This feature requires the WordPress version <code>%1s</code> or above, to function properly. You\'re using WordPress version <code>%2s</code>, please <a href="%3s">update</a>.' , $this->hook) , $this->min_wp_ver, get_bloginfo('version'), admin_url('update-core.php') ) . '</div>';
+ echo '<div class="box-shortcode box-red">'. sprintf( __('This feature requires the WordPress version <code>%1s</code> to function properly. You\'re using WordPress version <code>%2s</code>, please <a href="%3s">update</a>.' , $this->hook) , $this->min_wp_ver, get_bloginfo('version'), admin_url('update-core.php') ) . '</div>';
  echo <<<END
 <style type="text/css">
 #hiddenoff {opacity:0.4 !important;}

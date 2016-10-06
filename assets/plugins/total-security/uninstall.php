@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;  // Exit if accessed directly  
 /**
  * Code used when the plugin is removed (not just deactivated but actively deleted through the WordPress Admin).
  */

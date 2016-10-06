@@ -3,6 +3,7 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
+            navbar-header
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -35,7 +36,7 @@
                     }
                     $menu_list .= '<li'. $class . '><a href="' . $url . '">' . $title . '</a></li>';
                 }
-                $menu_list .= '<li class="phone-text"><a class="sub-phone" href="tel:16045582026"><b class="icon-phone"></b>604-558-2026</a></li>';
+                $menu_list .= '<li><a class="page-scroll" href="tel:16045582026"><b class="icon-phone"></b>604-558-2026</a></li>';
                 $menu_list .= '</ul>';
                 echo $menu_list;
             }
