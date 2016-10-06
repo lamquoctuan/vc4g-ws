@@ -29,6 +29,7 @@
         	<a class="logo"><img src="/assets/images/m/logo.png" width="166" style="float: left" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
+                
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -36,7 +37,7 @@
                     <span class="icon-bar"></span>
                     <img src="/assets/images/m/icon-close.png" class="imgclose" style="display: none;" />
                 </button>
-                
+                <a class="pull-right phone-call" href="tel:16045582026"><img src="/assets/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,9 +73,11 @@
                         <a class="page-scroll" href="#contact">Contact Us</a>
                     </li>
                     <li>
+	                    <a class="page-scroll" href="tel:16045582026"><img src="/assets/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
+	                </li>
+                    <li>
                         <a class="page-scroll" href="login.html">Login</a>
                     </li>
-                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

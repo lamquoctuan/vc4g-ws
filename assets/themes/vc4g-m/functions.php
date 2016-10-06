@@ -8,10 +8,12 @@ echo '<pre>';
 print_r( WP_CONTENT_URL . '/font-awesome/css/font-awesome.min.css');
 print_r(CUR_THEME_VER);
 language_attributes();
+$siteUrl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+var_dump($siteUrl,$_SERVER);
 echo '</pre>';
+
 die();
 */
-
 if (!function_exists('vc4g_m_fonts_url')) :
     /**
      * Register Google fonts.
@@ -79,7 +81,7 @@ function vc4g_scripts() {
     
     wp_enqueue_style('vc4g-m-fonts', vc4g_m_fonts_url());
     // Load our main stylesheet.
-    wp_enqueue_style('vc4g-m-style', WP_CONTENT_URL . '/css/styles.css');
+    wp_enqueue_style('vc4g-m-style', WP_CONTENT_URL . '/themes/vc4g-m/css/styles.css');
     
     // jQuery
     wp_enqueue_script('vc4g-m-jquery', WP_CONTENT_URL . '/js/jquery.js', array());
