@@ -1,3 +1,6 @@
+/*global $*/
+/*global vc4g*/
+/*global analytics*/
 $(function() {
 
     $("input,textarea").not('[type="submit"]').jqBootstrapValidation({
@@ -9,7 +12,7 @@ $(function() {
             event.preventDefault(); // prevent default submit behaviour
             var errorMessage = 'Your request is temporarily unable to be processed. Please try again later.';
             // get values from FORM
-            var actionName  = $form.find('input[name="action"]').val();
+            // var actionName  = $form.find('input[name="action"]').val();
             var leadData = $.getQueryParameters($form.serialize());
             $.parseNameInObj(leadData);
             $.ajax({
