@@ -25,3 +25,13 @@ assets/wp-cache-config.php
 pdf/
 google1a7882cf4b61e535.html
 robots.txt
+
+##################################
+# W3 Total Cache untracked files #
+##################################
+assets/advanced-cache.php
+assets/db.php
+assets/object-cache.php
+assets/cache/
+#assets/plugins/w3-total-cache/
+assets/w3tc-config/
