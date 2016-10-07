@@ -1,7 +1,8 @@
+/*global $, analytics, ga, mixpanel, vc4g*/
 $.extend({
     getQueryParameters: function(str) {
         return (str || document.location.search).replace(/(^\?)/, '').split("&").map(function(n) {
-            return n = n.split("="), this[n[0]] = n[1], this
+            return n = n.split("="), this[n[0]] = n[1], this;
         }.bind({}))[0];
     },
     parseName: function(name) {
@@ -39,7 +40,7 @@ $(function() {
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
-})
+});
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
@@ -123,9 +124,9 @@ function headerAnimate() {
     var thresHold = $('header').outerHeight();
     var top = $(window).scrollTop();
     if (top < thresHold) {
-        $('.navbar-default').css('top', thresHold - top).removeClass('navbar-shrink');;
+        $('.navbar-default').css('top', thresHold - top).removeClass('navbar-shrink');
     }
     else {
-        $('.navbar-default').css('top', 0).addClass('navbar-shrink');;
+        $('.navbar-default').css('top', 0).addClass('navbar-shrink');
     }
 }

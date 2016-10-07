@@ -31,13 +31,16 @@
 /*global $,analytics*/
 $(document).ready(function(){
     var popupShown = false;
-    var htsTop = parseInt($('#howwepay h2').offset().top) - 71;
+    if ($('#howwepay h2').length > 0) {
+        var htsTop = parseInt($('#howwepay h2').offset().top) - 71;
 
-    $(window).scroll(function(){
-        if ( popupShown != true && htsTop < $(window).scrollTop() ) {
-            $('#popupModal').modal('show');
-        }
-    });
+        $(window).scroll(function(){
+            if ( popupShown != true && htsTop < $(window).scrollTop() ) {
+                $('#popupModal').modal('show');
+            }
+        });
+        
+    }
     
     $('#popupModal').on('show.bs.modal', function (e) {
         analytics.track('popup', {
