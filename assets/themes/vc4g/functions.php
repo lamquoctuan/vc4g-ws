@@ -6,6 +6,22 @@ $theme = wp_get_theme( );
 if (! defined('CUR_THEME_NAME')) {
     define('CUR_THEME_NAME', $theme->get( 'Name' ));
 }
+if (! defined('CUR_THEME_VER')) {
+    define('CUR_THEME_VER', $theme->get( 'Version' ));
+}
+
+// Url filter callback function
+function filteredUrlCallback( $uri, $scheme = 'https' ) {
+    $filteredUrl = '';
+    if (isset($_SERVER['APP_CDN'])) {
+        $filteredUrl = $scheme . '://' . $_SERVER['APP_CDN'] . $uri;
+    }
+    else {
+        $filteredUrl = site_url($uri);
+    }
+    return $filteredUrl;
+}
+add_filter( 'url_filter', 'filteredUrlCallback', 10, 3 );
 
 if (!function_exists('vc4g_setup')) :
     function vc4g_setup()
@@ -146,18 +162,18 @@ function vc4g_scripts()
 {
 
     // Add custom fonts, used in the main stylesheet.
-    wp_enqueue_style('vc4g-font-awesome', WP_CONTENT_URL . '/font-awesome/css/font-awesome.min.css');
-    wp_enqueue_style('vc4g-weather-icons', WP_CONTENT_URL . '/weather-icons/css/weather-icons.css');
+    wp_enqueue_style('vc4g-font-awesome', apply_filters( 'url_filter', '/assets/font-awesome/css/font-awesome.min.css' ), '4.2.0');
+    wp_enqueue_style('vc4g-weather-icons', apply_filters( 'url_filter', '/assets/weather-icons/css/weather-icons.css' ), '1.3.2');
 //    wp_enqueue_style('vc4g-weather-icons', '//cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.css');
 
     wp_enqueue_style('vc4g-fonts', vc4g_fonts_url());
 
-    wp_enqueue_style('vc4g-bootstrap', WP_CONTENT_URL . '/css/bootstrap.min.css');
+    wp_enqueue_style('vc4g-bootstrap', apply_filters( 'url_filter', '/assets/css/bootstrap.min.css' ), '3.3.4');
 
     // Load our main stylesheet.
-    wp_enqueue_style('vc4g-style', WP_CONTENT_URL . '/css/styles.css');
+    wp_enqueue_style('vc4g-style', apply_filters( 'url_filter', '/assets/css/styles.css' ), CUR_THEME_VER);
     if (!is_front_page() && !is_home()) {
-        wp_enqueue_style('vc4g-akordeon', WP_CONTENT_URL . '/css/jquery.akordeon.css');
+        wp_enqueue_style('vc4g-akordeon', apply_filters( 'url_filter', '/assets/css/jquery.akordeon.css' ), CUR_THEME_VER);
     }
 //    wp_enqueue_style('vc4g-vancouver', WP_CONTENT_URL . '/css/vancouver.css');
 
@@ -170,27 +186,27 @@ function vc4g_scripts()
 //    }
 
 //    jQuery
-    wp_enqueue_script('vc4g-jquery', WP_CONTENT_URL . '/js/jquery.js', array(), '20160307');
+    wp_enqueue_script('vc4g-jquery', apply_filters( 'url_filter', '/assets/js/jquery.js' ), array(), '1.11.1');
 //    Bootstrap Core JavaScript
-    wp_enqueue_script('vc4g-bootstrap', WP_CONTENT_URL . '/js/bootstrap.min.js', array(), '20160307');
+    wp_enqueue_script('vc4g-bootstrap', apply_filters( 'url_filter', '/assets/js/bootstrap.min.js' ), array(), '3.3.4');
 //    Plugin JavaScript
-    wp_enqueue_script('vc4g-jquery-easing', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array(), '20160307');
-    wp_enqueue_script('vc4g-classie', WP_CONTENT_URL . '/js/classie.js', array(), '20160307');
+    wp_enqueue_script('vc4g-jquery-easing', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array(), '1.3');
+    wp_enqueue_script('vc4g-classie', apply_filters( 'url_filter', '/assets/js/classie.js' ), array(), CUR_THEME_VER);
     // if (is_front_page() || is_home()) {
     //     load home page header script
     // }
-    wp_enqueue_script('vc4g-responsive-tabs', WP_CONTENT_URL . '/js/responsive-tabs.js', array(), '20160307');
+    wp_enqueue_script('vc4g-responsive-tabs', apply_filters( 'url_filter', '/assets/js/responsive-tabs.js' ), array(), CUR_THEME_VER);
 //    Contact Form JavaScript
-    wp_enqueue_script('vc4g-bootstrap-validation', WP_CONTENT_URL . '/js/jqBootstrapValidation.js', array(), '20160307');
-    wp_enqueue_script('vc4g-form', WP_CONTENT_URL . '/js/form.js', array(), '20160307');
+    wp_enqueue_script('vc4g-bootstrap-validation', apply_filters( 'url_filter', '/assets/js/jqBootstrapValidation.js' ), array(), '1.3.6');
+    wp_enqueue_script('vc4g-form', apply_filters( 'url_filter', '/assets/js/form.js' ), array(), CUR_THEME_VER);
     
 //    wp_enqueue_script('vc4g-contact-form', WP_CONTENT_URL . '/js/contact_me.js', array(), '20160307');
 //    Custom Theme JavaScript
-    wp_enqueue_script('vc4g-vancouver', WP_CONTENT_URL . '/js/vancouver.js', array(), '20160307');
+    wp_enqueue_script('vc4g-vancouver',  apply_filters( 'url_filter', '/assets/js/vancouver.js' ), array(), CUR_THEME_VER);
     if (is_front_page() || is_home()) {
-        wp_enqueue_script('vc4g-roundabout', WP_CONTENT_URL . '/js/jquery.roundabout.js', array(), '20160307');
+        wp_enqueue_script('vc4g-roundabout', apply_filters( 'url_filter', '/assets/js/jquery.roundabout.js' ), array(), CUR_THEME_VER);
     } else {
-        wp_enqueue_script('vc4g-akordeon', WP_CONTENT_URL . '/js/jquery.akordeon.js', array(), '20150702');
+        wp_enqueue_script('vc4g-akordeon', apply_filters( 'url_filter', '/assets/js/jquery.akordeon.js' ), array(), CUR_THEME_VER);
     }
 
     wp_localize_script( 'vc4g-form', 'vc4g', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );

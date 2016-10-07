@@ -3,7 +3,7 @@
     <div class="container mb20">
         <div class="row">
             <div class="col-md-6 text-left pt20">
-                <img src="/assets/images/logo.png" />
+                <img src="<?php echo apply_filters( 'url_filter', '/assets/images/logo.png' );?>" />
             </div>
             <div class="col-md-6 text-right pt20">
     			<a class="sub-phone" href="tel:16045582026"><b class="icon-phone"></b>604-558-2026</a>
