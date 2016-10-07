@@ -162,18 +162,18 @@ function vc4g_scripts()
 {
 
     // Add custom fonts, used in the main stylesheet.
-    wp_enqueue_style('vc4g-font-awesome', apply_filters( 'url_filter', '/assets/font-awesome/css/font-awesome.min.css' ), '4.2.0');
-    wp_enqueue_style('vc4g-weather-icons', apply_filters( 'url_filter', '/assets/weather-icons/css/weather-icons.css' ), '1.3.2');
+    wp_enqueue_style('vc4g-font-awesome', apply_filters( 'url_filter', '/font-awesome/css/font-awesome.min.css' ), '4.2.0');
+    wp_enqueue_style('vc4g-weather-icons', apply_filters( 'url_filter', '/weather-icons/css/weather-icons.css' ), '1.3.2');
 //    wp_enqueue_style('vc4g-weather-icons', '//cdnjs.cloudflare.com/ajax/libs/weather-icons/1.3.2/css/weather-icons.css');
 
     wp_enqueue_style('vc4g-fonts', vc4g_fonts_url());
 
-    wp_enqueue_style('vc4g-bootstrap', apply_filters( 'url_filter', '/assets/css/bootstrap.min.css' ), '3.3.4');
+    wp_enqueue_style('vc4g-bootstrap', apply_filters( 'url_filter', '/css/bootstrap.min.css' ), '3.3.4');
 
     // Load our main stylesheet.
-    wp_enqueue_style('vc4g-style', apply_filters( 'url_filter', '/assets/css/styles.css' ), CUR_THEME_VER);
+    wp_enqueue_style('vc4g-style', apply_filters( 'url_filter', '/css/styles.css' ), CUR_THEME_VER);
     if (!is_front_page() && !is_home()) {
-        wp_enqueue_style('vc4g-akordeon', apply_filters( 'url_filter', '/assets/css/jquery.akordeon.css' ), CUR_THEME_VER);
+        wp_enqueue_style('vc4g-akordeon', apply_filters( 'url_filter', '/css/jquery.akordeon.css' ), CUR_THEME_VER);
     }
 //    wp_enqueue_style('vc4g-vancouver', WP_CONTENT_URL . '/css/vancouver.css');
 
@@ -186,27 +186,27 @@ function vc4g_scripts()
 //    }
 
 //    jQuery
-    wp_enqueue_script('vc4g-jquery', apply_filters( 'url_filter', '/assets/js/jquery.js' ), array(), '1.11.1');
+    wp_enqueue_script('vc4g-jquery', apply_filters( 'url_filter', '/js/jquery.js' ), array(), '1.11.1');
 //    Bootstrap Core JavaScript
-    wp_enqueue_script('vc4g-bootstrap', apply_filters( 'url_filter', '/assets/js/bootstrap.min.js' ), array(), '3.3.4');
+    wp_enqueue_script('vc4g-bootstrap', apply_filters( 'url_filter', '/js/bootstrap.min.js' ), array(), '3.3.4');
 //    Plugin JavaScript
     wp_enqueue_script('vc4g-jquery-easing', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array(), '1.3');
-    wp_enqueue_script('vc4g-classie', apply_filters( 'url_filter', '/assets/js/classie.js' ), array(), CUR_THEME_VER);
+    wp_enqueue_script('vc4g-classie', apply_filters( 'url_filter', '/js/classie.js' ), array(), CUR_THEME_VER);
     // if (is_front_page() || is_home()) {
     //     load home page header script
     // }
-    wp_enqueue_script('vc4g-responsive-tabs', apply_filters( 'url_filter', '/assets/js/responsive-tabs.js' ), array(), CUR_THEME_VER);
+    wp_enqueue_script('vc4g-responsive-tabs', apply_filters( 'url_filter', '/js/responsive-tabs.js' ), array(), CUR_THEME_VER);
 //    Contact Form JavaScript
-    wp_enqueue_script('vc4g-bootstrap-validation', apply_filters( 'url_filter', '/assets/js/jqBootstrapValidation.js' ), array(), '1.3.6');
-    wp_enqueue_script('vc4g-form', apply_filters( 'url_filter', '/assets/js/form.js' ), array(), CUR_THEME_VER);
+    wp_enqueue_script('vc4g-bootstrap-validation', apply_filters( 'url_filter', '/js/jqBootstrapValidation.js' ), array(), '1.3.6');
+    wp_enqueue_script('vc4g-form', apply_filters( 'url_filter', '/js/form.js' ), array(), CUR_THEME_VER);
     
 //    wp_enqueue_script('vc4g-contact-form', WP_CONTENT_URL . '/js/contact_me.js', array(), '20160307');
 //    Custom Theme JavaScript
-    wp_enqueue_script('vc4g-vancouver',  apply_filters( 'url_filter', '/assets/js/vancouver.js' ), array(), CUR_THEME_VER);
+    wp_enqueue_script('vc4g-vancouver',  apply_filters( 'url_filter', '/js/vancouver.js' ), array(), CUR_THEME_VER);
     if (is_front_page() || is_home()) {
-        wp_enqueue_script('vc4g-roundabout', apply_filters( 'url_filter', '/assets/js/jquery.roundabout.js' ), array(), CUR_THEME_VER);
+        wp_enqueue_script('vc4g-roundabout', apply_filters( 'url_filter', '/js/jquery.roundabout.js' ), array(), CUR_THEME_VER);
     } else {
-        wp_enqueue_script('vc4g-akordeon', apply_filters( 'url_filter', '/assets/js/jquery.akordeon.js' ), array(), CUR_THEME_VER);
+        wp_enqueue_script('vc4g-akordeon', apply_filters( 'url_filter', '/js/jquery.akordeon.js' ), array(), CUR_THEME_VER);
     }
 
     wp_localize_script( 'vc4g-form', 'vc4g', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
