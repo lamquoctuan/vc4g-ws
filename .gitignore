@@ -2,7 +2,7 @@
 .htaccess
 sitemap.xml
 sitemap.xml.gz
-*-local.php
+config/*-local.php
 #wp-config.php
 #wp-config.php*
 wp-content/advanced-cache.php
