@@ -4,7 +4,7 @@
 
             <div class="col-md-8">
                 <?php get_template_part('template/buy-diamond', 'load');?>
-                <img src="/assets/images/diamond.png" class="img-responsive" alt="we buy diamond"/>
+                <img src="/images/diamond.png" class="img-responsive" alt="we buy diamond"/>
             </div>
             <div class="col-md-4">
                 <div class="pricing mt40">
