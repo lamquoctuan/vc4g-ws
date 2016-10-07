@@ -1,4 +1,7 @@
 <?php
+define('WP_HOME','https://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL','https://' . $_SERVER['HTTP_HOST']);
+
 $appMode = false;
 if (isset($_SERVER['APP_MODE']) && $_SERVER['APP_MODE'] == 'debug') {
     $appMode = true;
