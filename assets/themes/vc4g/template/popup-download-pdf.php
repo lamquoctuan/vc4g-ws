@@ -43,10 +43,12 @@ $(document).ready(function(){
     }
     
     $('#popupModal').on('show.bs.modal', function (e) {
-        analytics.track('popup', {
-            form: 'Download PDF',
-            section: 'How to sell'
-        });
+        if (typeof(analytics) != 'undefined') {
+            analytics.track('popup', {
+                form: 'Download PDF',
+                section: 'How to sell'
+            });
+        }
     });
     $('#popupModal').on('show.bs.modal', function (e) {
         popupShown = true;

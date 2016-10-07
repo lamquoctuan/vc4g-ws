@@ -27,13 +27,16 @@ $ajaxDownloadForm = wp_create_nonce( $strDownloadForm );
 </form>
 <p class="text-center small pl30 pr30">Enter your name and email above and click, "DOWNLOAD!"</p>
 <script type="text/javascript">
-    var $formDownload = $('#downloadForm');
-    $formDownload.find('.btn.download').click(function(){
+/*global $, analytics*/
+var $formDownload = $('#downloadForm');
+$formDownload.find('.btn.download').click(function(){
+    if (typeof(analytics) != 'undefined') {
         analytics.track('form_action', {
             action: 'download',
             source: 'Home-HowToSell'
         }, function(){
             $formDownload.submit();
         });
-    });
+    }
+});
 </script>

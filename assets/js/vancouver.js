@@ -26,10 +26,12 @@ $.extend({
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        analytics.track('Clicked Home Nav', {
-            menu_item: $anchor.html(),
-            nav_shrink: $('.navbar-fixed-top').hasClass('navbar-shrink')
-        });
+        if (typeof(analytics) != 'undefined') {
+            analytics.track('Clicked Home Nav', {
+                menu_item: $anchor.html(),
+                nav_shrink: $('.navbar-fixed-top').hasClass('navbar-shrink')
+            });
+        }
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');

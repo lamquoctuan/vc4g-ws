@@ -39,14 +39,16 @@ $(function() {
                         if (typeof(leadData.last_name) != 'undefined') {
                             mxProperties['last name'] = leadData.last_name;
                         }
-                        analytics.identify(response.id, mxProperties, function(){
-                            if (typeof(response.download_url) != 'undefined') {
-                                window.location.href = response.download_url;
-                            }
-                            else {
-                                window.location.href = $form.find('#thanks').val();
-                            }
-                        });
+                        if (typeof(analytics) != 'undefined') {
+                            analytics.identify(response.id, mxProperties, function(){
+                                if (typeof(response.download_url) != 'undefined') {
+                                    window.location.href = response.download_url;
+                                }
+                                else {
+                                    window.location.href = $form.find('#thanks').val();
+                                }
+                            });
+                        }
                     }
                     else {
                         alert(errorMessage);

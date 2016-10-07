@@ -17,13 +17,16 @@ $ajaxDownloadForm = wp_create_nonce( $strDownloadForm );
 </form>
 <p class="text-center small">Unsubscribe at any time, and of course we hate spam just as much as you do</p>
 <script type="text/javascript">
-    var $formDownloadPopup = $('#downloadPopupForm');
-    $formDownloadPopup.find('.btn.download').click(function(){
+/*global $, analytics*/
+var $formDownloadPopup = $('#downloadPopupForm');
+$formDownloadPopup.find('.btn.download').click(function(){
+    if (typeof(analytics) != 'undefined') {
         analytics.track('form_action', {
             action: 'download',
             source: 'Popup'
         }, function(){
             $formDownloadPopup.submit();
         });
-    });
+    }
+});
 </script>
