@@ -14,7 +14,7 @@ assets/cache/
 assets/upgrade/
 assets/uploads/
 assets/wp-cache-config.php
-pdf/*
+#pdf/*.pdf
 google1a7882cf4b61e535.html
 robots.txt
 
