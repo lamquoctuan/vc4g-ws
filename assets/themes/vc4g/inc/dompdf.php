@@ -119,7 +119,7 @@ function generatePdf () {
         }
         
         $html = file_get_contents ( DOMPDF_DIR. '/pricing/download-pricing-content.html' );
-        $html = str_replace('{{SITE_URL}}', site_url(), $html);
+        $html = isset($_SERVER['APP_CDN']) ? str_replace('{{SITE_URL}}', 'https://' . $_SERVER['APP_CDN'], $html) : str_replace('{{SITE_URL}}', site_url(), $html);
         $html = str_replace('{{GOLD_RATE}}', $tblGoldRates, $html);
         $html = str_replace('{{GOLD_COIN}}', $tblGoldCoin, $html);
         $html = str_replace('{{GOLD_BULLION}}', $tblGoldBullion, $html);
