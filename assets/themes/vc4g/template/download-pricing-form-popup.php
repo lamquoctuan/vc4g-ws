@@ -2,7 +2,7 @@
 $strDownloadForm = CUR_THEME_NAME . gmdate('Y-m-d') . '-ajax_download';
 $ajaxDownloadForm = wp_create_nonce( $strDownloadForm );
 ?>
-<h4><img src="/images/text-quick.png"  alt="A Quick Look at our Gold Rate?"></h4>
+<h4><img src="/assets/images/text-quick.png"  alt="A Quick Look at our Gold Rate?"></h4>
 <p>Sign up to Vancouver Cash for Gold newsletter and get our most recent list price and HOT deal that we ONLY share with my private newsletter subscribers.</p>
 <form accept-charset="UTF-8" id="downloadPopupForm" novalidate="">
     <div class="form-group">

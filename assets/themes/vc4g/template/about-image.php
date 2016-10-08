@@ -1,1 +1,1 @@
-<img src="/images/about.jpg" alt="about" class="mb20" />
+<img src="/assets/images/about.jpg" alt="about" class="mb20" />

@@ -545,7 +545,7 @@ fieldset[disabled] .btn-xl.active {
 #aboutTerms .fa {
     width: 24px;
     height: 24px;
-    background: url(/images/group-icons.png) -539px -846px no-repeat;
+    background: url(/assets/images/group-icons.png) -539px -846px no-repeat;
     color: transparent;
 }
 #aboutTerms .fa-arrow-circle-o-down {
@@ -569,7 +569,7 @@ header {
     color: #fff;
 }
 header .bg-header {
-    background: url(/images/header-bg.jpg) no-repeat center top;
+    background: url(/assets/images/header-bg.jpg) no-repeat center top;
     background-attachment: relative;
     background-position: center center;
     -webkit-background-size: cover;
@@ -578,7 +578,7 @@ header .bg-header {
     background-size: cover;
 }
 header.bg-header {
-    background: url(/images/bg-banner-header.jpg) no-repeat center top;
+    background: url(/assets/images/bg-banner-header.jpg) no-repeat center top;
     background-attachment: relative;
     background-position: center center;
     -webkit-background-size: cover;
@@ -588,7 +588,7 @@ header.bg-header {
 }
 
 header .intro-text {
-    /*background: url(/images/gold.png) center bottom no-repeat;*/
+    /*background: url(/assets/images/gold.png) center bottom no-repeat;*/
     padding: 54px 0;
 }
 
@@ -786,7 +786,7 @@ section#contact .icon-phone-small,
 section#contact .icon-email-small,
 section#contact .icon-place,
 section#contact .icon-date {
-    background: url(/images/group-icons.png) no-repeat;
+    background: url(/assets/images/group-icons.png) no-repeat;
 }
 
 section#contact .icon-phone-small {
@@ -1128,7 +1128,7 @@ a.sub-phone:hover {
     position: absolute;
     font-size: 30px;
     left: -25px;
-    background: url(/images/group-icons.png) no-repeat 0 -144px;
+    background: url(/assets/images/group-icons.png) no-repeat 0 -144px;
     width: 24px;
     height: 24px;
 }
@@ -1220,16 +1220,16 @@ a.sub-phone:hover {
     color: #303030;
 }
 
-.fa.icon-best {background: url(/images/bestprice.gif) no-repeat; width:90px; height:89px;}
-.fa.icon-trust {background: url(/images/trustable.gif) no-repeat; width:90px; height:89px;}
-.fa.icon-fast {background: url(/images/fast-convenient-service.gif) no-repeat; width:90px; height:89px;}
+.fa.icon-best {background: url(/assets/images/bestprice.gif) no-repeat; width:90px; height:89px;}
+.fa.icon-trust {background: url(/assets/images/trustable.gif) no-repeat; width:90px; height:89px;}
+.fa.icon-fast {background: url(/assets/images/fast-convenient-service.gif) no-repeat; width:90px; height:89px;}
 
 .fa.icon-snow,
 .fa.icon-cool,
 .fa.icon-rainy,
 .fa.icon-sunny,
 .fa.icon-lightning {
-    background: url(/images/group-icons.png) no-repeat;
+    background: url(/assets/images/group-icons.png) no-repeat;
     width: 55px;
     height: 54px;
 }
@@ -1285,7 +1285,7 @@ body h2 {
 }
 
 #whatwebuy .icon-call {
-    background: url(/images/group-icons.png) no-repeat -400px -144px;
+    background: url(/assets/images/group-icons.png) no-repeat -400px -144px;
     width: 30px;
     height: 30px;
 }
@@ -1333,7 +1333,7 @@ body h2 {
 #whatwebuy .icon-next.btn {
     width: 24px;
     height: 24px;
-    background: url(/images/icon-next.png) no-repeat 0 0;
+    background: url(/assets/images/icon-next.png) no-repeat 0 0;
     margin-right: -15px;
 }
 
@@ -1342,7 +1342,7 @@ body h2 {
 }
 
 #whatwebuy .display-view {
-    background: url(/images/icon-view.jpg) no-repeat 0 0;
+    background: url(/assets/images/icon-view.jpg) no-repeat 0 0;
     width: 24px;
     height:24px;
     display: inline-block;
@@ -1433,7 +1433,7 @@ body h2 {
 }
 
 .viewall {
-    background: url(/images/icon-view.png) right 2px no-repeat;
+    background: url(/assets/images/icon-view.png) right 2px no-repeat;
     padding-right: 20px;
     color: #7b7b7b;
     font-size: 13px;
@@ -1447,12 +1447,12 @@ body h2 {
 }
 
 .bg-diamond {
-    background: url(/images/diamond.png) no-repeat;
+    background: url(/assets/images/diamond.png) no-repeat;
 }
 
 .webuy {
     color: #fff;
-    background: url(/images/bg-diamond.jpg) no-repeat scroll center center;
+    background: url(/assets/images/bg-diamond.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1467,7 +1467,7 @@ body h2 {
 }
 
 .webuy li {
-    background: url(/images/group-icons.png) 0 -220px no-repeat;
+    background: url(/assets/images/group-icons.png) 0 -220px no-repeat;
     padding-left: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1693,7 +1693,7 @@ section hr {
     padding-left: 0px;
 }
 .tables .calculator select.arrow {
-    background:#fff url(/images/icon-select.png) right no-repeat;
+    background:#fff url(/assets/images/icon-select.png) right no-repeat;
 }
 
 
@@ -1724,7 +1724,7 @@ section hr {
 }
 
 #howwepay .btn1, #howwepay .btn2  {
-    background: url(/images/group-icons.png) no-repeat;
+    background: url(/assets/images/group-icons.png) no-repeat;
     line-height: 26px;
     padding-bottom: 4px;
 }
@@ -1754,7 +1754,7 @@ section hr {
 }
 
 .btn.body-content.dload span {
-    background: url(/images/group-icons.png) -289px -846px no-repeat;
+    background: url(/assets/images/group-icons.png) -289px -846px no-repeat;
     padding-left: 40px;
     padding-top: 8px;
     height: 32px;
@@ -1781,7 +1781,7 @@ section hr {
 
 .bg-blue-dark {
     color: #fff;
-    background: url(/images/bg-blog.jpg) no-repeat scroll center center;
+    background: url(/assets/images/bg-blog.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1827,7 +1827,7 @@ section hr {
     font-size: 14px;
     line-height: 1.75;
     border-left: none;
-    background: url(/images/icon-blockquote.png) top left no-repeat;
+    background: url(/assets/images/icon-blockquote.png) top left no-repeat;
 }
 
 #team h3 {
@@ -1852,7 +1852,7 @@ section hr {
 
 .bg-banner-how {
     color: #fff;
-    background: url(/images/bg-banner-how.jpg) no-repeat scroll center center;
+    background: url(/assets/images/bg-banner-how.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1871,7 +1871,7 @@ section hr {
 
 .bg-deal {
     color: #fff;
-    background: url(/images/bg-contact.jpg) no-repeat scroll center center;
+    background: url(/assets/images/bg-contact.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1923,7 +1923,7 @@ section hr {
 
 .bg-comming {
     color: #fff;
-    background: url(/images/bg-ad.jpg) no-repeat scroll center center;
+    background: url(/assets/images/bg-ad.jpg) no-repeat scroll center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -2043,7 +2043,7 @@ section hr {
 }
 
 .btn.call {
-    background: #d19f42 url(/images/group-icons.png) -536px -740px no-repeat;
+    background: #d19f42 url(/assets/images/group-icons.png) -536px -740px no-repeat;
     border-radius: 20px;
     width: 100%;
     color: #fff;
@@ -2062,7 +2062,7 @@ section hr {
 .recentpay .icon-prev {
     width: 26px;
     height: 42px;
-    background: url(/images/group-icons.png) no-repeat;
+    background: url(/assets/images/group-icons.png) no-repeat;
     color: transparent;
     text-shadow: none;
     margin-top: -30px;
@@ -2104,7 +2104,7 @@ section hr {
 }
 
 .recentpay .carousel-caption {
-    background: url(/images/bg-caption.png) repeat;
+    background: url(/assets/images/bg-caption.png) repeat;
     right: 0;
     left: 0;
     padding: 10px 10px 0;
@@ -2137,7 +2137,7 @@ section hr {
 }
 
 .webuy.diamond {
-    background: url(/images/bg-blue.jpg) repeat;
+    background: url(/assets/images/bg-blue.jpg) repeat;
     color: #bababa;
     padding: 100px 0 80px;
 }
@@ -2187,7 +2187,7 @@ section hr {
 .btn.download span {
     display: inline-block;
     padding-top: 2px;
-    background: url(/images/group-icons.png) no-repeat -539px -649px;
+    background: url(/assets/images/group-icons.png) no-repeat -539px -649px;
     padding-left: 28px;
 }
 
@@ -2301,13 +2301,13 @@ section hr {
 }
 
 .recent-post li {
-    background: url(/images/icon-arrow-next.png) 0 2px no-repeat;
+    background: url(/assets/images/icon-arrow-next.png) 0 2px no-repeat;
     padding-left: 18px;
     font-weight: 600;
 }
 
 .bg-banner-how.mail-in-service {
-    background-image: url(/images/bg-mail-in-service.jpg);
+    background-image: url(/assets/images/bg-mail-in-service.jpg);
 }
 
 .list-step {
@@ -2316,7 +2316,7 @@ section hr {
 }
 
 .list-step .fa {
-    background: url(/images/group-icons.png) no-repeat;
+    background: url(/assets/images/group-icons.png) no-repeat;
     width: 60px;
     height: 60px;
 }
@@ -2484,7 +2484,7 @@ section hr {
 }
 
 .btn.mail span {
-    background: url(/images/icon-email.png) 0 -3px no-repeat;
+    background: url(/assets/images/icon-email.png) 0 -3px no-repeat;
     padding-left: 38px;
     color: #fff;
 }
@@ -2508,7 +2508,7 @@ section hr {
 }
 
 .place-ct .fa {
-    background: url(/images/group-icons.png) no-repeat;
+    background: url(/assets/images/group-icons.png) no-repeat;
     width: 88px;
     height: 88px;
 }
@@ -2531,11 +2531,11 @@ section hr {
 }
 
 .icon-phone-call {
-    background: url(/images/icon-phone-call.png) no-repeat;
+    background: url(/assets/images/icon-phone-call.png) no-repeat;
 }
 
 .icon-email-small {
-    background: url(/images/icon-email-small.png) no-repeat;
+    background: url(/assets/images/icon-email-small.png) no-repeat;
 }
 
 .form-message {
@@ -2557,7 +2557,7 @@ section hr {
 }
 
 .banner-thank-you {
-    background: #d19f42 url(/images/bg-thk.jpg) repeat-x top left;
+    background: #d19f42 url(/assets/images/bg-thk.jpg) repeat-x top left;
     margin-top: 71px;
     padding: 90px 0 120px;
     color: #fff;
@@ -2582,7 +2582,7 @@ section hr {
 }
 
 .services.thanks .fa-stack {
-    background: url(/images/group-icons.png) -525px -1103px no-repeat;
+    background: url(/assets/images/group-icons.png) -525px -1103px no-repeat;
     width: 146px;
     height: 146px;
     padding-top: 30px;
@@ -2628,7 +2628,7 @@ section hr {
 .modal-dialog.signup .modal-body {
     padding: 0;
     overflow: hidden;
-    background: url(/images/bg-popup.jpg) no-repeat right top;
+    background: url(/assets/images/bg-popup.jpg) no-repeat right top;
 }
 .modal-dialog.signup .modal-content {
     border-radius: 0;

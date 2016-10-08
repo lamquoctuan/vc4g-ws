@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
     
     <title><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></title>
     
@@ -26,7 +26,7 @@
 	<!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-        	<a class="logo"><img src="/images/m/logo.png" width="166" style="float: left" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
+        	<a class="logo"><img src="/assets/images/m/logo.png" width="166" style="float: left" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 
@@ -35,9 +35,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <img src="/images/m/icon-close.png" class="imgclose" style="display: none;" />
+                    <img src="/assets/images/m/icon-close.png" class="imgclose" style="display: none;" />
                 </button>
-                <a class="pull-right phone-call" href="tel:16045582026"><img src="/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
+                <a class="pull-right phone-call" href="tel:16045582026"><img src="/assets/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,7 +49,7 @@
                     <li>
                     	<div class="user-panel text-center">
                     		<div class="image">
-                    			<img src="/images/m/img-user.png" alt="User Image">
+                    			<img src="/assets/images/m/img-user.png" alt="User Image">
                     		</div>
                     		<div class="info">
                     			<p>Brandon Harris</p>
@@ -73,7 +73,7 @@
                         <a class="page-scroll" href="#contact">Contact Us</a>
                     </li>
                     <li>
-	                    <a class="page-scroll" href="tel:16045582026"><img src="/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
+	                    <a class="page-scroll" href="tel:16045582026"><img src="/assets/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
 	                </li>
                     <li>
                         <a class="page-scroll" href="login.html">Login</a>
@@ -119,11 +119,11 @@
     <section class="logos">
     	<div class="text-center">
     		<div class="images">
-    			<img src="/images/m/logo-about.png" width="124" alt="GIA certified"/>
+    			<img src="/assets/images/m/logo-about.png" width="124" alt="GIA certified"/>
     			
     		</div>
     		<div class="images last">
-    			<img src="/images/m/top10.png" />
+    			<img src="/assets/images/m/top10.png" />
     		</div>
     	</div>
     </section>

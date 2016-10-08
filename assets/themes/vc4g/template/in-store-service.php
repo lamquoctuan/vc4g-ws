@@ -27,19 +27,19 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner">
                     <div class="item active">
-                      <img src="/images/instore/1.jpg" alt="...">
+                      <img src="/assets/images/instore/1.jpg" alt="...">
                     </div>
                     <div class="item">
-                      <img src="/images/instore/2.jpg" alt="...">
+                      <img src="/assets/images/instore/2.jpg" alt="...">
                     </div>
                     <div class="item">
-                      <img src="/images/instore/3.jpg" alt="...">
+                      <img src="/assets/images/instore/3.jpg" alt="...">
                     </div>
                     <div class="item">
-                      <img src="/images/instore/4.jpg" alt="...">
+                      <img src="/assets/images/instore/4.jpg" alt="...">
                     </div>
                     <div class="item">
-                      <img src="/images/instore/5.jpg" alt="...">
+                      <img src="/assets/images/instore/5.jpg" alt="...">
                     </div>
                   </div>
                  
@@ -135,7 +135,7 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <!-- Set the first background image using inline CSS below. -->
-                            <img src="/images/recent-pay/img1.jpg"/>
+                            <img src="/assets/images/recent-pay/img1.jpg"/>
 
                             <div class="carousel-caption pt1">
                                 <h2>$2079.55</h2>
@@ -143,7 +143,7 @@
                         </div>
                         <div class="item">
                             <!-- Set the second background image using inline CSS below. -->
-                            <img src="/images/recent-pay/img2.jpg"/>
+                            <img src="/assets/images/recent-pay/img2.jpg"/>
 
                             <div class="carousel-caption pt1">
                                 <h2>$2079.55</h2>
@@ -151,7 +151,7 @@
                         </div>
                         <div class="item">
                             <!-- Set the third background image using inline CSS below. -->
-                            <img src="/images/recent-pay/img3.jpg"/>
+                            <img src="/assets/images/recent-pay/img3.jpg"/>
 
                             <div class="carousel-caption pt1">
                                 <h2>$2079.55</h2>

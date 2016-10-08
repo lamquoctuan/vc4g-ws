@@ -9,8 +9,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="pull-right phone-call" href="tel:16045582026"><img src="/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
-            <a class="navbar-brand page-scroll" href="<?php echo site_url();?>"><img src="/images/logo.png" /></a>
+            <a class="pull-right phone-call" href="tel:16045582026"><img src="/assets/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
+            <a class="navbar-brand page-scroll" href="<?php echo site_url();?>"><img src="/assets/images/logo.png" /></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
