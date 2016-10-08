@@ -7,6 +7,18 @@ if (! defined('CUR_THEME_NAME')) {
     define('CUR_THEME_NAME', $theme->get( 'Name' ));
 }
 
+add_action('generate_rewrite_rules', 'vc4g_add_rewrites');
+
+function themes_dir_add_rewrites() {
+    $theme_name = next(explode('/themes/', get_stylesheet_directory()));
+    
+    global $wp_rewrite;
+    $newNonWpRules = array(
+        '^images/(.*)'  => 'https://cdn.vancouvercashforgold.com/images/$1'
+    );
+    $wp_rewrite->non_wp_rules += $newNonWpRules;
+}
+
 if (!function_exists('vc4g_setup')) :
     function vc4g_setup()
     {
