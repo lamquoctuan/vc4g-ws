@@ -15,7 +15,7 @@ function themes_dir_add_rewrites() {
         global $wp_rewrite;
         
         $newNonWpRules = array(
-            '^/images/(.*)'  => 'https://' . $_SERVER['APP_CDN'] . '/images/$1'
+            '^images/(.*)$'  => 'https://' . $_SERVER['APP_CDN'] . '/images/$1'
         );
         $wp_rewrite->non_wp_rules += $newNonWpRules;
     }
