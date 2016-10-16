@@ -26,5 +26,10 @@
 
 <body id="page-top" class="index">
 <?php
+if (is_front_page() || is_home()) {
     get_template_part( 'template/home', 'nav' );
+}
+else {
+	get_template_part( 'template/subpage', 'nav' );
+}
 ?>

@@ -16,6 +16,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
+<!--        
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden">
@@ -36,7 +37,6 @@
                 <li>
                     <a class="page-scroll" href="#gold">Gold Forecast</a>
                 </li>
-                -->
                 <li>
                     <a class="page-scroll" href="#webuy">We Buy Diamond</a>
                 </li>
@@ -49,16 +49,18 @@
                 <li>
                     <a class="page-scroll" href="#contact">Contact Us</a>
                 </li>
+                
                 <li>
                     <a class="page-scroll" href="tel:16045582026"><img src="/assets/images/m/icon-phone.png" alt="16045582026"> 604-558-2026</a>
                 </li>
-                <!--
+                
                 <li>
                     <a class="page-scroll" href="login.html">Login</a>
                 </li>
-                -->
+                
             </ul>
         </div>
+-->
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
