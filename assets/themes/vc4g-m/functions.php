@@ -1,7 +1,13 @@
 <?php
 $currThemeData = wp_get_theme();
-if (! defined(CUR_THEME_VER)) {
-    define(CUR_THEME_VER, $currThemeData->get( 'Version' ));
+if (! defined('CUR_THEME_VER')) {
+    define('CUR_THEME_VER', $currThemeData->get( 'Version' ));
+}
+if (! defined('CUR_THEME_NAME')) {
+    define('CUR_THEME_NAME', $currThemeData->get( 'Name' ));
+}
+if (! defined('CUR_THEME_DIR')) {
+    define('CUR_THEME_DIR', get_template_directory());
 }
 /*
 echo '<pre>';
@@ -90,8 +96,38 @@ function vc4g_scripts() {
     // Plugin JavaScript
     wp_enqueue_script('vc4g-m-jquery-easing', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array());
     wp_enqueue_script('vc4g-m-responsive-tabs', WP_CONTENT_URL . '/js/responsive-tabs.js', array(), CUR_THEME_VER);
+    
+    // Contact Form JavaScript
+    wp_enqueue_script('vc4g-m-bootstrap-validation', WP_CONTENT_URL . '/js/jqBootstrapValidation.js', array(), CUR_THEME_VER);
+    wp_enqueue_script('vc4g-m-form', WP_CONTENT_URL . '/js/form.js', array(), CUR_THEME_VER);
+    
+    // Custom Theme JavaScript
+    wp_enqueue_script('vc4g-m-vancouver', WP_CONTENT_URL . '/js/vancouver.js', array(), CUR_THEME_VER);
+    
+    wp_localize_script( 'vc4g-m-form', 'vc4g', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 }
 
 add_action('wp_enqueue_scripts', 'vc4g_scripts');
 
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'rsd_link');
+add_filter('pre_comment_content', 'esc_html');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+function no_wordpress_errors()
+{
+    return 'GET OFF MY LAWN !! RIGHT NOW !!';
+}
+
+add_filter('login_errors', 'no_wordpress_errors');
+define('DISALLOW_FILE_EDIT', true);
+
+include_once CUR_THEME_DIR . '/inc/post_types.php';
+include_once CUR_THEME_DIR . '/inc/functions.php';
+include_once CUR_THEME_DIR . '/inc/ajax.php';
+include_once CUR_THEME_DIR . '/inc/admin-area.php';
+include_once CUR_THEME_DIR . '/inc/dompdf.php';
 ?>

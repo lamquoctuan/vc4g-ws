@@ -2,6 +2,14 @@
 /*global vc4g*/
 /*global analytics*/
 $(function() {
+    function popDownload($form, response) {
+        if (typeof(response.download_url) != 'undefined') {
+            window.location.href = response.download_url;
+        }
+        else {
+            window.location.href = $form.find('#thanks').val();
+        }
+    }
 
     $("input,textarea").not('[type="submit"]').jqBootstrapValidation({
         preventSubmit: true,
@@ -41,13 +49,11 @@ $(function() {
                         }
                         if (typeof(analytics) != 'undefined') {
                             analytics.identify(response.id, mxProperties, function(){
-                                if (typeof(response.download_url) != 'undefined') {
-                                    window.location.href = response.download_url;
-                                }
-                                else {
-                                    window.location.href = $form.find('#thanks').val();
-                                }
+                                popDownload($form, response);
                             });
+                        }
+                        else {
+                            popDownload($form, response);
                         }
                     }
                     else {
