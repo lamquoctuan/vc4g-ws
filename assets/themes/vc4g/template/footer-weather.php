@@ -1,8 +1,8 @@
 <?php
 include_once CUR_THEME_DIR . '/inc/Connectors/Yahoo.php';
 use \LNR\Connectors\Yahoo;
-$connector = new Yahoo();
-$condition = $connector->getCondition();
+// $connector = new Yahoo();
+// $condition = $connector->getCondition();
 if (! empty($condition)) {
 echo setWeatherIcon($condition->code);
 ?>
