@@ -1,7 +1,7 @@
 <?php
 /**
  *  WP-SpamShield Security
- *  File Version 1.9.9.3
+ *  File Version 1.9.9.5
  */
 
 if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
@@ -279,9 +279,11 @@ class WPSS_Security {
 			self::ip_ban_htaccess();
 			$ip_ban_status = TRUE;
 		}
-		$_SERVER['WPSS_IP_BAN'] = $_SESSION['WPSS_IP_BAN_'.WPSS_HASH] = $ip_ban_status;
-		if( !empty( $_SERVER['WPSS_IP_BAN'] ) || !empty( $_SESSION['WPSS_IP_BAN_'.WPSS_HASH] ) ) {
-			$_SERVER['WPSS_SEC_THREAT'] = $_SESSION['WPSS_SEC_THREAT_'.WPSS_HASH] = TRUE;
+		if( rs_wpss_is_session_active() ) {
+			$_SERVER['WPSS_IP_BAN'] = $_SESSION['WPSS_IP_BAN_'.WPSS_HASH] = $ip_ban_status;
+			if( !empty( $_SERVER['WPSS_IP_BAN'] ) || !empty( $_SESSION['WPSS_IP_BAN_'.WPSS_HASH] ) ) {
+				$_SERVER['WPSS_SEC_THREAT'] = $_SESSION['WPSS_SEC_THREAT_'.WPSS_HASH] = TRUE;
+			}
 		}
 		return $ip_ban_status;
 	}

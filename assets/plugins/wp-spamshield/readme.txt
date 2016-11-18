@@ -1,9 +1,9 @@
-﻿=== WP-SpamShield Anti-Spam ===
-Contributors: RedSand, blackhawkcybersec
-Donate link: http://www.redsandmarketing.com/wp-spamshield-donate/
-Tags: akismet, all-in-one, anti-captcha, anti-spam, antispam, antispambot, bbpress, blacklist, block spam, bot, bots, buddypress, captcha, cf7, comment, comment spam, comments, contact, contact form, contact form 7, contact form plugin, contact form spam, contact forms, ddos, e-mail, email, email address, encode, encoder, encoding, filter, form, formidable, formidable forms, forms, free, gravity forms, harvester, javascript, jetpack, jquery, login, mail, mailchimp, mailto, multisite, ninja, ninja forms, no captcha, nocaptcha, obfuscate, obfuscation, pingback, plugin, protect, protection, recaptcha, register, registration, registration spam, robot, robots, s2member, secure, security, signup, signup spam, spam, spam blocker, spam comments, spam filter, spambot, trackback, trackbacks, user, user registration spam, users, validation, widget, woocommerce
+﻿=== WP-SpamShield Anti-Spam - All-in-One Spam Protection ===
+Contributors: RedSand, blackhawkcybersec, rsm-support
+Donate link: https://www.redsandmarketing.com/go/donate/wp-spamshield/
+Tags: akismet, all-in-one, anti-captcha, anti-spam, antispam, bbpress, blacklist, block spam, bot, bots, buddypress, captcha, cf7, comment, comment spam, comments, contact, contact form, contact form 7, contact form plugin, contact form spam, contact forms, ddos, e-mail, email, email address, encode, encoder, encoding, filter, form, formidable, formidable forms, forms, free, gravity forms, harvester, javascript, jetpack, jquery, login, mail, mailchimp, mailto, multisite, ninja, ninja forms, no captcha, nocaptcha, obfuscate, obfuscation, pingback, plugin, protect, protection, recaptcha, register, registration, registration spam, robot, robots, s2member, secure, security, signup, signup spam, spam, spam blocker, spam comments, spam filter, spambot, trackback, trackbacks, user, user registration spam, users, validation, widget, woocommerce
 Requires at least: 4.0
-Tested up to: 4.6
+Tested up to: 4.7
 Stable tag: trunk
 License: GPLv2
 
@@ -11,7 +11,7 @@ All-in-one WordPress spam protection, with NO CAPTCHAs, challenge questions or o
 
 == Description ==
 
-An exceptionally powerful and user-friendly WordPress anti-spam plugin that *eliminates* comment spam, trackback spam, contact form spam & registration spam.
+An exceptionally powerful and user-friendly WordPress anti-spam plugin that *eliminates* comment spam, contact form spam, registration spam, trackback spam, pingback spam, and every other type of WordPress spam.
 
 = The All-in-One Anti-Spam Plugin for WordPress - Without CAPTCHAs =
 Leading edge WordPress spam protection, with *NO CAPTCHAs, challenge questions or other inconvenience to site visitors*. This plugin works silently in the background, and *simply makes WordPress spam disappear*.
@@ -19,7 +19,7 @@ Leading edge WordPress spam protection, with *NO CAPTCHAs, challenge questions o
 **Supports: Contact Form 7, Gravity Forms, Ninja Forms, JetPack Contact Forms & Comments, BuddyPress, bbPress, WooCommerce, s2Member, WP-Members, Mailchimp, Fast Secure Contact Form, Formidable Forms, *almost all* WordPress forms, and *almost all* WordPress registration forms. *Automatically!***
 
 = NEED HELP? =
-**[Plugin Documentation](http://www.redsandmarketing.com/plugins/wp-spamshield/)** | **[Troubleshooting Guide](http://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/)** | **[FAQs](http://www.redsandmarketing.com/plugins/wp-spamshield/faqs/)** | **[Tech Support](http://www.redsandmarketing.com/plugins/wp-spamshield/support/)**
+**[Plugin Documentation](https://www.redsandmarketing.com/plugins/wp-spamshield/)** | **[Troubleshooting Guide](https://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/)** | **[FAQs](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/)** | **[Support Requests](https://www.redsandmarketing.com/plugins/wp-spamshield/support/)**
 
 = How It Works =
 Most of the spam hitting your site originates from bots, but quite a bit comes from humans too. This plugin works like a firewall to ensure that your commenters are in fact, human, and that those humans aren't spamming you.
@@ -41,10 +41,10 @@ WP-SpamShield is different from other anti-spam plugins in that it *BLOCKS* spam
 If you want to improve the user-friendliness of your site, this is *THE* anti-spam plugin you want. After all, why should your users have to prove they are human? Since your users won't be inconvenienced by outdated and frustrating anti-spam methods, you will provide a smoother, trouble-free experience for your website users, which leads to improved readership, ad revenue, sales, or other types of conversion, and therefore greater success for your website.
 
 = Improves Security =
-Not allowing spam into the database improves security by potentially preventing SQL injection, DDoS, and XSS exploit attacks through automated spam comment submissions. WP-SpamShield fixes the security issues inherent to Pingbacks, and prevents Pingback-based DDoS attacks. As part of the Miscellaneous Form Spam Protection, the plugin protects against XML-RPC brute force amplification attacks. The plugin also has several other features that improve security, such as blocking certain potentially dangerous URLs in spam comment submissions, and limiting comment size to 15kb. (15kb of text is roughly the equivalent of 3 typed pages in Microsoft Word, single-spaced, so that's more than enough for even the longest of comments.) See [this blog post](http://www.redsandmarketing.com/blog/wp-spamshield-protected-users-from-wordpress-0-day-xss-exploit/) for more info.
+Not allowing spam into the database improves security by potentially preventing SQL injection, DDoS, and XSS exploit attacks through automated spam comment submissions. WP-SpamShield fixes the security issues inherent to Pingbacks, and prevents Pingback-based DDoS attacks. As part of the Miscellaneous Form Spam Protection, the plugin protects against XML-RPC brute force amplification attacks. The plugin also has several other features that improve security, such as blocking certain potentially dangerous URLs in spam comment submissions, and limiting comment size to 15kb. (15kb of text is roughly the equivalent of 3 typed pages in Microsoft Word, single-spaced, so that's more than enough for even the longest of comments.) See [this blog post](https://www.redsandmarketing.com/blog/wp-spamshield-protected-users-from-wordpress-0-day-xss-exploit/) for more info.
 
 = Helps Improve Overall Website Performance =
-The plugin helps keep your WordPress database slimmer and more efficient (keeping your site running faster in the long term) by not allowing the thousands upon thousands of spam comments into it, which could bloat the database and potentially corrupt it. Keeping your database lean is extremely important, because bloated databases result in much longer query times and increased server load, slowing down a site dramatically even for simple functions. If website performance is important to you, then you definitely want an anti-spam plugin like WP-SpamShield instead of a plugin that uses a spam queue. See [this FAQ](http://www.redsandmarketing.com/plugins/wp-spamshield/faqs/#faqs_15) for more detailed info.
+The plugin helps keep your WordPress database slimmer and more efficient (keeping your site running faster in the long term) by not allowing the thousands upon thousands of spam comments into it, which could bloat the database and potentially corrupt it. Keeping your database lean is extremely important, because bloated databases result in much longer query times and increased server load, slowing down a site dramatically even for simple functions. If website performance is important to you, then you definitely want an anti-spam plugin like WP-SpamShield instead of a plugin that uses a spam queue. See [this FAQ](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/?faqs=15#faqs_15) for more detailed info.
 
 = ZERO False Positives =
 It does all this with *ZERO false positives*, because of *the method used to block spam*. Notice we didn't say a "low false positive rate" - we said *ZERO false positives*. If a comment/contact form/registration gets blocked as spam, the user is given instant feedback and has a chance to correct their comment/contact form/registration/etc and try again, which means there cannot be false positives. This leads to fewer frustrated website visitors, and less work for you. We are committed to keeping the promise of zero false positives.
@@ -56,7 +56,7 @@ The trackback validation contains a filter that compares the client IP address o
 Includes drop-in spam-free contact form, with easy one-click installation. Easy to use - no configuration necessary, but you can configure it if you like. (See [Installation](https://wordpress.org/plugins/wp-spamshield/installation/) for info.) WP-SpamShield also includes automatic anti-spam protection for Contact Form 7, Gravity Forms, Ninja Forms, JetPack Contact Forms, Fast Secure Contact Forms, Formidable Forms, and more. (You don't have to do a thing...just add your Contact Form 7, Gravity Forms, Ninja Forms, JetPack Contact Forms, or other forms to your site, and they will automatically be protected.) It will automatically protect *most forms* on your WordPress site from automated spam, even if they are not listed here.
 
 = WordPress Registration Anti-Spam =
-The plugin also includes powerful protection from user registration spam. Once you install WP-SpamShield, you don't have to worry about bots or spammy users signing up any more. (Note: This protects *almost all* registration forms, including the WordPress default registration form, and registration forms for bbPress, BuddyPress, WooCommerce, s2Member, WP-Members, and many more. See [this FAQ](http://www.redsandmarketing.com/plugins/wp-spamshield/faqs/#faqs_13) for more info.
+The plugin also includes powerful protection from user registration spam. Once you install WP-SpamShield, you don't have to worry about bots or spammy users signing up any more. (Note: This protects *almost all* registration forms, including the WordPress default registration form, and registration forms for bbPress, BuddyPress, WooCommerce, s2Member, WP-Members, and many more. See [this FAQ](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/?faqs=13#faqs_13) for more info.
 
 = Stops Email Harvesters =
 The plugin has a feature to thwart email harvesting bots and keep them from scraping your site for email addresses. (Which helps reduce spam in your email inbox.) The plugin automatically obfuscates plain text email addresses and `mailto` links in your website content by encoding them into HTML entities (hexadecimal and decimal character codes that look like gibberish to harvesters, but render the email addresses perfectly in a browser). It protects email addresses on pages, posts, comments, excerpts, and text widgets.
@@ -77,10 +77,10 @@ This plugin has an extremely low overhead and won't slow down your site, unlike 
 Speaking of scalability, WP-SpamShield can kill spam faster than any cloud-based anti-spam solution. Cloud-based anti-spam plugins are inherently slower at processing spam because they have to connect to an external server to check the spam status, which in turn *will increase your site's server load*. With WP-SpamShield, all anti-spam processing happens directly on your website's server, with lightning speed.
 
 = Free for Commercial and Personal Websites =
-No cost, no hidden fees. This powerful anti-spam plugin is **free** for **both Commercial and Personal** use. If you find that WP-SpamShield benefits you, and you're so inclined, then feel free to [make a donation](http://www.redsandmarketing.com/wp-spamshield-donate/).
+No cost, no hidden fees. This powerful anti-spam plugin is **free** for **both Commercial and Personal** use. If you find that WP-SpamShield benefits you, and you're so inclined, then feel free to [make a donation](https://www.redsandmarketing.com/go/donate/wp-spamshield/).
 
 = Responsive and Helpful Tech Support =
-If you have any issues with the plugin, we are here to help. Simply submit a support request at the [WP-SpamShield Support Page](http://www.redsandmarketing.com/plugins/wp-spamshield/support/), and we'll help you diagnose and fix the issue quickly. Don't take our word for it though - look through our plugin ratings/reviews and notice the high percentage of resolved support threads and satisfied users.
+If you have any issues with the plugin, we are here to help. Simply submit a support request at the [WP-SpamShield Support Page](https://www.redsandmarketing.com/plugins/wp-spamshield/support/), and we'll help you diagnose and fix the issue quickly. Don't take our word for it though - look through our plugin ratings/reviews and notice the high percentage of resolved support threads and satisfied users.
 
 = Additional Features =
 1. Now WP-SpamShield provides *automatic anti-spam protection* for: Contact Form 7 forms, Gravity Forms, Ninja Forms, JetPack Contact Forms; BuddyPress, bbPress and WooCommerce registration forms; Mailchimp signup forms; *almost all* other WordPress forms; and *almost all* registration forms!
@@ -91,7 +91,7 @@ If you have any issues with the plugin, we are here to help. Simply submit a sup
 6. Easy to install - truly plug and play. Just upload and activate. (*Installation Status* on the plugin admin page to let you know if plugin is installed correctly.)
 7. Compatible with, and optimized for *all* major cache plugins, including WP Super Cache and many others. Not all anti-spam plugins can say that.
 8. Display your blocked spam stats on your site. Customizable widgets for graphic counters to display spam stats, in multiple colors, sizes and options.
-9. Works in WordPress Multisite as well. (See the related [FAQ](http://www.redsandmarketing.com/plugins/wp-spamshield/faqs/#faqs_3) for details.)
+9. Works in WordPress Multisite as well. (See the related [FAQ](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/?faqs=3#faqs_3) for details.)
 10. Enhanced Comment Blacklist option. Instead of just sending comments to moderation as with WordPress's default Comment Blacklist functionality, with this turned on, anything that matches a string in the blacklist will be **completely blocked**. Block specific human spammers by IP, email address, or a number of other options. The Enhanced Comment Blacklist has some improvements over the default WordPress blacklist functionality, and adds a link in the comment & contact form notification emails that will let you blacklist a spammer's IP with one click. It also provides some advanced custom options for blocking spam on everything else that WP-SpamShield protects.
 11. WP-SpamShield Whitelist option. Allows you to specify certain users who you want to let bypass the antispam filters.
 12. This plugin is legal to use in Germany and the EU, and does not violate European privacy laws. It does not use any type of cloud-based service, spam data is not transmitted from your server to any other server, and all anti-spam processing happens directly on your website's server.
@@ -107,15 +107,17 @@ If you have any issues with the plugin, we are here to help. Simply submit a sup
 * Italian (it_IT)
 * Serbian (sr_RS)
 
-If you would like to help translate, please [get in touch with us](http://www.redsandmarketing.com/plugins/wp-spamshield/support/).
+If you would like to help translate, please [get in touch with us](https://www.redsandmarketing.com/plugins/wp-spamshield/support/).
 
 = Minimum Requirements =
 
-* **WordPress 4.0 or higher** (Recommended: WordPress 4.5 or higher)
-* **PHP 5.3 or higher** (Recommended: PHP 5.5 or higher)
+* **WordPress 4.0+** (Recommended: WordPress 4.5 or higher)
+* **PHP 5.3+** (Recommended: PHP 5.6 or higher) [PHP 7 Compatible: YES - 100%]
 * **Your server must be configured to allow the use of an `.htaccess` file.** (This is enabled by default on the vast majority of servers.)
 
-Please see the plugin documentation's [minimum requirements section](http://www.redsandmarketing.com/plugins/wp-spamshield/#wpss_requirements) for more information.
+Please see the plugin documentation's [minimum requirements section](https://www.redsandmarketing.com/plugins/wp-spamshield/?wpss=requirements#wpss_requirements) for more information.
+
+To find web hosts that meet and exceed the requirements, [see our list of recommended web hosts](https://www.redsandmarketing.com/recommended-web-hosts/).
 
 > #### **WordPress Without Spam**
 > How does it feel to run a WordPress site without being bombarded by blog comment spam, trackback spam, contact form spam, and registration spam? If you're happy with the WP-SpamShield WordPress anti-spam plugin, let others know by [reviewing the plugin!](https://wordpress.org/support/view/plugin-reviews/wp-spamshield)
@@ -162,9 +164,9 @@ Please see the plugin documentation's [minimum requirements section](http://www.
 
 4. Install a contact form if you like. (See "Adding a Contact Form to Your Blog" below)
 
-5. If you'd like to test if everything is working, please see the beginning section of the [Troubleshooting Guide](http://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) for more info.
+5. If you'd like to test if everything is working, please see the beginning section of the [Troubleshooting Guide](https://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) for more info.
 
-6. If you are using an e-commerce plugin on your site, run a test transaction to make sure everything runs smoothly. If you have any issue with a payment gateway getting blocked, simply go to your WP-SpamShield settings and use the option "Disable anti-spam for miscellaneous forms", and it will take care of the issue. (We have made every effort to whitelist all of these on major plugins, but in some rare occasions a problem will arise.) If you do have any issues, please [submit a support request](http://www.redsandmarketing.com/plugins/wp-spamshield/support/) and we will be happy to help.
+6. If you are using an e-commerce plugin on your site, run a test transaction to make sure everything runs smoothly. If you have any issue with a payment gateway getting blocked, simply go to your WP-SpamShield settings and use the option "Disable anti-spam for miscellaneous forms", and it will take care of the issue. (We have made every effort to whitelist all of these on major plugins, but in some rare occasions a problem will arise.) If you do have any issues, please [submit a support request](https://www.redsandmarketing.com/plugins/wp-spamshield/support/) and we will be happy to help.
 
 **You're done! Sit back and see what it feels like to live without blog comment spam, trackback spam, contact form spam, and registration spam!**
 
@@ -185,7 +187,7 @@ Go to your **WordPress Admin** -> **Appearance** -> **Widgets**. Choose one of t
 
 There are a few visual examples of the widgets on the [Screenshots page](https://wordpress.org/plugins/wp-spamshield/screenshots/).
 
-You can also add shortcodes to your pages and posts, and PHP code to your theme. For more info see the plugin documentation section on [Displaying Spam Stats on Your Blog](http://www.redsandmarketing.com/plugins/wp-spamshield/displaying-stats/).
+You can also add shortcodes to your pages and posts, and PHP code to your theme. For more info see the plugin documentation section on [Displaying Spam Stats on Your Blog](https://www.redsandmarketing.com/plugins/wp-spamshield/displaying-stats/).
 
 = Adding a Contact Form to Your Blog =
 First create a distinct *page* (not *post*) where you want to have your contact form. Then, go into the editor and click the tab for the "Text" editor (not "Visual" editor). Then click the button that says **"WPSS Contact Form"**. It's that easy. You can also manually insert the following shortcode if you prefer: `[spamshieldcontact]`
@@ -196,19 +198,19 @@ There is no need to configure the form. It allows you to simply drop it into the
 
 **As of version 1.8.9.9 WP-SpamShield also includes *automatic anti-spam protection* for Contact Form 7, Gravity Forms, Ninja Forms, JetPack Contact Forms, Fast Secure Contact Forms, Formidable Forms, Mailchimp, and most others. (You don't have to do anything...just add your Contact Form 7, Gravity Forms, Ninja Forms, JetPack Contact Forms, Mailchimp signup, and other forms to your site, and they will *automatically* be protected from spam.) It will now *automatically* protect most forms on your WordPress site from spam, even if they are not specifically listed here.**
 
-Please visit the plugin documentation for more info on [contact form installation and use](http://www.redsandmarketing.com/plugins/wp-spamshield/installing-contact-form/).
+Please visit the plugin documentation for more info on [contact form installation and use](https://www.redsandmarketing.com/plugins/wp-spamshield/installing-contact-form/).
 
 = Configuration Information =
 
-Please visit the plugin documentation for detailed [configuration information](http://www.redsandmarketing.com/plugins/wp-spamshield/configuration-information/).
+Please visit the plugin documentation for detailed [configuration information](https://www.redsandmarketing.com/plugins/wp-spamshield/configuration-information/).
 
 == Frequently Asked Questions ==
 
-We've put together a list of [Frequently Asked Questions (FAQs)](http://www.redsandmarketing.com/plugins/wp-spamshield/faqs/) that will answer many of the questions out there. If you have an issue, please read these first.
+We've put together a list of [Frequently Asked Questions (FAQs)](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/) that will answer many of the questions out there. If you have an issue, please read these first.
 
-Also, see the [Troubleshooting Guide](http://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) as it solves over 90% of support issues.
+Also, see the [Troubleshooting Guide](https://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) as it solves over 90% of support issues.
 
-If you have any further questions, please submit them on the main [WP-SpamShield Support Page](http://www.redsandmarketing.com/plugins/wp-spamshield/support/) (our main support channel) and we will be happy to help you out.
+If you have any further questions, please submit them on the main [WP-SpamShield Support Page](https://www.redsandmarketing.com/plugins/wp-spamshield/support/) (our main support channel) and we will be happy to help you out.
 
 == Screenshots ==
 
@@ -224,6 +226,27 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 10. Widget - WP-SpamShield Counter - Graphic: Style 9
 
 == Changelog ==
+
+= 1.9.9.5 =
+*released 11/11/16*
+
+* Improved support for Varnish and other server-side caching systems.
+* Added support for secure cookie handling. On sites with HTTPS enabled, WP-SpamShield will now serve PHP cookies securely.
+* Made various code enhancements and improvements.
+* Improved some filters in the anti-spam algorithm.
+* Maintenance: Updated the spam filters.
+
+= 1.9.9.4 =
+*released 10/22/16*
+
+* Fixed a bug in the contact form settings.
+* Fixed a text capitalization error on localized registration form translations.
+* Fixed a bug in the blocked spam logging expiration time.
+* Added improved support for localized WooCommerce registration pages.
+* Made various code enhancements and improvements.
+* Added new spam filters to the algorithm.
+* Improved some filters in the anti-spam algorithm.
+* Maintenance: Updated existing spam filters.
 
 = 1.9.9.3 =
 *released 10/08/16*
@@ -472,7 +495,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 
 * Compatibility fix for Gravity Forms PayPal Standard Add-On plugin.
 * Compatibility fix for Vantage theme by Appthemes.
-* Added workarounds for two plugins on the [Known Conflicts list](http://www.redsandmarketing.com/plugins/wp-spamshield/known-conflicts/): Affiliates, and New User Approve.
+* Added workarounds for two plugins on the [Known Conflicts list](https://www.redsandmarketing.com/plugins/wp-spamshield/known-conflicts/): Affiliates, and New User Approve.
 * Made various other preemptive compatibility enhancements.
 * Pre-emptive security enhancements.
 * The log file can now be viewed by more than one administrator at a time.
@@ -587,7 +610,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 = 1.9.1 =
 *released 06/18/15*
 
-* Added 2 new Advanced Features: "Compatibility Mode" and "Disable Temporary Blacklist". The Advanced Features are something new that we'll be introducing over time, and are explained in the [plugin documentation in more detail](http://www.redsandmarketing.com/plugins/wp-spamshield/advanced-configuration/).
+* Added 2 new Advanced Features: "Compatibility Mode" and "Disable Temporary Blacklist". The Advanced Features are something new that we'll be introducing over time, and are explained in the [plugin documentation in more detail](https://www.redsandmarketing.com/plugins/wp-spamshield/advanced-configuration/).
 * Added some improvements to the installation status detection.
 * Added automatic fixes for certain issues. During the installation status detection process the plugin will attempt to fix some uncommon issues by automatically switching the plugin into Compatibility Mode. (At the top of the Settings page it tells you if the plugin is installed correctly or not.)
 * Made various code improvements.
@@ -707,7 +730,7 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 *released 04/21/15*
 
 * Added an `.htaccess` file to the `wp-spamshield` directory to control browser access to certain files.
-* Added a fix to ensure that certain security plugins could not inadvertently block browser access to the `jscripts.php` file. This fix will prevent most of the occurrences of the issue discussed in [Troubleshooting Guide](http://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) step 14.
+* Added a fix to ensure that certain security plugins could not inadvertently block browser access to the `jscripts.php` file. This fix will prevent most of the occurrences of the issue discussed in [Troubleshooting Guide](https://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) step 14.
 * Upgraded the `.htaccess` file in the `data` directory (that protects the log file) to be compatible with changes in Apache 2.4.
 * Modified the log file creation process so that WordFence (and any other security plugins that compare plugin files against the WordPress repository) will no longer give the following warning: "Modified plugin file: wp-content/plugins/wp-spamshield/data/temp-comments-log.txt" when **Blocked Comment Logging Mode** is turned on. This file is supposed to change, since it's the log file.
 * Removed inline CSS from the three registration fields that WP-SpamShield adds, in order to make it easier for users to configure the look and feel of the registration page.
@@ -788,23 +811,23 @@ If you have any further questions, please submit them on the main [WP-SpamShield
 * Updated the anti-spam filters.
 
 = Changelog =
-For a complete list of changes to the plugin, view the [Version History/Changelog](http://www.redsandmarketing.com/plugins/wp-spamshield/version-history/).
+For a complete list of changes to the plugin, view the [Changelog](https://www.redsandmarketing.com/plugins/wp-spamshield/changelog/).
 
 == Upgrade Notice ==
-= 1.9.9.3 =
+= 1.9.9.5 =
 
-* Made various code enhancements and improvements, and updated the anti spam filters. Please see Changelog for details.
+* Improved support for Varnish, improved support for secure cookie handling, and improved/updated the spam filters. Please see Changelog for details.
 
 == Other Notes ==
 
-[Troubleshooting Guide](http://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) | [FAQs](http://www.redsandmarketing.com/plugins/wp-spamshield/faqs/) | [WP-SpamShield Support Page](http://www.redsandmarketing.com/plugins/wp-spamshield/support/)
+[Troubleshooting Guide](https://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) | [Frequently Asked Questions (FAQs)](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/) | [WP-SpamShield Support Page](https://www.redsandmarketing.com/plugins/wp-spamshield/support/)
 
 = Troubleshooting Guide / Support =
 
-If you're experiencing any issues, please take a few moments to work through the [FAQs](http://www.redsandmarketing.com/plugins/wp-spamshield/faqs/) and [troubleshooting guide](http://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) as these solve 90% of the issues that users bring to us.
+If you're experiencing any issues, please take a few moments to work through the [FAQs](https://www.redsandmarketing.com/plugins/wp-spamshield/faqs/) and [troubleshooting guide](https://www.redsandmarketing.com/plugins/wp-spamshield/troubleshooting-guide/) as these solve over 90% of the issues that users bring to us.
 
 = Updates / Documentation =
-For updates and documentation, visit the [WP-SpamShield homepage](http://www.redsandmarketing.com/plugins/wp-spamshield/).
+For updates and documentation, visit the [WP-SpamShield homepage](https://www.redsandmarketing.com/plugins/wp-spamshield/).
 
 = WordPress Security Note =
-As with any WordPress plugin, for security reasons, you should only download plugins from the author's site and from official WordPress repositories. When other sites host a plugin that is developed by someone else, they may inject code into that could compromise the security of your blog. We cannot endorse a version of this that you may have downloaded from another site. If you have downloaded the "WP-SpamShield" plugin from another site, please download the current release from the from the [official WP-SpamShield page on WordPress.org](https://wordpress.org/plugins/wp-spamshield/).
+As with any WordPress plugin, for security reasons, you should only download plugins from the author's site and from official WordPress repositories. When other sites host a plugin that is developed by someone else, they may be distributing a rogue version with malicious code that could compromise the security of your site and/or server. We cannot endorse a version of this that you may have downloaded from another site. If you have downloaded the "WP-SpamShield" plugin from another site, please download the current release from the from the [official WP-SpamShield page on WordPress.org](https://wordpress.org/plugins/wp-spamshield/).

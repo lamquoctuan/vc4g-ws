@@ -1,7 +1,7 @@
 <?php
 /**
  *  WP-SpamShield Compatibility
- *  File Version 1.9.9.3
+ *  File Version 1.9.9.5
  */
 
 if( !defined( 'ABSPATH' ) || !defined( 'WPSS_VERSION' ) ) {
@@ -30,7 +30,7 @@ class WPSS_Compatibility {
 		 *  ex. $plug_bn = 'folder/filename.php'; // Plugin Basename
 		 */
 		if( empty( $plug_bn ) ){ return FALSE; }
-		global $wpss_conf_active_plugins;
+		global $wpss_conf_active_plugins,$wpss_active_plugins,$wpss_active_network_plugins;
 		/* Quick Check */
 		if( !empty( $wpss_conf_active_plugins[$plug_bn] ) ) { return TRUE; }
 		if( TRUE === $check_network && is_multisite() ) { if( !empty( $wpss_conf_active_network_plugins[$plug_bn] ) ) { return TRUE; } }
@@ -53,10 +53,10 @@ class WPSS_Compatibility {
 		);
 		if( ( !empty( $plug_cncl[$plug_bn]['cn'] ) && defined( $plug_cncl[$plug_bn]['cn'] ) ) || ( !empty( $plug_cncl[$plug_bn]['cl'] ) && class_exists( $plug_cncl[$plug_bn]['cl'] ) ) ) { $wpss_conf_active_plugins[$plug_bn] = TRUE; return TRUE; }
 		/* No match yet, so now do standard check */
-		global $wpss_active_plugins; if( empty( $wpss_active_plugins ) ) { $wpss_active_plugins = rs_wpss_get_active_plugins(); }
+		if( empty( $wpss_active_plugins ) ) { $wpss_active_plugins = rs_wpss_get_active_plugins(); }
 		if( in_array( $plug_bn, $wpss_active_plugins, TRUE ) ) { $wpss_conf_active_plugins[$plug_bn] = TRUE; return TRUE; }
 		if( TRUE === $check_network && is_multisite() ) {
-			global $wpss_active_network_plugins; if( empty( $wpss_active_network_plugins ) ) { $wpss_active_network_plugins = rs_wpss_get_active_network_plugins(); }
+			if( empty( $wpss_active_network_plugins ) ) { $wpss_active_network_plugins = rs_wpss_get_active_network_plugins(); }
 			if( in_array( $plug_bn, $wpss_active_network_plugins, TRUE ) ) { $wpss_conf_active_network_plugins[$plug_bn] = TRUE; return TRUE; }
 		}
 		return FALSE;
@@ -170,13 +170,14 @@ class WPSS_Compatibility {
 		if( rs_wpss_is_admin_sproc() ) { return; }
 
 		/* Vantage Theme by Appthemes ( https://www.appthemes.com/themes/vantage/ ) */
-		global $wpss_theme_vantage; if( !empty( $wpss_theme_vantage ) ) { return TRUE; }
-		elseif( defined( 'APP_FRAMEWORK_DIR_NAME' ) && defined( 'VA_VERSION' ) ) { $wpss_theme_vantage = TRUE; return TRUE; }
+		global $wpss_theme_vantage; if( !empty( $wpss_theme_vantage ) ) { return TRUE; } elseif( defined( 'APP_FRAMEWORK_DIR_NAME' ) && defined( 'VA_VERSION' ) ) { $wpss_theme_vantage = TRUE; return TRUE; }
 		else {
 			$wpss_theme = wp_get_theme();
-			$theme_name = $wpss_theme->get( 'Name' );
-			$theme_author = $wpss_theme->get( 'Author' );
-			if( 'Vantage' === $theme_name && 'AppThemes' === $theme_author ) { $wpss_theme_vantage = TRUE; return TRUE; }
+			if( is_object( $wpss_theme ) && !empty( $wpss_theme ) ) {
+				$theme_name = $wpss_theme->get( 'Name' );
+				$theme_author = $wpss_theme->get( 'Author' );
+				if( 'Vantage' === $theme_name && 'AppThemes' === $theme_author ) { $wpss_theme_vantage = TRUE; return TRUE; }
+			}
 		}
 
 		/* Add next here... */
@@ -373,6 +374,46 @@ class WPSS_Compatibility {
 		return FALSE;
 	}
 
+	static public function is_surrogate() {
+		/**
+		 *  Check for Surrogates
+		 *  - Server Caching, Reverse Poxies, WAFS: Varnish, CloudFlare (Rocket Loader), Sucuri WAF, Incapsula, etc.
+		 *	- Specific web hosts that use Varnish: WP Engine, Dreamhost, SiteGround, Bluehost...
+		 *  @since 1.9.9.5
+		 */
+		global $wpss_surrogate; if( isset( $wpss_surrogate ) && is_bool( $wpss_surrogate ) ) { return TRUE; }
+		$wpss_surrogate = FALSE; $web_host = rs_wpss_get_web_host();
+		if( !empty( $web_host ) && ( $web_host === 'WP Engine' || $web_host === 'Dreamhost' || $web_host === 'SiteGround' || $web_host === 'Bluehost' ) ) { $wpss_surrogate = TRUE; WP_SpamShield::update_wpss_option( array( 'surrogate' => $wpss_surrogate ) ); return TRUE; }
+		if( self::is_varnish_active() ) { $wpss_surrogate = TRUE; WP_SpamShield::update_wpss_option( array( 'surrogate' => $wpss_surrogate ) ); return TRUE; }
+		if( empty( $wpss_surrogate ) ) { $wpss_surrogate = WP_SpamShield::get_wpss_option( 'surrogate' ); }
+		if( empty( $wpss_surrogate ) ) { $wpss_surrogate = FALSE; }
+		WP_SpamShield::update_wpss_option( array( 'surrogate' => $wpss_surrogate, 'web_host' => $web_host ) );
+		return $wpss_surrogate;
+	}
+
+	static public function is_varnish_active() {
+		/**
+		 *  Secondary Varnish detection
+		 *  @since 1.9.9.5
+		 */
+		global $wpss_varnish_active,$wpss_surrogate; if( isset( $wpss_varnish_active ) && is_bool( $wpss_varnish_active ) ) { $wpss_surrogate = TRUE; return TRUE; }
+		if( function_exists( 'get_loaded_extensions' ) ) { $ext_loaded_zend = @get_loaded_extensions(); }
+		$ext_loaded_zend	= ( !empty( $ext_loaded_zend ) && is_array( $ext_loaded_zend ) ) ? $ext_loaded_zend : array();
+		$varnish_loaded		= $wpss_varnish_active = $wpss_surrogate = in_array( 'varnish', $ext_loaded_zend, TRUE ); /* Zend extensions only */
+		if( TRUE === $varnish_loaded ) { WP_SpamShield::update_wpss_option( array( 'surrogate' => $wpss_surrogate ) ); return TRUE; }
+		$varnish_php_const	= array( 'VARNISH_COMPAT_2', 'VARNISH_COMPAT_3', 'VARNISH_CONFIG_COMPAT', 'VARNISH_CONFIG_HOST', 'VARNISH_CONFIG_IDENT', 'VARNISH_CONFIG_PORT', 'VARNISH_CONFIG_SECRET', 'VARNISH_CONFIG_TIMEOUT', 'VARNISH_STATUS_AUTH', 'VARNISH_STATUS_CANT', 'VARNISH_STATUS_CLOSE', 'VARNISH_STATUS_COMMS', 'VARNISH_STATUS_OK', 'VARNISH_STATUS_PARAM', 'VARNISH_STATUS_SYNTAX', 'VARNISH_STATUS_TOOFEW', 'VARNISH_STATUS_TOOMANY', 'VARNISH_STATUS_UNIMPL', 'VARNISH_STATUS_UNKNOWN', );
+		$varnish_plug_const	= array( 'DHDO', 'DHDO_PLUGIN_DIR', 'DREAMSPEED_VERSION', 'VHP_VARNISH_IP', );
+		$varnish_constants	= array_merge( $varnish_php_const, $varnish_plug_const );
+		foreach( $varnish_constants as $i => $c ) {
+			if( defined( $c ) ) { $wpss_varnish_active = $wpss_surrogate = TRUE; WP_SpamShield::update_wpss_option( array( 'surrogate' => $wpss_surrogate ) ); return TRUE; }
+		}
+		$varnish_plugs		= array( 'dreamobjects/dreamobjects.php', 'dreamspeed-cdn/dreamspeed-cdn.php', 'varnish-http-purge/varnish-http-purge.php', );
+		foreach( $varnish_plugs as $i => $p ) {
+			if( self::is_plugin_active( $p ) ) { $wpss_varnish_active = $wpss_surrogate = TRUE; return TRUE; }
+		}
+		$wpss_varnish_active = FALSE;
+		return FALSE;
+	}
 
 	/* Add more... */
 
