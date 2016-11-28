@@ -82,9 +82,9 @@ $ajaxMailInServiceForm = wp_create_nonce( $strMailInServiceForm );
             </div>
             <div class="col-md-3">
                 <div class="form-group">
-                    <label for="">Zip <span>*</span></label>
+                    <label for="">Postal <span>*</span></label>
                     <input type="text" class="form-control" name="zip" required="" 
-                            pattern="[A-Z]\d[A-Z] \d[A-Z]\d" data-validation-pattern-message="Please enter your zip." aria-invalid="false">
+                            pattern="[A-Z]\d[A-Z] \d[A-Z]\d" data-validation-pattern-message="Please enter your postal code." aria-invalid="false">
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
