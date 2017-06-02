@@ -20,7 +20,8 @@
 <body id="page-top" class="index">
 <?php
 if (is_home() || is_front_page()) {
-    get_template_part('template/header', 'home-banner');
+    // get_template_part('template/header', 'home-banner');
+    get_template_part('template/header', 'home-banner-ClosingHoliday');
     // get_template_part('template/header', 'home-banner-xmas');
     get_template_part('template/header', 'home-nav');
 }
