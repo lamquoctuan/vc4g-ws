@@ -10,17 +10,17 @@
 <section id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-sm-5 col-md-6">
+            <div class="col-sm-5 col-md-5">
                 <div class="col-md-5">
                     <?php get_template_part('template/footer', 'nav');?>
                 </div>
                 <div class="col-md-7">
-                    <?php get_template_part('template/footer', 'contact');?>
+                    <?php get_template_part('template/footer', 'contact-head');?>
                 </div>
             </div>
-            <div class="col-sm-5 col-md-6">
-                <div class="col-md-5 text-center">
-                    <?php get_template_part('template/footer', 'weather');?>
+            <div class="col-sm-5 col-md-7">
+                <div class="col-md-5">
+                    <?php get_template_part('template/footer', 'contact-surrey');?>
                 </div>
                 <div class="col-md-7">
                     <?php get_template_part('template/footer', 'subscribe-form');?>
