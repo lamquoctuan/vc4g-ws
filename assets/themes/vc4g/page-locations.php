@@ -7,8 +7,8 @@ get_header();
     // Start the loop.
     while (have_posts()) : the_post();
 
-        get_template_part('template/contact-locations', 'map');
-        get_template_part('template/contact-locations');
+        // get_template_part('template/contact-locations', 'map');
+        get_template_part('template/contact-locations', 'with-maps');
         get_template_part('template/contact', 'form');
         // End the loop.
     endwhile;

@@ -2,16 +2,16 @@
 <header>
     <div class="container mb20">
         <div class="row">
-            <div class="col-md-6 text-left pt20">
+            <div class="col-md-6 text-left pt30">
                 <img src="/assets/images/logo.png" />
             </div>
-            <div class="col-md-6 text-right pt20">
-    			<span class="address-banner">
-    			    <a href="/locations/"><strong>Vancouver</strong></a> 3515 Kingsway, Vancouver, BC V5R 5L8 <a class="sub-phone" href="tel:16045582026"><b class="icon-phone"></b>604-558-2026</a><br />
-    			    </span>
-			    <span class="address-banner" style="margin-top: -22px;">
-    			    <a href="/locations/surrey/"><strong>Surrey</strong></a> 10210 152 St #213, Surrey, BC V3R 6N7 <a class="sub-phone" href="tel:16049990606"><b class="icon-phone"></b>604-999-0606</a>
-			    </span>
+            <div class="col-md-6 text-right pt10">
+                <div class="address-banner">
+                    <p><a href="/locations/"><strong>Vancouver</strong></a><br />
+                    3515 Kingsway, Vancouver, BC V5R 5L8 <a class="sub-phone" href="tel:16045582026"><b class="icon-phone"></b>604-558-2026</a></p>
+                    <p><a href="/locations/surrey/"><strong>Surrey</strong></a><br />
+    			    10210 152 St #213, Surrey, BC V3R 6N7 <a class="sub-phone" href="tel:16049990606"><b class="icon-phone"></b>604-999-0606</a></p>
+                </div>
     		</div>
         </div>
     </div>

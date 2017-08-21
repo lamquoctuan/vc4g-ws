@@ -1111,14 +1111,23 @@ header {
     display: none;
 }
 
+.address-banner p{
+    font-size: 13px;
+}
+.address-banner a strong {
+    text-transform: uppercase;
+    color: #a1a3a3 ;
+}
+
 a.sub-phone {
     position: relative;
-    margin: 20px 0 5px 30px;
+    margin-left: 30px;
     display: inline-block;
     color: #d19f42;
     font-size: 16px;
     font-weight: 600;
 }
+
 
 a.sub-phone:hover {
     color: #636363;
@@ -2494,9 +2503,43 @@ section hr {
 }
 
 .place-ct {
-    padding: 50px 0;
+    padding: 0;
 }
-
+.place-ct li {
+    position: relative;
+    padding: 10px 0 10px 40px;
+    font-size: 13px;
+}
+.place-ct li::before {
+    font-family: 'Material Icons';
+    content: "\E63A";
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #d19f42;
+    cursor: pointer;
+}
+.place-ct li.place::before {
+    content: "\E55F";
+}
+.place-ct li.phone::before {
+    content: "\E324";
+}
+.place-ct li.time::before {
+    content: "\E192";
+}
+.place-ct li.email::before {
+    content: "\E0BE";
+}
+.contact-add {
+    padding-bottom: 30px;
+}
+.contact-add h2 {
+    color: #d19f42;
+    font-weight: 500;
+}
 .place-ct a {color:#2e2e2e;}
 .place-ct a:hover {color:#d19f42;}
 
@@ -2731,6 +2774,11 @@ button.close {
     padding: 18px 10px 0 0;
     display: none;
 }
+
+.dpl-none.days {
+    
+}
+
 
 @media (min-width: 1401px) { 
     header .intro-text {
@@ -3205,6 +3253,9 @@ button.close {
         margin-top: 40px;
     }
     .map-contact {
+        margin-top: 0;
+    }
+    .map-contact.first {
         margin-top: 71px;
     }
     .map-contact iframe {
@@ -3478,6 +3529,9 @@ button.close {
         font-weight: 400;
     }
     .map-contact {
+        margin-top: 0;
+    }
+    .map-contact.first {
         margin-top: 52px;
     }
     .place-ct .col-md-3 {
@@ -3970,6 +4024,9 @@ button.close {
         font-size: 15px;
     }
     .map-contact {
+        margin-top: 0;
+    }
+    .map-contact.first {
         margin-top: 52px;
     }
     .recentpay.carousel {
