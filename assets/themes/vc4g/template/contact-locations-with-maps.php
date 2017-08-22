@@ -1,3 +1,11 @@
+<?php 
+global $post;
+$pContent = get_the_content($post);
+if (! empty($pContent) ) {
+    echo $pContent;
+}
+else {
+?>
 <section class="place-ct">
     <div class="container">
         <div class="row">
@@ -32,7 +40,7 @@
                     <ul class="list-unstyled">
                         <li class="place">10210 152 St #213, Surrey, BC V3R 6N7, The Canada</li>
                         <li class="phone"><a href="">(604) 999-0606</a> <abbr title="Phone">or</abbr> <a href="">(778) 869-2112</a></li>
-                        <li class="time"><abbr title="Phone">Mon - Sat:</abbr> 10:00 am – 6:00 pm</li>
+                        <li class="time"><abbr title="Phone">Tue - Sat:</abbr> 10:00 am – 6:00 pm</li>
                         <li class="email"><a href="mailto:surreycashforgold@gmail.com">surreycashforgold@gmail.com</a></li>
                     </ul>
                 </div>
@@ -41,4 +49,8 @@
     </div>
     
 </section>
+<?php
+}
+?>
+
 <div class="clearfix visible-xs-block"></div>
