@@ -9,7 +9,7 @@
                 <div class="address-banner">
                     <p><a href="/locations/"><strong>Vancouver</strong></a><br />
                     3515 Kingsway, Vancouver, BC V5R 5L8 <a class="sub-phone" href="tel:16045582026"><b class="icon-phone"></b>604-558-2026</a></p>
-                    <p><a href="/locations/surrey/"><strong>Surrey</strong></a><br />
+                    <p><a href="/locations/"><strong>Surrey</strong></a><br />
     			    10210 152 St #213, Surrey, BC V3R 6N7 <a class="sub-phone" href="tel:16049990606"><b class="icon-phone"></b>604-999-0606</a></p>
                 </div>
     		</div>
