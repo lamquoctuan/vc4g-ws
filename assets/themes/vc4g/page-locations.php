@@ -9,6 +9,7 @@ get_header();
 
         // get_template_part('template/contact-locations', 'map');
         get_template_part('template/contact-locations', 'with-maps');
+        
         get_template_part('template/contact', 'form');
         // End the loop.
     endwhile;
